@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a Ph.D. Candidate in Information Sciences (Cognitive Neuroscience / Vision Science) at [Tohoku University](https://www.tohoku.ac.jp/en/), Japan, working in the [Visual Cognition and Systems Laboratory](https://www.shioiri.riec.tohoku.ac.jp/) under the supervision of Prof. Satoshi Shioiri, Prof. Shuichi Sakamoto, and Assoc. Prof. Chia-huei Tseng. I was a Visiting PhD Scholar at **Harvard Medical School / Massachusetts General Hospital** (Aug 2024 – Jan 2025), where I trained in stereo-EEG (sEEG), hyperscanning, and the neural mechanisms of speech and interactive communication.
+I am a **Project Assistant Professor** at the [Graduate School of Information Sciences (GSIS)](https://www.is.tohoku.ac.jp/en/), [Tohoku University](https://www.tohoku.ac.jp/en/), Japan (from April 2025), working in the [Visual Cognition and Systems Laboratory](https://www.shioiri.riec.tohoku.ac.jp/) under the supervision of Prof. Satoshi Shioiri. I hold a JSPS DC2 Research Fellowship (2025–2026). Previously I was a Visiting PhD Scholar at **Harvard Medical School / Massachusetts General Hospital** (Aug 2024 – Jan 2025), where I trained in stereo-EEG (sEEG), hyperscanning, and the neural mechanisms of speech and interactive communication.
 
 My research lies at the intersection of cognitive neuroscience and vision science. I study the brain mechanisms underlying **voluntary attentional control** — how and why we spontaneously shift our attention — using a combination of EEG/sEEG recordings, eye-tracking, and computational modeling.
 
@@ -23,6 +23,7 @@ My research lies at the intersection of cognitive neuroscience and vision scienc
 
 | | |
 |---|---|
+| **Apr 2025** | Started as **Project Assistant Professor**, Graduate School of Information Sciences, Tohoku University |
 | **Apr 2025** | Awarded JSPS DC2 Research Fellowship |
 | **Feb 2025** | Paper published in *Frontiers in Human Neuroscience*: frontal-midline theta ramping indexes self-initiated attention shifts |
 | **Jan 2025** | Returned from visiting scholar position at Harvard Medical School / MGH |
