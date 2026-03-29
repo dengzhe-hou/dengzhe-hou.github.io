@@ -42,6 +42,7 @@ My research bridges cognitive neuroscience and artificial intelligence. I am bro
 |---|---|---|
 | **Ph.D.** | Graduate School of Information Sciences, Tohoku University | Apr 2023 – Mar 2026 |
 | | Visual Cognition and Systems Lab · [Graduate Program in Data Science (GPDS)](https://gp-ds.tohoku.ac.jp/ja/index.html) | |
+| | [JST Next Generation Researcher Challenging Research Program](https://pgd.tohoku.ac.jp/rpc/next_generation.html) | |
 | **M.S.** | Graduate School of Information Sciences, Tohoku University | Apr 2021 – Mar 2023 |
 | | Visual Cognition and Systems Lab · [GPDS](https://gp-ds.tohoku.ac.jp/ja/index.html) (joined Apr 2022) | |
 | **B.E.** | Electronic and Information Engineering, Tongji University | Sep 2016 – Jul 2020 |
