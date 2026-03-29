@@ -14,4 +14,179 @@
 <link rel="icon" href="/images/favicon.ico"/>
 <meta name="theme-color" content="#ffffff"/>
 
+<!-- Google Fonts: Inter -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
+<!-- Custom gradient & modern design overrides -->
+<style>
+  /* ── Variables ─────────────────────────────── */
+  :root {
+    --g1: #4f46e5;
+    --g2: #0891b2;
+    --g-dark1: #1e1b4b;
+    --g-dark2: #0c4a6e;
+    --card-shadow: 0 2px 16px rgba(79,70,229,0.08);
+    --card-hover:  0 6px 24px rgba(79,70,229,0.18);
+  }
+
+  /* ── Typography ─────────────────────────────── */
+  body, .page__content, .sidebar, .masthead {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  /* ── Nav bar ─────────────────────────────────── */
+  .masthead {
+    background: linear-gradient(135deg, var(--g-dark1) 0%, var(--g-dark2) 100%) !important;
+    border-bottom: none !important;
+  }
+  .masthead::after { display: none !important; }
+  .masthead a, .masthead__menu-item a {
+    color: rgba(255,255,255,0.88) !important;
+    letter-spacing: 0.02em;
+  }
+  .masthead__menu-item a:hover { color: #a5f3fc !important; }
+  .masthead__menu-item--lg a   { color: #fff !important; font-weight: 700; }
+  .masthead__menu-item.selected a {
+    color: #fff !important;
+    border-bottom: 2px solid #a5f3fc !important;
+  }
+
+  /* ── Sidebar author profile ───────────────── */
+  .author__avatar img {
+    border-radius: 14px !important;
+    box-shadow: 0 8px 32px rgba(79,70,229,0.22) !important;
+    border: 3px solid rgba(79,70,229,0.12) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .author__avatar img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 40px rgba(79,70,229,0.32) !important;
+  }
+  .author__name {
+    background: linear-gradient(135deg, var(--g1), var(--g2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 1.05em !important;
+    font-weight: 700 !important;
+  }
+  .author__bio {
+    color: #6b7280;
+    font-size: 0.82em !important;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+  .author__urls a {
+    color: #374151 !important;
+    font-size: 0.82em !important;
+    transition: color 0.2s;
+  }
+  .author__urls a:hover { color: var(--g1) !important; }
+
+  /* ── Page title (h1) ─────────────────────── */
+  .page__title {
+    background: linear-gradient(135deg, var(--g1) 0%, var(--g2) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700 !important;
+  }
+
+  /* ── Content section headings ────────────── */
+  .page__content h2 {
+    font-size: 1.15em;
+    font-weight: 700;
+    color: var(--g-dark1);
+    letter-spacing: 0.01em;
+    margin-top: 2em;
+    padding-bottom: 0.4em;
+    border-bottom: 2.5px solid;
+    border-image: linear-gradient(90deg, var(--g1), var(--g2)) 1;
+  }
+
+  /* ── Links ───────────────────────────────── */
+  .page__content a, .page__content a:visited {
+    color: var(--g1) !important;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .page__content a:hover {
+    color: var(--g2) !important;
+    border-bottom-color: var(--g2);
+  }
+
+  /* ── Archive / card items ────────────────── */
+  .archive__item {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.1rem 1.4rem;
+    margin-bottom: 1.1rem;
+    box-shadow: var(--card-shadow);
+    border-left: 4px solid;
+    border-image: linear-gradient(to bottom, var(--g1), var(--g2)) 1;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .archive__item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--card-hover);
+  }
+  .archive__item-title {
+    margin-top: 0 !important;
+    font-size: 0.97em !important;
+  }
+  .archive__item-title a {
+    color: #1e1b4b !important;
+    font-weight: 600;
+  }
+  .archive__item-title a:hover {
+    color: var(--g1) !important;
+    border-bottom: none !important;
+  }
+  .archive__item-excerpt {
+    color: #4b5563;
+    font-size: 0.85em !important;
+    line-height: 1.6;
+  }
+
+  /* ── News table on homepage ──────────────── */
+  .page__content table {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    width: 100%;
+  }
+  .page__content table thead { display: none; }
+  .page__content table td {
+    border: none !important;
+    padding: 0.35em 0.7em !important;
+    background: transparent !important;
+    font-size: 0.9em;
+    vertical-align: top;
+  }
+  .page__content table tr:nth-child(odd) td { background: transparent !important; }
+  .page__content table td:first-child {
+    font-weight: 600;
+    color: var(--g1);
+    white-space: nowrap;
+    min-width: 7em;
+  }
+
+  /* ── Footer ─────────────────────────────── */
+  .page__footer {
+    background: linear-gradient(135deg, var(--g-dark1) 0%, var(--g-dark2) 100%) !important;
+  }
+  .page__footer-copyright, .page__footer a {
+    color: rgba(255,255,255,0.65) !important;
+  }
+  .page__footer a:hover { color: #a5f3fc !important; }
+
+  /* ── Responsive: mobile ───────────────── */
+  @media (max-width: 768px) {
+    .author__avatar img { border-radius: 50% !important; }
+  }
+</style>
+
 <!-- end custom head snippets -->
