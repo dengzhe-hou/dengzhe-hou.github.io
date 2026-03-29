@@ -24,6 +24,7 @@ My research lies at the intersection of cognitive neuroscience and vision scienc
 | | |
 |---|---|
 | **Apr 2025** | Started as **Project Assistant Professor**, Graduate School of Information Sciences, Tohoku University |
+| **Feb 2026** | Participated in **Qualia Structure** Grant Meeting |
 | **Apr 2025** | Awarded JSPS DC2 Research Fellowship |
 | **Feb 2025** | Paper published in *Frontiers in Human Neuroscience*: frontal-midline theta ramping indexes self-initiated attention shifts |
 | **Jan 2025** | Returned from visiting scholar position at Harvard Medical School / MGH |
@@ -32,6 +33,17 @@ My research lies at the intersection of cognitive neuroscience and vision scienc
 | **Aug 2024** | Started as Visiting PhD Scholar, Department of Neurology, MGH / Harvard Medical School |
 | **Jul 2024** | Two presentations at **APCV 2024** (The 16th Asia Pacific Conference on Vision) |
 | **Aug 2023** | Oral presentation at **ECVP 2023**, Paphos, Cyprus — awarded ECVP Student Travel Award |
+
+## Education
+
+| | | |
+|---|---|---|
+| **Ph.D.** | Graduate School of Information Sciences, Tohoku University | Apr 2023 – Mar 2026 |
+| | Visual Cognition and Systems Lab · Graduate Program in Data Science (GPDS) | |
+| **M.S.** | Graduate School of Information Sciences, Tohoku University | Apr 2021 – Mar 2023 |
+| | Visual Cognition and Systems Lab · Graduate Program in Data Science (GPDS) | |
+| **B.E.** | Electronic and Information Engineering, Tongji University | Sep 2016 – Jul 2020 |
+| | GPA 4.15 / 5.0 | |
 
 ## Reviewer
 
