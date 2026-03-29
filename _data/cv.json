@@ -1,152 +1,236 @@
 {
   "basics": {
-    "name": "Your Sidebar Name",
-    "email": "none@example.org",
+    "name": "Dengzhe Hou",
+    "email": "hou.dengzhe.t8@dc.tohoku.ac.jp",
     "phone": "",
-    "website": "https://academicpages.github.io",
-    "summary": "Currently employed at Red Brick University. Short biography for the left-hand sidebar",
+    "website": "https://dengzhe-hou.github.io",
+    "summary": "Ph.D. Candidate in Information Sciences (Cognitive Neuroscience / Vision Science) at Tohoku University. JSPS DC2 Fellow. Research focuses on the brain mechanisms of self-initiated attentional control using EEG, eye-tracking, and computational modeling.",
     "location": {
-      "address": "",
-      "postalCode": "",
-      "city": "Earth",
-      "countryCode": "US",
-      "region": ""
+      "address": "Graduate School of Information Sciences, Tohoku University",
+      "postalCode": "980-8579",
+      "city": "Sendai",
+      "countryCode": "JP",
+      "region": "Miyagi"
     },
     "profiles": [
       {
         "network": "Google Scholar",
-        "username": "",
-        "url": "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+        "username": "Dengzhe Hou",
+        "url": "https://scholar.google.com/citations?user=3BV4d9kAAAAJ&hl=en"
       },
       {
         "network": "ORCID",
-        "username": "",
-        "url": "https://orcid.org/yourorcidurl"
+        "username": "0000-0002-1036-7979",
+        "url": "https://orcid.org/0000-0002-1036-7979"
       },
       {
         "network": "GitHub",
-        "username": "academicpages",
-        "url": "https://github.com/academicpages"
+        "username": "dengzhe-hou",
+        "url": "https://github.com/dengzhe-hou"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "dengzhe-hou-a47135293",
+        "url": "https://www.linkedin.com/in/dengzhe-hou-a47135293/"
+      },
+      {
+        "network": "ResearchGate",
+        "username": "Dengzhe-Hou",
+        "url": "https://www.researchgate.net/profile/Dengzhe-Hou"
       }
     ]
   },
-  "work": [],
+  "work": [
+    {
+      "company": "Graduate School of Information Sciences, Tohoku University",
+      "position": "Teaching Assistant",
+      "website": "https://www.tohoku.ac.jp/en/",
+      "startDate": "2022-04-01",
+      "endDate": "",
+      "summary": "Teaching Assistant for data science and machine learning courses. Supervisors: Prof. Kazunori Yamada, Assoc. Prof. Samy Baladram.",
+      "highlights": [
+        "Machine Learning Basics (2024 spring)",
+        "Data Science Programming Basics (2024 spring)",
+        "Data Engineering (2024 spring)",
+        "Data Science Training I (2024 spring, 2022 spring)",
+        "Data Science Training II (2024 spring)",
+        "Data Science Basic (2023 fall)",
+        "Data Science Skill Up Exercise (2022 spring)"
+      ]
+    }
+  ],
   "education": [
     {
-      "institution": "GitHub University",
-      "area": "Ph.D in Version Control Theory",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2018",
+      "institution": "Tohoku University",
+      "area": "Ph.D. Candidate, Information Sciences (Cognitive Neuroscience / Vision Science / Psychology)",
+      "studyType": "Ph.D.",
+      "startDate": "2023-04-01",
+      "endDate": "2026-03-31",
       "gpa": null,
-      "courses": []
+      "courses": [
+        "Thesis: Exploring Brain Mechanisms of Self-Initiated Attention Shift: Simultaneous Recording of EEG and Eye Movements",
+        "Advisors: Prof. Satoshi Shioiri, Prof. Shuichi Sakamoto, Assoc. Prof. Chia-huei Tseng",
+        "Visual Cognition and Systems Laboratory"
+      ]
     },
     {
-      "institution": "GitHub University",
-      "area": "M.S. in Jekyll",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2014",
+      "institution": "Harvard Medical School / Massachusetts General Hospital",
+      "area": "Visiting PhD Scholar — Department of Neurology, MGH",
+      "studyType": "Visiting Scholar",
+      "startDate": "2024-08-01",
+      "endDate": "2025-01-31",
       "gpa": null,
-      "courses": []
+      "courses": [
+        "Training in sEEG, hyperscanning, and neural mechanisms of speech and interactive communication",
+        "Advisors: Instructor Jing (Jill) Cai, Prof. Sydney S. Cash"
+      ]
     },
     {
-      "institution": "GitHub University",
-      "area": "B.S. in GitHub",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2012",
+      "institution": "Tohoku University",
+      "area": "M.S., Information Sciences",
+      "studyType": "M.S.",
+      "startDate": "2021-04-01",
+      "endDate": "2023-03-31",
       "gpa": null,
+      "courses": [
+        "Visual Cognition and Systems Laboratory",
+        "Advisors: Prof. Satoshi Shioiri, Assoc. Prof. Chia-huei Tseng"
+      ]
+    },
+    {
+      "institution": "Tongji University",
+      "area": "B.Eng., Electronic and Information Engineering (Automation)",
+      "studyType": "B.Eng.",
+      "startDate": "2016-09-01",
+      "endDate": "2020-07-31",
+      "gpa": "4.15/5.0 (Top 30%)",
       "courses": []
     }
   ],
-  "skills": [],
-  "languages": [],
-  "interests": [],
+  "skills": [
+    {
+      "name": "Neuroimaging & Psychophysics",
+      "level": "Expert",
+      "keywords": ["EEG/ERP", "Eye-tracking", "sEEG", "Gaze-contingent paradigms", "Visual psychophysics"]
+    },
+    {
+      "name": "Computational Methods",
+      "level": "Advanced",
+      "keywords": ["Time-frequency analysis", "Neural decoding (MVPA)", "Accumulation-to-bound modeling", "Machine learning", "Signal processing"]
+    },
+    {
+      "name": "Programming",
+      "level": "Advanced",
+      "keywords": ["Python", "MATLAB", "R", "EEGLab", "MNE-Python"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Chinese (Mandarin)",
+      "fluency": "Native or bilingual proficiency"
+    },
+    {
+      "language": "English",
+      "fluency": "Professional working proficiency (TOEIC 910/990, TOEFL 90/120)"
+    },
+    {
+      "language": "Japanese",
+      "fluency": "Limited working proficiency (JLPT N2)"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Visual Attention",
+      "keywords": ["Self-initiated attentional control", "Eye movements", "Visual search"]
+    },
+    {
+      "name": "Cognitive Neuroscience",
+      "keywords": ["EEG oscillations", "Neural decoding", "Decision-making", "sEEG"]
+    }
+  ],
   "references": [],
   "publications": [
     {
-      "name": "Paper Title Number 1",
-      "publisher": "Journal 1",
-      "releaseDate": "2009-10-01",
-      "website": "https://academicpages.github.io/files/paper1.pdf",
-      "summary": "This paper is about the number 1. The number 2 is left for future work."
+      "name": "Task-constrained self-initiated attention shifts are indexed by frontal-midline theta ramping",
+      "publisher": "Frontiers in Human Neuroscience",
+      "releaseDate": "2025-02-01",
+      "website": "",
+      "summary": "Hou D., Sun S., Hatori Y., Tseng C., & Shioiri S. (2025). EEG study revealing frontal-midline theta ramping as a neural index of voluntary attentional preparation."
     },
     {
-      "name": "Paper Title Number 2",
-      "publisher": "Journal 1",
-      "releaseDate": "2010-10-01",
-      "website": "https://academicpages.github.io/files/paper2.pdf",
-      "summary": "This paper is about the number 2. The number 3 is left for future work."
+      "name": "EEG Activity Over Ipsilateral and Contralateral M1 During Simple and Complex Hand Tasks: Variations with Motor Learning",
+      "publisher": "Frontiers in Neuroscience",
+      "releaseDate": "2025-01-15",
+      "website": "",
+      "summary": "Zhao J., Wang Y., Hou D., Négyesi J., Qiu D.L., & Nagatomi R. (2025). Frontiers in Neuroscience, 19, 1681250."
     },
     {
-      "name": "Paper Title Number 3",
-      "publisher": "Journal 1",
-      "releaseDate": "2015-10-01",
-      "website": "https://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about the number 3. The number 4 is left for future work."
-    },
-    {
-      "name": "Paper Title Number 4",
-      "publisher": "GitHub Journal of Bugs",
-      "releaseDate": "2024-02-17",
-      "website": "https://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about fixing template issue #693."
+      "name": "Commonality of neuronal coherence for motor skill acquisition and interlimb transfer",
+      "publisher": "Scientific Reports",
+      "releaseDate": "2025-03-01",
+      "website": "",
+      "summary": "Zhao J., Wang Y., Hou D., Sun S., Négyesi J., Inada H., Shioiri S., & Nagatomi R. (2025). Scientific Reports, 15(1), 26276."
     }
   ],
   "presentations": [
     {
-      "name": "Talk 1 on Relevant Topic in Your Field",
-      "event": "UC San Francisco, Department of Testing",
-      "date": "2012-03-01",
-      "location": "San Francisco, CA, USA",
-      "description": ""
+      "name": "A unified neural model in representing and modulating decision parameters underlying emotional ambiguity",
+      "event": "Japanese Neuroscience Society Annual Meeting 2025",
+      "date": "2025-07-25",
+      "location": "Niigata, Japan",
+      "description": "Oral talk"
     },
     {
-      "name": "Tutorial 1 on Relevant Topic in Your Field",
-      "event": "UC-Berkeley Institute for Testing Science",
-      "date": "2013-03-01",
-      "location": "Berkeley, CA, USA",
-      "description": ""
+      "name": "EEG-Based Decoding of Voluntary Attentional Control: Differentiating Self-Initiated Shifts in a Visual Search Paradigm",
+      "event": "EPC & APCV Joint Meeting 2025 — UNSW Conferences",
+      "date": "2025-06-01",
+      "location": "Sydney, Australia",
+      "description": "Poster"
     },
     {
-      "name": "Talk 2 on Relevant Topic in Your Field",
-      "event": "London School of Testing",
-      "date": "2014-02-01",
-      "location": "London, UK",
-      "description": ""
+      "name": "Attention guides reward-based decision-making as measured by SSVEPs",
+      "event": "Society for Neuroscience (SfN) Annual Meeting 2024",
+      "date": "2024-11-01",
+      "location": "Chicago, IL, USA",
+      "description": "Poster"
     },
     {
-      "name": "Conference Proceeding talk 3 on Relevant Topic in Your Field",
-      "event": "Testing Institute of America 2014 Annual Conference",
-      "date": "2014-03-01",
-      "location": "Los Angeles, CA, USA",
-      "description": ""
+      "name": "Exploring Mechanisms of Self-initiated Attention Shifts: Analysis of Theta Wave",
+      "event": "The 16th Asia Pacific Conference on Vision (APCV 2024)",
+      "date": "2024-07-01",
+      "location": "Japan",
+      "description": "Poster"
+    },
+    {
+      "name": "Self-initiation of attentional shift during visual search",
+      "event": "European Conference on Visual Perception (ECVP 2023)",
+      "date": "2023-08-27",
+      "location": "Paphos, Cyprus",
+      "description": "Oral talk — ECVP Student Travel Award recipient"
+    },
+    {
+      "name": "Neural activities preceding self-initiated attention (alpha wave analysis)",
+      "event": "European Conference on Visual Perception (ECVP 2023)",
+      "date": "2023-08-27",
+      "location": "Paphos, Cyprus",
+      "description": "Poster (Shioiri S., Wu W., Kobayashi K., Hou D., et al.)"
+    },
+    {
+      "name": "Critical brain states related with self-initiated attentional shift",
+      "event": "Journal of Vision (VSS / ECVP-affiliated abstract)",
+      "date": "2022-09-01",
+      "location": "Japan",
+      "description": "Talk (Wu W., Kobayashi K., Hou D., et al.)"
     }
   ],
   "teaching": [
     {
-      "course": "Teaching experience 1",
-      "institution": "University 1, Department",
-      "date": "2014-01-01",
-      "role": "Undergraduate course",
-      "description": ""
-    },
-    {
-      "course": "Teaching experience 2",
-      "institution": "University 1, Department",
-      "date": "2015-01-01",
-      "role": "Workshop",
-      "description": ""
+      "course": "Teaching Assistant — Data Science & Machine Learning Courses",
+      "institution": "Graduate School of Information Sciences, Tohoku University",
+      "date": "2022-04-01",
+      "role": "Teaching Assistant",
+      "description": "Supervised lab sessions, assisted students with programming assignments, and supported course delivery across 7 data science and machine learning courses (2022–2024). Supervisors: Prof. Kazunori Yamada, Assoc. Prof. Samy Baladram."
     }
   ],
-  "portfolio": [
-    {
-      "name": "Portfolio item number 1",
-      "category": "portfolio",
-      "date": "",
-      "url": "",
-      "description": "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
-    }
-  ]
+  "portfolio": []
 }
