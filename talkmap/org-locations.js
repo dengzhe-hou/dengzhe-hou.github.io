@@ -1,22 +1,27 @@
 var addressPoints = [
   [
-    "Conference Proceeding talk 3 on Relevant Topic in Your Field<br />Testing Institute of America 2014 Annual Conference; Los Angeles, CA, USA",
-    34.0536909,
-    -118.242766
+    "Attention guides reward-based decision-making as measured by SSVEPs<br />Society for Neuroscience (SfN) Annual Meeting 2024; Chicago, IL, USA",
+    41.8755616,
+    -87.6244212
   ],
   [
-    "Talk 2 on Relevant Topic in Your Field<br />London School of Testing; London, UK",
-    51.5074456,
-    -0.1277653
+    "EEG-Based Decoding of Voluntary Attentional Control: Differentiating Self-Initiated Shifts in a Visual Search Paradigm<br />EPC & APCV Joint Meeting 2025 \u2014 UNSW Conferences; Sydney, Australia",
+    -33.8698439,
+    151.2082848
   ],
   [
-    "Tutorial 1 on Relevant Topic in Your Field<br />UC-Berkeley Institute for Testing Science; Berkeley, CA, USA",
-    37.8708393,
-    -122.272863
+    "A unified neural model in representing and modulating decision parameters underlying emotional ambiguity<br />Japanese Neuroscience Society Annual Meeting 2025; Niigata, Japan",
+    37.6452283,
+    138.7669125
   ],
   [
-    "Talk 1 on Relevant Topic in Your Field<br />UC San Francisco, Department of Testing; San Francisco, CA, USA",
-    37.7879363,
-    -122.4075201
+    "Exploring Mechanisms of Self-initiated Attention Shifts: Analysis of Theta Wave<br />The 16th Asia Pacific Conference on Vision (APCV 2024); Japan",
+    36.5748441,
+    139.2394179
+  ],
+  [
+    "Self-initiation of attentional shift during visual search<br />European Conference on Visual Perception (ECVP 2023); Paphos, Cyprus",
+    34.7743988,
+    32.4231586
   ]
 ];
