@@ -24,7 +24,8 @@ My research lies at the intersection of cognitive neuroscience and vision scienc
 | | |
 |---|---|
 | **Apr 2025** | Started as **Project Assistant Professor**, Graduate School of Information Sciences, Tohoku University |
-| **Feb 2026** | Participated in **Qualia Structure** Grant Meeting |
+| **Feb 2026** | Participated in [**Qualia Structure** Grant Meeting](https://en.qualia-structure.jp/news/detail/7202) |
+| **Feb 2026** | Appeared in [Journal Club — *The Proliferation of Consciousness Theories: What can we do next?*](https://www.youtube.com/watch?v=QqUq6q1EMXI) (Neural basis of Consciousness & Qualia Structure) |
 | **Apr 2025** | Awarded JSPS DC2 Research Fellowship |
 | **Feb 2025** | Paper published in *Frontiers in Human Neuroscience*: frontal-midline theta ramping indexes self-initiated attention shifts |
 | **Jan 2025** | Returned from visiting scholar position at Harvard Medical School / MGH |
