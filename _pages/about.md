@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a **Project Assistant Professor** at the [Graduate School of Information Sciences (GSIS)](https://www.is.tohoku.ac.jp/en/), [Tohoku University](https://www.tohoku.ac.jp/en/), Japan (from April 2025), working in the [Visual Cognition and Systems Laboratory](https://www.shioiri.riec.tohoku.ac.jp/) under the supervision of Prof. Satoshi Shioiri. I hold a JSPS DC2 Research Fellowship (2025–2026). Previously I was a Visiting PhD Scholar at **Harvard Medical School / Massachusetts General Hospital** (Aug 2024 – Jan 2025), where I trained in stereo-EEG (sEEG), hyperscanning, and the neural mechanisms of speech and interactive communication.
+I am a **Project Assistant Professor** at the [Graduate School of Information Sciences (GSIS)](https://www.is.tohoku.ac.jp/en/), [Tohoku University](https://www.tohoku.ac.jp/en/), Japan (from April 2025), working in the [Visual Cognition and Systems Laboratory](https://www.shioiri.riec.tohoku.ac.jp/) under the supervision of Prof. Satoshi Shioiri. I hold a JSPS DC2 Research Fellowship (2025–2026). Previously I was a Visiting PhD Scholar at **Harvard Medical School / Massachusetts General Hospital** (Aug 2024 – Jan 2025) in the [Sydney Cash Lab](https://www.massgeneral.org/neurology/research/cash-lab), supervised by Dr. Jing (Jill) Cai, where I trained in stereo-EEG (sEEG), hyperscanning, and the neural mechanisms of speech and interactive communication.
 
 My research lies at the intersection of cognitive neuroscience and vision science. I study the brain mechanisms underlying **voluntary attentional control** — how and why we spontaneously shift our attention — using a combination of EEG/sEEG recordings, eye-tracking, and computational modeling.
 
@@ -27,8 +27,8 @@ My research lies at the intersection of cognitive neuroscience and vision scienc
 | **Feb 2026** | Participated in [**Qualia Structure** Grant Meeting](https://en.qualia-structure.jp/news/detail/7202) |
 | **Feb 2026** | Appeared in [Journal Club — *The Proliferation of Consciousness Theories: What can we do next?*](https://www.youtube.com/watch?v=QqUq6q1EMXI) (Neural basis of Consciousness & Qualia Structure) |
 | **Apr 2025** | Awarded JSPS DC2 Research Fellowship |
-| **Feb 2025** | Paper published in *Frontiers in Human Neuroscience*: frontal-midline theta ramping indexes self-initiated attention shifts |
-| **Jan 2025** | Returned from visiting scholar position at Harvard Medical School / MGH |
+| **Dec 2025** | Paper published in *Frontiers in Human Neuroscience*: frontal-midline theta ramping indexes self-initiated attention shifts |
+| **Jan 2025** | Returned from visiting scholar position at Harvard Medical School / MGH (Sydney Cash Lab, supervised by Dr. Jing (Jill) Cai) |
 | **Dec 2024** | Best Presentation Award, 32nd Doctoral Student Presentation, Tohoku University |
 | **Nov 2024** | Presented two posters at **Society for Neuroscience 2024** |
 | **Aug 2024** | Started as Visiting PhD Scholar, Department of Neurology, MGH / Harvard Medical School |
