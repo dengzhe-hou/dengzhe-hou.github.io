@@ -1,16 +1,21 @@
 ---
 layout: archive
-title: "Talks and presentations"
+title: "Presentations"
 permalink: /talks/
 author_profile: true
 ---
 
-{% if site.talkmap_link == true %}
+{% assign international = site.talks | where: "category", "international" | sort: "date" | reverse %}
+{% assign domestic = site.talks | where: "category", "domestic" | sort: "date" | reverse %}
 
-<p style="text-decoration:underline;"><a href="/talkmap.html">See a map of all the places I've given a talk!</a></p>
+## International Conferences
 
-{% endif %}
+{% for post in international %}
+  {% include archive-single-talk.html %}
+{% endfor %}
 
-{% for post in site.talks reversed %}
+## Domestic Conferences
+
+{% for post in domestic %}
   {% include archive-single-talk.html %}
 {% endfor %}

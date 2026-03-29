@@ -16,8 +16,9 @@ My research bridges cognitive neuroscience and artificial intelligence. I am bro
 - Neural–AI alignment: comparing representations in EEG/fMRI and large language/vision models
 - Brain-inspired AI: using cognitive and neural principles to optimize AI architectures
 - Visual attention and self-initiated attentional control
-- Neural decoding and time–frequency analysis (EEG, sEEG, MEG)
-- Hyperscanning and interactive neural dynamics
+- Eye movement–EEG integration (gaze-contingent paradigms; saccade and microsaccade dynamics)
+- Decision-related neural dynamics and computational modeling (accumulation-to-bound, time–frequency analysis)
+- Neural decoding (EEG, sEEG, MEG, hyperscanning)
 
 ## News
 
@@ -43,17 +44,49 @@ My research bridges cognitive neuroscience and artificial intelligence. I am bro
 | **Ph.D.** | Graduate School of Information Sciences, Tohoku University | Apr 2023 – Mar 2026 |
 | | Visual Cognition and Systems Lab · [Graduate Program in Data Science (GPDS)](https://gp-ds.tohoku.ac.jp/ja/index.html) | |
 | | [JST Next Generation Researcher Challenging Research Program](https://pgd.tohoku.ac.jp/rpc/next_generation.html) | |
+| | Thesis: *Exploring Brain Mechanisms of Self-Initiated Attention Shift: Simultaneous Recording of EEG and Eye Movements* | |
+| | Advisors: [Prof. Satoshi Shioiri](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=en), Prof. Shuichi Sakamoto, Assoc. Prof. Chia-huei Tseng | |
 | **M.S.** | Graduate School of Information Sciences, Tohoku University | Apr 2021 – Mar 2023 |
 | | Visual Cognition and Systems Lab · [GPDS](https://gp-ds.tohoku.ac.jp/ja/index.html) (joined Apr 2022) | |
-| **B.E.** | Electronic and Information Engineering, Tongji University | Sep 2016 – Jul 2020 |
+| | Advisors: [Prof. Satoshi Shioiri](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=en), Assoc. Prof. Chia-huei Tseng | |
+| **B.E.** | Electronic and Information Engineering (Automation), Tongji University | Sep 2016 – Jul 2020 |
 | | GPA 4.15 / 5.0 | |
 
 ## Teaching
 
+**Instructor**, Graduate School of Information Sciences, Tohoku University
+
 | | | |
 |---|---|---|
-| **Machine Learning Basics** | Graduate School of Information Sciences, Tohoku University ([GPDS](https://gp-ds.tohoku.ac.jp/ja/index.html)) | Apr 2026 – present |
+| **Machine Learning Basics** | GSIS, Tohoku University ([GPDS](https://gp-ds.tohoku.ac.jp/ja/index.html)) | Apr 2026 – present |
 | | Course materials adapted from [Samy Baladram](https://www.samybaladram.com/) | |
+
+**Teaching Assistant**, Graduate School of Information Sciences, Tohoku University (2022 – 2025)
+
+Supervisors: Prof. [Kazunori Yamada](https://yamada-lab.gr.jp/ja/index.html), Assoc. Prof. [Samy Baladram](https://www.samybaladram.com/)
+
+| | |
+|---|---|
+| Machine Learning Basics | Spring 2024 |
+| Data Science Programming Basics | Spring 2024 |
+| Data Engineering | Spring 2024 |
+| Data Science Training I | Spring 2022, Spring 2024 |
+| Data Science Training II | Spring 2024 |
+| Data Science Basic | Fall 2023 |
+| Data Science Skill Up Exercise | Spring 2022 |
+
+## Fellowships & Awards
+
+| | |
+|---|---|
+| **2025** | [JSPS DC2 Research Fellowship](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-25KJ0641) |
+| **2025** | [Kaggle Expert](https://www.kaggle.com/monkeydz) – Bronze Medal, Santa 2024: The Perplexity Permutation Puzzle (148/1514) |
+| **2024** | [Best Presentation Award](https://www.is.tohoku.ac.jp/jp/activity/award/detail---id-1555.html), 32nd Doctoral Student Presentation, Tohoku University |
+| **2023** | ECVP Student Travel Award |
+| **2023–2025** | [JST Next Generation Researcher Challenging Research Program](https://pgd.tohoku.ac.jp/rpc/next_generation.html) |
+| **2022–present** | Tohoku University [GPDS](https://gp-ds.tohoku.ac.jp/ja/index.html) Research Assistant |
+| **2021–2023** | Kamei Memorial Foundation Scholarship for International Students (公益財団法人亀井記念財団) |
+| **2016** | Tongji University Undergraduate Entrance Scholarship |
 
 ## Reviewer
 
