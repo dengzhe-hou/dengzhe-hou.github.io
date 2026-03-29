@@ -29,7 +29,7 @@ My research lies at the intersection of cognitive neuroscience and vision scienc
 | **Apr 2025** | Awarded JSPS DC2 Research Fellowship |
 | **Dec 2025** | Paper published in *Frontiers in Human Neuroscience*: frontal-midline theta ramping indexes self-initiated attention shifts |
 | **Jan 2025** | Returned from visiting scholar position at Harvard Medical School / MGH (Sydney Cash Lab, supervised by Dr. Jing (Jill) Cai) |
-| **Dec 2024** | Best Presentation Award, 32nd Doctoral Student Presentation, Tohoku University |
+| **Dec 2024** | [Best Presentation Award, 32nd Doctoral Student Presentation, Tohoku University](https://www.is.tohoku.ac.jp/jp/activity/award/detail---id-1555.html) |
 | **Nov 2024** | Presented two posters at **Society for Neuroscience 2024** |
 | **Aug 2024** | Started as Visiting PhD Scholar, Department of Neurology, MGH / Harvard Medical School |
 | **Jul 2024** | Two presentations at **APCV 2024** (The 16th Asia Pacific Conference on Vision) |
