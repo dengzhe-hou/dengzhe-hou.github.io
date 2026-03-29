@@ -9,15 +9,15 @@ redirect_from:
 
 I am a **Project Assistant Professor** at the [Graduate School of Information Sciences (GSIS)](https://www.is.tohoku.ac.jp/en/), [Tohoku University](https://www.tohoku.ac.jp/en/), Japan (from April 2026), affiliated with the [Yamada Laboratory](https://yamada-lab.gr.jp/ja/index.html) and the [International Liaison Office (ILO)](https://www.is.tohoku.ac.jp/introduction/ilo/). I hold a JSPS DC2 Research Fellowship (2025–2026). I received my Ph.D. and M.S. from Tohoku University GSIS under the supervision of [Prof. Satoshi Shioiri](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=en) at the [Visual Cognition and Systems Laboratory](https://www.shioiri.riec.tohoku.ac.jp/). Previously I was a Visiting PhD Scholar at **Harvard Medical School / Massachusetts General Hospital** (Aug 2024 – Jan 2025) in the [Sydney Cash Lab](https://cashlab.mgh.harvard.edu/), supervised by [Dr. Jing (Jill) Cai](https://scholar.google.co.jp/citations?user=ggUF_nIAAAAJ&hl=ja), where I trained in stereo-EEG (sEEG), hyperscanning, and the neural mechanisms of speech and interactive communication.
 
-My research lies at the intersection of cognitive neuroscience and vision science. I study the brain mechanisms underlying **voluntary attentional control** (how and why we spontaneously shift our attention) using a combination of EEG/sEEG recordings, eye-tracking, and computational modeling.
+My research bridges cognitive neuroscience and artificial intelligence. I am broadly interested in **aligning brain signals (EEG, fMRI) with large-scale AI models** (LLMs, vision-language models) to compare their internal representations, and in using insights from cognitive science and neuroscience to guide the design and optimization of AI systems. My earlier work focused on the neural mechanisms of **voluntary attentional control** using EEG/sEEG recordings, eye-tracking, and computational modeling.
 
 ## Research Interests
 
+- Neural–AI alignment: comparing representations in EEG/fMRI and large language/vision models
+- Brain-inspired AI: using cognitive and neural principles to optimize AI architectures
 - Visual attention and self-initiated attentional control
-- Decision-related neural dynamics (EEG/MEG, sEEG, hyperscanning)
-- Eye movement–EEG integration (gaze-contingent paradigms; saccades & microsaccades)
-- Computational modeling (accumulation-to-bound; neural decoding; time–frequency analysis)
-- Applied machine learning in cognitive neuroscience
+- Neural decoding and time–frequency analysis (EEG, sEEG, MEG)
+- Hyperscanning and interactive neural dynamics
 
 ## News
 
