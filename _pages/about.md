@@ -24,7 +24,7 @@ My research bridges cognitive neuroscience and artificial intelligence. I am bro
 | | |
 |---|---|
 | **Apr 2026** | Started as **Project Assistant Professor**, GSIS, Tohoku University (Yamada Lab + ILO) |
-| **Apr 2026** | Teaching [Machine Learning Basics](https://gp-ds.tohoku.ac.jp/ja/index.html) at GPDS, Tohoku University |
+| **Apr 2026** | Teaching [Machine Learning Basics](https://gp-ds.tohoku.ac.jp/ja/index.html) at GSIS, Tohoku University |
 | **Feb 2026** | Participated in [**Qualia Structure** Grant Meeting](https://en.qualia-structure.jp/news/detail/7202) |
 | **Feb 2026** | Appeared in [Journal Club: *The Proliferation of Consciousness Theories: What can we do next?*](https://www.youtube.com/watch?v=QqUq6q1EMXI) (Neural basis of Consciousness & Qualia Structure) |
 | **Apr 2025** | Awarded [JSPS DC2 Research Fellowship](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-25KJ0641) |
@@ -51,7 +51,8 @@ My research bridges cognitive neuroscience and artificial intelligence. I am bro
 
 | | | |
 |---|---|---|
-| **Machine Learning Basics** | [Graduate Program in Data Science (GPDS)](https://gp-ds.tohoku.ac.jp/ja/index.html), Tohoku University | Apr 2026 – present |
+| **Machine Learning Basics** | Graduate School of Information Sciences, Tohoku University ([GPDS](https://gp-ds.tohoku.ac.jp/ja/index.html)) | Apr 2026 – present |
+| | Course materials adapted from [Samy Baladram](https://www.samybaladram.com/) | |
 
 ## Reviewer
 
