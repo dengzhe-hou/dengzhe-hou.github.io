@@ -85,7 +85,7 @@ Supervisors: Prof. [Kazunori Yamada](https://yamada-lab.gr.jp/ja/index.html), As
 | **2023** | ECVP Student Travel Award |
 | **2023–2025** | [JST Next Generation Researcher Challenging Research Program](https://pgd.tohoku.ac.jp/rpc/next_generation.html) |
 | **2022–present** | Tohoku University [GPDS](https://gp-ds.tohoku.ac.jp/ja/index.html) Research Assistant |
-| **2021–2023** | Kamei Memorial Foundation Scholarship for International Students (公益財団法人亀井記念財団) |
+| **2021–2023** | [Kamei Memorial Foundation](https://kmfo.or.jp/) Scholarship for International Students (公益財団法人亀井記念財団) |
 | **2016** | Tongji University Undergraduate Entrance Scholarship |
 
 ## Reviewer
