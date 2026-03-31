@@ -26,14 +26,14 @@
      nav bg  #0d0b1a   card glow      violet/15
   ════════════════════════════════════════════ */
   :root {
-    --v:  #6d28d9;          /* deeper violet */
-    --c:  #06b6d4;          /* stronger cyan */
-    --nav: #0d0b1a;         /* near-black w/ purple undertone */
-    --ink: #0f0f23;         /* near-black body text */
-    --muted: #4b5563;       /* darker muted text */
-    --card-bg: #f3f0ff;     /* light violet tint cards */
-    --card-s: 0 2px 14px rgba(109,40,217,0.12);
-    --card-h: 0 6px 28px rgba(109,40,217,0.25);
+    --v:  #5b21b6;          /* deep violet */
+    --c:  #0e7490;          /* deep cyan */
+    --nav: #080614;         /* near-black nav */
+    --ink: #0a0a1a;         /* near-black body text */
+    --muted: #374151;       /* dark muted text */
+    --card-bg: #e8e0f8;     /* stronger violet tint cards */
+    --card-s: 0 2px 14px rgba(91,33,182,0.18);
+    --card-h: 0 6px 28px rgba(91,33,182,0.32);
   }
 
   /* ── Fonts ────────────────────────────── */
@@ -51,7 +51,7 @@
   /* ── Nav bar ──────────────────────────── */
   .masthead {
     background: var(--nav) !important;
-    border-bottom: 2px solid rgba(109,40,217,0.5) !important;
+    border-bottom: 2px solid rgba(91,33,182,0.6) !important;
   }
   .masthead::after { display: none !important; }
 
@@ -76,20 +76,23 @@
   }
 
   /* ── Page body background ─────────────── */
-  body { background: #eeeaf6 !important; } /* noticeable violet tint */
+  body { background: #e4ddf0 !important; } /* deeper violet tint */
+
+  /* ── Hide theme toggle (sun icon) ────── */
+  #theme-toggle { display: none !important; }
 
   /* ── Sidebar ──────────────────────────── */
   .author__avatar img {
     border-radius: 14px !important;
-    border: 2px solid rgba(109,40,217,0.35) !important;
-    box-shadow: 0 0 0 4px rgba(6,182,212,0.12),
-                0 8px 30px rgba(109,40,217,0.25) !important;
+    border: 2px solid rgba(91,33,182,0.45) !important;
+    box-shadow: 0 0 0 4px rgba(14,116,144,0.18),
+                0 8px 30px rgba(91,33,182,0.30) !important;
     transition: transform 0.3s, box-shadow 0.3s;
   }
   .author__avatar img:hover {
     transform: scale(1.03);
-    box-shadow: 0 0 0 6px rgba(6,182,212,0.20),
-                0 12px 40px rgba(109,40,217,0.35) !important;
+    box-shadow: 0 0 0 6px rgba(14,116,144,0.25),
+                0 12px 40px rgba(91,33,182,0.40) !important;
   }
   .author__name {
     color: var(--ink) !important;
@@ -103,7 +106,7 @@
     font-weight: 500;
   }
   .author__urls a {
-    color: #1f2937 !important;
+    color: #111827 !important;
     font-size: 0.82em !important;
     transition: color 0.18s;
   }
@@ -222,7 +225,7 @@
   /* ── Footer ───────────────────────────── */
   .page__footer {
     background: var(--nav) !important;
-    border-top: 2px solid rgba(109,40,217,0.5) !important;
+    border-top: 2px solid rgba(91,33,182,0.6) !important;
   }
   .page__footer-copyright, .page__footer a {
     color: rgba(255,255,255,0.5) !important;
