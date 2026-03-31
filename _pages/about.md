@@ -47,10 +47,10 @@ My research bridges cognitive neuroscience and artificial intelligence. I am bro
 | | Visual Cognition and Systems Lab · [Graduate Program in Data Science (GPDS)](https://gp-ds.tohoku.ac.jp/ja/index.html) | |
 | | [JST Next Generation Researcher Challenging Research Program](https://pgd.tohoku.ac.jp/rpc/next_generation.html) | |
 | | Thesis: *Exploring Brain Mechanisms of Self-Initiated Attention Shift: Simultaneous Recording of EEG and Eye Movements* | |
-| | Advisors: [Prof. Satoshi Shioiri](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=en), Prof. Shuichi Sakamoto, Assoc. Prof. Chia-huei Tseng | |
+| | Advisors: [Prof. Satoshi Shioiri](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=en), [Prof. Shuichi Sakamoto](https://scholar.google.com/citations?user=h7ymzUgAAAAJ&hl=en), [Prof. Chia-huei Tseng](https://scholar.google.com/citations?hl=en&user=g00AZTcAAAAJ) | |
 | **M.S.** | Graduate School of Information Sciences, Tohoku University | Apr 2021 – Mar 2023 |
 | | Visual Cognition and Systems Lab · [GPDS](https://gp-ds.tohoku.ac.jp/ja/index.html) (joined Apr 2022) | |
-| | Advisors: [Prof. Satoshi Shioiri](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=en), Assoc. Prof. Chia-huei Tseng | |
+| | Advisors: [Prof. Satoshi Shioiri](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=en), [Prof. Chia-huei Tseng](https://scholar.google.com/citations?hl=en&user=g00AZTcAAAAJ) | |
 | **B.E.** | Electronic and Information Engineering (Automation), Tongji University | Sep 2016 – Jul 2020 |
 | | GPA 4.15 / 5.0 | |
 
