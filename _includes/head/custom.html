@@ -235,6 +235,76 @@
   @media (max-width: 768px) {
     .author__avatar img { border-radius: 50% !important; }
   }
+
+  /* ── Dark mode ─────────────────────────── */
+  html[data-theme="dark"] {
+    --p:  #93c5fd;          /* light blue */
+    --a:  #5eead4;          /* light teal */
+    --ink: #e2e8f0;         /* slate-200 */
+    --muted: #94a3b8;       /* slate-400 */
+    --card-bg: #1e293b;     /* slate-800 */
+    --card-s: 0 1px 3px rgba(0,0,0,0.3);
+    --card-h: 0 4px 16px rgba(0,0,0,0.4);
+  }
+  html[data-theme="dark"] body {
+    background: #0f172a !important;
+    color: #e2e8f0 !important;
+  }
+  html[data-theme="dark"] .page__title {
+    color: #93c5fd !important;
+    -webkit-text-fill-color: #93c5fd !important;
+  }
+  html[data-theme="dark"] .page__content,
+  html[data-theme="dark"] .page__content p,
+  html[data-theme="dark"] .page__content li {
+    color: #e2e8f0 !important;
+  }
+  html[data-theme="dark"] .page__content h2 {
+    color: #e2e8f0 !important;
+  }
+  html[data-theme="dark"] .page__content a,
+  html[data-theme="dark"] .page__content a:visited {
+    color: #93c5fd !important;
+    border-bottom-color: rgba(147,197,253,0.3) !important;
+  }
+  html[data-theme="dark"] .page__content a:hover {
+    color: #5eead4 !important;
+    border-bottom-color: #5eead4 !important;
+  }
+  html[data-theme="dark"] .page__content table td {
+    color: #e2e8f0 !important;
+  }
+  html[data-theme="dark"] .page__content table td:first-child {
+    color: #5eead4 !important;
+  }
+  html[data-theme="dark"] .author__name {
+    color: #f1f5f9 !important;
+  }
+  html[data-theme="dark"] .author__bio {
+    color: #94a3b8 !important;
+  }
+  html[data-theme="dark"] .author__urls a {
+    color: #cbd5e1 !important;
+  }
+  html[data-theme="dark"] .author__urls a:hover {
+    color: #5eead4 !important;
+  }
+  html[data-theme="dark"] .archive__item {
+    background: #1e293b !important;
+    border-left-color: #5eead4 !important;
+  }
+  html[data-theme="dark"] .archive__item-title a {
+    color: #f1f5f9 !important;
+  }
+  html[data-theme="dark"] .archive__item-title a:hover {
+    color: #5eead4 !important;
+  }
+  html[data-theme="dark"] .archive__item-excerpt {
+    color: #94a3b8 !important;
+  }
+  html[data-theme="dark"] .page__footer {
+    background: #020617 !important;
+  }
 </style>
 
 <!-- JSON-LD structured data for Google -->
