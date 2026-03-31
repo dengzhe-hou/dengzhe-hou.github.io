@@ -24,6 +24,7 @@ My research bridges cognitive neuroscience and artificial intelligence. I am bro
 
 | | |
 |---|---|
+| **Mar 2026** | New preprint: [Beyond Completion: Probing Cumulative State Tracking to Predict LLM Agent Performance](https://arxiv.org/abs/2603.27343) on arXiv |
 | **Apr 2026** | Started as **Project Assistant Professor**, GSIS, Tohoku University (Yamada Lab + ILO) |
 | **Apr 2026** | Teaching [Machine Learning Basics](https://gp-ds.tohoku.ac.jp/ja/index.html) at GSIS, Tohoku University |
 | **Feb 2026** | Participated in [**Qualia Structure** Grant Meeting](https://en.qualia-structure.jp/news/detail/7202) |
