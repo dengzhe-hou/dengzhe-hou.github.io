@@ -24,6 +24,7 @@ My research bridges cognitive neuroscience and artificial intelligence. I am bro
 
 | | |
 |---|---|
+| **Mar 2026** | Paper accepted at **CVPR 2026 Workshop VGBE**: Physics-Aware Video Instance Removal Benchmark |
 | **Mar 2026** | New preprint: [Beyond Completion: Probing Cumulative State Tracking to Predict LLM Agent Performance](https://arxiv.org/abs/2603.27343) on arXiv |
 | **Apr 2026** | Started as **Project Assistant Professor**, GSIS, Tohoku University (Yamada Lab + ILO) |
 | **Apr 2026** | Teaching [Machine Learning Basics](https://gp-ds.tohoku.ac.jp/ja/index.html) at GSIS, Tohoku University |
