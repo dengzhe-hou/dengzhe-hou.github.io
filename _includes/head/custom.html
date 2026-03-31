@@ -19,28 +19,28 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 
-<!-- Custom: Brain × AI geek theme — violet + electric cyan -->
+<!-- Custom: Clean academic theme — slate navy + teal accent -->
 <style>
   /* ═══ Palette ══════════════════════════════
-     violet  #7c3aed   electric-cyan  #22d3ee
-     nav bg  #0d0b1a   card glow      violet/15
+     primary  #1e3a5f  (deep navy)
+     accent   #0d9488  (teal)
+     nav      #0f172a  (slate-900)
   ════════════════════════════════════════════ */
   :root {
-    --v:  #5b21b6;          /* deep violet */
-    --c:  #0e7490;          /* deep cyan */
-    --nav: #080614;         /* near-black nav */
-    --ink: #0a0a1a;         /* near-black body text */
-    --muted: #374151;       /* dark muted text */
-    --card-bg: #e8e0f8;     /* stronger violet tint cards */
-    --card-s: 0 2px 14px rgba(91,33,182,0.18);
-    --card-h: 0 6px 28px rgba(91,33,182,0.32);
+    --p:  #1e3a5f;          /* deep navy */
+    --a:  #0d9488;          /* teal accent */
+    --nav: #0f172a;         /* slate-900 */
+    --ink: #1e293b;         /* slate-800 body text */
+    --muted: #475569;       /* slate-600 */
+    --card-bg: #ffffff;
+    --card-s: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+    --card-h: 0 4px 16px rgba(0,0,0,0.12);
   }
 
   /* ── Fonts ────────────────────────────── */
   body, .page__content, .sidebar, .masthead {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   }
-  /* monospace for code-like labels (location, dates) */
   .author__location, .page__meta time,
   .archive__item-excerpt .date {
     font-family: 'JetBrains Mono', 'Fira Code', monospace;
@@ -51,32 +51,28 @@
   /* ── Nav bar ──────────────────────────── */
   .masthead {
     background: var(--nav) !important;
-    border-bottom: 2px solid rgba(91,33,182,0.6) !important;
+    border-bottom: 2px solid var(--a) !important;
   }
   .masthead::after { display: none !important; }
-
-  /* site title: violet → cyan gradient */
   .masthead__menu-item--lg a {
-    background: linear-gradient(90deg, var(--v), var(--c));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #f1f5f9 !important;
     font-weight: 700 !important;
     letter-spacing: 0.01em;
+    -webkit-text-fill-color: #f1f5f9 !important;
   }
   .masthead a, .masthead__menu-item a {
-    color: rgba(255,255,255,0.95) !important;
+    color: #cbd5e1 !important;
     letter-spacing: 0.03em;
     font-size: 0.88em;
   }
-  .masthead__menu-item a:hover    { color: var(--c) !important; }
+  .masthead__menu-item a:hover { color: var(--a) !important; }
   .masthead__menu-item.selected a {
     color: #fff !important;
-    border-bottom: 2px solid var(--c) !important;
+    border-bottom: 2px solid var(--a) !important;
   }
 
-  /* ── Page body background ─────────────── */
-  body { background: #e4ddf0 !important; } /* deeper violet tint */
+  /* ── Page body ──────────────────────────── */
+  body { background: #f8fafc !important; }
 
   /* ── Hide theme toggle (sun icon) ────── */
   #theme-toggle { display: none !important; }
@@ -84,21 +80,18 @@
   /* ── Sidebar ──────────────────────────── */
   .author__avatar img {
     border-radius: 14px !important;
-    border: 2px solid rgba(91,33,182,0.45) !important;
-    box-shadow: 0 0 0 4px rgba(14,116,144,0.18),
-                0 8px 30px rgba(91,33,182,0.30) !important;
+    border: 2px solid rgba(13,148,136,0.3) !important;
+    box-shadow: 0 4px 20px rgba(15,23,42,0.12) !important;
     transition: transform 0.3s, box-shadow 0.3s;
   }
   .author__avatar img:hover {
     transform: scale(1.03);
-    box-shadow: 0 0 0 6px rgba(14,116,144,0.25),
-                0 12px 40px rgba(91,33,182,0.40) !important;
+    box-shadow: 0 8px 30px rgba(15,23,42,0.18) !important;
   }
   .author__name {
     color: var(--ink) !important;
     font-size: 1.05em !important;
     font-weight: 700 !important;
-    letter-spacing: -0.01em;
   }
   .author__bio {
     color: var(--muted) !important;
@@ -106,20 +99,18 @@
     font-weight: 500;
   }
   .author__urls a {
-    color: #111827 !important;
+    color: var(--ink) !important;
     font-size: 0.82em !important;
     transition: color 0.18s;
   }
-  .author__urls a:hover { color: var(--v) !important; }
+  .author__urls a:hover { color: var(--a) !important; }
 
   /* ── Page title (h1) ──────────────────── */
   .page__title {
-    background: linear-gradient(100deg, var(--v) 20%, var(--c) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--p) !important;
     font-weight: 800 !important;
     letter-spacing: -0.02em;
+    -webkit-text-fill-color: var(--p) !important;
   }
 
   /* ── Section headings (h2) ────────────── */
@@ -139,48 +130,49 @@
     display: block;
     height: 3px;
     margin-top: 0.35em;
-    background: linear-gradient(90deg, var(--v), var(--c) 70%, transparent);
+    background: linear-gradient(90deg, var(--p), var(--a) 70%, transparent);
     border-radius: 2px;
   }
 
   /* ── Links ────────────────────────────── */
   .page__content a,
   .page__content a:visited {
-    color: var(--v) !important;
+    color: var(--p) !important;
     text-decoration: none;
-    transition: color 0.18s;
+    border-bottom: 1px solid rgba(30,58,95,0.2);
+    transition: color 0.18s, border-color 0.18s;
   }
-  .page__content a:hover { color: var(--c) !important; }
+  .page__content a:hover {
+    color: var(--a) !important;
+    border-bottom-color: var(--a);
+  }
 
   /* ── Publication / talk cards ─────────── */
   .archive__item {
     background: var(--card-bg);
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 1rem 1.3rem;
     margin-bottom: 1rem;
     box-shadow: var(--card-s);
-    border-left: 4px solid var(--v);
+    border-left: 3px solid var(--a);
     position: relative;
     overflow: hidden;
-    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s;
   }
-  /* subtle top glow bar */
   .archive__item::before {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 2px;
-    background: linear-gradient(90deg, var(--v), var(--c));
+    background: linear-gradient(90deg, var(--p), var(--a));
     opacity: 0;
     transition: opacity 0.25s;
   }
   .archive__item:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     box-shadow: var(--card-h);
-    border-color: var(--c);
   }
   .archive__item:hover::before { opacity: 1; }
-
   .archive__item-title {
     margin-top: 0 !important;
     font-size: 0.96em !important;
@@ -188,8 +180,9 @@
   .archive__item-title a {
     color: var(--ink) !important;
     font-weight: 600;
+    border-bottom: none !important;
   }
-  .archive__item-title a:hover { color: var(--v) !important; }
+  .archive__item-title a:hover { color: var(--a) !important; }
   .archive__item-excerpt {
     color: var(--muted);
     font-size: 0.85em !important;
@@ -216,7 +209,7 @@
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.78em;
     font-weight: 600;
-    color: var(--c);
+    color: var(--a);
     white-space: nowrap;
     min-width: 7em;
     padding-top: 0.45em !important;
@@ -225,12 +218,12 @@
   /* ── Footer ───────────────────────────── */
   .page__footer {
     background: var(--nav) !important;
-    border-top: 2px solid rgba(91,33,182,0.6) !important;
+    border-top: 2px solid var(--a) !important;
   }
   .page__footer-copyright, .page__footer a {
     color: rgba(255,255,255,0.5) !important;
   }
-  .page__footer a:hover { color: var(--c) !important; }
+  .page__footer a:hover { color: var(--a) !important; }
 
   /* ── Responsive ───────────────────────── */
   @media (max-width: 768px) {
