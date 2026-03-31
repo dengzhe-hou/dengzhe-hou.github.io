@@ -81,7 +81,7 @@ Supervisors: Prof. [Kazunori Yamada](https://yamada-lab.gr.jp/ja/index.html), As
 
 | | |
 |---|---|
-| **2025** | [JSPS DC2 Research Fellowship](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-25KJ0641) |
+| **2025** | **[JSPS DC2 Research Fellowship](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-25KJ0641)** |
 | **2025** | [Kaggle Expert](https://www.kaggle.com/monkeydz) – Bronze Medal, Santa 2024: The Perplexity Permutation Puzzle (148/1514) |
 | **2024** | [Best Presentation Award](https://www.is.tohoku.ac.jp/jp/activity/award/detail---id-1555.html), 32nd Doctoral Student Presentation, Tohoku University |
 | **2023** | ECVP Student Travel Award |
