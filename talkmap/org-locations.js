@@ -15,11 +15,6 @@ var addressPoints = [
     139.2394179
   ],
   [
-    "Attention guides reward-based decision-making as measured by SSVEPs<br />Society for Neuroscience (SfN) Annual Meeting 2024; Chicago, IL, USA",
-    41.8755616,
-    -87.6244212
-  ],
-  [
     "EEG-Based Decoding of Voluntary Attentional Control: Differentiating Self-Initiated Shifts in a Visual Search Paradigm<br />EPC & APCV Joint Meeting 2025 \u2014 UNSW Conferences; Sydney, Australia",
     -33.8698439,
     151.2082848
@@ -41,6 +36,11 @@ var addressPoints = [
   ],
   [
     "Task complexity-related neurophysiological dynamics underlying visuomotor skill learning and interlimb transfer<br />Society for Neuroscience (SfN) Annual Meeting 2024; Chicago, IL, USA",
+    41.8755616,
+    -87.6244212
+  ],
+  [
+    "Attention guides reward-based decision-making as measured by SSVEPs<br />Society for Neuroscience (SfN) Annual Meeting 2024; Chicago, IL, USA",
     41.8755616,
     -87.6244212
   ],
