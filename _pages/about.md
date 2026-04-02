@@ -52,6 +52,7 @@ My research bridges cognitive neuroscience and artificial intelligence. I am bro
 | | Visual Cognition and Systems Lab · [GPDS](https://gp-ds.tohoku.ac.jp/ja/index.html) (joined Apr 2022) | |
 | | Advisors: [Prof. Satoshi Shioiri](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=en), [Prof. Chia-huei Tseng](https://scholar.google.com/citations?hl=en&user=g00AZTcAAAAJ) | |
 | **B.E.** | Electronic and Information Engineering (Automation), Tongji University | Sep 2016 – Jul 2020 |
+| | Advisor: [Assoc. Prof. Xia Zhao](https://see.tongji.edu.cn/info/1388/10495.htm) | |
 | | GPA 4.15 / 5.0 | |
 
 ## Teaching
