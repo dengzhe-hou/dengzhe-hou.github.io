@@ -24,14 +24,14 @@ My research bridges cognitive neuroscience and artificial intelligence. I am bro
 
 | | |
 |---|---|
-| **Mar 2026** | Paper accepted at **CVPR 2026 Workshop VGBE**: Physics-Aware Video Instance Removal Benchmark |
-| **Mar 2026** | New preprint: [Beyond Completion: Probing Cumulative State Tracking to Predict LLM Agent Performance](https://arxiv.org/abs/2603.27343) on arXiv |
 | **Apr 2026** | Started as **Project Assistant Professor**, GSIS, Tohoku University (Yamada Lab + ILO) |
 | **Apr 2026** | Teaching [Machine Learning Basics](https://gp-ds.tohoku.ac.jp/ja/index.html) at GSIS, Tohoku University |
+| **Mar 2026** | Paper accepted at **CVPR 2026 Workshop VGBE**: Physics-Aware Video Instance Removal Benchmark |
+| **Mar 2026** | New preprint: [Beyond Completion: Probing Cumulative State Tracking to Predict LLM Agent Performance](https://arxiv.org/abs/2603.27343) on arXiv |
 | **Feb 2026** | Participated in [**Qualia Structure** Grant Meeting](https://en.qualia-structure.jp/news/detail/7202) |
 | **Feb 2026** | Appeared in [Journal Club: *The Proliferation of Consciousness Theories: What can we do next?*](https://www.youtube.com/watch?v=QqUq6q1EMXI) (Neural basis of Consciousness & Qualia Structure) |
-| **Apr 2025** | Awarded [JSPS DC2 Research Fellowship](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-25KJ0641) |
 | **Dec 2025** | Paper published in *Frontiers in Human Neuroscience*: frontal-midline theta ramping indexes self-initiated attention shifts |
+| **Apr 2025** | Awarded [JSPS DC2 Research Fellowship](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-25KJ0641) |
 | **Jan 2025** | Returned from visiting scholar position at Harvard Medical School / MGH ([Sydney Cash Lab](https://cashlab.mgh.harvard.edu/), supervised by [Dr. Jing (Jill) Cai](https://scholar.google.co.jp/citations?user=ggUF_nIAAAAJ&hl=ja)) |
 | **Dec 2024** | [Best Presentation Award, 32nd Doctoral Student Presentation, Tohoku University](https://www.is.tohoku.ac.jp/jp/activity/award/detail---id-1555.html) |
 | **Nov 2024** | Presented two posters at **Society for Neuroscience 2024** |
@@ -82,8 +82,9 @@ Supervisors: Prof. [Kazunori Yamada](https://yamada-lab.gr.jp/ja/index.html), As
 
 | | |
 |---|---|
+| **2026** | [Kaggle Expert](https://www.kaggle.com/monkeydz) – Bronze Medal, [CSIRO Image2Biomass Prediction](https://www.kaggle.com/competitions/csiro-biomass) (354/3803) |
 | **2025** | **[JSPS DC2 Research Fellowship](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-25KJ0641)** |
-| **2025** | [Kaggle Expert](https://www.kaggle.com/monkeydz) – Bronze Medal, [Santa 2024: The Perplexity Permutation Puzzle](https://www.kaggle.com/competitions/santa-2024) (148/1514); Bronze Medal, [CSIRO Image2Biomass Prediction](https://www.kaggle.com/competitions/csiro-biomass) (354/3803) |
+| **2025** | [Kaggle](https://www.kaggle.com/monkeydz) Bronze Medal, [Santa 2024: The Perplexity Permutation Puzzle](https://www.kaggle.com/competitions/santa-2024) (148/1514) |
 | **2024** | [Best Presentation Award](https://www.is.tohoku.ac.jp/jp/activity/award/detail---id-1555.html), 32nd Doctoral Student Presentation, Tohoku University |
 | **2023** | ECVP Student Travel Award |
 | **2023–2025** | [JST Next Generation Researcher Challenging Research Program](https://pgd.tohoku.ac.jp/rpc/next_generation.html) |
