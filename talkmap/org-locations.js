@@ -5,11 +5,6 @@ var addressPoints = [
     32.4231586
   ],
   [
-    "\u6a5f\u68b0\u5b66\u7fd2\u306b\u3088\u308b\u81ea\u767a\u7684\u6ce8\u610f\u30b7\u30d5\u30c8\u4e88\u5146\u306e\u8133\u6d3b\u52d5\u89e3\u6790<br />\u30d2\u30e5\u30fc\u30de\u30f3\u60c5\u5831\u51e6\u7406\u7814\u7a76\u4f1a (HIP); Japan",
-    36.5748441,
-    139.2394179
-  ],
-  [
     "Task complexity-related neurophysiological dynamics underlying visuomotor skill learning and interlimb transfer<br />Society for Neuroscience (SfN) Annual Meeting 2024; Chicago, IL, USA",
     41.8755616,
     -87.6244212
@@ -40,12 +35,12 @@ var addressPoints = [
     103.8194992
   ],
   [
-    "Searching indexes for self-initiated attention shift<br />\u65e5\u672c\u8996\u899a\u5b66\u4f1a 2022\u5e74\u51ac\u5b63\u5927\u4f1a; Japan",
-    36.5748441,
-    139.2394179
+    "\u6a5f\u68b0\u5b66\u7fd2\u306b\u3088\u308b\u81ea\u767a\u7684\u6ce8\u610f\u30b7\u30d5\u30c8\u4e88\u5146\u306e\u8133\u6d3b\u52d5\u89e3\u6790<br />\u30d2\u30e5\u30fc\u30de\u30f3\u60c5\u5831\u51e6\u7406\u7814\u7a76\u4f1a (HIP); Sendai, Japan",
+    38.2677554,
+    140.8691498
   ],
   [
-    "\u81ea\u767a\u7684\u6ce8\u610f\u30b7\u30d5\u30c8\u306e\u8133\u5185\u30e1\u30ab\u30cb\u30ba\u30e0\u306b\u95a2\u3059\u308b\u30c7\u30fc\u30bf\u99c6\u52d5\u578b\u7814\u7a76<br />\u30d2\u30e5\u30fc\u30de\u30f3\u60c5\u5831\u51e6\u7406\u7814\u7a76\u4f1a (HIP); Japan",
+    "Searching indexes for self-initiated attention shift<br />\u65e5\u672c\u8996\u899a\u5b66\u4f1a 2022\u5e74\u51ac\u5b63\u5927\u4f1a; Japan",
     36.5748441,
     139.2394179
   ],
@@ -58,6 +53,11 @@ var addressPoints = [
     "EEG-Based Decoding of Voluntary Attentional Control: Differentiating Self-Initiated Shifts in a Visual Search Paradigm<br />EPC & APCV Joint Meeting 2025 \u2014 UNSW Conferences; Sydney, Australia",
     -33.8698439,
     151.2082848
+  ],
+  [
+    "\u81ea\u767a\u7684\u6ce8\u610f\u30b7\u30d5\u30c8\u306e\u8133\u5185\u30e1\u30ab\u30cb\u30ba\u30e0\u306b\u95a2\u3059\u308b\u30c7\u30fc\u30bf\u99c6\u52d5\u578b\u7814\u7a76<br />\u30d2\u30e5\u30fc\u30de\u30f3\u60c5\u5831\u51e6\u7406\u7814\u7a76\u4f1a (HIP); Sendai, Japan",
+    38.2677554,
+    140.8691498
   ],
   [
     "Investigation of critical brain states to initiate attentional shift<br />IEICE Technical Report; Japan",
