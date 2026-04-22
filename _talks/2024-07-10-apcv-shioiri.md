@@ -5,8 +5,8 @@ type: "Oral presentation"
 talk_type: "Oral presentation"
 permalink: /talks/2024-apcv-shioiri
 venue: "The 16th Asia Pacific Conference on Vision (APCV 2024)"
-date: 2024-07-01
-location: "Japan"
+date: 2024-07-10
+location: "Singapore"
 category: international
 ---
 
