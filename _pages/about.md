@@ -24,10 +24,11 @@ My research bridges cognitive neuroscience and artificial intelligence. I am bro
 
 | | |
 |---|---|
+| **May 2026** | Updated preprint: [WMF-AM v2](https://arxiv.org/abs/2603.27343) reframes our LLM probe around working-memory depth and isolates cumulative state tracking as the dominant bottleneck |
 | **Apr 2026** | Started as **Project Assistant Professor**, GSIS, Tohoku University (Yamada Lab + ILO) |
 | **Apr 2026** | Teaching [Machine Learning Basics](https://gp-ds.tohoku.ac.jp/ja/index.html) at GSIS, Tohoku University |
 | **Mar 2026** | Paper accepted at **CVPR 2026 Workshop VGBE**: Physics-Aware Video Instance Removal Benchmark |
-| **Mar 2026** | New preprint: [WMF-AM: Probing LLM Working Memory via Depth-Parameterized Cumulative State Tracking](https://arxiv.org/abs/2603.27343) on arXiv |
+| **Mar 2026** | New preprint on arXiv: [Beyond Completion: Probing Cumulative State Tracking to Predict LLM Agent Performance](https://arxiv.org/abs/2603.27343) |
 | **Feb 2026** | Participated in [**Qualia Structure** Grant Meeting](https://en.qualia-structure.jp/news/detail/7202) |
 | **Feb 2026** | Appeared in [Journal Club: *The Proliferation of Consciousness Theories: What can we do next?*](https://www.youtube.com/watch?v=QqUq6q1EMXI) (Neural basis of Consciousness & Qualia Structure) |
 | **Dec 2025** | Paper published in *Frontiers in Human Neuroscience*: [frontal-midline theta ramping indexes self-initiated attention shifts](https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2025.1708257/full) |
