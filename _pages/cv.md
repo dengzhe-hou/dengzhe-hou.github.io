@@ -30,11 +30,12 @@ Education
 
 Research Interests
 ======
+* Neural–AI alignment: comparing representations in EEG/fMRI and large language/vision models
+* Brain-inspired AI: using cognitive and neural principles to optimize AI architectures
 * Visual attention and self-initiated attentional control
-* Decision-related neural dynamics (EEG/MEG, sEEG, hyperscanning)
 * Eye movement–EEG integration (gaze-contingent paradigms; saccades & microsaccades)
-* Computational modeling (accumulation-to-bound; neural decoding; time–frequency analysis)
-* Applied machine learning in cognitive neuroscience
+* Decision-related neural dynamics and computational modeling (accumulation-to-bound, time–frequency analysis)
+* Neural decoding (EEG, sEEG, MEG, hyperscanning)
 
 Publications
 ======
@@ -56,13 +57,15 @@ Teaching
 
 Fellowships & Awards
 ======
-* **JSPS DC2** Research Fellowship, Japan Society for the Promotion of Science, Apr 2025 –
+* **Kaggle Expert** — Bronze Medal, [CSIRO Image2Biomass Prediction](https://www.kaggle.com/competitions/csiro-biomass) (354/3803), 2026
+* **JSPS DC2 Research Fellowship**, Japan Society for the Promotion of Science, Apr 2025 –
 * **Kaggle Bronze Medal** — Santa 2024: The Perplexity Permutation Puzzle (148/1514), Feb 2025
+* **KAKENHI Grant-in-Aid for Scientific Research (A)**, 自発的脳機能の神経基盤理解 (PI: Prof. Satoshi Shioiri), 2024 – 2028
 * **Best Presentation Award** (ベストプレゼンテーション賞), 32nd Doctoral Student Presentation, Tohoku University, Dec 2024
 * **ECVP Student Travel Award**, European Conference on Visual Perception, Aug 2023
-* **挑戦的研究支援プロジェクト** (Challenging Research Support Project), Tohoku University, Apr 2023 – Mar 2025
-* **東北大学データ科学国際共同大学院プログラム生 & Research Assistant**, Apr 2022 –
-* **公益財団法人亀井記念財団外国人留学生奨学生** (Kamei Foundation International Student Scholarship), Apr 2021 – Mar 2023
+* **JST Next Generation Researcher Challenging Research Program** (挑戦的研究支援プロジェクト), Tohoku University, 2023 – 2025
+* **Tohoku University GPDS Research Assistant** (東北大学データ科学国際共同大学院プログラム生 & Research Assistant), Apr 2022 –
+* **Kamei Memorial Foundation Scholarship for International Students** (公益財団法人亀井記念財団外国人留学生奨学生), Apr 2021 – Mar 2023
 * **Tongji University Undergraduate Entrance Scholarship**, Sep 2016
 
 Skills
@@ -80,6 +83,8 @@ Languages
 Service
 ======
 **Peer Reviewer:**
+* *Journal of NeuroEngineering and Rehabilitation*
 * *Scientific Reports*
 * *Discover Neuroscience*
+* European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD 2026)
 * International Joint Conference on Neural Networks (IJCNN)

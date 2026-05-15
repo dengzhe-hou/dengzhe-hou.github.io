@@ -4,7 +4,7 @@ collection: publications
 category: manuscripts
 permalink: /publication/2025-frontiers-neuro
 excerpt: 'This study characterized EEG activity over ipsilateral and contralateral primary motor cortex during simple and complex hand tasks, revealing how motor cortex lateralization changes across motor learning.'
-date: 2025-01-15
+date: 2025-11-06
 venue: 'Frontiers in Neuroscience'
 paperurl: ''
 citation: 'Zhao, J., Wang, Y., Hou, D., Négyesi, J., Qiu, D. L., &amp; Nagatomi, R. (2025). EEG activity over ipsilateral and contralateral M1 during simple and complex hand tasks: Variations with motor learning. <i>Frontiers in Neuroscience</i>, 19, 1681250.'
