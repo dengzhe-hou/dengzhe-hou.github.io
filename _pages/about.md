@@ -24,7 +24,10 @@ My research bridges cognitive neuroscience and artificial intelligence. I am bro
 
 | | |
 |---|---|
+| **May 2026** | New preprint on arXiv: [Subject-Specific Analysis of Self-Initiated Attention Shifts from EEG](https://arxiv.org/abs/2605.18251) — SHAP-based within-subject decoding of self-initiated attention |
+| **May 2026** | New preprint on arXiv: [Same Brain, Different Prediction](https://arxiv.org/abs/2605.07212) — preprocessing pipelines flip up to 42% of EEG decoding predictions; we introduce a diagnostic + regularization fix |
 | **May 2026** | Updated preprint: [WMF-AM v2](https://arxiv.org/abs/2603.27343) reframes our LLM probe around working-memory depth and isolates cumulative state tracking as the dominant bottleneck |
+| **Apr 2026** | Collaborator on new preprint: [Vibe Medicine: Redefining Biomedical Research Through Human-AI Co-Work](https://arxiv.org/abs/2604.23674) — under review at *Meta-Radiology* |
 | **Apr 2026** | Started as **Project Assistant Professor**, GSIS, Tohoku University (Yamada Lab + ILO) |
 | **Apr 2026** | Teaching [Machine Learning Basics](https://gp-ds.tohoku.ac.jp/ja/index.html) at GSIS, Tohoku University |
 | **Mar 2026** | Paper accepted at **CVPR 2026 Workshop VGBE**: Physics-Aware Video Instance Removal Benchmark |
