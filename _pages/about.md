@@ -17,10 +17,8 @@ I received my Ph.D. and M.S. from Tohoku University GSIS under [Prof. Satoshi Sh
 
 - Neural–AI alignment: comparing representations in EEG/fMRI and large language/vision models
 - Brain-inspired AI: using cognitive and neural principles to optimize AI architectures
-- Visual attention and self-initiated attentional control
-- Eye movement–EEG integration (gaze-contingent paradigms; saccade and microsaccade dynamics)
-- Decision-related neural dynamics and computational modeling (accumulation-to-bound, time–frequency analysis)
-- Neural decoding (EEG, sEEG, MEG, hyperscanning)
+- Visual attention and self-initiated attentional control (EEG + eye movements; gaze-contingent paradigms; saccade and microsaccade dynamics)
+- Computational modeling and neural decoding (EEG, sEEG, MEG, hyperscanning; accumulation-to-bound, time–frequency analysis)
 
 ## News
 
@@ -38,13 +36,20 @@ I received my Ph.D. and M.S. from Tohoku University GSIS under [Prof. Satoshi Sh
 | **Feb 2026** | Participated in [**Qualia Structure** Grant Meeting](https://en.qualia-structure.jp/news/detail/7202) |
 | **Feb 2026** | Appeared in [Journal Club: *The Proliferation of Consciousness Theories: What can we do next?*](https://www.youtube.com/watch?v=QqUq6q1EMXI) (Neural basis of Consciousness & Qualia Structure) |
 | **Dec 2025** | Paper published in *Frontiers in Human Neuroscience*: [frontal-midline theta ramping indexes self-initiated attention shifts](https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2025.1708257/full) |
+
+<details markdown="1">
+<summary><strong>Earlier news</strong> (2025 and before)</summary>
+
+| | |
+|---|---|
 | **Apr 2025** | Awarded [JSPS DC2 Research Fellowship](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-25KJ0641) |
 | **Jan 2025** | Returned from visiting scholar position at Harvard Medical School / MGH ([Sydney Cash Lab](https://cashlab.mgh.harvard.edu/), supervised by [Dr. Jing (Jill) Cai](https://scholar.google.co.jp/citations?user=ggUF_nIAAAAJ&hl=ja)) |
 | **Dec 2024** | [Best Presentation Award, 32nd Doctoral Student Presentation, Tohoku University](https://www.is.tohoku.ac.jp/jp/activity/award/detail---id-1555.html) |
 | **Oct 2024** | Presented two posters at **Society for Neuroscience 2024** |
-| **Aug 2024** | Started as Visiting PhD Scholar, Department of Neurology, MGH / Harvard Medical School |
 | **Jul 2024** | Two presentations at **APCV 2024** (The 16th Asia Pacific Conference on Vision) |
 | **Aug 2023** | Oral presentation at **ECVP 2023**, Paphos, Cyprus; awarded ECVP Student Travel Award |
+
+</details>
 
 ## Education
 
@@ -75,15 +80,9 @@ I received my Ph.D. and M.S. from Tohoku University GSIS under [Prof. Satoshi Sh
 
 Supervisors: Prof. [Kazunori Yamada](https://yamada-lab.gr.jp/ja/index.html), Assoc. Prof. [Samy Baladram](https://www.samybaladram.com/)
 
-| | |
-|---|---|
-| Machine Learning Basics | Spring 2024 |
-| Data Science Programming Basics | Spring 2024 |
-| Data Engineering | Spring 2024 |
-| Data Science Training I | Spring 2022, Spring 2024 |
-| Data Science Training II | Spring 2024 |
-| Data Science Basic | Fall 2023 |
-| Data Science Skill Up Exercise | Spring 2022 |
+- **Spring 2024**: Machine Learning Basics, Data Science Programming Basics, Data Engineering, Data Science Training I & II
+- **Fall 2023**: Data Science Basic
+- **Spring 2022**: Data Science Training I, Data Science Skill Up Exercise
 
 ## Fellowships & Awards
 
