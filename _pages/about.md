@@ -7,9 +7,11 @@ redirect_from:
   - /about.html
 ---
 
-I am an **Assistant Professor** at the [Graduate School of Information Sciences (GSIS)](https://www.is.tohoku.ac.jp/en/), [Tohoku University](https://www.tohoku.ac.jp/en/), Japan (from April 2026), affiliated with the [Yamada Laboratory](https://yamada-lab.gr.jp/ja/index.html) and the [International Liaison Office (ILO)](https://www.is.tohoku.ac.jp/introduction/ilo/), with concurrent appointments at the [Unprecedented-scale Data Analytics Center (UDAC) — Social Integration Research Division](https://udac.tohoku.ac.jp/) and the [TechGov](https://techgov.udac.tohoku.ac.jp/ja/index.html#home) initiative (from May 2026). I hold a **[JSPS DC2 Research Fellowship](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-25KJ0641)** (2025–2026). I received my Ph.D. and M.S. from Tohoku University GSIS under the supervision of [Prof. Satoshi Shioiri](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=en) at the [Visual Cognition and Systems Laboratory](https://www.shioiri.riec.tohoku.ac.jp/). Previously I was a Visiting PhD Scholar at **Harvard Medical School / Massachusetts General Hospital** (Aug 2024 – Jan 2025) in the [Sydney Cash Lab](https://cashlab.mgh.harvard.edu/), supervised by [Dr. Jing (Jill) Cai](https://scholar.google.co.jp/citations?user=ggUF_nIAAAAJ&hl=ja), where I trained in stereo-EEG (sEEG), hyperscanning, and the neural mechanisms of speech and interactive communication.
+I am an **Assistant Professor** at the [Graduate School of Information Sciences (GSIS)](https://www.is.tohoku.ac.jp/en/), [Tohoku University](https://www.tohoku.ac.jp/en/), Japan, affiliated with the [Yamada Laboratory](https://yamada-lab.gr.jp/ja/index.html) and the [International Liaison Office (ILO)](https://www.is.tohoku.ac.jp/introduction/ilo/). I hold concurrent appointments at the [Unprecedented-scale Data Analytics Center (UDAC)](https://udac.tohoku.ac.jp/) Social Integration Research Division (from April 2026; advanced analytics for unprecedented-scale data from medical biobanks, cryo-EM, and next-generation synchrotron facilities) and the [TechGov](https://techgov.udac.tohoku.ac.jp/ja/index.html#home) initiative (from May 2026). I am supported by a **[JSPS DC2 Research Fellowship](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-25KJ0641)** (2025–2026).
 
 My research bridges cognitive neuroscience and artificial intelligence. I am broadly interested in **aligning brain signals (EEG, fMRI) with large-scale AI models** (LLMs, vision-language models) to compare their internal representations, and in using insights from cognitive science and neuroscience to guide the design and optimization of AI systems. My earlier work focused on the neural mechanisms of **voluntary attentional control** using EEG/sEEG recordings, eye-tracking, and computational modeling.
+
+I received my Ph.D. and M.S. from Tohoku University GSIS under [Prof. Satoshi Shioiri](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=en) at the [Visual Cognition and Systems Laboratory](https://www.shioiri.riec.tohoku.ac.jp/). Previously, I was a Visiting PhD Scholar at **Harvard Medical School / Massachusetts General Hospital** (Aug 2024 – Jan 2025) in the [Sydney Cash Lab](https://cashlab.mgh.harvard.edu/), supervised by [Dr. Jing (Jill) Cai](https://scholar.google.co.jp/citations?user=ggUF_nIAAAAJ&hl=ja), training in stereo-EEG (sEEG), hyperscanning, and the neural mechanisms of speech and interactive communication.
 
 ## Research Interests
 
@@ -24,12 +26,12 @@ My research bridges cognitive neuroscience and artificial intelligence. I am bro
 
 | | |
 |---|---|
-| **May 2026** | Started concurrent appointments at [UDAC — Social Integration Research Division](https://udac.tohoku.ac.jp/) and the [TechGov](https://techgov.udac.tohoku.ac.jp/ja/index.html#home) initiative, Tohoku University |
+| **May 2026** | Joined the [TechGov](https://techgov.udac.tohoku.ac.jp/ja/index.html#home) initiative at UDAC, Tohoku University |
 | **May 2026** | New preprint on arXiv: [Subject-Specific Analysis of Self-Initiated Attention Shifts from EEG](https://arxiv.org/abs/2605.18251) — SHAP-based within-subject decoding of self-initiated attention |
 | **May 2026** | New preprint on arXiv: [Same Brain, Different Prediction](https://arxiv.org/abs/2605.07212) — preprocessing pipelines flip up to 42% of EEG decoding predictions; we introduce a diagnostic + regularization fix |
 | **May 2026** | Updated preprint: [WMF-AM v2](https://arxiv.org/abs/2603.27343) reframes our LLM probe around working-memory depth and isolates cumulative state tracking as the dominant bottleneck |
 | **Apr 2026** | Collaborator on new preprint: [Vibe Medicine: Redefining Biomedical Research Through Human-AI Co-Work](https://arxiv.org/abs/2604.23674) — under review at *Meta-Radiology* |
-| **Apr 2026** | Started as **Assistant Professor**, GSIS, Tohoku University (Yamada Lab + ILO) |
+| **Apr 2026** | Started as **Assistant Professor** at GSIS, Tohoku University (Yamada Lab, ILO) with concurrent appointment at [UDAC](https://udac.tohoku.ac.jp/) Social Integration Research Division |
 | **Apr 2026** | Teaching [Machine Learning Basics](https://gp-ds.tohoku.ac.jp/ja/index.html) at GSIS, Tohoku University |
 | **Mar 2026** | Paper accepted at **CVPR 2026 Workshop VGBE**: Physics-Aware Video Instance Removal Benchmark |
 | **Mar 2026** | New preprint on arXiv: [Beyond Completion: Probing Cumulative State Tracking to Predict LLM Agent Performance](https://arxiv.org/abs/2603.27343) |
