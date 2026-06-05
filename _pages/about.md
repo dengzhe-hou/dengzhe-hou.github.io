@@ -24,6 +24,7 @@ I received my Ph.D. and M.S. from Tohoku University GSIS under [Prof. Satoshi Sh
 
 | | |
 |---|---|
+| **Jun 2026** | PVIR [poster](/publication/2026-cvpr-pvir) presented at **CVPR 2026 Workshop VGBE**, Denver, Colorado |
 | **May 2026** | Joined the [TechGov](https://techgov.udac.tohoku.ac.jp/ja/index.html#home) initiative at UDAC, Tohoku University |
 | **May 2026** | New preprint on arXiv: [Subject-Specific Analysis of Self-Initiated Attention Shifts from EEG](https://arxiv.org/abs/2605.18251) — SHAP-based within-subject decoding of self-initiated attention |
 | **May 2026** | New preprint on arXiv: [Same Brain, Different Prediction](https://arxiv.org/abs/2605.07212) — preprocessing pipelines flip up to 42% of EEG decoding predictions; we introduce a diagnostic + regularization fix |
