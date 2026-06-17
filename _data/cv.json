@@ -1,10 +1,11 @@
 {
   "basics": {
     "name": "Dengzhe Hou",
+    "label": "Assistant Professor, Graduate School of Information Sciences, Tohoku University",
     "email": "hou.dengzhe.t8@dc.tohoku.ac.jp",
     "phone": "",
     "website": "https://dengzhe-hou.github.io",
-    "summary": "Ph.D. Candidate in Information Sciences (Cognitive Neuroscience / Vision Science) at Tohoku University. JSPS DC2 Fellow. Research focuses on the brain mechanisms of self-initiated attentional control using EEG, eye-tracking, and computational modeling.",
+    "summary": "Assistant Professor at the Graduate School of Information Sciences, Tohoku University (Yamada Laboratory; International Liaison Office), with a concurrent appointment at the Unprecedented-scale Data Analytics Center (UDAC), Social Integration Research Division (from April 2026). JSPS DC2 Research Fellow (2025–2026). Research bridges cognitive neuroscience and AI — aligning brain signals (EEG, fMRI) with large-scale AI models and using neural and cognitive principles to guide AI design. Ph.D. in Information Sciences, Tohoku University (2026).",
     "location": {
       "address": "Graduate School of Information Sciences, Tohoku University",
       "postalCode": "980-8579",
@@ -43,10 +44,34 @@
   "work": [
     {
       "company": "Graduate School of Information Sciences, Tohoku University",
+      "position": "Assistant Professor",
+      "website": "https://www.is.tohoku.ac.jp/en/",
+      "startDate": "2026-04-01",
+      "endDate": "",
+      "summary": "Assistant Professor at GSIS, affiliated with the Yamada Laboratory and the International Liaison Office (ILO). Research bridges cognitive neuroscience and artificial intelligence.",
+      "highlights": [
+        "Aligning brain signals (EEG, fMRI) with large-scale AI models (LLMs, vision-language models)",
+        "Instructor for Machine Learning Basics (Graduate Program in Data Science, GPDS)"
+      ]
+    },
+    {
+      "company": "Unprecedented-scale Data Analytics Center (UDAC), Tohoku University",
+      "position": "Assistant Professor (Concurrent Appointment)",
+      "website": "https://udac.tohoku.ac.jp/",
+      "startDate": "2026-04-01",
+      "endDate": "",
+      "summary": "Concurrent appointment in the Social Integration Research Division, ordered April 1, 2026 (令和8年4月1日). Advanced analytics for unprecedented-scale data from medical biobanks, cryo-EM, and next-generation synchrotron facilities.",
+      "highlights": [
+        "Social Integration Research Division",
+        "Member of the TechGov initiative (from May 2026)"
+      ]
+    },
+    {
+      "company": "Graduate School of Information Sciences, Tohoku University",
       "position": "Teaching Assistant",
       "website": "https://www.tohoku.ac.jp/en/",
       "startDate": "2022-04-01",
-      "endDate": "",
+      "endDate": "2025-03-31",
       "summary": "Teaching Assistant for data science and machine learning courses. Supervisors: Prof. Kazunori Yamada, Assoc. Prof. Samy Baladram.",
       "highlights": [
         "Machine Learning Basics (2024 spring)",
