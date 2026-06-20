@@ -12,7 +12,7 @@ redirect_from:
 ## Education
 * **Ph.D. Candidate**, Information Sciences (Cognitive Neuroscience / Vision Science), Tohoku University, Japan, Apr 2023 – Mar 2026 (expected)
   * Thesis: Exploring Brain Mechanisms of Self-Initiated Attention Shift: Simultaneous Recording of EEG and Eye Movements
-  * Advisors: Prof. Satoshi Shioiri, Prof. Shuichi Sakamoto, Assoc. Prof. Chia-huei Tseng
+  * Advisors: Prof. Satoshi Shioiri, Prof. Shuichi Sakamoto, Prof. Chia-huei Tseng
   * Visual Cognition and Systems Laboratory
 
 * **Visiting PhD Scholar**, Harvard Medical School / Massachusetts General Hospital, Aug 2024 – Jan 2025
@@ -22,7 +22,7 @@ redirect_from:
 
 * **M.S.**, Information Sciences, Tohoku University, Japan, Apr 2021 – Mar 2023
   * Visual Cognition and Systems Laboratory
-  * Advisors: Prof. Satoshi Shioiri, Assoc. Prof. Chia-huei Tseng
+  * Advisors: Prof. Satoshi Shioiri, Prof. Chia-huei Tseng
 
 * **B.Eng.**, Electronic and Information Engineering (Automation), Tongji University, China, Sep 2016 – Jul 2020
   * GPA: 4.15/5.0 (Top 30%)

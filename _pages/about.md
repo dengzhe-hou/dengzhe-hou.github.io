@@ -82,7 +82,7 @@ I received my Ph.D. and M.S. from Tohoku University GSIS under [Prof. Satoshi Sh
 Supervisors: Prof. [Kazunori Yamada](https://yamada-lab.gr.jp/ja/index.html), Assoc. Prof. [Samy Baladram](https://www.samybaladram.com/)
 
 - **Spring 2024**: Machine Learning Basics, Data Science Programming Basics, Data Engineering, Data Science Training I & II
-- **Fall 2023**: Data Science Basic
+- **Fall 2023**: Data Science Basics
 - **Spring 2022**: Data Science Training I, Data Science Skill Up Exercise
 
 ## Fellowships & Awards
