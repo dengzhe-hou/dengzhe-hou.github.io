@@ -56,7 +56,7 @@ redirect_from:
   {% endfor %}</ul>
 
 ## Fellowships & Awards
-* **Kaggle Expert** — Bronze Medal, [CSIRO Image2Biomass Prediction](https://www.kaggle.com/competitions/csiro-biomass) (354/3803), 2026
+* **Kaggle Expert** — Bronze Medal, [CSIRO Image2Biomass Prediction](https://www.kaggle.com/competitions/csiro-biomass) (355/3805), 2026
 * **JSPS DC2 Research Fellowship**, Japan Society for the Promotion of Science, Apr 2025 –
 * **Kaggle Bronze Medal** — Santa 2024: The Perplexity Permutation Puzzle (148/1514), Feb 2025
 * **KAKENHI Grant-in-Aid for Scientific Research (A)**, 自発的脳機能の神経基盤理解 (PI: Prof. Satoshi Shioiri), 2024 – 2028
