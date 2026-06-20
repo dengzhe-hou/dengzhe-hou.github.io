@@ -13,15 +13,6 @@ My research bridges cognitive neuroscience and artificial intelligence. I am bro
 
 I received my Ph.D. and M.S. from Tohoku University GSIS under [Prof. Satoshi Shioiri](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=en) at the [Visual Cognition and Systems Laboratory](https://www.shioiri.riec.tohoku.ac.jp/). Previously, I was a Visiting PhD Scholar at **Harvard Medical School / Massachusetts General Hospital** (Aug 2024 – Jan 2025) in the [Sydney Cash Lab](https://cashlab.mgh.harvard.edu/), supervised by [Dr. Jing (Jill) Cai](https://scholar.google.co.jp/citations?user=ggUF_nIAAAAJ&hl=ja), training in stereo-EEG (sEEG), hyperscanning, and the neural mechanisms of speech and interactive communication.
 
-## Affiliations
-
-- [Graduate School of Information Sciences (GSIS)](https://www.is.tohoku.ac.jp/en/), Tohoku University
-- [Yamada Laboratory](https://yamada-lab.gr.jp/ja/index.html) · [International Liaison Office (ILO)](https://www.is.tohoku.ac.jp/introduction/ilo/)
-- [Unprecedented-scale Data Analytics Center (UDAC)](https://udac.tohoku.ac.jp/) — Social Integration Research Division
-- [TOHOKU AI GROUP](https://tai.udac.tohoku.ac.jp/ja/index.html) — Artificial Intelligence Research Group at Tohoku University
-- [Collaborative Research Laboratory for Technology Governance (TechGov)](https://techgov.udac.tohoku.ac.jp/ja/index.html) — Tohoku University × NTT Data Group
-- [Graduate Program in Data Science (GPDS)](https://gp-ds.tohoku.ac.jp/ja/index.html)
-
 ## Research Interests
 
 - Neural–AI alignment: comparing representations in EEG/fMRI and large language/vision models
@@ -116,3 +107,12 @@ Supervisors: Prof. [Kazunori Yamada](https://yamada-lab.gr.jp/ja/index.html), As
 - *Discover Neuroscience*
 - European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD 2026)
 - International Joint Conference on Neural Networks (IJCNN)
+
+## Links
+
+- [Graduate School of Information Sciences (GSIS)](https://www.is.tohoku.ac.jp/en/), Tohoku University
+- [Yamada Laboratory](https://yamada-lab.gr.jp/ja/index.html) · [International Liaison Office (ILO)](https://www.is.tohoku.ac.jp/introduction/ilo/)
+- [Unprecedented-scale Data Analytics Center (UDAC)](https://udac.tohoku.ac.jp/) — Social Integration Research Division
+- [TOHOKU AI GROUP](https://tai.udac.tohoku.ac.jp/ja/index.html) — Artificial Intelligence Research Group at Tohoku University
+- [Collaborative Research Laboratory for Technology Governance (TechGov)](https://techgov.udac.tohoku.ac.jp/ja/index.html) — Tohoku University × NTT Data Group
+- [Graduate Program in Data Science (GPDS)](https://gp-ds.tohoku.ac.jp/ja/index.html)
