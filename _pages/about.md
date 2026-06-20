@@ -110,10 +110,10 @@ Supervisors: Prof. [Kazunori Yamada](https://yamada-lab.gr.jp/ja/index.html), As
 
 ## Links
 
-- [Graduate School of Information Sciences (GSIS)](https://www.is.tohoku.ac.jp/en/), Tohoku University
-- [Yamada Laboratory](https://yamada-lab.gr.jp/ja/index.html)
-- [Unprecedented-scale Data Analytics Center (UDAC)](https://udac.tohoku.ac.jp/) — Social Integration Research Division
 - [International Liaison Office (ILO)](https://www.is.tohoku.ac.jp/introduction/ilo/)
-- [TOHOKU AI GROUP](https://tai.udac.tohoku.ac.jp/ja/index.html) — Artificial Intelligence Research Group at Tohoku University
-- [Collaborative Research Laboratory for Technology Governance (TechGov)](https://techgov.udac.tohoku.ac.jp/ja/index.html) — Tohoku University × NTT Data Group
 - [Graduate Program in Data Science (GPDS)](https://gp-ds.tohoku.ac.jp/ja/index.html)
+- [Yamada Laboratory](https://yamada-lab.gr.jp/ja/index.html)
+- [TOHOKU AI GROUP](https://tai.udac.tohoku.ac.jp/ja/index.html) — Artificial Intelligence Research Group at Tohoku University
+- [Graduate School of Information Sciences (GSIS)](https://www.is.tohoku.ac.jp/en/), Tohoku University
+- [Unprecedented-scale Data Analytics Center (UDAC)](https://udac.tohoku.ac.jp/) — Social Integration Research Division
+- [Collaborative Research Laboratory for Technology Governance (TechGov)](https://techgov.udac.tohoku.ac.jp/ja/index.html) — Tohoku University × NTT Data Group
