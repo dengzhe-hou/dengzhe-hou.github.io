@@ -7,11 +7,20 @@ redirect_from:
   - /about.html
 ---
 
-I am an **Assistant Professor** at the [Graduate School of Information Sciences (GSIS)](https://www.is.tohoku.ac.jp/en/), [Tohoku University](https://www.tohoku.ac.jp/en/), Japan, affiliated with the [Yamada Laboratory](https://yamada-lab.gr.jp/ja/index.html) and the [International Liaison Office (ILO)](https://www.is.tohoku.ac.jp/introduction/ilo/). I hold concurrent appointments at the [Unprecedented-scale Data Analytics Center (UDAC)](https://udac.tohoku.ac.jp/) Social Integration Research Division (from April 2026; advanced analytics for unprecedented-scale data from medical biobanks, cryo-EM, and next-generation synchrotron facilities) and the [TechGov](https://techgov.udac.tohoku.ac.jp/ja/index.html#home) initiative (from May 2026). I am supported by a **[JSPS DC2 Research Fellowship](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-25KJ0641)** (2025–2026).
+I am an **Assistant Professor** at the [Graduate School of Information Sciences (GSIS)](https://www.is.tohoku.ac.jp/en/), [Tohoku University](https://www.tohoku.ac.jp/en/), Japan, affiliated with the [Yamada Laboratory](https://yamada-lab.gr.jp/ja/index.html) and the [International Liaison Office (ILO)](https://www.is.tohoku.ac.jp/introduction/ilo/). I also hold a concurrent appointment in the Social Integration Research Division of the [Unprecedented-scale Data Analytics Center (UDAC)](https://udac.tohoku.ac.jp/) (from April 2026), and I take part in its [TechGov](https://techgov.udac.tohoku.ac.jp/ja/index.html#home) initiative (from May 2026). I am supported by a **[JSPS DC2 Research Fellowship](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-25KJ0641)** (2025–2026).
 
 My research bridges cognitive neuroscience and artificial intelligence. I am broadly interested in **aligning brain signals (EEG, fMRI) with large-scale AI models** (LLMs, vision-language models) to compare their internal representations, and in using insights from cognitive science and neuroscience to guide the design and optimization of AI systems. My earlier work focused on the neural mechanisms of **voluntary attentional control** using EEG/sEEG recordings, eye-tracking, and computational modeling.
 
 I received my Ph.D. and M.S. from Tohoku University GSIS under [Prof. Satoshi Shioiri](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=en) at the [Visual Cognition and Systems Laboratory](https://www.shioiri.riec.tohoku.ac.jp/). Previously, I was a Visiting PhD Scholar at **Harvard Medical School / Massachusetts General Hospital** (Aug 2024 – Jan 2025) in the [Sydney Cash Lab](https://cashlab.mgh.harvard.edu/), supervised by [Dr. Jing (Jill) Cai](https://scholar.google.co.jp/citations?user=ggUF_nIAAAAJ&hl=ja), training in stereo-EEG (sEEG), hyperscanning, and the neural mechanisms of speech and interactive communication.
+
+## Affiliations
+
+- [Graduate School of Information Sciences (GSIS)](https://www.is.tohoku.ac.jp/en/), Tohoku University
+- [Yamada Laboratory](https://yamada-lab.gr.jp/ja/index.html) · [International Liaison Office (ILO)](https://www.is.tohoku.ac.jp/introduction/ilo/)
+- [Unprecedented-scale Data Analytics Center (UDAC)](https://udac.tohoku.ac.jp/) — Social Integration Research Division
+- [TOHOKU AI GROUP](https://tai.udac.tohoku.ac.jp/ja/index.html) — Artificial Intelligence Research Group at Tohoku University
+- [Collaborative Research Laboratory for Technology Governance (TechGov)](https://techgov.udac.tohoku.ac.jp/ja/index.html) — Tohoku University × NTT Data Group
+- [Graduate Program in Data Science (GPDS)](https://gp-ds.tohoku.ac.jp/ja/index.html)
 
 ## Research Interests
 
