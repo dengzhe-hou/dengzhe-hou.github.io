@@ -89,7 +89,7 @@ Supervisors: Prof. [Kazunori Yamada](https://yamada-lab.gr.jp/ja/index.html), As
 
 | | |
 |---|---|
-| **2026** | [Kaggle Expert](https://www.kaggle.com/monkeydz) – Bronze Medal, [CSIRO Image2Biomass Prediction](https://www.kaggle.com/competitions/csiro-biomass) (354/3803) |
+| **2026** | [Kaggle Expert](https://www.kaggle.com/monkeydz) – Bronze Medal, [CSIRO Image2Biomass Prediction](https://www.kaggle.com/competitions/csiro-biomass) (355/3805) |
 | **2025** | **[JSPS DC2 Research Fellowship](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-25KJ0641)** |
 | **2025** | [Kaggle](https://www.kaggle.com/monkeydz) Bronze Medal, [Santa 2024: The Perplexity Permutation Puzzle](https://www.kaggle.com/competitions/santa-2024) (148/1514) |
 | **2024–2028** | [KAKENHI Grant-in-Aid for Scientific Research (A)](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-24H00700/): 自発的脳機能の神経基盤理解 (PI: Prof. Satoshi Shioiri) |
