@@ -10,6 +10,7 @@
 locale                   : "en-US"
 site_theme               : "air" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
 title                    : "Dengzhe Hou | Assistant Professor"
+masthead_title           : "Dengzhe Hou" # Short brand for the top nav (full SEO title stays above)
 title_separator          : "-"
 name                     : &name "Dengzhe Hou"
 description              : &description "Assistant Professor @ Tohoku GSIS | JSPS DC2 Fellow | Visual Cognition & Neuroscience | Brain × AI"   # Update this with a general description of your site, this is the default if not overridden by a page
