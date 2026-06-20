@@ -9,8 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
+## Education
 * **Ph.D. Candidate**, Information Sciences (Cognitive Neuroscience / Vision Science), Tohoku University, Japan, Apr 2023 – Mar 2026 (expected)
   * Thesis: Exploring Brain Mechanisms of Self-Initiated Attention Shift: Simultaneous Recording of EEG and Eye Movements
   * Advisors: Prof. Satoshi Shioiri, Prof. Shuichi Sakamoto, Assoc. Prof. Chia-huei Tseng
@@ -28,8 +27,7 @@ Education
 * **B.Eng.**, Electronic and Information Engineering (Automation), Tongji University, China, Sep 2016 – Jul 2020
   * GPA: 4.15/5.0 (Top 30%)
 
-Research Interests
-======
+## Research Interests
 * Neural–AI alignment: comparing representations in EEG/fMRI and large language/vision models
 * Brain-inspired AI: using cognitive and neural principles to optimize AI architectures
 * Visual attention and self-initiated attentional control
@@ -37,26 +35,22 @@ Research Interests
 * Decision-related neural dynamics and computational modeling (accumulation-to-bound, time–frequency analysis)
 * Neural decoding (EEG, sEEG, MEG, hyperscanning)
 
-Publications
-======
+## Publications
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
 
-Talks & Presentations
-======
+## Talks & Presentations
   <ul>{% for post in site.talks reversed %}
     {% include archive-single-talk-cv.html  %}
   {% endfor %}</ul>
 
-Teaching
-======
+## Teaching
   <ul>{% for post in site.teaching reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
 
-Fellowships & Awards
-======
+## Fellowships & Awards
 * **Kaggle Expert** — Bronze Medal, [CSIRO Image2Biomass Prediction](https://www.kaggle.com/competitions/csiro-biomass) (354/3803), 2026
 * **JSPS DC2 Research Fellowship**, Japan Society for the Promotion of Science, Apr 2025 –
 * **Kaggle Bronze Medal** — Santa 2024: The Perplexity Permutation Puzzle (148/1514), Feb 2025
@@ -68,20 +62,17 @@ Fellowships & Awards
 * **Kamei Memorial Foundation Scholarship for International Students** (公益財団法人亀井記念財団外国人留学生奨学生), Apr 2021 – Mar 2023
 * **Tongji University Undergraduate Entrance Scholarship**, Sep 2016
 
-Skills
-======
+## Skills
 * **Neuroimaging & Psychophysics:** EEG/ERP, Eye-tracking, sEEG, Gaze-contingent paradigms, Visual psychophysics
 * **Computational Methods:** Time-frequency analysis, Neural decoding (MVPA), Accumulation-to-bound modeling, Machine learning
-* **Programming:** Python, MATLAB, R, MNE-Python, EEGLab
+* **Programming:** Python, MATLAB, R, MNE-Python, EEGLAB
 
-Languages
-======
+## Languages
 * Chinese (Mandarin): Native or bilingual proficiency
 * English: Professional working proficiency (TOEIC 910/990, TOEFL 90/120)
 * Japanese: Limited working proficiency (JLPT N2)
 
-Service
-======
+## Service
 **Peer Reviewer:**
 * *Journal of NeuroEngineering and Rehabilitation*
 * *Scientific Reports*
