@@ -9,8 +9,13 @@ redirect_from:
 
 {% include base_path %}
 
+## Appointments
+* **Assistant Professor**, Graduate School of Information Sciences, Tohoku University, Japan, Apr 2026 – present
+  * Yamada Laboratory · International Liaison Office (ILO)
+* **Assistant Professor (Concurrent)**, Unprecedented-scale Data Analytics Center (UDAC) — Social Integration Research Division, Tohoku University, Apr 2026 – present
+
 ## Education
-* **Ph.D. Candidate**, Information Sciences (Cognitive Neuroscience / Vision Science), Tohoku University, Japan, Apr 2023 – Mar 2026 (expected)
+* **Ph.D.**, Information Sciences (Cognitive Neuroscience / Vision Science), Tohoku University, Japan, Apr 2023 – Mar 2026
   * Thesis: Exploring Brain Mechanisms of Self-Initiated Attention Shift: Simultaneous Recording of EEG and Eye Movements
   * Advisors: Prof. Satoshi Shioiri, Prof. Shuichi Sakamoto, Prof. Chia-huei Tseng
   * Visual Cognition and Systems Laboratory
