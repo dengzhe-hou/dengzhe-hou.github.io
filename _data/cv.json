@@ -146,7 +146,7 @@
     {
       "name": "Programming",
       "level": "Advanced",
-      "keywords": ["Python", "MATLAB", "R", "EEGLab", "MNE-Python"]
+      "keywords": ["Python", "MATLAB", "R", "EEGLAB", "MNE-Python"]
     }
   ],
   "languages": [
@@ -178,7 +178,7 @@
     {
       "name": "Task-constrained self-initiated attention shifts are indexed by frontal-midline theta ramping",
       "publisher": "Frontiers in Human Neuroscience",
-      "releaseDate": "2025-02-01",
+      "releaseDate": "2025-12-16",
       "website": "",
       "summary": "Hou D., Sun S., Hatori Y., Tseng C., & Shioiri S. (2025). EEG study revealing frontal-midline theta ramping as a neural index of voluntary attentional preparation."
     },
