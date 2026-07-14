@@ -78,6 +78,9 @@ redirect_from:
 * Japanese: Limited working proficiency (JLPT N2)
 
 ## Service
+**Editorial Board:**
+* **Editorial Board Member**, *[Interdisciplinary Information Sciences](https://www.is.tohoku.ac.jp/en/iis/)* (ISSN 1347-6157 / 1340-9050), Graduate School of Information Sciences, Tohoku University, 2026 – present
+
 **Peer Reviewer:**
 * *Journal of NeuroEngineering and Rehabilitation*
 * *Scientific Reports*

@@ -105,7 +105,7 @@
       <li class="cv-item">
         <div class="cv-item-header">
           <div class="cv-item-title">{{ work.position }}</div>
-          <div class="cv-item-date">{{ work.startDate }}{% if work.endDate %} - {{ work.endDate }}{% endif %}</div>
+          <div class="cv-item-date">{{ work.startDate }}{% if work.endDate != '' %} - {{ work.endDate }}{% elsif work.startDate != '' %} - present{% endif %}</div>
         </div>
         <div class="cv-item-content">
           <div class="cv-item-subtitle">{{ work.company }}</div>
@@ -224,7 +224,30 @@
     </ul>
   </div>
   {% endif %}
-  
+
+  {% if cv.service.size > 0 %}
+  <!-- Service -->
+  <div class="cv-section">
+    <h2>Service</h2>
+    <ul class="cv-list">
+      {% for service in cv.service %}
+      <li class="cv-item">
+        <div class="cv-item-header">
+          <div class="cv-item-title">{{ service.position }}</div>
+          <div class="cv-item-date">{% if service.startDate != '' %}{{ service.startDate }}{% endif %}{% if service.endDate != '' %} - {{ service.endDate }}{% elsif service.startDate != '' %} - present{% endif %}</div>
+        </div>
+        <div class="cv-item-content">
+          <div class="cv-item-subtitle">{% if service.url != '' %}<a href="{{ service.url }}" target="_blank">{{ service.organization }}</a>{% else %}{{ service.organization }}{% endif %}</div>
+          {% if service.summary %}
+          <div class="cv-item-detail">{{ service.summary }}</div>
+          {% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
   {% if cv.portfolio.size > 0 %}
   <!-- Portfolio -->
   <div class="cv-section">

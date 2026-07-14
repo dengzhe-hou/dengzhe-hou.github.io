@@ -24,6 +24,7 @@ I received my Ph.D. and M.S. from Tohoku University GSIS under [Prof. Satoshi Sh
 
 | | |
 |---|---|
+| **Jul 2026** | Appointed to the **Editorial Board** of [*Interdisciplinary Information Sciences*](https://www.is.tohoku.ac.jp/en/iis/) (Tohoku University GSIS) |
 | **Jun 2026** | PVIR [poster](/publication/2026-cvpr-pvir) presented at **CVPR 2026 Workshop VGBE**, Denver, Colorado |
 | **May 2026** | Joined the [TechGov](https://techgov.udac.tohoku.ac.jp/ja/index.html#home) initiative at UDAC, Tohoku University |
 | **May 2026** | New preprint on arXiv: [Subject-Specific Analysis of Self-Initiated Attention Shifts from EEG](https://arxiv.org/abs/2605.18251) — SHAP-based within-subject decoding of self-initiated attention |
@@ -99,6 +100,10 @@ Supervisors: Prof. [Kazunori Yamada](https://yamada-lab.gr.jp/ja/index.html), As
 | **2022–present** | Tohoku University [GPDS](https://gp-ds.tohoku.ac.jp/ja/index.html) Research Assistant |
 | **2021–2023** | [Kamei Memorial Foundation](https://kmfo.or.jp/) Scholarship for International Students (公益財団法人亀井記念財団) |
 | **2016** | Tongji University Undergraduate Entrance Scholarship |
+
+## Editorial Board
+
+- **Editorial Board Member**, *[Interdisciplinary Information Sciences](https://www.is.tohoku.ac.jp/en/iis/)* (Tohoku University GSIS) — 2026–present
 
 ## Reviewer
 
