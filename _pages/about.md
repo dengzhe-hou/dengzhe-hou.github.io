@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am an **Assistant Professor** at the [Graduate School of Information Sciences (GSIS)](https://www.is.tohoku.ac.jp/en/), [Tohoku University](https://www.tohoku.ac.jp/en/), Japan, affiliated with the [Yamada Laboratory](https://yamada-lab.gr.jp/ja/index.html) and the [International Liaison Office (ILO)](https://www.is.tohoku.ac.jp/introduction/ilo/). I also hold a concurrent appointment in the Social Integration Research Division of the [Unprecedented-scale Data Analytics Center (UDAC)](https://udac.tohoku.ac.jp/) (from April 2026), and I take part in its [TechGov](https://techgov.udac.tohoku.ac.jp/ja/index.html#home) initiative (from May 2026). I am supported by a **[JSPS DC2 Research Fellowship](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-25KJ0641)** (2025–2026).
+I am an **Assistant Professor** at the [Graduate School of Information Sciences (GSIS)](https://www.is.tohoku.ac.jp/en/), [Tohoku University](https://www.tohoku.ac.jp/en/), Japan, affiliated with the [Yamada Laboratory](https://yamada-lab.gr.jp/ja/index.html) and the [International Liaison Office (ILO)](https://www.is.tohoku.ac.jp/introduction/ilo/). I also hold a concurrent appointment in the Social Integration Research Division of the [Unprecedented-scale Data Analytics Center (UDAC)](https://udac.tohoku.ac.jp/) (from April 2026), and I take part in its [TechGov](https://techgov.udac.tohoku.ac.jp/ja/index.html#home) initiative (from May 2026), serving as a research member of the Tohoku University × NTT DATA Group joint research on technology governance (from June 2026). I am supported by a **[JSPS DC2 Research Fellowship](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-25KJ0641)** (2025–2026).
 
 My research bridges cognitive neuroscience and artificial intelligence. I am broadly interested in **aligning brain signals (EEG, fMRI) with large-scale AI models** (LLMs, vision-language models) to compare their internal representations, and in using insights from cognitive science and neuroscience to guide the design and optimization of AI systems. A continuing thread of my work investigates the neural mechanisms of **voluntary, self-initiated attentional control** using EEG/sEEG recordings, eye-tracking, and computational modeling.
 
@@ -24,7 +24,9 @@ I received my Ph.D. and M.S. from Tohoku University GSIS under [Prof. Satoshi Sh
 
 | | |
 |---|---|
+| **Jul 2026** | Awarded a **research grant** (PI) from the [Center for So-Go-Chi (Convergence Knowledge) Informatics](https://www.aisogochi.tohoku.ac.jp/), Tohoku University |
 | **Jul 2026** | Appointed to the **Editorial Board** of [*Interdisciplinary Information Sciences*](https://www.is.tohoku.ac.jp/en/iis/) (Tohoku University GSIS) |
+| **Jun 2026** | Joined the Tohoku University × **NTT DATA Group** joint research on technology governance ([TechGov](https://techgov.udac.tohoku.ac.jp/ja/index.html#home)) as a research member |
 | **Jun 2026** | PVIR [poster](/publication/2026-cvpr-pvir) presented at **CVPR 2026 Workshop VGBE**, Denver, Colorado |
 | **May 2026** | Joined the [TechGov](https://techgov.udac.tohoku.ac.jp/ja/index.html#home) initiative at UDAC, Tohoku University |
 | **May 2026** | New preprint on arXiv: [Subject-Specific Analysis of Self-Initiated Attention Shifts from EEG](https://arxiv.org/abs/2605.18251) — SHAP-based within-subject decoding of self-initiated attention |
@@ -86,10 +88,12 @@ Supervisors: Prof. [Kazunori Yamada](https://yamada-lab.gr.jp/ja/index.html), As
 - **Fall 2023**: Data Science Basics
 - **Spring 2022**: Data Science Training I, Data Science Skill Up Exercise
 
-## Fellowships & Awards
+## Grants, Fellowships & Awards
 
 | | |
 |---|---|
+| **2026** | **Research Grant (PI)**, [Center for So-Go-Chi (Convergence Knowledge) Informatics](https://www.aisogochi.tohoku.ac.jp/), Tohoku University (¥400,000) |
+| **2026–** | Research Member, Tohoku University × NTT DATA Group Joint Research on Technology Governance ([TechGov](https://techgov.udac.tohoku.ac.jp/ja/index.html#home), UDAC) |
 | **2026** | [Kaggle Expert](https://www.kaggle.com/monkeydz) – Bronze Medal, [CSIRO Image2Biomass Prediction](https://www.kaggle.com/competitions/csiro-biomass) (355/3805) |
 | **2025** | **[JSPS DC2 Research Fellowship](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-25KJ0641)** |
 | **2025** | [Kaggle](https://www.kaggle.com/monkeydz) Bronze Medal, [Santa 2024: The Perplexity Permutation Puzzle](https://www.kaggle.com/competitions/santa-2024) (148/1514) |

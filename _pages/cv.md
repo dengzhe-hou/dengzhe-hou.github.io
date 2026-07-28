@@ -13,6 +13,7 @@ redirect_from:
 * **Assistant Professor**, Graduate School of Information Sciences, Tohoku University, Japan, Apr 2026 – present
   * Yamada Laboratory · International Liaison Office (ILO)
 * **Assistant Professor (Concurrent)**, Unprecedented-scale Data Analytics Center (UDAC) — Social Integration Research Division, Tohoku University, Apr 2026 – present
+  * TechGov initiative (from May 2026); research member, Tohoku University × NTT DATA Group joint research on technology governance (from Jun 2026)
 
 ## Education
 * **Ph.D.**, Information Sciences (Cognitive Neuroscience / Vision Science), Tohoku University, Japan, Apr 2023 – Mar 2026
@@ -55,7 +56,9 @@ redirect_from:
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
 
-## Fellowships & Awards
+## Grants, Fellowships & Awards
+* **Research Grant (PI)**, Center for So-Go-Chi (Convergence Knowledge) Informatics, Tohoku University (¥400,000), Jul 2026
+* **Research Member**, Tohoku University × NTT DATA Group Joint Research on Technology Governance (TechGov, UDAC), Jun 2026 – present
 * **Kaggle Expert** — Bronze Medal, [CSIRO Image2Biomass Prediction](https://www.kaggle.com/competitions/csiro-biomass) (355/3805), 2026
 * **JSPS DC2 Research Fellowship**, Japan Society for the Promotion of Science, Apr 2025 –
 * **Kaggle Bronze Medal** — Santa 2024: The Perplexity Permutation Puzzle (148/1514), Feb 2025
