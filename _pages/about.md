@@ -10,14 +10,14 @@ selected_research:
   - image_path: research-same-brain.jpg
     alt: "Overview of the preprocessing multiverse: one EEG trial expanded into 128 pipeline variants, prediction flips, and the NA-PGI mitigation"
     title: "Same Brain, Different Prediction"
-    excerpt: "Change only the preprocessing pipeline — same data, same model, same subject — and up to 42% of trial-level EEG predictions flip. We characterize the sensitivity with a Walsh–Hadamard decomposition, introduce Preprocessing Uncertainty as a per-trial diagnostic, and mitigate the instability with Normalized Adaptive PGI."
+    excerpt: "Across six datasets and four paradigms, up to 42% of trial-level EEG predictions flip when only the preprocessing pipeline changes. The data, the model and the subject all stay the same. We characterize the sensitivity with a Walsh-Hadamard decomposition, introduce Preprocessing Uncertainty as a per-trial diagnostic, and mitigate the instability with Normalized Adaptive PGI."
     url: "/publication/2026-arxiv-same-brain"
     btn_label: "Read more"
     btn_class: "btn--primary"
   - image_path: research-wmf-am.jpg
     alt: "The WMF-AM probe: human working memory, an LLM tracking a hidden cumulative state without a scratchpad, and per-model results across depth K"
     title: "Probing Working Memory in LLMs"
-    excerpt: "WMF-AM isolates cumulative state tracking — maintaining and updating an intermediate result across K operations with no scratchpad. Across 20 open-weight models from 13 families, the probe predicts downstream agent performance at r = 0.612, and stays discriminative where fixed benchmarks plateau."
+    excerpt: "WMF-AM isolates cumulative state tracking, the ability to maintain and update an intermediate result across K operations with no scratchpad. Across 20 open-weight models from 13 families, the probe predicts downstream agent performance at r = 0.612, and it stays discriminative where fixed benchmarks plateau."
     url: "/publication/2026-arxiv-wmf-am"
     btn_label: "Read more"
     btn_class: "btn--primary"
@@ -32,15 +32,16 @@ selected_research:
 
 I am an **Assistant Professor** at the [Graduate School of Information Sciences (GSIS)](https://www.is.tohoku.ac.jp/en/), [Tohoku University](https://www.tohoku.ac.jp/en/), Japan, affiliated with the [Yamada Laboratory](https://yamada-lab.gr.jp/ja/index.html) and the [International Liaison Office (ILO)](https://www.is.tohoku.ac.jp/introduction/ilo/), with a concurrent appointment in the Social Integration Research Division of the [Unprecedented-scale Data Analytics Center (UDAC)](https://udac.tohoku.ac.jp/).
 
-My research asks when a measurement of a complex system can be trusted — whether the system is a brain or a model. I work on the reliability of EEG decoding, on cognitive probes that measure what large language models can actually do, and on the neural mechanisms of voluntary, self-initiated attention. I received my Ph.D. under [Prof. Satoshi Shioiri](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=en) at the [Visual Cognition and Systems Laboratory](https://www.shioiri.riec.tohoku.ac.jp/), and was a Visiting PhD Scholar in the [Sydney Cash Lab](https://cashlab.mgh.harvard.edu/) at **Harvard Medical School / Massachusetts General Hospital**.
+My research asks when a measurement of a complex system can be trusted, whether that system is a brain or a model. I work on the reliability of EEG decoding, on cognitive probes for large language models, and on the neural mechanisms of voluntary, self-initiated attention. I received my Ph.D. under [Prof. Satoshi Shioiri](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=en) at the [Visual Cognition and Systems Laboratory](https://www.shioiri.riec.tohoku.ac.jp/), and was a Visiting PhD Scholar in the [Sydney Cash Lab](https://cashlab.mgh.harvard.edu/) at **Harvard Medical School / Massachusetts General Hospital**.
 
 ## Research Interests
 
-- **Reliable and interpretable neural decoding** — when an EEG prediction can be trusted: preprocessing-induced instability, per-trial uncertainty diagnostics, and feature attribution
-- **Cognitive probes for AI systems** — measuring working memory and cumulative state tracking in large language models, and evaluation protocols that isolate what a model can actually do
-- **Neural mechanisms of voluntary, self-initiated attention** — EEG with simultaneous eye movements, gaze-contingent paradigms, frontal-midline theta dynamics
+- Reliability of EEG decoding, including preprocessing-induced instability, per-trial uncertainty, and feature attribution
+- Cognitive probes for AI systems, including working memory and cumulative state tracking in large language models
+- Evaluation protocols that isolate what a model can actually do
+- Neural mechanisms of voluntary, self-initiated attention, using EEG with simultaneous eye movements and gaze-contingent paradigms
 
-**Current directions.** Aligning brain signals (EEG, fMRI) with large-scale AI models (LLMs, vision-language models) to compare their internal representations.
+My current work extends this toward aligning brain signals (EEG, fMRI) with large-scale AI models such as LLMs and vision-language models, comparing their internal representations.
 
 ## Selected Research
 
@@ -55,17 +56,17 @@ My research asks when a measurement of a complex system can be trusted — wheth
 | **Jun 2026** | Joined the Tohoku University × **NTT DATA Group** joint research on technology governance ([TechGov](https://techgov.udac.tohoku.ac.jp/ja/index.html#home)) as a research member |
 | **Jun 2026** | PVIR [poster](/publication/2026-cvpr-pvir) presented at **CVPR 2026 Workshop VGBE**, Denver, Colorado |
 | **May 2026** | Joined the [TechGov](https://techgov.udac.tohoku.ac.jp/ja/index.html#home) initiative at UDAC, Tohoku University |
-| **May 2026** | New preprint on arXiv: [Subject-Specific Analysis of Self-Initiated Attention Shifts from EEG](https://arxiv.org/abs/2605.18251) — SHAP-based within-subject decoding of self-initiated attention |
-| **May 2026** | New preprint on arXiv: [Same Brain, Different Prediction](https://arxiv.org/abs/2605.07212) — preprocessing pipelines flip up to 42% of EEG decoding predictions; we introduce a diagnostic + regularization fix |
-| **May 2026** | Updated preprint: [WMF-AM v2](https://arxiv.org/abs/2603.27343) reframes our LLM probe around working-memory depth and isolates cumulative state tracking as the dominant bottleneck |
-| **Apr 2026** | Collaborator on new preprint: [Vibe Medicine: Redefining Biomedical Research Through Human-AI Co-Work](https://arxiv.org/abs/2604.23674) — under review at *Meta-Radiology* |
+| **May 2026** | New preprint on arXiv, [Subject-Specific Analysis of Self-Initiated Attention Shifts from EEG](https://arxiv.org/abs/2605.18251). SHAP-based within-subject decoding of self-initiated attention |
+| **May 2026** | New preprint on arXiv, [Same Brain, Different Prediction](https://arxiv.org/abs/2605.07212). Preprocessing pipelines flip up to 42% of EEG decoding predictions, and we introduce a diagnostic and a regularization fix |
+| **May 2026** | Updated preprint. [WMF-AM v2](https://arxiv.org/abs/2603.27343) reframes our LLM probe around working-memory depth and isolates cumulative state tracking as the dominant bottleneck |
+| **Apr 2026** | Collaborator on new preprint, [Vibe Medicine: Redefining Biomedical Research Through Human-AI Co-Work](https://arxiv.org/abs/2604.23674), under review at *Meta-Radiology* |
 | **Apr 2026** | Started as **Assistant Professor** at GSIS, Tohoku University (Yamada Lab, ILO) with concurrent appointment at [UDAC](https://udac.tohoku.ac.jp/) Social Integration Research Division |
 | **Apr 2026** | Teaching [Machine Learning Basics](https://gp-ds.tohoku.ac.jp/ja/index.html) at GSIS, Tohoku University |
-| **Mar 2026** | Paper accepted at **CVPR 2026 Workshop VGBE**: Physics-Aware Video Instance Removal Benchmark |
-| **Mar 2026** | New preprint on arXiv: [Beyond Completion: Probing Cumulative State Tracking to Predict LLM Agent Performance](https://arxiv.org/abs/2603.27343) |
+| **Mar 2026** | Paper accepted at **CVPR 2026 Workshop VGBE**, Physics-Aware Video Instance Removal Benchmark |
+| **Mar 2026** | New preprint on arXiv, [Beyond Completion: Probing Cumulative State Tracking to Predict LLM Agent Performance](https://arxiv.org/abs/2603.27343) |
 | **Feb 2026** | Participated in [**Qualia Structure** Grant Meeting](https://en.qualia-structure.jp/news/detail/7202) |
 | **Feb 2026** | Appeared in [Journal Club: *The Proliferation of Consciousness Theories: What can we do next?*](https://www.youtube.com/watch?v=QqUq6q1EMXI) (Neural basis of Consciousness & Qualia Structure) |
-| **Dec 2025** | Paper published in *Frontiers in Human Neuroscience*: [frontal-midline theta ramping indexes self-initiated attention shifts](https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2025.1708257/full) |
+| **Dec 2025** | Paper published in *Frontiers in Human Neuroscience*, [frontal-midline theta ramping indexes self-initiated attention shifts](https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2025.1708257/full) |
 
 <details markdown="1">
 <summary><strong>Earlier news</strong> (2025 and before)</summary>
@@ -133,7 +134,7 @@ Supervisors: Prof. [Kazunori Yamada](https://yamada-lab.gr.jp/ja/index.html), As
 
 ## Editorial Board
 
-- **Editorial Board Member**, *[Interdisciplinary Information Sciences](https://www.is.tohoku.ac.jp/en/iis/)* (Tohoku University GSIS) — 2026–present
+- **Editorial Board Member**, *[Interdisciplinary Information Sciences](https://www.is.tohoku.ac.jp/en/iis/)* (Tohoku University GSIS), 2026–present
 
 ## Reviewer
 
@@ -148,7 +149,7 @@ Supervisors: Prof. [Kazunori Yamada](https://yamada-lab.gr.jp/ja/index.html), As
 - [International Liaison Office (ILO)](https://www.is.tohoku.ac.jp/introduction/ilo/)
 - [Graduate Program in Data Science (GPDS)](https://gp-ds.tohoku.ac.jp/ja/index.html)
 - [Yamada Laboratory](https://yamada-lab.gr.jp/ja/index.html)
-- [TOHOKU AI GROUP](https://tai.udac.tohoku.ac.jp/ja/index.html) — Artificial Intelligence Research Group at Tohoku University
+- [TOHOKU AI GROUP](https://tai.udac.tohoku.ac.jp/ja/index.html), Artificial Intelligence Research Group at Tohoku University
 - [Graduate School of Information Sciences (GSIS)](https://www.is.tohoku.ac.jp/en/), Tohoku University
-- [Unprecedented-scale Data Analytics Center (UDAC)](https://udac.tohoku.ac.jp/) — Social Integration Research Division
-- [Collaborative Research Laboratory for Technology Governance (TechGov)](https://techgov.udac.tohoku.ac.jp/ja/index.html) — Tohoku University × NTT Data Group
+- [Unprecedented-scale Data Analytics Center (UDAC)](https://udac.tohoku.ac.jp/), Social Integration Research Division
+- [Collaborative Research Laboratory for Technology Governance (TechGov)](https://techgov.udac.tohoku.ac.jp/ja/index.html), Tohoku University × NTT Data Group
