@@ -5,6 +5,29 @@ author_profile: true
 redirect_from:
   - /about/
   - /about.html
+
+selected_research:
+  - image_path: research-same-brain.jpg
+    alt: "Overview of the preprocessing multiverse: one EEG trial expanded into 128 pipeline variants, prediction flips, and the NA-PGI mitigation"
+    title: "Same Brain, Different Prediction"
+    excerpt: "Change only the preprocessing pipeline — same data, same model, same subject — and up to 42% of trial-level EEG predictions flip. We characterize the sensitivity with a Walsh–Hadamard decomposition, introduce Preprocessing Uncertainty as a per-trial diagnostic, and mitigate the instability with Normalized Adaptive PGI."
+    url: "/publication/2026-arxiv-same-brain"
+    btn_label: "Read more"
+    btn_class: "btn--primary"
+  - image_path: research-wmf-am.jpg
+    alt: "The WMF-AM probe: human working memory, an LLM tracking a hidden cumulative state without a scratchpad, and per-model results across depth K"
+    title: "Probing Working Memory in LLMs"
+    excerpt: "WMF-AM isolates cumulative state tracking — maintaining and updating an intermediate result across K operations with no scratchpad. Across 20 open-weight models from 13 families, the probe predicts downstream agent performance at r = 0.612, and stays discriminative where fixed benchmarks plateau."
+    url: "/publication/2026-arxiv-wmf-am"
+    btn_label: "Read more"
+    btn_class: "btn--primary"
+  - image_path: research-fmt-theta.jpg
+    alt: "Frontal-midline theta power ramping up in the two seconds before a self-initiated attention shift, separated by shift type"
+    title: "Frontal-Midline Theta Ramping"
+    excerpt: "Simultaneous EEG and eye-tracking during visual search show frontal-midline theta ramping up before voluntary, self-initiated attention shifts. The ramp indexes attentional preparation and separates self-initiated shifts from externally driven ones."
+    url: "/publication/2025-frontiers-hum-neuro"
+    btn_label: "Read more"
+    btn_class: "btn--primary"
 ---
 
 I am an **Assistant Professor** at the [Graduate School of Information Sciences (GSIS)](https://www.is.tohoku.ac.jp/en/), [Tohoku University](https://www.tohoku.ac.jp/en/), Japan, affiliated with the [Yamada Laboratory](https://yamada-lab.gr.jp/ja/index.html) and the [International Liaison Office (ILO)](https://www.is.tohoku.ac.jp/introduction/ilo/), with a concurrent appointment in the Social Integration Research Division of the [Unprecedented-scale Data Analytics Center (UDAC)](https://udac.tohoku.ac.jp/).
@@ -18,6 +41,10 @@ My research asks when a measurement of a complex system can be trusted — wheth
 - **Neural mechanisms of voluntary, self-initiated attention** — EEG with simultaneous eye movements, gaze-contingent paradigms, frontal-midline theta dynamics
 
 **Current directions.** Aligning brain signals (EEG, fMRI) with large-scale AI models (LLMs, vision-language models) to compare their internal representations.
+
+## Selected Research
+
+{% include feature_row id="selected_research" %}
 
 ## News
 
