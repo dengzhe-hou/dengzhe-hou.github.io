@@ -34,12 +34,12 @@ redirect_from:
   * GPA: 4.15/5.0 (Top 30%)
 
 ## Research Interests
-* Neural–AI alignment: comparing representations in EEG/fMRI and large language/vision models
-* Brain-inspired AI: using cognitive and neural principles to optimize AI architectures
+* Reliable and interpretable neural decoding (preprocessing-induced instability, per-trial uncertainty, feature attribution)
+* Cognitive probes for AI systems (working memory and cumulative state tracking in LLMs; evaluation protocol design)
 * Visual attention and self-initiated attentional control
 * Eye movement–EEG integration (gaze-contingent paradigms; saccades & microsaccades)
 * Decision-related neural dynamics and computational modeling (accumulation-to-bound, time–frequency analysis)
-* Neural decoding (EEG, sEEG, MEG, hyperscanning)
+* Current directions: neural–AI alignment — comparing representations in EEG/fMRI and large language/vision models
 
 ## Publications
   <ul>{% for post in site.publications reversed %}
