@@ -9,14 +9,15 @@ redirect_from:
 
 I am an **Assistant Professor** at the [Graduate School of Information Sciences (GSIS)](https://www.is.tohoku.ac.jp/en/), [Tohoku University](https://www.tohoku.ac.jp/en/), Japan, affiliated with the [Yamada Laboratory](https://yamada-lab.gr.jp/ja/index.html) and the [International Liaison Office (ILO)](https://www.is.tohoku.ac.jp/introduction/ilo/), with a concurrent appointment in the Social Integration Research Division of the [Unprecedented-scale Data Analytics Center (UDAC)](https://udac.tohoku.ac.jp/).
 
-My research bridges cognitive neuroscience and artificial intelligence: I align brain signals (EEG, fMRI) with large-scale AI models to compare their internal representations, and study the neural mechanisms of voluntary, self-initiated attention. I received my Ph.D. under [Prof. Satoshi Shioiri](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=en) at the [Visual Cognition and Systems Laboratory](https://www.shioiri.riec.tohoku.ac.jp/), and was a Visiting PhD Scholar in the [Sydney Cash Lab](https://cashlab.mgh.harvard.edu/) at **Harvard Medical School / Massachusetts General Hospital**.
+My research asks when a measurement of a complex system can be trusted — whether the system is a brain or a model. I work on the reliability of EEG decoding, on cognitive probes that measure what large language models can actually do, and on the neural mechanisms of voluntary, self-initiated attention. I received my Ph.D. under [Prof. Satoshi Shioiri](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=en) at the [Visual Cognition and Systems Laboratory](https://www.shioiri.riec.tohoku.ac.jp/), and was a Visiting PhD Scholar in the [Sydney Cash Lab](https://cashlab.mgh.harvard.edu/) at **Harvard Medical School / Massachusetts General Hospital**.
 
 ## Research Interests
 
-- Neural–AI alignment: comparing representations in EEG/fMRI and large language/vision models
-- Brain-inspired AI: using cognitive and neural principles to optimize AI architectures
-- Visual attention and self-initiated attentional control (EEG + eye movements; gaze-contingent paradigms; saccade and microsaccade dynamics)
-- Computational modeling and neural decoding (EEG, sEEG, MEG, hyperscanning; accumulation-to-bound, time–frequency analysis)
+- **Reliable and interpretable neural decoding** — when an EEG prediction can be trusted: preprocessing-induced instability, per-trial uncertainty diagnostics, and feature attribution
+- **Cognitive probes for AI systems** — measuring working memory and cumulative state tracking in large language models, and evaluation protocols that isolate what a model can actually do
+- **Neural mechanisms of voluntary, self-initiated attention** — EEG with simultaneous eye movements, gaze-contingent paradigms, frontal-midline theta dynamics
+
+**Current directions.** Aligning brain signals (EEG, fMRI) with large-scale AI models (LLMs, vision-language models) to compare their internal representations.
 
 ## News
 
