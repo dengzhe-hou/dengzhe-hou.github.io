@@ -12,7 +12,7 @@ redirect_from:
 ## Appointments
 * **Assistant Professor**, Graduate School of Information Sciences, Tohoku University, Japan, Apr 2026 – present
   * Yamada Laboratory · International Liaison Office (ILO)
-* **Assistant Professor (Concurrent)**, Unprecedented-scale Data Analytics Center (UDAC) — Social Integration Research Division, Tohoku University, Apr 2026 – present
+* **Assistant Professor (Concurrent)**, Unprecedented-scale Data Analytics Center (UDAC), Social Integration Research Division, Tohoku University, Apr 2026 – present
   * TechGov initiative (from May 2026); research member, Tohoku University × NTT DATA Group joint research on technology governance (from Jun 2026)
 
 ## Education
@@ -34,12 +34,12 @@ redirect_from:
   * GPA: 4.15/5.0 (Top 30%)
 
 ## Research Interests
-* Reliable and interpretable neural decoding (preprocessing-induced instability, per-trial uncertainty, feature attribution)
-* Cognitive probes for AI systems (working memory and cumulative state tracking in LLMs; evaluation protocol design)
+* Reliability of EEG decoding (preprocessing-induced instability, per-trial uncertainty, feature attribution)
+* Cognitive probes for AI systems (working memory and cumulative state tracking in LLMs, evaluation protocol design)
 * Visual attention and self-initiated attentional control
-* Eye movement–EEG integration (gaze-contingent paradigms; saccades & microsaccades)
+* Eye movement–EEG integration (gaze-contingent paradigms, saccades and microsaccades)
 * Decision-related neural dynamics and computational modeling (accumulation-to-bound, time–frequency analysis)
-* Current directions: neural–AI alignment — comparing representations in EEG/fMRI and large language/vision models
+* Current directions, aligning brain signals (EEG, fMRI) with large language and vision models to compare their internal representations
 
 ## Publications
   <ul>{% for post in site.publications reversed %}
@@ -59,9 +59,9 @@ redirect_from:
 ## Grants, Fellowships & Awards
 * **Research Grant (PI)**, Center for So-Go-Chi (Convergence Knowledge) Informatics, Tohoku University (¥400,000), Jul 2026
 * **Research Member**, Tohoku University × NTT DATA Group Joint Research on Technology Governance (TechGov, UDAC), Jun 2026 – present
-* **Kaggle Expert** — Bronze Medal, [CSIRO Image2Biomass Prediction](https://www.kaggle.com/competitions/csiro-biomass) (355/3805), 2026
+* **Kaggle Expert**, Bronze Medal, [CSIRO Image2Biomass Prediction](https://www.kaggle.com/competitions/csiro-biomass) (355/3805), 2026
 * **JSPS DC2 Research Fellowship**, Japan Society for the Promotion of Science, Apr 2025 –
-* **Kaggle Bronze Medal** — Santa 2024: The Perplexity Permutation Puzzle (148/1514), Feb 2025
+* **Kaggle Bronze Medal**, Santa 2024 Perplexity Permutation Puzzle (148/1514), Feb 2025
 * **KAKENHI Grant-in-Aid for Scientific Research (A)**, 自発的脳機能の神経基盤理解 (PI: Prof. Satoshi Shioiri), 2024 – 2028
 * **Best Presentation Award** (ベストプレゼンテーション賞), 32nd Doctoral Student Presentation, Tohoku University, Dec 2024
 * **ECVP Student Travel Award**, European Conference on Visual Perception, Aug 2023
