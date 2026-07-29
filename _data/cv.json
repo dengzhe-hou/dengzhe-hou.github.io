@@ -5,7 +5,7 @@
     "email": "hou.dengzhe.t8@dc.tohoku.ac.jp",
     "phone": "",
     "website": "https://dengzhe-hou.github.io",
-    "summary": "Assistant Professor at the Graduate School of Information Sciences, Tohoku University (Yamada Laboratory; International Liaison Office), with a concurrent appointment at the Unprecedented-scale Data Analytics Center (UDAC), Social Integration Research Division (from April 2026). JSPS DC2 Research Fellow (2025–2026). Research bridges cognitive neuroscience and AI — aligning brain signals (EEG, fMRI) with large-scale AI models and using neural and cognitive principles to guide AI design. Ph.D. in Information Sciences, Tohoku University (2026).",
+    "summary": "Assistant Professor at the Graduate School of Information Sciences, Tohoku University (Yamada Laboratory; International Liaison Office), with a concurrent appointment at the Unprecedented-scale Data Analytics Center (UDAC), Social Integration Research Division (from April 2026). JSPS DC2 Research Fellow (2025–2026). Research bridges cognitive neuroscience and AI, covering the reliability of EEG decoding, cognitive probes for large language models, and the neural mechanisms of self-initiated attention. Ph.D. in Information Sciences, Tohoku University (2026).",
     "location": {
       "address": "Graduate School of Information Sciences, Tohoku University",
       "postalCode": "980-8579",
@@ -50,7 +50,7 @@
       "endDate": "",
       "summary": "Assistant Professor at GSIS, affiliated with the Yamada Laboratory and the International Liaison Office (ILO). Research bridges cognitive neuroscience and artificial intelligence.",
       "highlights": [
-        "Aligning brain signals (EEG, fMRI) with large-scale AI models (LLMs, vision-language models)",
+        "Reliability of EEG decoding and cognitive probes for large language models. Current directions include aligning brain signals (EEG, fMRI) with large-scale AI models",
         "Instructor for Machine Learning Basics (Graduate Program in Data Science, GPDS)"
       ]
     },
@@ -100,7 +100,7 @@
     },
     {
       "institution": "Harvard Medical School / Massachusetts General Hospital",
-      "area": "Visiting PhD Scholar — Department of Neurology, MGH",
+      "area": "Visiting PhD Scholar, Department of Neurology, MGH",
       "studyType": "Visiting Scholar",
       "startDate": "2024-08-01",
       "endDate": "2025-01-31",
@@ -225,7 +225,7 @@
     },
     {
       "name": "EEG-Based Decoding of Voluntary Attentional Control: Differentiating Self-Initiated Shifts in a Visual Search Paradigm",
-      "event": "EPC & APCV Joint Meeting 2025 — UNSW Conferences",
+      "event": "EPC & APCV Joint Meeting 2025, UNSW Conferences",
       "date": "2025-06-01",
       "location": "Sydney, Australia",
       "description": "Poster"
@@ -249,7 +249,7 @@
       "event": "European Conference on Visual Perception (ECVP 2023)",
       "date": "2023-08-27",
       "location": "Paphos, Cyprus",
-      "description": "Oral talk — ECVP Student Travel Award recipient"
+      "description": "Oral talk, ECVP Student Travel Award recipient"
     },
     {
       "name": "Neural activities preceding self-initiated attention (alpha wave analysis)",
@@ -268,7 +268,7 @@
   ],
   "teaching": [
     {
-      "course": "Teaching Assistant — Data Science & Machine Learning Courses",
+      "course": "Teaching Assistant, Data Science and Machine Learning Courses",
       "institution": "Graduate School of Information Sciences, Tohoku University",
       "date": "2022-04-01",
       "role": "Teaching Assistant",
