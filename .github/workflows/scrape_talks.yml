@@ -6,6 +6,7 @@ on:
       - 'talks/**'
       - '_talks/**'
       - 'talkmap.ipynb'
+  workflow_dispatch:          # allows re-running the map by hand
 
 jobs:
   build:
