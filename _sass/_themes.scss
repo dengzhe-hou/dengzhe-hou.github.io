@@ -55,6 +55,14 @@ $medium-wide                : 900px !default;
 $large                      : 925px !default;
 $x-large                    : 1280px !default;
 
+/* How wide the page container is allowed to grow. Kept separate from
+   $x-large so that widening the layout does not move the breakpoint. */
+$content-max-width          : 1600px !default;
+
+/* Comfortable reading measure for running prose. Wide blocks (card grids,
+   tables, figures) are exempt so they can use the full container. */
+$prose-max-width            : 48em !default;
+
 /* ==========================================================================
    Grid
    ========================================================================== */
