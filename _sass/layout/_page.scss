@@ -12,7 +12,7 @@
   animation-delay: 0.35s;
 
   @include breakpoint($x-large) {
-    max-width: $x-large;
+    max-width: $content-max-width;
   }
 }
 
@@ -20,7 +20,7 @@
   @include breakpoint($large) {
     @include span(10 of 12 last);
     @include prefix(0.5 of 12);
-    @include suffix(2 of 12);
+    @include suffix(0.5 of 12);
   }
 
   .page__inner-wrap {
@@ -53,6 +53,15 @@
   h2 {
     padding-bottom: 0.5em;
     border-bottom: 1px solid var(--global-border-color);
+  }
+
+  /* Hold running prose to a readable measure now that the container is
+     wider. Direct children only, so card copy, table cells and figures
+     keep the full width. */
+  > p,
+  > ul,
+  > ol {
+    max-width: $prose-max-width;
   }
 
   p, li, dl {
@@ -134,7 +143,7 @@
       padding-right: 1em;
 
       @include breakpoint($x-large) {
-        max-width: $x-large;
+        max-width: $content-max-width;
       }
     }
 
