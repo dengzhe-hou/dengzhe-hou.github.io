@@ -17,10 +17,10 @@
 <link rel="icon" href="/images/favicon.ico"/>
 <meta name="theme-color" content="#ffffff"/>
 
-<!-- Google Fonts: Inter -->
+<!-- Google Fonts: Source Serif 4 for running text, Inter for headings and UI -->
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet"/>
 
 <!-- Custom: Clean academic theme — slate navy + teal accent -->
 <style>
@@ -41,8 +41,21 @@
   }
 
   /* ── Fonts ────────────────────────────── */
-  body, .page__content, .sidebar, .masthead {
+  /* Running text is set in Source Serif 4; headings, navigation and other
+     interface chrome stay in Inter so the two roles read differently. */
+  body, .page__content, .archive {
+    font-family: 'Source Serif 4', Charter, Georgia, serif;
+  }
+  .sidebar, .masthead, .btn, .page__footer,
+  h1, h2, h3, h4, h5, h6,
+  .page__title, .archive__item-title, .author__name {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  /* Serif needs a touch more size and leading than Inter at the same em. */
+  .page__content > p, .page__content > ul, .page__content > ol,
+  .archive > p, .archive > ul, .archive > ol {
+    font-size: 1.06em;
+    line-height: 1.66;
   }
   .author__location, .page__meta time,
   .archive__item-excerpt .date {
@@ -123,7 +136,9 @@
   }
 
   /* ── Section headings (h2) ────────────── */
-  .page__content h2 {
+  /* Card titles are also h2.archive__item-title, so they must be excluded
+     or they inherit the uppercase section-label treatment. */
+  .page__content h2:not(.archive__item-title) {
     font-size: 0.92em;
     font-weight: 700;
     color: var(--ink);
@@ -134,7 +149,7 @@
     border-bottom: none !important;
     position: relative;
   }
-  .page__content h2::after {
+  .page__content h2:not(.archive__item-title)::after {
     content: "";
     display: block;
     height: 3px;
@@ -184,7 +199,11 @@
   .archive__item:hover::before { opacity: 1; }
   .archive__item-title {
     margin-top: 0 !important;
-    font-size: 0.96em !important;
+    font-size: 1.06em !important;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.005em;
+    text-transform: none;
   }
   .archive__item-title a {
     color: var(--ink) !important;
@@ -194,8 +213,8 @@
   .archive__item-title a:hover { color: var(--a) !important; }
   .archive__item-excerpt {
     color: var(--muted);
-    font-size: 0.85em !important;
-    line-height: 1.6;
+    font-size: 0.93em !important;
+    line-height: 1.62;
   }
 
   /* ── News / info table ────────────────── */
