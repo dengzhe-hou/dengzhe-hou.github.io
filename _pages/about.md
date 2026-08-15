@@ -51,7 +51,11 @@ My current work extends this toward aligning brain signals (EEG, fMRI) with larg
 
 | | |
 |---|---|
+| **Aug 2026** | Paper accepted at **IEEE SMC 2026** (Bellevue, USA), [Subject-Specific Analysis of Self-Initiated Attention Shifts from EEG](/publication/2026-arxiv-subject-specific) |
+| **Aug 2026** | [TimePre](/publication/2026-tmlr-timepre) accepted at **Transactions on Machine Learning Research (TMLR)** |
+| **Aug 2026** | [KANMixer](/publication/2026-scirep-kanmixer) accepted at ***Scientific Reports*** (in press) |
 | **Aug 2026** | **Invited talk** at the [12th Annual CWRU-Tohoku Data Science in Engineering and Life Sciences Symposium](https://energy.case.edu/), Cleveland, USA: "From Preprocessing Choices to LLM Agents: Automated and Verifiable Cognitive EEG Analysis" |
+| **Jul 2026** | Two new preprints under review at **AAAI 2027**: [CogEEGAgent](/publication/2026-arxiv-cogeegagent) (autonomous cognitive EEG analysis) and [CogArena](/publication/2026-arxiv-cogarena) (cognitive ability structure in LLMs) |
 | **Aug 2026** | Awarded [**KAKENHI Grant-in-Aid for Research Activity Start-up**](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-26K25566/) (PI, 26K25566): the representational format of attentional templates, probed with computational model hierarchies, EEG and eye tracking |
 | **Aug 2026** | [Kaggle](https://www.kaggle.com/monkeydz) **Silver Medal** in [ROGII - Wellbore Geology Prediction](https://www.kaggle.com/competitions/rogii-wellbore-geology-prediction) (89/6125) |
 | **Jul 2026** | Awarded a **research grant** (PI) from the [Center for So-Go-Chi (Convergence Knowledge) Informatics](https://www.aisogochi.tohoku.ac.jp/), Tohoku University |
@@ -66,7 +70,7 @@ My current work extends this toward aligning brain signals (EEG, fMRI) with larg
 | **Apr 2026** | Started as **Assistant Professor** at GSIS, Tohoku University (Yamada Lab, ILO) with concurrent appointment at [UDAC](https://udac.tohoku.ac.jp/) Social Integration Research Division |
 | **Apr 2026** | Teaching [Machine Learning Basics](https://gp-ds.tohoku.ac.jp/ja/index.html) at GSIS, Tohoku University |
 | **Mar 2026** | Paper accepted at **CVPR 2026 Workshop VGBE**, Physics-Aware Video Instance Removal Benchmark |
-| **Mar 2026** | New preprint on arXiv, [Beyond Completion: Probing Cumulative State Tracking to Predict LLM Agent Performance](https://arxiv.org/abs/2603.27343) |
+| **Mar 2026** | First version of the LLM working-memory probe on arXiv, then titled [Beyond Completion: Probing Cumulative State Tracking to Predict LLM Agent Performance](https://arxiv.org/abs/2603.27343) (later revised and retitled WMF-AM) |
 | **Feb 2026** | Participated in [**Qualia Structure** Grant Meeting](https://en.qualia-structure.jp/news/detail/7202) |
 | **Feb 2026** | Appeared in [Journal Club: *The Proliferation of Consciousness Theories: What can we do next?*](https://www.youtube.com/watch?v=QqUq6q1EMXI) (Neural basis of Consciousness & Qualia Structure) |
 | **Dec 2025** | Paper published in *Frontiers in Human Neuroscience*, [frontal-midline theta ramping indexes self-initiated attention shifts](https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2025.1708257/full) |
