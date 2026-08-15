@@ -65,6 +65,11 @@ var addressPoints = [
     151.2082848
   ],
   [
+    "Neurotechnology<br />The 44th Annual Conference of the Robotics Society of Japan (RSJ2026), Open Forum OF7; Kanazawa, Japan",
+    36.561627,
+    136.6568822
+  ],
+  [
     "Criticality-State-Based Mechanism for Self-Initiated Attention<br />\u65e5\u672c\u8996\u899a\u5b66\u4f1a 2023\u5e74\u590f\u5b63\u5927\u4f1a; Kanazawa, Japan",
     36.561627,
     136.6568822
