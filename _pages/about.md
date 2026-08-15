@@ -109,6 +109,7 @@ My current work extends this toward aligning brain signals (EEG, fMRI) with larg
 |---|---|---|
 | **Machine Learning Basics** | GSIS, Tohoku University ([GPDS](https://gp-ds.tohoku.ac.jp/ja/index.html)) | Apr 2026 – present |
 | | Course materials adapted from [Samy Baladram](https://www.samybaladram.com/) | |
+| **Data Science Training II & Data Science Challenge** | GSIS, Tohoku University | Jun 2026 – Jul 2026 |
 
 **Teaching Assistant**, Graduate School of Information Sciences, Tohoku University (2022 – 2025)
 
