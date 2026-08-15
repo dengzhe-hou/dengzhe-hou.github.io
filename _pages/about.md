@@ -125,7 +125,8 @@ Supervisors: Prof. [Kazunori Yamada](https://yamada-lab.gr.jp/ja/index.html), As
 | **2026–2027** | **[KAKENHI Grant-in-Aid for Research Activity Start-up](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-26K25566/)** (PI, 26K25566): 注意テンプレートの表象形式：計算モデル階層・脳波・視線追跡による解明 (¥2,600,000) |
 | **2026** | [Kaggle](https://www.kaggle.com/monkeydz) **Silver Medal**, [ROGII - Wellbore Geology Prediction](https://www.kaggle.com/competitions/rogii-wellbore-geology-prediction) (89/6125), [certificate](/images/kaggle-rogii-silver-2026.png) |
 | **2026** | **Research Grant (PI)**, [Center for So-Go-Chi (Convergence Knowledge) Informatics](https://www.aisogochi.tohoku.ac.jp/), Tohoku University (¥400,000) |
-| **2026–** | Research Member, Tohoku University × NTT DATA Group Joint Research on Technology Governance ([TechGov](https://techgov.udac.tohoku.ac.jp/ja/index.html#home), UDAC) |
+| **2026–** | Research Member, Tohoku University × NTT DATA Group Joint Research on Technology Governance ([TechGov](https://techgov.udac.tohoku.ac.jp/ja/index.html#home), UDAC) (¥1,000,000) |
+| **2026** | **Research Grant (PI)**, Graduate School of Information Sciences (GSIS), Tohoku University (¥500,000) |
 | **2026** | [Kaggle Expert](https://www.kaggle.com/monkeydz) – Bronze Medal, [CSIRO Image2Biomass Prediction](https://www.kaggle.com/competitions/csiro-biomass) (355/3805) |
 | **2025** | **[JSPS DC2 Research Fellowship](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-25KJ0641)** |
 | **2025** | [Kaggle](https://www.kaggle.com/monkeydz) Bronze Medal, [Santa 2024: The Perplexity Permutation Puzzle](https://www.kaggle.com/competitions/santa-2024) (148/1514) |
