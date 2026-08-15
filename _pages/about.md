@@ -140,6 +140,7 @@ Supervisors: Prof. [Kazunori Yamada](https://yamada-lab.gr.jp/ja/index.html), As
 
 ## Reviewer
 
+- *npj Science of Learning*
 - *Cognitive Neurodynamics*
 - *Journal of NeuroEngineering and Rehabilitation*
 - *Scientific Reports*
