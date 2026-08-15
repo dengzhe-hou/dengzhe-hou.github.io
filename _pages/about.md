@@ -53,7 +53,8 @@ My current work extends this toward aligning brain signals (EEG, fMRI) with larg
 |---|---|
 | **Aug 2026** | Paper accepted at **IEEE SMC 2026** (Bellevue, USA), [Subject-Specific Analysis of Self-Initiated Attention Shifts from EEG](/publication/2026-arxiv-subject-specific) |
 | **Aug 2026** | [TimePre](/publication/2026-tmlr-timepre) accepted at **Transactions on Machine Learning Research (TMLR)** |
-| **Aug 2026** | [KANMixer](/publication/2026-scirep-kanmixer) accepted at ***Scientific Reports*** (in press) |
+| **Aug 2026** | New preprint on arXiv, [Control-Diverse Reinforcement Fine-Tuning](/publication/2026-arxiv-cd-rft). RL post-training concentrates *control* on a shared set of components across tasks, even where activations look diverse — and relieving that bottleneck improves multi-task performance |
+| **Jul 2026** | [KANMixer](/publication/2026-scirep-kanmixer) published in ***Scientific Reports***: a compact KAN-centered mixer for long-term forecasting, and an honest account of when KANs actually help |
 | **Aug 2026** | **Invited talk** at the [12th Annual CWRU-Tohoku Data Science in Engineering and Life Sciences Symposium](https://energy.case.edu/), Cleveland, USA: "From Preprocessing Choices to LLM Agents: Automated and Verifiable Cognitive EEG Analysis" |
 | **Jul 2026** | Two new preprints under review at **AAAI 2027**: [CogEEGAgent](/publication/2026-arxiv-cogeegagent) (autonomous cognitive EEG analysis) and [CogArena](/publication/2026-arxiv-cogarena) (cognitive ability structure in LLMs) |
 | **Aug 2026** | Awarded [**KAKENHI Grant-in-Aid for Research Activity Start-up**](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-26K25566/) (PI, 26K25566): the representational format of attentional templates, probed with computational model hierarchies, EEG and eye tracking |
