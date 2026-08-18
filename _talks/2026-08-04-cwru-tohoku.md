@@ -5,6 +5,7 @@ type: "Invited talk"
 talk_type: "Invited talk"
 permalink: /talks/cwru-tohoku-2026
 venue: "The 12th Annual CWRU-Tohoku Data Science in Engineering and Life Sciences Symposium"
+url: 'https://sites.google.com/case.edu/2026-cwru-tohoku-symposium/event-program'
 date: 2026-08-04
 location: "Cleveland, OH, USA"
 category: international
@@ -13,3 +14,5 @@ category: international
 Invited talk in Technical Session IV: Life Sciences at the 12th Annual CWRU-Tohoku Data Science in Engineering and Life Sciences Symposium, Case Western Reserve University.
 
 **Speaker:** Dengzhe Hou
+
+[Event program](https://sites.google.com/case.edu/2026-cwru-tohoku-symposium/event-program)
