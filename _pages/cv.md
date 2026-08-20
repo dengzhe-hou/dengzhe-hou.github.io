@@ -60,7 +60,7 @@ redirect_from:
 * **[KAKENHI Grant-in-Aid for Research Activity Start-up](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-26K25566/)** (PI), 注意テンプレートの表象形式：計算モデル階層・脳波・視線追跡による解明 (26K25566, ¥2,600,000), Jul 2026 – Mar 2028
 * **Kaggle Silver Medal**, [ROGII - Wellbore Geology Prediction](https://www.kaggle.com/competitions/rogii-wellbore-geology-prediction) (89/6125, top 1.5%), Aug 2026
 * **Research Grant (PI)**, Center for So-Go-Chi (Convergence Knowledge) Informatics, Tohoku University (¥400,000), Jul 2026
-* **Research Member**, Tohoku University × NTT DATA Group Joint Research on Technology Governance (TechGov, UDAC), Jun 2026 – present
+* **Research Member**, Tohoku University × NTT DATA Group Joint Research on Technology Governance (TechGov, UDAC) (¥1,000,000 individual allocation, of ¥40,000,000 total project), Jun 2026 – present
 * **Kaggle Expert**, Bronze Medal, [CSIRO Image2Biomass Prediction](https://www.kaggle.com/competitions/csiro-biomass) (355/3805), 2026
 * **JSPS DC2 Research Fellowship**, Japan Society for the Promotion of Science, Apr 2025 –
 * **Kaggle Bronze Medal**, Santa 2024 Perplexity Permutation Puzzle (148/1514), Feb 2025
