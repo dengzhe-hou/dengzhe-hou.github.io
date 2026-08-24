@@ -55,6 +55,7 @@ My current work extends this toward aligning brain signals (EEG, fMRI) with larg
 | **Aug 2026** | Co-authored presentation accepted at the [Japan Institute of Marketing Science (JIMS) Research Conference](http://www.jims.gr.jp/%e7%a0%94%e7%a9%b6%e5%a4%a7%e4%bc%9a/), Waseda University, 14–15 Nov 2026: “生成AI活用事例における社会倫理的リスクと炎上要因の定量分析” |
 | **Aug 2026** | Paper accepted at **IEEE SMC 2026** (Bellevue, USA), [Subject-Specific Analysis of Self-Initiated Attention Shifts from EEG](/publication/2026-arxiv-subject-specific) |
 | **Aug 2026** | [TimePre](/publication/2026-tmlr-timepre) accepted at **Transactions on Machine Learning Research (TMLR)** |
+| **Aug 2026** | Awarded a **research grant** (PI) from [GSIS](https://www.is.tohoku.ac.jp/en/), Tohoku University, under Interdisciplinary Research Project Development Support: 認知科学実験パラダイムに基づくAIシステム認知能力評価プラットフォームの開拓 |
 | **Aug 2026** | New preprint on arXiv, [Control-Diverse Reinforcement Fine-Tuning](/publication/2026-arxiv-cd-rft). RL post-training concentrates *control* on a shared set of components across tasks, even where activations look diverse — and relieving that bottleneck improves multi-task performance |
 | **Jul 2026** | [KANMixer](/publication/2026-scirep-kanmixer) published in ***Scientific Reports***: a compact KAN-centered mixer for long-term forecasting, and an honest account of when KANs actually help |
 | **Aug 2026** | **Invited talk** at the [12th Annual CWRU-Tohoku Data Science in Engineering and Life Sciences Symposium](https://sites.google.com/case.edu/2026-cwru-tohoku-symposium/event-program), Cleveland, USA: "From Preprocessing Choices to LLM Agents: Automated and Verifiable Cognitive EEG Analysis" |
@@ -134,7 +135,7 @@ Supervisors: Prof. [Kazunori Yamada](https://yamada-lab.gr.jp/ja/index.html), As
 | **2026** | [Kaggle](https://www.kaggle.com/monkeydz) **Silver Medal**, [ROGII - Wellbore Geology Prediction](https://www.kaggle.com/competitions/rogii-wellbore-geology-prediction) (89/6125), [certificate](/images/kaggle-rogii-silver-2026.png) |
 | **2026** | **Research Grant (PI)**, [Center for So-Go-Chi (Convergence Knowledge) Informatics](https://www.aisogochi.tohoku.ac.jp/), Tohoku University (¥400,000) |
 | **2026–** | Research Member, Tohoku University × NTT DATA Group Joint Research on Technology Governance ([TechGov](https://techgov.udac.tohoku.ac.jp/ja/index.html#home), UDAC) (¥1,000,000 individual allocation, of ¥40,000,000 total project) |
-| **2026** | **Research Grant (PI)**, Graduate School of Information Sciences (GSIS), Tohoku University (¥500,000) |
+| **2026** | **Research Grant (PI)**, Interdisciplinary Research Project Development Support, Graduate School of Information Sciences (GSIS), Tohoku University: 認知科学実験パラダイムに基づくAIシステム認知能力評価プラットフォームの開拓 (¥500,000) |
 | **2026** | [Kaggle Expert](https://www.kaggle.com/monkeydz) – Bronze Medal, [CSIRO Image2Biomass Prediction](https://www.kaggle.com/competitions/csiro-biomass) (355/3805) |
 | **2025** | **[JSPS DC2 Research Fellowship](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-25KJ0641)** |
 | **2025** | [Kaggle](https://www.kaggle.com/monkeydz) Bronze Medal, [Santa 2024: The Perplexity Permutation Puzzle](https://www.kaggle.com/competitions/santa-2024) (148/1514) |
