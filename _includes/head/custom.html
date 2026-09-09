@@ -16,6 +16,7 @@
 <link rel="manifest" href="{{ base_path }}/images/manifest.json"/>
 <link rel="icon" href="/images/favicon.ico"/>
 <meta name="theme-color" content="#ffffff"/>
+<meta name="color-scheme" content="light"/>
 
 <!-- Google Fonts: Source Serif 4 for running text, Inter for headings and UI -->
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -30,8 +31,10 @@
      nav      #0f172a  (slate-900)
   ════════════════════════════════════════════ */
   :root {
+    color-scheme: light;
     --p:  #1e3a5f;          /* deep navy */
     --a:  #0f766e;          /* teal accent (darkened for AA text contrast) */
+    --a-on-dark: #5eead4;   /* readable teal on the navy header and footer */
     --nav: #0f172a;         /* slate-900 */
     --ink: #1e293b;         /* slate-800 body text */
     --muted: #475569;       /* slate-600 */
@@ -72,6 +75,10 @@
 
   /* ── Nav bar ──────────────────────────── */
   .masthead {
+    --global-bg-color: var(--nav);
+    --global-border-color: #475569;
+    --global-masthead-link-color: #ffffff;
+    --global-masthead-link-color-hover: var(--a-on-dark);
     background: var(--nav) !important;
     border-bottom: 2px solid var(--a) !important;
   }
@@ -93,7 +100,8 @@
     letter-spacing: 0.03em;
     font-size: 0.88em;
   }
-  .masthead__menu-item a:hover { color: var(--a) !important; }
+  .masthead__menu-item a:hover,
+  .masthead__menu-item a:focus-visible { color: var(--a-on-dark) !important; }
   .masthead__menu-item.selected a {
     color: #fff !important;
     border-bottom: 2px solid var(--a) !important;
@@ -101,9 +109,6 @@
 
   /* ── Page body ──────────────────────────── */
   body { background: #f8fafc !important; }
-
-  /* ── Hide theme toggle (sun icon) ────── */
-  #theme-toggle { display: none !important; }
 
   /* ── Sidebar ──────────────────────────── */
   .author__avatar img {
@@ -123,12 +128,13 @@
   }
   .author__bio {
     color: var(--muted) !important;
-    font-size: 0.81em !important;
+    font-size: 0.875rem !important;
     font-weight: 500;
   }
+  .author__urls li { font-size: 0.875rem; }
   .author__urls a {
     color: var(--ink) !important;
-    font-size: 0.82em !important;
+    font-size: inherit !important;
     transition: color 0.18s;
   }
   .author__urls a:hover { color: var(--a) !important; }
@@ -165,16 +171,26 @@
   }
 
   /* ── Links ────────────────────────────── */
-  .page__content a,
-  .page__content a:visited {
+  .page__content a:not(.btn),
+  .page__content a:not(.btn):visited {
     color: var(--p) !important;
     text-decoration: none;
     border-bottom: 1px solid rgba(30,58,95,0.5);
     transition: color 0.18s, border-color 0.18s;
   }
-  .page__content a:hover {
+  .page__content a:not(.btn):hover {
     color: var(--a) !important;
     border-bottom-color: var(--a);
+  }
+  .btn--primary,
+  .btn--primary:visited {
+    color: #ffffff !important;
+    background-color: var(--p);
+  }
+  .btn--primary:hover,
+  .btn--primary:focus-visible {
+    color: #ffffff !important;
+    background-color: var(--a);
   }
 
   /* ── Publication / talk cards ─────────── */
@@ -211,12 +227,12 @@
     letter-spacing: -0.005em;
     text-transform: none;
   }
-  .archive__item-title a {
+  .archive__item .archive__item-title a {
     color: var(--ink) !important;
     font-weight: 600;
     border-bottom: none !important;
   }
-  .archive__item-title a:hover { color: var(--a) !important; }
+  .archive__item .archive__item-title a:hover { color: var(--a) !important; }
   .archive__item-excerpt {
     color: var(--muted);
     font-size: 0.93em !important;
@@ -229,22 +245,22 @@
     box-shadow: none !important;
     background: transparent !important;
     width: 100%;
+    font-size: 0.875rem;
+    line-height: 1.6;
   }
   .page__content table thead { display: none; }
   .page__content table td {
     border: none !important;
     padding: 0.3em 0.65em !important;
     background: transparent !important;
-    font-size: 0.88em;
+    font-size: inherit;
     vertical-align: top;
   }
   .page__content table tr:nth-child(odd) td { background: transparent !important; }
   .page__content table td:first-child {
     font-family: ui-monospace, 'SF Mono', Menlo, monospace;
-    font-size: 0.78em;
     font-weight: 600;
     color: var(--a);
-    white-space: nowrap;
     min-width: 7em;
     padding-top: 0.45em !important;
   }
@@ -257,7 +273,7 @@
   .page__footer-copyright, .page__footer a {
     color: rgba(255,255,255,0.5) !important;
   }
-  .page__footer a:hover { color: var(--a) !important; }
+  .page__footer a:hover { color: var(--a-on-dark) !important; }
 
   /* ── Responsive ───────────────────────── */
   @media (max-width: 768px) {
@@ -266,17 +282,15 @@
 
   /* ── Focus visibility (a11y) ──────────── */
   .greedy-nav button:focus-visible {
-    outline: 2px solid var(--a) !important;
+    outline: 2px solid var(--a-on-dark) !important;
     outline-offset: 2px;
   }
 
   /* ── Mobile: relax 3-col tables, bigger tap targets ── */
   @media (max-width: 600px) {
     .page__content table td:first-child {
-      white-space: normal !important;
       min-width: 4.5em;
     }
-    .page__content table td { font-size: 0.9em; }
     .greedy-nav a { padding: 0.75rem 0; }
     .author__urls a { padding-top: 0.35rem !important; padding-bottom: 0.35rem !important; }
   }
