@@ -5,7 +5,7 @@
     "email": "hou.dengzhe.t8@dc.tohoku.ac.jp",
     "phone": "",
     "website": "https://dengzhe-hou.github.io",
-    "summary": "Assistant Professor at the Graduate School of Information Sciences, Tohoku University (Yamada Laboratory; International Liaison Office), with a concurrent appointment at the Unprecedented-scale Data Analytics Center (UDAC), Social Integration Research Division (from April 2026). Former JSPS DC2 Research Fellow (2025–2026). Research bridges cognitive neuroscience and AI, covering the reliability of EEG decoding, cognitive probes for large language models, and the neural mechanisms of self-initiated attention. Ph.D. in Information Sciences, Tohoku University (2026).",
+    "summary": "Assistant Professor at the Graduate School of Information Sciences, Tohoku University (Yamada Laboratory; International Liaison Office), with a concurrent appointment at the Unprecedented-scale Data Analytics Center (UDAC), Social Integration Research Division (from April 2026). Former JSPS DC2 Research Fellow (2025–2026). Research spans AI4Brain (AI for understanding the brain) and Brain4AI (brain and cognitive science for understanding and improving AI), including reliable EEG decoding, self-initiated attention, and cognitive evaluation of large language models. Ph.D. in Information Sciences, Tohoku University (2026).",
     "location": {
       "address": "Graduate School of Information Sciences, Tohoku University",
       "postalCode": "980-8579",
@@ -165,12 +165,12 @@
   ],
   "interests": [
     {
-      "name": "Visual Attention",
-      "keywords": ["Self-initiated attentional control", "Eye movements", "Visual search"]
+      "name": "AI4Brain",
+      "keywords": ["Reliable EEG decoding", "Automated EEG analysis", "Self-initiated attention", "Eye movement–EEG integration", "Computational modeling"]
     },
     {
-      "name": "Cognitive Neuroscience",
-      "keywords": ["EEG oscillations", "Neural decoding", "Decision-making", "sEEG"]
+      "name": "Brain4AI",
+      "keywords": ["Cognitive evaluation of AI", "Working memory in LLMs", "Cumulative state tracking", "Cognitive ability structure", "Brain–AI representation alignment"]
     }
   ],
   "references": [],

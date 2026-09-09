@@ -34,7 +34,7 @@ selected_research:
 
 I am an **Assistant Professor** at [Tohoku University](https://www.tohoku.ac.jp/en/), Japan.
 
-My research connects **reliable EEG decoding**, **cognitive evaluation of language models**, and the **neural mechanisms of self-initiated attention**.
+My research spans **AI4Brain** (AI for understanding the brain) and **Brain4AI** (brain and cognitive science for understanding and improving AI).
 
 <details id="research-interests" class="profile-background" markdown="1">
 <summary>Background & research interests</summary>
@@ -43,14 +43,12 @@ At the [Graduate School of Information Sciences (GSIS)](https://www.is.tohoku.ac
 
 I received my Ph.D. under [Prof. Satoshi Shioiri](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=en) at the [Visual Cognition and Systems Laboratory](https://sites.google.com/view/shioiri-satoshi/), and was a Visiting PhD Scholar in the Sydney Cash Lab at **Harvard Medical School / Massachusetts General Hospital**.
 
-My research asks when a measurement of a complex system can be trusted, whether that system is a brain or a model. My interests include:
+My work focuses on two connected directions:
 
-- Reliability of EEG decoding, including preprocessing-induced instability, per-trial uncertainty, and feature attribution
-- Cognitive probes for AI systems, including working memory and cumulative state tracking in large language models
-- Evaluation protocols that isolate what a model can actually do
-- Neural mechanisms of voluntary, self-initiated attention, using EEG with simultaneous eye movements and gaze-contingent paradigms
+- **AI4Brain:** Reliable decoding and automated analysis of EEG, including preprocessing-induced instability, per-trial uncertainty, and feature attribution; understanding self-initiated attention through EEG, eye tracking, and computational modeling.
+- **Brain4AI:** Drawing on cognitive neuroscience to understand, evaluate, and improve AI systems, with a focus on working memory, cumulative state tracking, and the structure of cognitive abilities in large language models.
 
-My current work extends this toward aligning brain signals (EEG, fMRI) with large-scale AI models such as LLMs and vision-language models, comparing their internal representations.
+Connecting these directions, my current work explores aligning brain signals (EEG, fMRI) with representations in large language and vision-language models.
 
 [Full CV](/cv/)
 

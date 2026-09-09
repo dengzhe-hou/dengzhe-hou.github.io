@@ -34,12 +34,20 @@ redirect_from:
   * GPA: 4.15/5.0 (Top 30%)
 
 ## Research Interests
-* Reliability of EEG decoding (preprocessing-induced instability, per-trial uncertainty, feature attribution)
-* Cognitive probes for AI systems (working memory and cumulative state tracking in LLMs, evaluation protocol design)
+
+### AI4Brain
+
+* Reliable decoding and automated analysis of EEG (preprocessing-induced instability, per-trial uncertainty, feature attribution)
 * Visual attention and self-initiated attentional control
 * Eye movement–EEG integration (gaze-contingent paradigms, saccades and microsaccades)
 * Decision-related neural dynamics and computational modeling (accumulation-to-bound, time–frequency analysis)
-* Current directions, aligning brain signals (EEG, fMRI) with large language and vision models to compare their internal representations
+
+### Brain4AI
+
+* Cognitive neuroscience as a framework for understanding, evaluating, and improving AI systems
+* Cognitive probes and evaluation protocols for LLMs (working memory, cumulative state tracking, cognitive ability structure)
+
+Across these directions, my current work explores aligning brain signals (EEG, fMRI) with representations in large language and vision-language models.
 
 ## Publications
   <ul>{% for post in site.publications reversed %}
