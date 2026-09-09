@@ -6,7 +6,7 @@ permalink: /publication/2025-scientific-reports
 excerpt: 'This study identified common neural coherence patterns underlying both motor skill acquisition and interlimb transfer, suggesting shared neurophysiological mechanisms for these two motor learning processes.'
 date: 2025-07-19
 venue: 'Scientific Reports'
-paperurl: ''
+paperurl: 'https://www.nature.com/articles/s41598-025-11943-6'
 citation: 'Zhao, J., Wang, Y., Hou, D., Sun, S., Négyesi, J., Inada, H., Shioiri, S., &amp; Nagatomi, R. (2025). Commonality of neuronal coherence for motor skill acquisition and interlimb transfer. <i>Scientific Reports</i>, 15(1), 26276.'
 ---
 

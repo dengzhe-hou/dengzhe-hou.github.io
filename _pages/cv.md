@@ -62,7 +62,7 @@ redirect_from:
 * **Research Grant (PI)**, Center for So-Go-Chi (Convergence Knowledge) Informatics, Tohoku University (¥400,000), Jul 2026
 * **Research Member**, Tohoku University × NTT DATA Group Joint Research on Technology Governance (TechGov, UDAC) (¥1,000,000 individual allocation, of ¥40,000,000 total project), Jun 2026 – present
 * **Kaggle Expert**, Bronze Medal, [CSIRO Image2Biomass Prediction](https://www.kaggle.com/competitions/csiro-biomass) (355/3805), 2026
-* **JSPS DC2 Research Fellowship**, Japan Society for the Promotion of Science, Apr 2025 –
+* **JSPS DC2 Research Fellowship**, Japan Society for the Promotion of Science, 2025–2026 (completed)
 * **Kaggle Bronze Medal**, Santa 2024 Perplexity Permutation Puzzle (148/1514), Feb 2025
 * **KAKENHI Grant-in-Aid for Scientific Research (A)**, 自発的脳機能の神経基盤理解 (PI: Prof. Satoshi Shioiri), 2024 – 2028
 * **Best Presentation Award** (ベストプレゼンテーション賞), 32nd Doctoral Student Presentation, Tohoku University, Dec 2024

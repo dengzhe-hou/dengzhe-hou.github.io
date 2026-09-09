@@ -6,7 +6,7 @@ permalink: /publication/2026-preprints-self-evolving
 excerpt: 'A survey of how healthcare AI agents are built to improve themselves, covering the methodologies behind self-evolving agent engineering and where they are actually deployed in clinical and biomedical settings.'
 date: 2026-05-22
 venue: 'Preprints.org'
-paperurl: 'https://www.preprints.org/'
+paperurl: 'https://www.preprints.org/manuscript/202605.1547'
 citation: 'Hou, D., Wu, Z., Zeng, Y., Jiang, L., Lin, F., &amp; Yamada, K. (2026). Self-Evolving Agent Engineering for Healthcare: Methodologies and Applications. <i>Preprints.org</i>.'
 ---
 

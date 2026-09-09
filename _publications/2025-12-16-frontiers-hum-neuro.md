@@ -6,7 +6,7 @@ permalink: /publication/2025-frontiers-hum-neuro
 excerpt: 'We investigated the EEG signatures of voluntary, self-initiated attention shifts during visual search. Frontal-midline theta oscillations showed a characteristic ramping pattern prior to attention shifts, reflecting the cognitive demands of self-initiated attentional control.'
 date: 2025-12-16
 venue: 'Frontiers in Human Neuroscience'
-paperurl: ''
+paperurl: 'https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2025.1708257/full'
 citation: 'Hou, D., Sun, S., Hatori, Y., Tseng, C., &amp; Shioiri, S. (2025). Task-constrained self-initiated attention shifts are indexed by frontal-midline theta ramping. <i>Frontiers in Human Neuroscience</i>.'
 ---
 

@@ -17,7 +17,7 @@ selected_research:
   - image_path: research-wmf-am.jpg
     alt: "The WMF-AM probe: human working memory, an LLM tracking a hidden cumulative state without a scratchpad, and per-model results across depth K"
     title: "Probing Working Memory in LLMs"
-    excerpt: "WMF-AM isolates cumulative state tracking, the ability to maintain and update an intermediate result across K operations with no scratchpad. Across 20 open-weight models from 13 families, the probe predicts downstream agent performance at r = 0.612, and it stays discriminative where fixed benchmarks plateau."
+    excerpt: "WMF-AM isolates cumulative state tracking, the ability to maintain and update an intermediate result across K operations with no scratchpad. Across 28 models from 12 families, WMF-AM scores are associated with performance on a 10-task agent battery (Kendall τ = 0.595, p < 0.001)."
     url: "/publication/2026-arxiv-wmf-am"
     btn_label: "Read more"
     btn_class: "btn--primary"
@@ -32,7 +32,7 @@ selected_research:
 
 I am an **Assistant Professor** at the [Graduate School of Information Sciences (GSIS)](https://www.is.tohoku.ac.jp/en/), [Tohoku University](https://www.tohoku.ac.jp/en/), Japan, affiliated with the [Yamada Laboratory](https://yamada-lab.gr.jp/ja/index.html) and the [International Liaison Office (ILO)](https://www.is.tohoku.ac.jp/introduction/ilo/), with a concurrent appointment in the Social Integration Research Division of the [Unprecedented-scale Data Analytics Center (UDAC)](https://udac.tohoku.ac.jp/).
 
-My research asks when a measurement of a complex system can be trusted, whether that system is a brain or a model. I work on the reliability of EEG decoding, on cognitive probes for large language models, and on the neural mechanisms of voluntary, self-initiated attention. I received my Ph.D. under [Prof. Satoshi Shioiri](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=en) at the [Visual Cognition and Systems Laboratory](https://www.shioiri.riec.tohoku.ac.jp/), and was a Visiting PhD Scholar in the [Sydney Cash Lab](https://cashlab.mgh.harvard.edu/) at **Harvard Medical School / Massachusetts General Hospital**.
+My research asks when a measurement of a complex system can be trusted, whether that system is a brain or a model. I work on the reliability of EEG decoding, on cognitive probes for large language models, and on the neural mechanisms of voluntary, self-initiated attention. I received my Ph.D. under [Prof. Satoshi Shioiri](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=en) at the [Visual Cognition and Systems Laboratory](https://sites.google.com/view/shioiri-satoshi/), and was a Visiting PhD Scholar in the [Sydney Cash Lab](https://cashlab.mgh.harvard.edu/) at **Harvard Medical School / Massachusetts General Hospital**.
 
 ## Research Interests
 
@@ -57,11 +57,11 @@ My current work extends this toward aligning brain signals (EEG, fMRI) with larg
 | **Aug 2026** | [TimePre](/publication/2026-tmlr-timepre) accepted at **Transactions on Machine Learning Research (TMLR)** |
 | **Aug 2026** | Awarded a **research grant** (PI) from [GSIS](https://www.is.tohoku.ac.jp/en/), Tohoku University, under Interdisciplinary Research Project Development Support: 認知科学実験パラダイムに基づくAIシステム認知能力評価プラットフォームの開拓 |
 | **Aug 2026** | New preprint on arXiv, [Control-Diverse Reinforcement Fine-Tuning](/publication/2026-arxiv-cd-rft). RL post-training concentrates *control* on a shared set of components across tasks, even where activations look diverse — and relieving that bottleneck improves multi-task performance |
-| **Jul 2026** | [KANMixer](/publication/2026-scirep-kanmixer) published in ***Scientific Reports***: a compact KAN-centered mixer for long-term forecasting, and an honest account of when KANs actually help |
 | **Aug 2026** | **Invited talk** at the [12th Annual CWRU-Tohoku Data Science in Engineering and Life Sciences Symposium](https://sites.google.com/case.edu/2026-cwru-tohoku-symposium/event-program), Cleveland, USA: "From Preprocessing Choices to LLM Agents: Automated and Verifiable Cognitive EEG Analysis" |
-| **Jul 2026** | Two new preprints on arXiv: [CogEEGAgent](/publication/2026-arxiv-cogeegagent) (autonomous cognitive EEG analysis) and [CogArena](/publication/2026-arxiv-cogarena) (cognitive ability structure in LLMs) |
 | **Aug 2026** | Awarded [**KAKENHI Grant-in-Aid for Research Activity Start-up**](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-26K25566/) (PI, 26K25566): the representational format of attentional templates, probed with computational model hierarchies, EEG and eye tracking |
 | **Aug 2026** | [Kaggle](https://www.kaggle.com/monkeydz) **Silver Medal** in [ROGII - Wellbore Geology Prediction](https://www.kaggle.com/competitions/rogii-wellbore-geology-prediction) (89/6125) |
+| **Jul 2026** | [KANMixer](/publication/2026-scirep-kanmixer) published in ***Scientific Reports***: a compact KAN-centered mixer for long-term forecasting, and an honest account of when KANs actually help |
+| **Jul 2026** | Two new preprints on arXiv: [CogEEGAgent](/publication/2026-arxiv-cogeegagent) (autonomous cognitive EEG analysis) and [CogArena](/publication/2026-arxiv-cogarena) (cognitive ability structure in LLMs) |
 | **Jul 2026** | Awarded a **research grant** (PI) from the [Center for So-Go-Chi (Convergence Knowledge) Informatics](https://www.aisogochi.tohoku.ac.jp/), Tohoku University |
 | **Jul 2026** | Appointed to the **Editorial Board** of [*Interdisciplinary Information Sciences*](https://www.is.tohoku.ac.jp/en/iis/) (Tohoku University GSIS) |
 | **Jun 2026** | Joined the Tohoku University × **NTT DATA Group** joint research on technology governance ([TechGov](https://techgov.udac.tohoku.ac.jp/ja/index.html#home)) as a research member |
@@ -137,7 +137,7 @@ Supervisors: Prof. [Kazunori Yamada](https://yamada-lab.gr.jp/ja/index.html), As
 | **2026–** | Research Member, Tohoku University × NTT DATA Group Joint Research on Technology Governance ([TechGov](https://techgov.udac.tohoku.ac.jp/ja/index.html#home), UDAC) (¥1,000,000 individual allocation, of ¥40,000,000 total project) |
 | **2026** | **Research Grant (PI)**, Interdisciplinary Research Project Development Support, Graduate School of Information Sciences (GSIS), Tohoku University: 認知科学実験パラダイムに基づくAIシステム認知能力評価プラットフォームの開拓 (¥500,000) |
 | **2026** | [Kaggle Expert](https://www.kaggle.com/monkeydz) – Bronze Medal, [CSIRO Image2Biomass Prediction](https://www.kaggle.com/competitions/csiro-biomass) (355/3805) |
-| **2025** | **[JSPS DC2 Research Fellowship](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-25KJ0641)** |
+| **2025–2026** | **[JSPS DC2 Research Fellowship](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-25KJ0641)** (completed) |
 | **2025** | [Kaggle](https://www.kaggle.com/monkeydz) Bronze Medal, [Santa 2024: The Perplexity Permutation Puzzle](https://www.kaggle.com/competitions/santa-2024) (148/1514) |
 | **2024–2028** | [KAKENHI Grant-in-Aid for Scientific Research (A)](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-24H00700/): 自発的脳機能の神経基盤理解 (PI: Prof. Satoshi Shioiri) |
 | **2024** | [Best Presentation Award](https://www.is.tohoku.ac.jp/jp/activity/award/detail---id-1555.html), 32nd Doctoral Student Presentation, Tohoku University |

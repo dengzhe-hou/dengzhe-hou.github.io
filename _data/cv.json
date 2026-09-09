@@ -5,7 +5,7 @@
     "email": "hou.dengzhe.t8@dc.tohoku.ac.jp",
     "phone": "",
     "website": "https://dengzhe-hou.github.io",
-    "summary": "Assistant Professor at the Graduate School of Information Sciences, Tohoku University (Yamada Laboratory; International Liaison Office), with a concurrent appointment at the Unprecedented-scale Data Analytics Center (UDAC), Social Integration Research Division (from April 2026). JSPS DC2 Research Fellow (2025–2026). Research bridges cognitive neuroscience and AI, covering the reliability of EEG decoding, cognitive probes for large language models, and the neural mechanisms of self-initiated attention. Ph.D. in Information Sciences, Tohoku University (2026).",
+    "summary": "Assistant Professor at the Graduate School of Information Sciences, Tohoku University (Yamada Laboratory; International Liaison Office), with a concurrent appointment at the Unprecedented-scale Data Analytics Center (UDAC), Social Integration Research Division (from April 2026). Former JSPS DC2 Research Fellow (2025–2026). Research bridges cognitive neuroscience and AI, covering the reliability of EEG decoding, cognitive probes for large language models, and the neural mechanisms of self-initiated attention. Ph.D. in Information Sciences, Tohoku University (2026).",
     "location": {
       "address": "Graduate School of Information Sciences, Tohoku University",
       "postalCode": "980-8579",
@@ -87,7 +87,7 @@
   "education": [
     {
       "institution": "Tohoku University",
-      "area": "Ph.D. Candidate, Information Sciences (Cognitive Neuroscience / Vision Science / Psychology)",
+      "area": "Ph.D., Information Sciences (Cognitive Neuroscience / Vision Science / Psychology)",
       "studyType": "Ph.D.",
       "startDate": "2023-04-01",
       "endDate": "2026-03-31",
