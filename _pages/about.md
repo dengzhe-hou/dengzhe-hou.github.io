@@ -32,7 +32,7 @@ selected_research:
 
 I am an **Assistant Professor** at the [Graduate School of Information Sciences (GSIS)](https://www.is.tohoku.ac.jp/en/), [Tohoku University](https://www.tohoku.ac.jp/en/), Japan, affiliated with the [Yamada Laboratory](https://yamada-lab.gr.jp/ja/index.html) and the [International Liaison Office (ILO)](https://www.is.tohoku.ac.jp/introduction/ilo/), with a concurrent appointment in the Social Integration Research Division of the [Unprecedented-scale Data Analytics Center (UDAC)](https://udac.tohoku.ac.jp/).
 
-My research asks when a measurement of a complex system can be trusted, whether that system is a brain or a model. I work on the reliability of EEG decoding, on cognitive probes for large language models, and on the neural mechanisms of voluntary, self-initiated attention. I received my Ph.D. under [Prof. Satoshi Shioiri](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=en) at the [Visual Cognition and Systems Laboratory](https://sites.google.com/view/shioiri-satoshi/), and was a Visiting PhD Scholar in the [Sydney Cash Lab](https://cashlab.mgh.harvard.edu/) at **Harvard Medical School / Massachusetts General Hospital**.
+My research asks when a measurement of a complex system can be trusted, whether that system is a brain or a model. I work on the reliability of EEG decoding, on cognitive probes for large language models, and on the neural mechanisms of voluntary, self-initiated attention. I received my Ph.D. under [Prof. Satoshi Shioiri](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=en) at the [Visual Cognition and Systems Laboratory](https://sites.google.com/view/shioiri-satoshi/), and was a Visiting PhD Scholar in the Sydney Cash Lab at **Harvard Medical School / Massachusetts General Hospital**.
 
 ## Research Interests
 
@@ -85,7 +85,7 @@ My current work extends this toward aligning brain signals (EEG, fMRI) with larg
 | | |
 |---|---|
 | **Apr 2025** | Awarded [JSPS DC2 Research Fellowship](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-25KJ0641) |
-| **Jan 2025** | Returned from visiting scholar position at Harvard Medical School / MGH ([Sydney Cash Lab](https://cashlab.mgh.harvard.edu/), supervised by [Dr. Jing (Jill) Cai](https://scholar.google.co.jp/citations?user=ggUF_nIAAAAJ&hl=ja)) |
+| **Jan 2025** | Returned from visiting scholar position at Harvard Medical School / MGH (Sydney Cash Lab, supervised by [Dr. Jing (Jill) Cai](https://scholar.google.co.jp/citations?user=ggUF_nIAAAAJ&hl=ja)) |
 | **Dec 2024** | [Best Presentation Award, 32nd Doctoral Student Presentation, Tohoku University](https://www.is.tohoku.ac.jp/jp/activity/award/detail---id-1555.html) |
 | **Oct 2024** | Presented two posters at **Society for Neuroscience 2024** |
 | **Jul 2024** | Two presentations at **APCV 2024** (The 16th Asia Pacific Conference on Vision) |
