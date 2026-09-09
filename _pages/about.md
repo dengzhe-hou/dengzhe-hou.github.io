@@ -10,31 +10,40 @@ selected_research:
   - image_path: research-same-brain.jpg
     alt: "Overview of the preprocessing multiverse: one EEG trial expanded into 128 pipeline variants, prediction flips, and the NA-PGI mitigation"
     title: "Same Brain, Different Prediction"
-    excerpt: "Across six datasets and four paradigms, up to 42% of trial-level EEG predictions flip when only the preprocessing pipeline changes. The data, the model and the subject all stay the same. We characterize the sensitivity with a Walsh-Hadamard decomposition, introduce Preprocessing Uncertainty as a per-trial diagnostic, and mitigate the instability with Normalized Adaptive PGI."
+    excerpt: "Changing only the preprocessing pipeline can flip up to 42% of EEG predictions. We measure this instability and introduce a method to reduce it."
     url: "/publication/2026-arxiv-same-brain"
     btn_label: "Read more"
     btn_class: "btn--primary"
   - image_path: research-wmf-am.jpg
     alt: "The WMF-AM probe: human working memory, an LLM tracking a hidden cumulative state without a scratchpad, and per-model results across depth K"
     title: "Probing Working Memory in LLMs"
-    excerpt: "WMF-AM isolates cumulative state tracking, the ability to maintain and update an intermediate result across K operations with no scratchpad. Across 28 models from 12 families, WMF-AM scores are associated with performance on a 10-task agent battery (Kendall τ = 0.595, p < 0.001)."
+    excerpt: "WMF-AM tests whether language models can maintain and update intermediate results without a scratchpad. The probe spans 28 models from 12 families."
     url: "/publication/2026-arxiv-wmf-am"
     btn_label: "Read more"
     btn_class: "btn--primary"
   - image_path: research-fmt-theta.jpg
     alt: "Frontal-midline theta power ramping up in the two seconds before a self-initiated attention shift, separated by shift type"
     title: "Frontal-Midline Theta Ramping"
-    excerpt: "Simultaneous EEG and eye-tracking during visual search show frontal-midline theta ramping up before voluntary, self-initiated attention shifts. The ramp indexes attentional preparation and separates self-initiated shifts from externally driven ones."
+    excerpt: "EEG and eye tracking reveal frontal-midline theta ramping before self-initiated attention shifts, providing a neural marker of voluntary attentional preparation."
     url: "/publication/2025-frontiers-hum-neuro"
     btn_label: "Read more"
     btn_class: "btn--primary"
 ---
 
-I am an **Assistant Professor** at the [Graduate School of Information Sciences (GSIS)](https://www.is.tohoku.ac.jp/en/), [Tohoku University](https://www.tohoku.ac.jp/en/), Japan, affiliated with the [Yamada Laboratory](https://yamada-lab.gr.jp/ja/index.html) and the [International Liaison Office (ILO)](https://www.is.tohoku.ac.jp/introduction/ilo/), with a concurrent appointment in the Social Integration Research Division of the [Unprecedented-scale Data Analytics Center (UDAC)](https://udac.tohoku.ac.jp/).
+<div class="profile-intro" markdown="1">
 
-My research asks when a measurement of a complex system can be trusted, whether that system is a brain or a model. I work on the reliability of EEG decoding, on cognitive probes for large language models, and on the neural mechanisms of voluntary, self-initiated attention. I received my Ph.D. under [Prof. Satoshi Shioiri](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=en) at the [Visual Cognition and Systems Laboratory](https://sites.google.com/view/shioiri-satoshi/), and was a Visiting PhD Scholar in the Sydney Cash Lab at **Harvard Medical School / Massachusetts General Hospital**.
+I am an **Assistant Professor** at [Tohoku University](https://www.tohoku.ac.jp/en/), Japan.
 
-## Research Interests
+My research connects **reliable EEG decoding**, **cognitive evaluation of language models**, and the **neural mechanisms of self-initiated attention**.
+
+<details id="research-interests" class="profile-background" markdown="1">
+<summary>Background & research interests</summary>
+
+At the [Graduate School of Information Sciences (GSIS)](https://www.is.tohoku.ac.jp/en/), I am affiliated with the [Yamada Laboratory](https://yamada-lab.gr.jp/ja/index.html) and the [International Liaison Office (ILO)](https://www.is.tohoku.ac.jp/introduction/ilo/), with a concurrent appointment in the Social Integration Research Division of the [Unprecedented-scale Data Analytics Center (UDAC)](https://udac.tohoku.ac.jp/).
+
+I received my Ph.D. under [Prof. Satoshi Shioiri](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=en) at the [Visual Cognition and Systems Laboratory](https://sites.google.com/view/shioiri-satoshi/), and was a Visiting PhD Scholar in the Sydney Cash Lab at **Harvard Medical School / Massachusetts General Hospital**.
+
+My research asks when a measurement of a complex system can be trusted, whether that system is a brain or a model. My interests include:
 
 - Reliability of EEG decoding, including preprocessing-induced instability, per-trial uncertainty, and feature attribution
 - Cognitive probes for AI systems, including working memory and cumulative state tracking in large language models
@@ -43,11 +52,18 @@ My research asks when a measurement of a complex system can be trusted, whether 
 
 My current work extends this toward aligning brain signals (EEG, fMRI) with large-scale AI models such as LLMs and vision-language models, comparing their internal representations.
 
+[Full CV](/cv/)
+
+</details>
+</div>
+
 ## Selected Research
 
-{% include feature_row id="selected_research" %}
+{% include selected-research.html %}
 
 ## News
+
+<div class="news-list" markdown="1">
 
 | | |
 |---|---|
@@ -59,6 +75,12 @@ My current work extends this toward aligning brain signals (EEG, fMRI) with larg
 | **Aug 2026** | New preprint on arXiv, [Control-Diverse Reinforcement Fine-Tuning](/publication/2026-arxiv-cd-rft). RL post-training concentrates *control* on a shared set of components across tasks, even where activations look diverse — and relieving that bottleneck improves multi-task performance |
 | **Aug 2026** | **Invited talk** at the [12th Annual CWRU-Tohoku Data Science in Engineering and Life Sciences Symposium](https://sites.google.com/case.edu/2026-cwru-tohoku-symposium/event-program), Cleveland, USA: "From Preprocessing Choices to LLM Agents: Automated and Verifiable Cognitive EEG Analysis" |
 | **Aug 2026** | Awarded [**KAKENHI Grant-in-Aid for Research Activity Start-up**](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-26K25566/) (PI, 26K25566): the representational format of attentional templates, probed with computational model hierarchies, EEG and eye tracking |
+
+<details class="news-archive" markdown="1">
+<summary>Earlier news</summary>
+
+| | |
+|---|---|
 | **Aug 2026** | [Kaggle](https://www.kaggle.com/monkeydz) **Silver Medal** in [ROGII - Wellbore Geology Prediction](https://www.kaggle.com/competitions/rogii-wellbore-geology-prediction) (89/6125) |
 | **Jul 2026** | [KANMixer](/publication/2026-scirep-kanmixer) published in ***Scientific Reports***: a compact KAN-centered mixer for long-term forecasting, and an honest account of when KANs actually help |
 | **Jul 2026** | Two new preprints on arXiv: [CogEEGAgent](/publication/2026-arxiv-cogeegagent) (autonomous cognitive EEG analysis) and [CogArena](/publication/2026-arxiv-cogarena) (cognitive ability structure in LLMs) |
@@ -78,12 +100,6 @@ My current work extends this toward aligning brain signals (EEG, fMRI) with larg
 | **Feb 2026** | Participated in [**Qualia Structure** Grant Meeting](https://en.qualia-structure.jp/news/detail/7202) |
 | **Feb 2026** | Appeared in [Journal Club: *The Proliferation of Consciousness Theories: What can we do next?*](https://www.youtube.com/watch?v=QqUq6q1EMXI) (Neural basis of Consciousness & Qualia Structure) |
 | **Dec 2025** | Paper published in *Frontiers in Human Neuroscience*, [frontal-midline theta ramping indexes self-initiated attention shifts](https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2025.1708257/full) |
-
-<details markdown="1">
-<summary><strong>Earlier news</strong> (2025 and before)</summary>
-
-| | |
-|---|---|
 | **Apr 2025** | Awarded [JSPS DC2 Research Fellowship](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-25KJ0641) |
 | **Jan 2025** | Returned from visiting scholar position at Harvard Medical School / MGH (Sydney Cash Lab, supervised by [Dr. Jing (Jill) Cai](https://scholar.google.co.jp/citations?user=ggUF_nIAAAAJ&hl=ja)) |
 | **Dec 2024** | [Best Presentation Award, 32nd Doctoral Student Presentation, Tohoku University](https://www.is.tohoku.ac.jp/jp/activity/award/detail---id-1555.html) |
@@ -92,32 +108,94 @@ My current work extends this toward aligning brain signals (EEG, fMRI) with larg
 | **Aug 2023** | Oral presentation at **ECVP 2023**, Paphos, Cyprus; awarded ECVP Student Travel Award |
 
 </details>
+</div>
 
 ## Education
 
-| | | |
-|---|---|---|
-| **Ph.D.** | Graduate School of Information Sciences, Tohoku University | Apr 2023 – Mar 2026 |
-| | Visual Cognition and Systems Lab · [Graduate Program in Data Science (GPDS)](https://gp-ds.tohoku.ac.jp/ja/index.html) | |
-| | [JST Next Generation Researcher Challenging Research Program](https://pgd.tohoku.ac.jp/rpc/next_generation.html) | |
-| | Thesis: *Exploring Brain Mechanisms of Self-Initiated Attention Shift: Simultaneous Recording of EEG and Eye Movements* | |
-| | Advisors: [Prof. Satoshi Shioiri](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=en), [Prof. Shuichi Sakamoto](https://scholar.google.com/citations?user=h7ymzUgAAAAJ&hl=en), [Prof. Chia-huei Tseng](https://scholar.google.com/citations?hl=en&user=g00AZTcAAAAJ) | |
-| **M.S.** | Graduate School of Information Sciences, Tohoku University | Apr 2021 – Mar 2023 |
-| | Visual Cognition and Systems Lab · [GPDS](https://gp-ds.tohoku.ac.jp/ja/index.html) (joined Apr 2022) | |
-| | Advisors: [Prof. Satoshi Shioiri](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=en), [Prof. Chia-huei Tseng](https://scholar.google.com/citations?hl=en&user=g00AZTcAAAAJ) | |
-| **B.Eng.** | Electronic and Information Engineering (Automation), Tongji University | Sep 2016 – Jul 2020 |
-| | Advisor: [Assoc. Prof. Xia Zhao](https://see.tongji.edu.cn/info/1388/10495.htm) | |
-| | GPA 4.15 / 5.0 | |
+<div class="cv-entries" markdown="1">
+
+<section class="cv-entry" markdown="1">
+<div class="cv-entry__heading">
+<h3>Ph.D. · Information Sciences</h3>
+<span class="cv-entry__date">Apr 2023 – Mar 2026</span>
+</div>
+
+Graduate School of Information Sciences, Tohoku University
+
+<details markdown="1">
+<summary>Thesis, advisors & programs</summary>
+
+- Thesis: *Exploring Brain Mechanisms of Self-Initiated Attention Shift: Simultaneous Recording of EEG and Eye Movements*
+- Advisors: [Prof. Satoshi Shioiri](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=en), [Prof. Shuichi Sakamoto](https://scholar.google.com/citations?user=h7ymzUgAAAAJ&hl=en), [Prof. Chia-huei Tseng](https://scholar.google.com/citations?hl=en&user=g00AZTcAAAAJ)
+- Visual Cognition and Systems Lab · [Graduate Program in Data Science (GPDS)](https://gp-ds.tohoku.ac.jp/ja/index.html)
+- [JST Next Generation Researcher Challenging Research Program](https://pgd.tohoku.ac.jp/rpc/next_generation.html)
+
+</details>
+</section>
+
+<section class="cv-entry" markdown="1">
+<div class="cv-entry__heading">
+<h3>M.S. · Information Sciences</h3>
+<span class="cv-entry__date">Apr 2021 – Mar 2023</span>
+</div>
+
+Graduate School of Information Sciences, Tohoku University
+
+<details markdown="1">
+<summary>Advisors & program</summary>
+
+- Advisors: [Prof. Satoshi Shioiri](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=en), [Prof. Chia-huei Tseng](https://scholar.google.com/citations?hl=en&user=g00AZTcAAAAJ)
+- Visual Cognition and Systems Lab · [GPDS](https://gp-ds.tohoku.ac.jp/ja/index.html) (joined Apr 2022)
+
+</details>
+</section>
+
+<section class="cv-entry" markdown="1">
+<div class="cv-entry__heading">
+<h3>B.Eng. · Electronic and Information Engineering</h3>
+<span class="cv-entry__date">Sep 2016 – Jul 2020</span>
+</div>
+
+Tongji University · Automation
+
+<details markdown="1">
+<summary>Advisor & academic record</summary>
+
+- Advisor: [Assoc. Prof. Xia Zhao](https://see.tongji.edu.cn/info/1388/10495.htm)
+- GPA 4.15 / 5.0
+
+</details>
+</section>
+
+</div>
 
 ## Teaching
 
 **Instructor**, Graduate School of Information Sciences, Tohoku University
 
-| | | |
-|---|---|---|
-| **Machine Learning Basics** | GSIS, Tohoku University ([GPDS](https://gp-ds.tohoku.ac.jp/ja/index.html)) | Apr 2026 – present |
-| | Course materials adapted from [Samy Baladram](https://www.samybaladram.com/) | |
-| **Data Science Training II & Data Science Challenge** | GSIS, Tohoku University | Jun 2026 – Jul 2026 |
+<div class="cv-entries" markdown="1">
+
+<section class="cv-entry" markdown="1">
+<div class="cv-entry__heading">
+<h3>Machine Learning Basics</h3>
+<span class="cv-entry__date">Apr 2026 – present</span>
+</div>
+
+GSIS, Tohoku University · [GPDS](https://gp-ds.tohoku.ac.jp/ja/index.html). Course materials adapted from [Samy Baladram](https://www.samybaladram.com/).
+
+</section>
+
+<section class="cv-entry" markdown="1">
+<div class="cv-entry__heading">
+<h3>Data Science Training II & Data Science Challenge</h3>
+<span class="cv-entry__date">Jun 2026 – Jul 2026</span>
+</div>
+
+GSIS, Tohoku University
+
+</section>
+
+</div>
 
 **Teaching Assistant**, Graduate School of Information Sciences, Tohoku University (2022 – 2025)
 
