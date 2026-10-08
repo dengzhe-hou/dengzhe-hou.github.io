@@ -39,7 +39,7 @@ layout: default
               {% if page.type %}<span class="tag">{{ page.type }}</span>{% endif %}
               {% if page.venue %}<span{% if page.venue_lang %} lang="{{ page.venue_lang }}"{% endif %}>{{ page.venue }}</span>{% endif %}
               {% if page.location %}<span>{{ page.location }}</span>{% endif %}
-              {% if page.date %}<time class="date" datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%b %Y' }}</time>{% endif %}
+              {% if page.date %}{% include date-range.html start=page.date end=page.date_end %}{% endif %}
             </p>
           {% elsif page.venue and page.date %}
             <p class="detail-meta">

@@ -9,7 +9,7 @@
     <div class="research-card__body">
       <p class="research-card__theme"><span class="tag tag--{{ project.theme | downcase }}">{{ project.theme }}</span></p>
       <h3 class="research-card__title"><a href="{{ base_path }}{{ project.url }}">{{ project.title }}</a></h3>
-      <p class="research-card__venue">{{ project.venue | default: paper.venue }} · {{ paper.date | date: '%Y' }}</p>
+      <p class="research-card__venue">{{ project.venue | default: paper.venue }}<span class="research-card__year"> · <time class="date" datetime="{{ paper.date | date: '%Y' }}">{{ paper.date | date: '%Y' }}</time></span></p>
       {{ project.excerpt | markdownify }}
       <p class="research-card__links">
         <span class="research-card__more" aria-hidden="true">Read more →</span>

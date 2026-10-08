@@ -48,6 +48,7 @@
   .research-theme__keywords li { margin: 0; }
   .research-theme__keywords li:not(:last-child)::after {
     content: "·";
+    content: "·" / "";
     margin: 0 0.5rem;
     color: var(--line-strong);
     font-weight: 700;
@@ -144,8 +145,10 @@
     font-size: 0.8125rem;
     font-weight: 600;
     line-height: 1.5;
-    font-variant-numeric: tabular-nums;
   }
+  /* The year (a .date) keeps its separator, so a long venue never leaves
+     "·" at a line end with the year alone below. */
+  .research-card__venue .research-card__year { white-space: nowrap; }
   .research-card__body > p:not([class]) {
     margin: 0 0 1rem;
     color: var(--muted);
@@ -198,6 +201,9 @@
   }
   @media (max-width: 639px) {
     .research-grid { grid-template-columns: minmax(0, 1fr); }
+    /* Stacked cards: about the crops' native width, so they are not
+       blown up (and do not take over the card) on wider phones. */
+    .research-card__figure img { max-width: 22rem; margin-inline: auto; }
     .research-themes { grid-template-columns: minmax(0, 1fr); padding: 1.1rem 1.1rem 1rem; }
     .research-themes__loop { padding: 0.75rem 0; }
     .research-themes__loop svg { transform: rotate(90deg); }

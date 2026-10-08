@@ -21,8 +21,9 @@
     --font-sans: 'Inter', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --font-serif: 'Source Serif 4', 'Noto Serif JP', Charter, Georgia, serif;
 
-    /* Comfortable line length for running text (about 70 characters). */
-    --measure: 42rem;
+    /* Comfortable line length for running text (about 70 characters of
+       the 1.06em serif body; 34rem is 612px at the theme's 18px root). */
+    --measure: 34rem;
   }
 
   /* The page background must also be on <html>: the footer's top margin
@@ -70,6 +71,8 @@
     letter-spacing: 0.01em;
     color: var(--a);
   }
+  /* A date or range ("Apr 2026 – present") never splits across lines. */
+  .date, .nowrap { white-space: nowrap; }
 
   /* ── Page title (h1) ──────────────────── */
   .page__title {

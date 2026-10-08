@@ -33,7 +33,7 @@ selected_research:
   - title: "Frontal-Midline Theta Ramping"
     url: "/publication/2025-frontiers-hum-neuro"
     theme: AI4Brain
-    venue: Frontiers in Human Neuroscience
+    venue: Front. Hum. Neurosci.   # card only; the paper keeps the full journal name
     thumb: research-fmt-theta-card.jpg
     thumb_width: 576
     thumb_height: 432
@@ -64,7 +64,7 @@ At the [Graduate School of Information Sciences (GSIS)](https://www.is.tohoku.ac
 
 I received my Ph.D. under [Prof. Satoshi Shioiri](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=en) at the [Visual Cognition and Systems Laboratory](https://sites.google.com/view/shioiri-satoshi/), and was a Visiting PhD Scholar in the Sydney Cash Lab at **Harvard Medical School / Massachusetts General Hospital**.
 
-Education, teaching, grants and service are listed in my [CV](/cv/).
+Education, teaching, grants, and service are listed in my [CV](/cv/).
 
 </details>
 

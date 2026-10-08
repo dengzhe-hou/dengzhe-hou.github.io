@@ -34,7 +34,7 @@ layout: default
             <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
           {% endif %}
           {% comment %} Same meta line as the Presentations list, with the full date. {% endcomment %}
-          {% assign talk_label = page.talk_type | default: page.type | remove: " presentation" | remove: " (English)" | strip %}
+          {% assign talk_label = page.talk_type | default: page.type | remove: " presentation" | strip %}
           <p class="detail-meta">
             {% if talk_label != "" %}<span class="tag{% if talk_label contains 'Invited' %} tag--invited{% endif %}">{{ talk_label }}</span>{% endif %}
             {% if page.venue %}<span{% if page.venue_lang %} lang="{{ page.venue_lang }}"{% endif %}>{{ page.venue }}</span>{% endif %}

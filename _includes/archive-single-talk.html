@@ -8,7 +8,7 @@
 {% include base_path %}
 {% assign entry_heading = include.heading | default: "h3" %}
 {% assign entry_title = post.title | markdownify | remove: "<p>" | remove: "</p>" | strip %}
-{% assign entry_type = post.talk_type | default: post.type | remove: " presentation" | remove: " (English)" | strip %}
+{% assign entry_type = post.talk_type | default: post.type | remove: " presentation" | strip %}
 {% assign entry_excerpt = post.excerpt | markdownify | remove: "<p>" | remove: "</p>" | strip %}
 <article class="list-entry list-entry--talk" itemscope itemtype="http://schema.org/CreativeWork">
   <{{ entry_heading }} class="list-entry__title" itemprop="headline"{% if post.title_lang %} lang="{{ post.title_lang }}"{% endif %}><a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ entry_title }}</a></{{ entry_heading }}>

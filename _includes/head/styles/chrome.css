@@ -33,9 +33,20 @@
     color: #fff !important;
     border-bottom: 2px solid var(--a) !important;
   }
-  .greedy-nav button:focus-visible {
+  .greedy-nav button:focus-visible,
+  .masthead a:focus-visible {
     outline: 2px solid var(--a-on-dark) !important;
     outline-offset: 2px;
+    border-radius: 2px;
+  }
+  /* The skip link appears over the light page, not the navy bar. */
+  .screen-reader-shortcut:focus {
+    outline: 2px solid var(--a) !important;
+    outline-offset: 2px;
+    background: var(--p) !important;
+    color: #ffffff !important;
+    font-family: var(--font-sans);
+    box-shadow: none !important;
   }
 
   /* ── Sidebar ──────────────────────────── */
@@ -61,8 +72,13 @@
     line-height: 1.5;
   }
   /* The bio is split at its commas (author-profile.html): each part stays
-     whole, so it wraps between parts rather than mid-phrase. */
+     whole, so it wraps between parts rather than mid-phrase. In the narrow
+     fixed sidebar (925-1023px) a slightly smaller size keeps the longest
+     part within the column. */
   .author__bio > span { display: inline-block; }
+  @media (min-width: 925px) and (max-width: 1023.98px) {
+    .author__bio { font-size: 0.75rem !important; }
+  }
 
   /* Links and facts: one icon column, one icon colour. Long items wrap with
      a hanging indent instead of being clipped. */
@@ -132,6 +148,14 @@
     color: var(--a-on-dark) !important;
     text-decoration: underline;
   }
+  /* Links in the muted meta line share its colour, so they carry a quiet
+     underline at rest (as in running text) that firms up on hover. */
+  .page__footer .site-footer__meta a,
+  .page__footer .site-footer__meta a:visited {
+    text-decoration: underline;
+    text-decoration-color: rgba(148,163,184,0.45);
+  }
+  .page__footer .site-footer__meta a:hover { text-decoration-color: currentColor; }
   .page__footer a:focus-visible {
     outline: 2px solid var(--a-on-dark);
     outline-offset: 2px;
@@ -149,8 +173,11 @@
     font-weight: 500;
     line-height: 1.5;
   }
+  /* The copyright is plain text: muted and regular, unlike the links. */
+  .site-footer__copyright { color: #94a3b8; font-weight: 400; }
   .site-footer__links li + li::before {
     content: "\00b7";
+    content: "\00b7" / "";
     margin: 0 0.6em;
     color: #94a3b8;
   }
@@ -167,7 +194,6 @@
     line-height: 1.5;
   }
   .site-footer__meta .sep { margin: 0 0.15em; }
-  .site-footer__meta .nowrap { white-space: nowrap; }
 
   /* ── Responsive ───────────────────────── */
   /* Below the theme's $large (925px) the sidebar is a compact row above

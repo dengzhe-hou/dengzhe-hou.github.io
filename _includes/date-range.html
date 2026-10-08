@@ -1,0 +1,7 @@
+{% comment %}
+  A date, or a period when the entry has an end date, in the one date style.
+  include.start: the start date; include.end: an end date or "present";
+  include.format: the strftime format (default "%b %Y").
+  Output: <time class="date">Apr 2022</time>, or one .date span holding
+  "Apr 2022 – Mar 2025" / "Apr 2026 – present", which never splits.
+{% endcomment %}{% assign range_format = include.format | default: '%b %Y' %}{% if include.end %}<span class="date"><time datetime="{{ include.start | date: '%Y-%m-%d' }}">{{ include.start | date: range_format }}</time> – {% if include.end == 'present' %}present{% else %}<time datetime="{{ include.end | date: '%Y-%m-%d' }}">{{ include.end | date: range_format }}</time>{% endif %}</span>{% else %}<time class="date" datetime="{{ include.start | date: '%Y-%m-%d' }}">{{ include.start | date: range_format }}</time>{% endif %}

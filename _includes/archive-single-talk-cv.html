@@ -4,7 +4,7 @@
 {% endcomment %}
 {% include base_path %}
 {% assign entry_title = post.title | markdownify | remove: "<p>" | remove: "</p>" | strip %}
-{% assign entry_type = post.talk_type | default: post.type | remove: " presentation" | remove: " (English)" | strip %}
+{% assign entry_type = post.talk_type | default: post.type | remove: " presentation" | strip %}
 <li class="list-entry list-entry--compact" itemscope itemtype="http://schema.org/CreativeWork">
   <h3 class="list-entry__title" itemprop="headline"{% if post.title_lang %} lang="{{ post.title_lang }}"{% endif %}><a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ entry_title }}</a></h3>
   <p class="list-entry__meta">

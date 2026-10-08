@@ -28,7 +28,7 @@
   {% if post.type %}<span class="tag">{{ post.type }}</span>{% endif %}
   {% if post.venue %}<span{% if post.venue_lang %} lang="{{ post.venue_lang }}"{% endif %}>{{ post.venue }}</span>{% endif %}
   {% if post.location %}<span>{{ post.location }}</span>{% endif %}
-  {% if post.date %}<time class="date" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: entry_date_format }}</time>{% endif %}
+  {% if post.date %}{% include date-range.html start=post.date end=post.date_end format=entry_date_format %}{% endif %}
   {% if post.read_time %}<span>{% include read-time.html %}</span>{% endif %}
 {% endcapture %}
 {% assign entry_meta = entry_meta | strip %}

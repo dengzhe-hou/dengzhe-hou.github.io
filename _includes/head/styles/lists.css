@@ -53,11 +53,20 @@
     color: var(--muted);
   }
   .list-entry__authors strong { font-weight: 600; color: var(--ink); white-space: nowrap; }
+  /* CV: the full reference, whose DOI or OpenReview URL must wrap. */
+  .list-entry .list-entry__citation { overflow-wrap: anywhere; }
+  /* The site owner's name in a presentation's author line. */
+  .page__content .author-self { font-weight: 600; white-space: nowrap; }
 
-  /* Meta line: optional type tag, then venue | location | date, divided by
-     light rules. The rule is a text "|" after each item: a line may break
-     after it but never before it, so a wrapped line never starts with one.
-     Shared with the detail-page header. */
+  /* Meta line: optional type tag, then venue | location | date. The row
+     flows inline, so a wrapped venue's last line can still hold the
+     location and date. Each item after a non-tag item is an inline-block
+     that draws a light "|" in the gap before it, inside its own left
+     padding, which a negative margin pulls back over that gap. An item that
+     starts a new line therefore sits flush at the edge with its divider
+     outside the row, where the clip hides it; no line ends with one either,
+     because the divider belongs to the item after it. Shared with the
+     detail-page header. */
   .list-entry .list-entry__meta,
   .archive__item .page__meta,
   .detail-meta {
@@ -67,13 +76,33 @@
     line-height: 1.65;
     color: var(--muted);
   }
-  :is(.list-entry__meta, .detail-meta) > :not(.tag):not(:last-child)::after {
+  :is(.list-entry__meta, .detail-meta) {
+    --meta-gap: 1rem;
+    display: block;
+    clip-path: inset(-0.5rem -0.5rem -0.5rem 0);
+  }
+  /* The item before a divider ends with (gap - one space); with the space
+     itself and the next item's padding less its margin, the mid-line gap
+     is about one --meta-gap, with the divider centred in it. */
+  :is(.list-entry__meta, .detail-meta) > :not(.tag):has(+ *) {
+    margin-right: calc(var(--meta-gap) - 0.25em);
+  }
+  :is(.list-entry__meta, .detail-meta) > :not(.tag) + * {
+    display: inline-block;
+    position: relative;
+    padding-left: var(--meta-gap);
+    margin-left: calc(-1 * var(--meta-gap));
+  }
+  :is(.list-entry__meta, .detail-meta) > :not(.tag) + *::before {
     content: "|";
-    margin: 0 0.15em 0 0.5em;
+    content: "|" / "";
+    position: absolute;
+    left: calc(var(--meta-gap) / 2);
+    transform: translateX(-50%);
     color: var(--line-strong);
     font-weight: 400;
   }
-  :is(.list-entry__meta, .detail-meta) > .date { white-space: nowrap; }
+  /* A tag sits closer to the item after it, which draws no divider. */
   :is(.list-entry__meta, .detail-meta) > .tag {
     margin-right: 0.3rem;
     vertical-align: 0.05em;
@@ -84,10 +113,11 @@
     background: rgba(15,118,110,0.06);
   }
 
-  /* One-paragraph summary: serif, muted, held to three lines. */
+  /* One-paragraph summary: serif, muted, held to four lines. This smaller
+     text gets its own cap (64ch, about 70 characters) within the measure. */
   .list-entry .list-entry__excerpt,
   .archive__item .archive__item-excerpt {
-    max-width: var(--measure);
+    max-width: min(var(--measure), 64ch);
     margin: 0.45rem 0 0;
     font-family: var(--font-serif);
     font-size: 0.9375rem;
@@ -97,8 +127,8 @@
   .list-entry__excerpt {
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
     overflow: hidden;
   }
 
@@ -231,6 +261,7 @@
     text-transform: capitalize;
   }
   .page__taxonomy a.page__taxonomy-item:hover { color: var(--p); border-color: rgba(30,58,95,0.45); }
+  .page__taxonomy a.page__taxonomy-item:focus-visible { outline: 2px solid var(--a); outline-offset: 2px; }
 
   /* Previous / next: quiet text links over a hairline. Floated full width
      like the theme's footer above it, so the top margin is not swallowed
