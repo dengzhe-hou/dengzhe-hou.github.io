@@ -24,12 +24,12 @@ repository               : "dengzhe-hou/dengzhe-hou.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.jpg"
+  avatar           : "avatar.jpg"   # face-centred crop of profile.jpg for the small sidebar avatar
   name             : "Dengzhe Hou"
   pronouns         : # example: "she/her"  
-  bio              : "Assistant Professor @ Tohoku GSIS"
+  bio              : "Assistant Professor, Tohoku University"
   location         : "Sendai, Japan"
-  employer         : "Tohoku University GSIS"
+  employer         : "Graduate School of Information Sciences"
   uri              : # URL
   email            : "hou.dengzhe.t8@dc.tohoku.ac.jp" 
 
@@ -146,7 +146,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : "profile.png" # Social media default site image
+og_image                 : "og-card.png" # Social media default site image (1200x630 card)
 og_description           : "Assistant Professor at Tohoku University (GSIS). AI4Brain: AI for understanding the brain. Brain4AI: brain and cognitive science for understanding and improving AI." # Social media default site image description
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
@@ -250,7 +250,7 @@ defaults:
       author_profile: true
       read_time: true
       comments: true
-      share: true
+      share: false
       related: true
   # _pages
   - scope:
@@ -266,7 +266,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      share: true
+      share: false
       comments: true
   # _publications
   - scope:
@@ -275,7 +275,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      share: true
+      share: false
       comments: true
   # _portfolio
   - scope:
@@ -284,7 +284,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      share: true
+      share: false
       comment: true
   # _talks
   - scope:
@@ -293,7 +293,7 @@ defaults:
     values:
       layout: talk
       author_profile: true
-      share: true
+      share: false
 
 
 # Sass/SCSS

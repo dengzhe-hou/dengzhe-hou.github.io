@@ -1,0 +1,208 @@
+  /* ═══ Foundation: palette, type, links, headings, shared components ═══
+     Every other stylesheet in this folder builds on these tokens; change a
+     colour or font here rather than redefining it in a component. */
+
+  /* ── Palette and type tokens ──────────── */
+  :root {
+    color-scheme: light;
+    --p:  #1e3a5f;          /* deep navy: headings, links, primary buttons */
+    --a:  #0f766e;          /* teal accent (AA contrast on --bg and white) */
+    --a-on-dark: #5eead4;   /* readable teal on the navy header and footer */
+    --nav: #0f172a;         /* slate-900: header and footer */
+    --ink: #1e293b;         /* slate-800: body text */
+    --muted: #475569;       /* slate-600: secondary text */
+    --line: #dbe3eb;        /* hairline dividers */
+    --line-strong: #cbd5e1; /* section rules, chip outlines */
+    --bg: #f8fafc;          /* page background */
+    --card-bg: #ffffff;
+    --card-s: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+    --card-h: 0 4px 16px rgba(0,0,0,0.12);
+
+    /* Noto JP follows each Latin face so Japanese (and the Chinese name)
+       get proper CJK glyphs in a matching style instead of a system fallback. */
+    --font-sans: 'Inter', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-serif: 'Source Serif 4', 'Noto Serif JP', Charter, Georgia, serif;
+
+    /* Comfortable line length for running text (about 70 characters). */
+    --measure: 42rem;
+  }
+
+  /* The page background must also be on <html>: the footer's top margin
+     otherwise shows the theme's grey there as a band above the footer. */
+  html, body { background: var(--bg) !important; }
+
+  /* ── Fonts ────────────────────────────── */
+  /* Running text (paragraphs, list items, table descriptions) is set in
+     Source Serif 4; headings, titles, labels, dates and other interface
+     chrome are set in Inter, so the two roles read differently. */
+  body, .page__content, .archive {
+    font-family: var(--font-serif);
+  }
+  .sidebar, .masthead, .btn, .page__footer,
+  h1, h2, h3, h4, h5, h6,
+  .page__title, .archive__item-title, .author__name,
+  .page__meta, summary, .tag, .date {
+    font-family: var(--font-sans);
+  }
+  /* Serif needs a touch more size and leading than Inter at the same em. */
+  .page__content > p, .page__content > ul, .page__content > ol,
+  .archive > p, .archive > ul, .archive > ol {
+    font-size: 1.06em;
+    line-height: 1.66;
+  }
+  /* Keep running text to a readable measure; wide components (cards,
+     figures) are not direct paragraphs and keep the full column. */
+  .page__content > p, .page__content > ul, .page__content > ol,
+  .page__content > blockquote, .page__content > details,
+  .archive > p, .archive > ul, .archive > ol, .archive > details {
+    max-width: var(--measure);
+  }
+
+  /* ── Dates ────────────────────────────── */
+  /* One date style everywhere: Inter with tabular figures, in the accent. */
+  .date, .cv-entry__date,
+  .page__meta time,
+  .archive__item-excerpt .date,
+  .page__content table td:first-child,
+  .archive table td:first-child {
+    font-family: var(--font-sans);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.01em;
+    color: var(--a);
+  }
+
+  /* ── Page title (h1) ──────────────────── */
+  .page__title {
+    color: var(--p) !important;
+    font-size: 1.7rem;
+    font-weight: 800 !important;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    -webkit-text-fill-color: var(--p) !important;
+  }
+
+  /* ── Section headings (h2) ────────────── */
+  /* A short accent bar under each section heading; a full-width rule
+     repeated on every section competes with the content. */
+  .page__content > h2, .archive > h2 {
+    font-size: 1.32em;
+    font-weight: 700;
+    color: var(--p);
+    letter-spacing: -0.015em;
+    text-transform: none;
+    margin-top: 2.1em;
+    padding-bottom: 0;
+    border-bottom: none !important;
+  }
+  .page__content > h2::after, .archive > h2::after {
+    content: "";
+    display: block;
+    width: 2.5rem;
+    height: 3px;
+    margin-top: 0.45em;
+    background: var(--a);
+    border-radius: 2px;
+  }
+
+  /* ── Links in running text ────────────── */
+  /* A quiet underline that firms up on hover. Scoped to text containers so
+     titles, buttons and link rows in components keep their own styling. */
+  :is(.page__content, .archive) :is(p, li, td, dd, dt, blockquote, figcaption) a:not(.btn),
+  :is(.page__content, .archive) :is(p, li, td, dd, dt, blockquote, figcaption) a:not(.btn):visited {
+    color: var(--p);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: rgba(30,58,95,0.3);
+    text-underline-offset: 0.2em;
+    border-bottom: 0;
+    transition: color 0.15s, text-decoration-color 0.15s;
+  }
+  :is(.page__content, .archive) :is(p, li, td, dd, dt, blockquote, figcaption) a:not(.btn):hover {
+    color: var(--a);
+    text-decoration-color: currentColor;
+  }
+
+  /* ── Buttons ──────────────────────────── */
+  .btn--primary,
+  .btn--primary:visited {
+    color: #ffffff !important;
+    background-color: var(--p);
+  }
+  .btn--primary:hover,
+  .btn--primary:focus-visible {
+    color: #ffffff !important;
+    background-color: var(--a);
+  }
+
+  /* ── Disclosure (details/summary) ─────── */
+  :is(.page__content, .archive) details > summary {
+    width: fit-content;
+    padding: 0.45rem 0;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--p);
+    cursor: pointer;
+  }
+  :is(.page__content, .archive) details[open] > summary { margin-bottom: 0.7rem; }
+
+  /* ── Tags (small labels) ──────────────── */
+  /* Used for research themes, venues and presentation types. */
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.1rem 0.5rem;
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    background: var(--card-bg);
+    color: var(--muted);
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+  .tag--ai4brain { color: var(--a); border-color: rgba(15,118,110,0.35); background: rgba(15,118,110,0.06); }
+  .tag--brain4ai { color: var(--p); border-color: rgba(30,58,95,0.3); background: rgba(30,58,95,0.05); }
+  .tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0 0 0.6rem; padding: 0; list-style: none; }
+
+  /* ── Info tables (news, awards) ───────── */
+  .page__content table, .archive table {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    width: 100%;
+    font-family: var(--font-serif);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+  }
+  .page__content table thead, .archive table thead { display: none; }
+  .page__content table td, .archive table td {
+    border: none !important;
+    padding: 0.35em 0.65em !important;
+    background: transparent !important;
+    font-size: inherit;
+    vertical-align: top;
+  }
+  .page__content table tr:nth-child(odd) td,
+  .archive table tr:nth-child(odd) td { background: transparent !important; }
+  .page__content table td:first-child,
+  .archive table td:first-child {
+    min-width: 7em;
+    padding-top: 0.5em !important;
+    white-space: nowrap;
+  }
+
+  /* ── Focus visibility (a11y) ──────────── */
+  :is(.page__content, .archive) :is(a, summary, button):focus-visible {
+    outline: 2px solid var(--a);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  @media (max-width: 600px) {
+    .page__content table td:first-child,
+    .archive table td:first-child { min-width: 4.5em; white-space: normal; }
+  }
