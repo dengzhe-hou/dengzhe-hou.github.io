@@ -15,8 +15,6 @@
     --line-strong: #cbd5e1; /* section rules, chip outlines */
     --bg: #f8fafc;          /* page background */
     --card-bg: #ffffff;
-    --card-s: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
-    --card-h: 0 4px 16px rgba(0,0,0,0.12);
 
     /* Noto JP follows each Latin face so Japanese (and the Chinese name)
        get proper CJK glyphs in a matching style instead of a system fallback. */
@@ -60,7 +58,7 @@
 
   /* ── Dates ────────────────────────────── */
   /* One date style everywhere: Inter with tabular figures, in the accent. */
-  .date, .cv-entry__date,
+  .date,
   .page__meta time,
   .archive__item-excerpt .date,
   .page__content table td:first-child,

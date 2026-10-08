@@ -1,42 +1,22 @@
+{% comment %}
+  Compact CV entry (publications and teaching), emitted as an <li> because
+  the CV page wraps these in a <ul>. Publications show the authors (site
+  owner in bold) and venue/year; other items show type, venue and date.
+{% endcomment %}
 {% include base_path %}
-
-{% if post.header.teaser %}
-  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
-{% else %}
-  {% assign teaser = site.teaser %}
-{% endif %}
-
-{% if post.id %}
-  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
-{% else %}
-  {% assign title = post.title %}
-{% endif %}
-
-<div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    <li>
-    {% if include.type == "grid" and teaser %}
-      <div class="archive__item-teaser">
-        <img src=
-          {% if teaser contains "://" %}
-            "{{ teaser }}"
-          {% else %}
-            "{{ teaser | prepend: "/images/" | prepend: base_path }}"
-          {% endif %}
-          alt="">
-      </div>
-    {% endif %}
-    <h3 class="archive__item-title" itemprop="headline">
-      {% if post.link %}
-        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
-      {% else %}
-        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
-      {% endif %}
-    </h3>
-    {% if post.read_time %}
-      <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
-    {% endif %}
-    {% if post.venue%}<p class="archive__item-excerpt" itemprop="description">{{ post.citation }}</p> {% endif %}
-    </li>
- </article>
-</div>
+{% assign entry_title = post.title | markdownify | remove: "<p>" | remove: "</p>" | strip %}
+<li class="list-entry list-entry--compact" itemscope itemtype="http://schema.org/CreativeWork">
+  <h3 class="list-entry__title" itemprop="headline"{% if post.title_lang %} lang="{{ post.title_lang }}"{% endif %}><a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ entry_title }}</a></h3>
+  {% if post.collection == "publications" %}
+    {% assign citation_year = post.date | date: '%Y' | prepend: '(' | append: ').' %}
+    {% assign entry_authors = post.citation | split: citation_year | first | strip | replace: 'Hou, D.', '<strong>Hou, D.</strong>' %}
+    {% if entry_authors != "" %}<p class="list-entry__authors">{{ entry_authors }}</p>{% endif %}
+    <p class="list-entry__meta"><span{% if post.venue_lang %} lang="{{ post.venue_lang }}"{% endif %}>{{ post.venue }}</span> <time class="date" datetime="{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}</time></p>
+  {% else %}
+    <p class="list-entry__meta">
+      {% if post.type %}<span class="tag">{{ post.type }}</span>{% endif %}
+      {% if post.venue %}<span{% if post.venue_lang %} lang="{{ post.venue_lang }}"{% endif %}>{{ post.venue }}</span>{% endif %}
+      {% if post.date %}<time class="date" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %Y' }}</time>{% endif %}
+    </p>
+  {% endif %}
+</li>

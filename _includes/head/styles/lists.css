@@ -1,64 +1,286 @@
   /* ═══ Lists and detail pages: publications, presentations, teaching ═══ */
 
-  /* ── Publication / talk cards ─────────── */
+  /* ── List entries ─────────────────────── */
+  /* One flat entry for every list (publications, presentations, teaching,
+     the CV lists and the generic archives): title, then meta, authors or a
+     short excerpt, separated from the next entry by a hairline. The theme's
+     .archive__item is kept flat too, in case a template still emits it. */
+  .list-entry,
   .archive__item {
-    background: var(--card-bg);
-    border-radius: 8px;
-    padding: 1rem 1.3rem;
-    margin-bottom: 1rem;
-    box-shadow: var(--card-s);
-    border-left: 3px solid var(--a);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.2s, box-shadow 0.2s;
+    padding: 1.15rem 0;
+    border-bottom: 1px solid var(--line);
   }
-  .archive__item::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--p), var(--a));
-    opacity: 0;
-    transition: opacity 0.25s;
-  }
-  .archive__item:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--card-h);
-  }
-  .archive__item:hover::before { opacity: 1; }
-  .archive__item-title {
-    margin-top: 0 !important;
-    font-size: 1.06em !important;
+
+  .list-entry .list-entry__title,
+  .archive__item .archive__item-title {
+    margin: 0 0 0.4rem;
+    padding: 0;
+    border: 0;
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
     font-weight: 600;
-    line-height: 1.3;
+    line-height: 1.4;
     letter-spacing: -0.005em;
     text-transform: none;
+    text-decoration: none;
+    color: var(--p);
   }
-  .archive__item .archive__item-title a {
-    color: var(--ink) !important;
-    font-weight: 600;
-    border-bottom: none !important;
+  /* Title links: no underline at rest, underline on hover. Scoped high
+     enough to beat base.css's running-text link rule inside CV <li>s. */
+  :is(.page__content, .archive) :is(.list-entry, .archive__item) :is(.list-entry__title, .archive__item-title) a,
+  :is(.page__content, .archive) :is(.list-entry, .archive__item) :is(.list-entry__title, .archive__item-title) a:visited {
+    color: var(--p);
+    text-decoration: none;
+    border-bottom: 0;
   }
-  .archive__item .archive__item-title a:hover { color: var(--a) !important; }
-  .archive__item-excerpt {
+  :is(.page__content, .archive) :is(.list-entry, .archive__item) :is(.list-entry__title, .archive__item-title) a:hover {
+    color: var(--p);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: currentColor;
+    text-underline-offset: 0.18em;
+  }
+  .archive__item:hover .archive__item-title { text-decoration: none; }
+
+  /* Entry parts are scoped under .list-entry so they also hold inside
+     .page__content (home page), whose theme rule sets p to 1em.
+     Authors (running text: serif); the site owner's name is set in <strong>. */
+  .list-entry .list-entry__authors {
+    margin: 0 0 0.3rem;
+    font-family: var(--font-serif);
+    font-size: 0.9375rem;
+    line-height: 1.55;
     color: var(--muted);
-    font-size: 0.93em !important;
-    line-height: 1.62;
+  }
+  .list-entry__authors strong { font-weight: 600; color: var(--ink); white-space: nowrap; }
+
+  /* Meta line: optional type tag, then venue | location | date, divided by
+     light rules. The rule is a text "|" after each item: a line may break
+     after it but never before it, so a wrapped line never starts with one.
+     Shared with the detail-page header. */
+  .list-entry .list-entry__meta,
+  .archive__item .page__meta,
+  .detail-meta {
+    margin: 0 0 0.3rem;
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    line-height: 1.65;
+    color: var(--muted);
+  }
+  :is(.list-entry__meta, .detail-meta) > :not(.tag):not(:last-child)::after {
+    content: "|";
+    margin: 0 0.15em 0 0.5em;
+    color: var(--line-strong);
+    font-weight: 400;
+  }
+  :is(.list-entry__meta, .detail-meta) > .date { white-space: nowrap; }
+  :is(.list-entry__meta, .detail-meta) > .tag {
+    margin-right: 0.3rem;
+    vertical-align: 0.05em;
+  }
+  .tag--invited {
+    color: var(--a);
+    border-color: rgba(15,118,110,0.35);
+    background: rgba(15,118,110,0.06);
   }
 
-  /* ── Publications: one concise entry per paper ── */
-  .publication-category { margin: 2rem 0 0.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #cbd5e1; font-size: 1.3rem; color: var(--p); }
-  .publication-entry { padding: 1.15rem 0; border-bottom: 1px solid #dbe3eb; }
-  .publication-entry__title { margin: 0 0 0.45rem; font-size: 1.06rem; line-height: 1.4; font-weight: 650; }
-  .publication-entry__title a { color: var(--p); text-decoration: none; }
-  .publication-entry__title a:hover { text-decoration: underline; }
-  .publication-entry__authors, .publication-entry__meta { margin: 0 0 0.35rem; font-size: 0.875rem; line-height: 1.6; color: var(--muted); }
-  .publication-entry__meta, .publication-entry__links { font-family: var(--font-sans); }
-  .publication-entry__meta { display: flex; gap: 0.65rem; flex-wrap: wrap; }
-  .publication-entry__meta span + span { padding-left: 0.65rem; border-left: 1px solid #cbd5e1; }
-  .publication-entry__links { display: flex; flex-wrap: wrap; gap: 0.35rem 1rem; margin-top: 0.6rem; font-size: 0.875rem; font-weight: 600; }
-  .publication-entry__links a { padding: 0.25rem 0; color: var(--p); text-underline-offset: 0.18em; }
+  /* One-paragraph summary: serif, muted, held to three lines. */
+  .list-entry .list-entry__excerpt,
+  .archive__item .archive__item-excerpt {
+    max-width: var(--measure);
+    margin: 0.45rem 0 0;
+    font-family: var(--font-serif);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+  .list-entry__excerpt {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
+  }
+
+  /* Link row (Paper, Details & citation): quiet Inter links. */
+  .list-entry__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 1.1rem;
+    margin-top: 0.4rem;
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  .list-entry__links a,
+  .list-entry__links a:visited {
+    padding: 0.2rem 0;
+    color: var(--p);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: rgba(30,58,95,0.3);
+    text-underline-offset: 0.2em;
+    transition: color 0.15s, text-decoration-color 0.15s;
+  }
+  .list-entry__links a:hover {
+    color: var(--a);
+    text-decoration-color: currentColor;
+  }
+
+  /* Compact entries in the CV lists (emitted as <li> inside a <ul>). */
+  li.list-entry { margin: 0; list-style: none; }
+  .archive > ul:has(> li.list-entry) { margin-left: 0; padding-left: 0; list-style: none; }
+  .list-entry--compact { padding: 0.8rem 0; }
+  .list-entry--compact:last-child { border-bottom: 0; }
+
+  /* ── Detail pages ─────────────────────── */
+  /* Header meta under the title: Inter, muted, shared divider style. */
+  .detail-meta {
+    margin: 0.55rem 0 1.6rem;
+    font-size: 0.9375rem;
+  }
+  .detail-meta__venue { color: var(--ink); font-weight: 500; }
+
+  /* Recommended citation: a light panel with a clear secondary link. */
+  .citation-panel {
+    max-width: var(--measure);
+    margin: 2.25rem 0 0;
+    padding: 1rem 1.15rem 1.1rem;
+    background: var(--card-bg);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+  }
+  .citation-panel .citation-panel__label {
+    margin: 0 0 0.45rem;
+    padding: 0;
+    border: 0;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .citation-panel .citation-panel__text {
+    margin: 0;
+    font-family: var(--font-serif);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--ink);
+    overflow-wrap: anywhere;
+  }
+  .citation-panel__text strong { font-weight: 600; white-space: nowrap; }
+  .citation-panel__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .citation-panel__text + .citation-panel__links {
+    margin-top: 0.9rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid var(--line);
+  }
+  .citation-panel__links a,
+  .citation-panel__links a:visited {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3em;
+    padding: 0.4rem 0.85rem;
+    border: 1px solid rgba(30,58,95,0.35);
+    border-radius: 6px;
+    background: var(--card-bg);
+    color: var(--p);
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.4;
+    text-decoration: none;
+    transition: border-color 0.15s, color 0.15s;
+  }
+  .citation-panel__links a:hover {
+    border-color: var(--p);
+    color: var(--p);
+    text-decoration: none;
+  }
+
+  /* Category chips in the detail-page footer (presentations): quiet
+     pills like .tag instead of the theme's outlined boxes. */
+  .page__taxonomy {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-size: 0.8125rem;
+    color: var(--muted);
+  }
+  .page__taxonomy strong { margin-right: 0.4rem; font-weight: 600; }
+  .page__taxonomy .fa { display: none; }
+  .page__taxonomy a.page__taxonomy-item,
+  .page__taxonomy a.page__taxonomy-item:visited {
+    display: inline-flex;
+    margin: 0 0.3rem 0 0;
+    padding: 0.1rem 0.5rem;
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    background: var(--card-bg);
+    color: var(--muted);
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.4;
+    text-decoration: none;
+    text-transform: capitalize;
+  }
+  .page__taxonomy a.page__taxonomy-item:hover { color: var(--p); border-color: rgba(30,58,95,0.45); }
+
+  /* Previous / next: quiet text links over a hairline. Floated full width
+     like the theme's footer above it, so the top margin is not swallowed
+     by clearance. */
+  .pager {
+    float: left;
+    clear: both;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem 2rem;
+    margin-top: 1.75rem;
+    padding-top: 1.1rem;
+    border-top: 1px solid var(--line);
+    font-family: var(--font-sans);
+  }
+  .pager a.pager__link,
+  .pager a.pager__link:visited {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    min-width: 0;
+    padding: 0.2rem 0;
+    color: var(--p);
+    text-decoration: none;
+  }
+  .pager a.pager__link--next { grid-column: 2; align-items: flex-end; text-align: right; }
+  .pager__label { font-size: 0.875rem; font-weight: 600; line-height: 1.5; }
+  .pager__title {
+    max-width: 100%;
+    overflow: hidden;
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    color: var(--muted);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .pager a.pager__link:hover .pager__label {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+  }
+  .pager a.pager__link:focus-visible {
+    outline: 2px solid var(--a);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
 
   @media (max-width: 639px) {
-    .publication-entry__links a { padding: 0.5rem 0; }
+    .list-entry__links a { padding: 0.5rem 0; }
+    .pager { grid-template-columns: minmax(0, 1fr); }
+    .pager a.pager__link--next { grid-column: 1; }
   }

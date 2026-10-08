@@ -1,13 +1,18 @@
+{% comment %}
+  One publication in a list: title, authors (site owner in bold), venue and
+  year, then a quiet row of links. The author list is the part of the
+  citation before "(year).", so the citation field stays the single source.
+{% endcomment %}
 {% assign citation_year = post.date | date: '%Y' | prepend: '(' | append: ').' %}
-{% assign publication_authors = post.citation | split: citation_year | first | strip %}
-<article class="publication-entry">
-  <h3 class="publication-entry__title"><a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a></h3>
-  <p class="publication-entry__authors">{{ publication_authors }}</p>
-  <p class="publication-entry__meta"><span>{{ post.venue }}</span><span>{{ post.date | date: '%Y' }}</span></p>
-  <div class="publication-entry__links">
-    <a href="{{ post.paperurl }}">Paper</a>
+{% assign publication_authors = post.citation | split: citation_year | first | strip | replace: 'Hou, D.', '<strong>Hou, D.</strong>' %}
+<article class="list-entry list-entry--publication">
+  <h3 class="list-entry__title"{% if post.title_lang %} lang="{{ post.title_lang }}"{% endif %}><a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a></h3>
+  {% if publication_authors != "" %}<p class="list-entry__authors">{{ publication_authors }}</p>{% endif %}
+  <p class="list-entry__meta"><span{% if post.venue_lang %} lang="{{ post.venue_lang }}"{% endif %}>{{ post.venue }}</span> <time class="date" datetime="{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}</time></p>
+  <div class="list-entry__links">
+    {% if post.paperurl %}<a href="{{ post.paperurl | strip }}">Paper</a>{% endif %}
     <a href="{{ base_path }}{{ post.url }}">Details &amp; citation</a>
-    {% if post.slidesurl %}<a href="{{ post.slidesurl }}">Slides</a>{% endif %}
-    {% if post.bibtexurl %}<a href="{{ post.bibtexurl }}">BibTeX</a>{% endif %}
+    {% if post.slidesurl %}<a href="{{ post.slidesurl | strip }}">Slides</a>{% endif %}
+    {% if post.bibtexurl %}<a href="{{ post.bibtexurl | strip }}">BibTeX</a>{% endif %}
   </div>
 </article>

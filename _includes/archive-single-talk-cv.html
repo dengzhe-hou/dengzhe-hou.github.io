@@ -1,41 +1,16 @@
+{% comment %}
+  Compact CV entry for a presentation, emitted as an <li> because the CV
+  page wraps these in a <ul>. Same meta line as the Presentations page.
+{% endcomment %}
 {% include base_path %}
-
-{% if post.header.teaser %}
-  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
-{% else %}
-  {% assign teaser = site.teaser %}
-{% endif %}
-
-{% if post.id %}
-  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
-{% else %}
-  {% assign title = post.title %}
-{% endif %}
-
-<div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    <li>
-    {% if include.type == "grid" and teaser %}
-      <div class="archive__item-teaser">
-        <img src=
-          {% if teaser contains "://" %}
-            "{{ teaser }}"
-          {% else %}
-            "{{ teaser | prepend: "/images/" | prepend: base_path }}"
-          {% endif %}
-          alt="">
-      </div>
-    {% endif %}
-    <h3 class="archive__item-title" itemprop="headline">
-      {% if post.link %}
-        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
-      {% else %}
-        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
-      {% endif %}
-    </h3>
-    {% if post.date %}<p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {{ post.date | date: '%B %d, %Y' }}</p>{% endif %}
-    {% if post.venue%}<p class="archive__item-excerpt" itemprop="description">{{post.type}} at {{ post.venue }},  {{post.location}}</p>{% endif %}
-    </li>
-  </article>
-</div>
-
+{% assign entry_title = post.title | markdownify | remove: "<p>" | remove: "</p>" | strip %}
+{% assign entry_type = post.talk_type | default: post.type | remove: " presentation" | remove: " (English)" | strip %}
+<li class="list-entry list-entry--compact" itemscope itemtype="http://schema.org/CreativeWork">
+  <h3 class="list-entry__title" itemprop="headline"{% if post.title_lang %} lang="{{ post.title_lang }}"{% endif %}><a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ entry_title }}</a></h3>
+  <p class="list-entry__meta">
+    {% if entry_type != "" %}<span class="tag{% if entry_type contains 'Invited' %} tag--invited{% endif %}">{{ entry_type }}</span>{% endif %}
+    {% if post.venue %}<span{% if post.venue_lang %} lang="{{ post.venue_lang }}"{% endif %}>{{ post.venue }}</span>{% endif %}
+    {% if post.location %}<span>{{ post.location }}</span>{% endif %}
+    {% if post.date %}<time class="date" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %Y' }}</time>{% endif %}
+  </p>
+</li>

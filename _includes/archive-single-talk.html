@@ -1,42 +1,22 @@
+{% comment %}
+  One presentation in a list: title, then a meta line with the presentation
+  type as a tag, venue, location and month, then the first paragraph.
+  Front matter "title_lang" / "venue_lang" (e.g. ja) mark a Japanese title or
+  venue, since front-matter strings cannot safely carry HTML.
+  include.heading sets the title element (default h3, under a section h2).
+{% endcomment %}
 {% include base_path %}
-
-{% if post.header.teaser %}
-  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
-{% else %}
-  {% assign teaser = site.teaser %}
-{% endif %}
-
-{% if post.id %}
-  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
-{% else %}
-  {% assign title = post.title %}
-{% endif %}
-
-<div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    {% if include.type == "grid" and teaser %}
-      <div class="archive__item-teaser">
-        <img src=
-          {% if teaser contains "://" %}
-            "{{ teaser }}"
-          {% else %}
-            "{{ teaser | prepend: "/images/" | prepend: base_path }}"
-          {% endif %}
-          alt="">
-      </div>
-    {% endif %}
-    <h2 class="archive__item-title" itemprop="headline">
-      {% if post.link %}
-        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
-      {% else %}
-        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
-      {% endif %}
-    </h2>
-    {% if post.read_time %}
-      <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
-    {% endif %}
-    {% if post.date %}<p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {{ post.date | date: '%B %d, %Y' }}</p>{% endif %}
-    {% if post.venue %}<p class="archive__item-excerpt" itemprop="description">{{post.type}}, {{ post.venue }},  {{post.location}} {% endif %}
-    {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>{% endif %}
-  </article>
-</div>
+{% assign entry_heading = include.heading | default: "h3" %}
+{% assign entry_title = post.title | markdownify | remove: "<p>" | remove: "</p>" | strip %}
+{% assign entry_type = post.talk_type | default: post.type | remove: " presentation" | remove: " (English)" | strip %}
+{% assign entry_excerpt = post.excerpt | markdownify | remove: "<p>" | remove: "</p>" | strip %}
+<article class="list-entry list-entry--talk" itemscope itemtype="http://schema.org/CreativeWork">
+  <{{ entry_heading }} class="list-entry__title" itemprop="headline"{% if post.title_lang %} lang="{{ post.title_lang }}"{% endif %}><a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ entry_title }}</a></{{ entry_heading }}>
+  <p class="list-entry__meta">
+    {% if entry_type != "" %}<span class="tag{% if entry_type contains 'Invited' %} tag--invited{% endif %}">{{ entry_type }}</span>{% endif %}
+    {% if post.venue %}<span{% if post.venue_lang %} lang="{{ post.venue_lang }}"{% endif %}>{{ post.venue }}</span>{% endif %}
+    {% if post.location %}<span>{{ post.location }}</span>{% endif %}
+    {% if post.date %}<time class="date" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %Y' }}</time>{% endif %}
+  </p>
+  {% if entry_excerpt != "" %}<p class="list-entry__excerpt" itemprop="description">{{ entry_excerpt }}</p>{% endif %}
+</article>

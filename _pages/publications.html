@@ -5,14 +5,16 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
 {% include base_path %}
 
-<div class="publications-list">
-<!-- New style rendering if publication categories are defined -->
+{% if site.author.googlescholar %}
+  <p class="list-intro">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</p>
+{% endif %}
+
+{% comment %}
+  Category headings are direct children of .archive so they take the shared
+  section-heading style from base.css, like the Presentations page.
+{% endcomment %}
 {% if site.publication_category %}
   {% for category in site.publication_category  %}
     {% assign title_shown = false %}
@@ -21,7 +23,7 @@ author_profile: true
         {% continue %}
       {% endif %}
       {% unless title_shown %}
-        <h2 class="publication-category">{{ category[1].title }}</h2>
+        <h2 class="publication-category" id="{{ category[0] }}">{{ category[1].title }}</h2>
         {% assign title_shown = true %}
       {% endunless %}
       {% include publication-list-item.html %}
@@ -32,6 +34,3 @@ author_profile: true
     {% include publication-list-item.html %}
   {% endfor %}
 {% endif %}
-</div>
-
-

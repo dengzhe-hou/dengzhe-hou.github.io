@@ -1,0 +1,11 @@
+{% include base_path %}
+<div class="selected-publications">
+{% for selected_url in page.selected_publications %}
+  {% for post in site.publications %}
+    {% if post.url == selected_url %}
+      {% include publication-list-item.html %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+<p class="selected-publications__all"><a href="{{ base_path }}/publications/">All publications <span aria-hidden="true">→</span></a></p>
+</div>

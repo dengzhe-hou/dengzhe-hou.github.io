@@ -1,6 +1,16 @@
 {
-	"name": "OOjs UI icon academic-progressive",
+	"name": "Dengzhe Hou",
+	"short_name": "DH",
+	"start_url": "/",
+	"display": "browser",
+	"theme_color": "#0f172a",
+	"background_color": "#f8fafc",
 	"icons": [
+		{
+			"src": "/images/favicon.svg",
+			"sizes": "any",
+			"type": "image/svg+xml"
+		},
 		{
 			"src": "/images/favicon-192x192.png",
 			"sizes": "192x192",

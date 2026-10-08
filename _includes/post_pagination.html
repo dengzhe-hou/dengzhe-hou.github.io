@@ -1,16 +1,24 @@
+{% comment %}
+  Quiet previous/next links at the foot of a detail page: a direction label
+  with the neighbouring item's title underneath, over a hairline rule.
+{% endcomment %}
 {% include base_path %}
 
 {% if page.previous or page.next %}
-  <nav class="pagination">
+  <nav class="pager" aria-label="Previous and next">
     {% if page.previous %}
-      <a href="{{ base_path }}{{ page.previous.url }}" class="pagination--pager" title="{{ page.previous.title | markdownify | strip_html }}">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a>
-    {% else %}
-      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a>
+      {% assign pager_title = page.previous.title | markdownify | strip_html | strip %}
+      <a href="{{ base_path }}{{ page.previous.url }}" class="pager__link pager__link--prev" rel="prev">
+        <span class="pager__label"><span aria-hidden="true">&larr; </span>{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</span>
+        <span class="pager__title"{% if page.previous.title_lang %} lang="{{ page.previous.title_lang }}"{% endif %}>{{ pager_title }}</span>
+      </a>
     {% endif %}
     {% if page.next %}
-      <a href="{{ base_path }}{{ page.next.url }}" class="pagination--pager" title="{{ page.next.title | markdownify | strip_html }}">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}</a>
-    {% else %}
-      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}</a>
+      {% assign pager_title = page.next.title | markdownify | strip_html | strip %}
+      <a href="{{ base_path }}{{ page.next.url }}" class="pager__link pager__link--next" rel="next">
+        <span class="pager__label">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}<span aria-hidden="true"> &rarr;</span></span>
+        <span class="pager__title"{% if page.next.title_lang %} lang="{{ page.next.title_lang }}"{% endif %}>{{ pager_title }}</span>
+      </a>
     {% endif %}
   </nav>
 {% endif %}

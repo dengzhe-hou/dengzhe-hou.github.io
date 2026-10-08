@@ -1,15 +1,20 @@
 {% include base_path %}
 <div class="research-grid">
   {% for project in page.selected_research %}
+  {% assign paper = site.publications | where: "url", project.url | first %}
   <article class="research-card">
-    <a class="research-card__figure" href="{{ base_path }}/images/{{ project.image_path }}" aria-label="View full-size figure for {{ project.title | escape }}">
-      <img src="{{ base_path }}/images/{{ project.image_path }}" alt="{{ project.alt | escape }}" width="880" height="495">
-      <span>View figure</span>
-    </a>
+    <div class="research-card__figure">
+      <img src="{{ base_path }}/images/{{ project.thumb }}" alt="{{ project.alt | escape }}" width="{{ project.thumb_width }}" height="{{ project.thumb_height }}" loading="lazy">
+    </div>
     <div class="research-card__body">
-      <h3><a href="{{ base_path }}{{ project.url }}">{{ project.title }}</a></h3>
+      <p class="research-card__theme"><span class="tag tag--{{ project.theme | downcase }}">{{ project.theme }}</span></p>
+      <h3 class="research-card__title"><a href="{{ base_path }}{{ project.url }}">{{ project.title }}</a></h3>
+      <p class="research-card__venue">{{ project.venue | default: paper.venue }} · {{ paper.date | date: '%Y' }}</p>
       {{ project.excerpt | markdownify }}
-      <a class="btn btn--primary research-card__link" href="{{ base_path }}{{ project.url }}">{{ project.btn_label }}</a>
+      <p class="research-card__links">
+        <span class="research-card__more" aria-hidden="true">Read more →</span>
+        <a class="research-card__full" href="{{ base_path }}/images/{{ project.image_path }}">Full figure<span class="sr-only"> for {{ project.title | escape }}</span></a>
+      </p>
     </div>
   </article>
   {% endfor %}

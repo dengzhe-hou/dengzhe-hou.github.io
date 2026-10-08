@@ -8,13 +8,13 @@ author_profile: true
 {% assign international = site.talks | where: "category", "international" | sort: "date" | reverse %}
 {% assign domestic = site.talks | where: "category", "domestic" | sort: "date" | reverse %}
 
-## International Conferences
+<h2 id="international">International Conferences</h2>
 
 {% for post in international %}
   {% include archive-single-talk.html %}
 {% endfor %}
 
-## Domestic Conferences
+<h2 id="domestic">Domestic Conferences</h2>
 
 {% for post in domestic %}
   {% include archive-single-talk.html %}

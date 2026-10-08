@@ -26,51 +26,52 @@ layout: default
     <div class="page__inner-wrap">
       {% unless page.header.overlay_color or page.header.overlay_image %}
         <header>
-          {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
+          {% if page.title %}
+            {% assign page_title_html = page.title | markdownify | remove: "<p>" | remove: "</p>" | strip %}
+            {% unless page_title_html contains 'lang=' %}{% assign page_title_html = page_title_html | replace: "侯登哲", '<span lang="zh">侯登哲</span>' %}{% endunless %}
+            <h1 class="page__title" itemprop="headline"{% if page.title_lang %} lang="{{ page.title_lang }}"{% endif %}>{{ page_title_html }}</h1>
+          {% endif %}
           {% if page.read_time %}
             <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
           {% endif %}
-        {% if page.modified %}
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time></p>
-        {% endif %}
-        
-        {% if page.collection == 'teaching' %}
-          <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
-        {% elsif page.venue and page.date %}
-          <p>Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
-        {% elsif page.date %}
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
-        {% endif %}    
+          {% if page.collection == 'teaching' %}
+            <p class="detail-meta">
+              {% if page.type %}<span class="tag">{{ page.type }}</span>{% endif %}
+              {% if page.venue %}<span{% if page.venue_lang %} lang="{{ page.venue_lang }}"{% endif %}>{{ page.venue }}</span>{% endif %}
+              {% if page.location %}<span>{{ page.location }}</span>{% endif %}
+              {% if page.date %}<time class="date" datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%b %Y' }}</time>{% endif %}
+            </p>
+          {% elsif page.venue and page.date %}
+            <p class="detail-meta">
+              <span>Published in <span class="detail-meta__venue"{% if page.venue_lang %} lang="{{ page.venue_lang }}"{% endif %}>{{ page.venue }}</span></span>
+              <time class="date" datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%Y' }}</time>
+            </p>
+          {% elsif page.modified or page.date %}
+            {% assign page_date = page.modified | default: page.date %}
+            <p class="detail-meta">
+              <span>{{ site.data.ui-text[site.locale].date_label | default: "Published:" }} <time class="date" datetime="{{ page_date | date: '%Y-%m-%d' }}">{{ page_date | date: '%b %-d, %Y' }}</time></span>
+            </p>
+          {% endif %}
         </header>
       {% endunless %}
 
       <section class="page__content" itemprop="text">
         {{ content }}
 
-        {% if page.citation and page.paperurl and page.slidesurl and page.bibtexurl %}
-          <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">Read Paper</a> | <a href="{{ page.slidesurl }}">Download Slides</a> | <a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
-        {% elsif page.citation and page.paperurl and page.slidesurl %}
-          <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">Read Paper</a> | <a href="{{ page.slidesurl }}">Download Slides</a></p>
-        {% elsif page.citation and page.paperurl and page.bibtexurl %}
-          <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">Read Paper</a> | <a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
-        {% elsif page.citation and page.paperurl %}
-          <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">Read Paper</a></p>
-        {% elsif page.citation and page.slidesurl and page.bibtexurl %}
-          <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.slidesurl }}">Download Slides</a> | <a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
-        {% elsif page.citation and page.slidesurl %}
-          <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.slidesurl }}">Download Slides</a></p>
-        {% elsif page.slidesurl and page.bibtexurl %}
-          <p style="font-size: smaller"><a href="{{ page.slidesurl }}">Download Slides</a> | <a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
-        {% elsif page.paperurl and page.bibtexurl %}
-          <p style="font-size: smaller"><a href="{{ page.paperurl }}">Read Paper</a> | <a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
-        {% elsif page.citation and page.bibtexurl %}
-          <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
-        {% elsif page.citation %}
-          <p style="font-size: smaller">Recommended citation: {{ page.citation }}</p>
-        {% elsif page.slidesurl %}
-          <p style="font-size: smaller"><a href="{{ page.slidesurl }}">Download Slides</a></p>
-        {% elsif page.bibtexurl %}
-          <p style="font-size: smaller"><a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
+        {% if page.citation or page.paperurl or page.slidesurl or page.bibtexurl %}
+          <section class="citation-panel"{% if page.citation %} aria-labelledby="citation-heading"{% endif %}>
+            {% if page.citation %}
+              <h2 class="citation-panel__label" id="citation-heading">Recommended citation</h2>
+              <p class="citation-panel__text">{{ page.citation | replace: 'Hou, D.', '<strong>Hou, D.</strong>' }}</p>
+            {% endif %}
+            {% if page.paperurl or page.slidesurl or page.bibtexurl %}
+              <div class="citation-panel__links">
+                {% if page.paperurl %}<a href="{{ page.paperurl | strip }}">Read paper<span aria-hidden="true"> &#8599;</span></a>{% endif %}
+                {% if page.slidesurl %}<a href="{{ page.slidesurl | strip }}">Download slides</a>{% endif %}
+                {% if page.bibtexurl %}<a href="{{ page.bibtexurl | strip }}">Download BibTeX</a>{% endif %}
+              </div>
+            {% endif %}
+          </section>
         {% endif %}
 
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
