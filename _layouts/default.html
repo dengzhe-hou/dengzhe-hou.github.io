@@ -1,36 +1,33 @@
 ---
 layout: compress
 ---
-{% comment %}
-  The shell of every page: head (SEO, feed, theme pre-paint, fonts, the one
-  stylesheet assets/css/site.css), site header, <main id="main">, site
-  footer, assets/js/site.js and the MathJax / Mermaid tags.
-  Layouts that use it render their own .wrap sections inside {{ content }}.
-  Note: "compress" collapses whitespace, so inline scripts here must not use
-  // comments.
-{% endcomment %}
+
 {% include base_path %}
+
 <!doctype html>
-<html lang="{{ page.lang | default: site.locale | slice: 0,2 | default: 'en' }}" class="no-js">
+<html lang="{{ site.locale | slice: 0,2 }}" class="no-js"{% if site.site_theme == "dark" %} data-theme="dark"{% endif %}>
   <head>
     {% include head.html %}
-    <script>(function(){try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400&text=%E4%BE%AF%E7%99%BB%E5%93%B2&display=swap">
-    <link rel="stylesheet" href="{{ base_path }}/assets/css/site.css?v={{ site.time | date: '%Y%m%d%H%M%S' }}">
     {% include head/custom.html %}
   </head>
-  <body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
-    <a class="skip" href="#main">Skip to content</a>
-    {% include site-header.html %}
-    <main id="main" tabindex="-1">
-      {{ content }}
-    </main>
-    {% include site-footer.html %}
-    <script src="{{ base_path }}/assets/js/site.js?v={{ site.time | date: '%Y%m%d%H%M%S' }}" defer></script>
-    {% include footer/custom.html %}
-    {% include analytics.html %}
+
+  <body>
+
+    <a href="#main" class="screen-reader-shortcut">Skip to content</a>
+
+    {% include browser-upgrade.html %}
+    {% include masthead.html %}
+
+    {{ content }}
+
+    <div class="page__footer">
+      <footer>
+        {% include footer/custom.html %}
+        {% include footer.html %}
+      </footer>
+    </div>
+
+    {% include scripts.html %}
+
   </body>
 </html>

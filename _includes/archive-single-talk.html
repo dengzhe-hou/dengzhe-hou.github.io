@@ -1,21 +1,42 @@
-{% comment %}
-  One presentation as a list row (use inside <ol class="rows">):
-    rail  the month ("Aug 2026", ink) and the type ("Invited talk", "Oral",
-          "Poster (English)"; talk_type or type without " presentation", ink-3)
-    main  the title, then "Event, City, Country" (ink-2), then the first
-          paragraph of the page (ink-3)
-    acts  "Slides ↗" when slidesurl is set, then "Details →"
-  Front matter "title_lang" / "venue_lang" (e.g. ja) mark a Japanese title or
-  venue, since front-matter strings cannot safely carry HTML.
-    post     a document from site.talks (falls back to `post` in scope)
-    heading  title element, "h3" (default, under a section h2)
-{% endcomment %}{% include base_path %}{% assign talk = include.post | default: post %}{% assign entry_heading = include.heading | default: "h3" %}{% assign entry_title = talk.title | markdownify | remove: "<p>" | remove: "</p>" | strip %}{% assign entry_type = talk.talk_type | default: talk.type | remove: " presentation" | strip %}{% assign entry_excerpt = talk.excerpt | markdownify | remove: "<p>" | remove: "</p>" | strip %}{% assign entry_slides = talk.slidesurl | strip %}{% assign entry_title_sr = entry_title | strip_html | escape %}
-<li class="grid row talk" itemscope itemtype="http://schema.org/CreativeWork">
-  <p class="rail">{% if talk.date %}<time class="meta-yr" datetime="{{ talk.date | date: '%Y-%m-%d' }}">{{ talk.date | date: '%b %Y' }}</time>{% endif %}{% if entry_type != "" %}<span class="meta-type{% if entry_type contains 'Invited' %} meta-type--invited{% endif %}">{{ entry_type }}</span>{% endif %}</p>
-  <div class="main">
-    <{{ entry_heading }} class="row-title" itemprop="headline"{% if talk.title_lang %} lang="{{ talk.title_lang }}"{% endif %}><a href="{{ base_path }}{{ talk.url }}" rel="permalink">{{ entry_title }}</a></{{ entry_heading }}>
-    {% if talk.venue or talk.location %}<p class="sub">{% if talk.venue %}<span{% if talk.venue_lang %} lang="{{ talk.venue_lang }}"{% endif %}>{{ talk.venue }}</span>{% endif %}{% if talk.venue and talk.location %}, {% endif %}{% if talk.location %}<span>{{ talk.location }}</span>{% endif %}</p>{% endif %}
-    {% if entry_excerpt != "" %}<p class="note" itemprop="description">{{ entry_excerpt }}</p>{% endif %}
-  </div>
-  <p class="acts">{% if entry_slides != "" %}<a href="{{ entry_slides }}">Slides <span class="ar ne" aria-hidden="true">&#8599;</span><span class="sr-only">: {{ entry_title_sr }}</span></a>{% endif %}<a href="{{ base_path }}{{ talk.url }}">Details <span class="ar e" aria-hidden="true">&rarr;</span><span class="sr-only">: {{ entry_title_sr }}</span></a></p>
-</li>
+{% include base_path %}
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+<div class="{{ include.type | default: "list" }}__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    {% if include.type == "grid" and teaser %}
+      <div class="archive__item-teaser">
+        <img src=
+          {% if teaser contains "://" %}
+            "{{ teaser }}"
+          {% else %}
+            "{{ teaser | prepend: "/images/" | prepend: base_path }}"
+          {% endif %}
+          alt="">
+      </div>
+    {% endif %}
+    <h2 class="archive__item-title" itemprop="headline">
+      {% if post.link %}
+        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+      {% else %}
+        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+      {% endif %}
+    </h2>
+    {% if post.read_time %}
+      <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
+    {% endif %}
+    {% if post.date %}<p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {{ post.date | date: '%B %d, %Y' }}</p>{% endif %}
+    {% if post.venue %}<p class="archive__item-excerpt" itemprop="description">{{post.type}}, {{ post.venue }},  {{post.location}} {% endif %}
+    {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>{% endif %}
+  </article>
+</div>

@@ -1,21 +1,9 @@
-{% comment %}
-  Tags and categories of a detail page as quiet rail | main rows: a label
-  in the rail, the terms as links to their archive (site.tag_archive /
-  site.category_archive) in main. Publications skip categories: their
-  category is the publication type, already shown in the eyebrow.
-  Rendered inside .d-foot by _layouts/single.html.
-{% endcomment %}{% include base_path %}
-{% if site.tag_archive.type and site.tag_archive.path and page.tags[0] %}{% if site.tag_archive.type == "liquid" %}{% assign tag_hash = "#" %}{% else %}{% assign tag_hash = "" %}{% endif %}
-{% capture page_tags %}{% for tag in page.tags %}{{ tag | downcase }}#{{ tag }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}{% assign tag_hashes = page_tags | split: ',' | sort %}
-<div class="grid tax-row">
-  <p class="rail label">{{ site.data.ui-text[site.locale].tags_label | default: "Tags:" | remove: ":" }}</p>
-  <p class="main tax-terms" itemprop="keywords">{% for hash in tag_hashes %}{% assign keyValue = hash | split: '#' %}{% capture tag_word %}{{ keyValue[1] | strip_newlines }}{% endcapture %}<a href="{{ base_path }}{{ site.tag_archive.path }}{{ tag_hash }}{{ tag_word | slugify }}" rel="tag">{{ tag_word }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}{% endfor %}</p>
-</div>
+{% include base_path %}
+
+{% if site.tag_archive.type and page.tags[0] %}
+  {% include tag-list.html %}
 {% endif %}
-{% if site.category_archive.type and site.category_archive.path and page.categories[0] and page.collection != 'publications' %}{% if site.category_archive.type == "liquid" %}{% assign cat_hash = "#" %}{% else %}{% assign cat_hash = "" %}{% endif %}
-{% capture page_categories %}{% for category in page.categories %}{{ category | downcase }}#{{ category }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}{% assign category_hashes = page_categories | split: ',' | sort %}
-<div class="grid tax-row">
-  <p class="rail label">{{ site.data.ui-text[site.locale].categories_label | default: "Categories:" | remove: ":" }}</p>
-  <p class="main tax-terms" itemprop="keywords">{% for hash in category_hashes %}{% assign keyValue = hash | split: '#' %}{% capture category_word %}{{ keyValue[1] | strip_newlines }}{% endcapture %}<a href="{{ base_path }}{{ site.category_archive.path }}{{ cat_hash }}{{ category_word | slugify }}" rel="tag">{{ category_word }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}{% endfor %}</p>
-</div>
+
+{% if site.category_archive.type and page.categories[0] and page.collection != 'publications' %}
+  {% include category-list.html %}
 {% endif %}

@@ -12,4 +12,4 @@ category: international
 
 Talk presented at the 16th Asia Pacific Conference on Vision (APCV 2024). Alpha-band EEG dynamics during self-initiated attention shifts, examining lateralized alpha suppression as a marker of voluntary attentional selection.
 
-**Authors:** Satoshi Shioiri, <strong class="author-self">Dengzhe Hou</strong>, Sai Sun, Yasuhiro Hatori, Chia-huei Tseng
+**Authors:** Satoshi Shioiri, Dengzhe Hou, Sai Sun, Yasuhiro Hatori, Chia-huei Tseng

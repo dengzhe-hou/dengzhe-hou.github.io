@@ -1,53 +1,84 @@
-{% comment %}
-  One entry in a list as a rail | main | acts row (use inside <ol class="rows">).
-    post      the document or page (falls back to `post` in scope)
-    heading   title element, "h3" (default, under a section h2)
-    compact   true -> a short index row for the sitemap and page archive:
-              rail = date and type, main = title and the page's path
-    type      "grid" -> a small text card (related posts on detail pages)
-  Without compact, presentations use archive-single-talk.html and
-  publications pub-row.html, so every list reads the same. Anything else
-  (teaching, posts, pages) gets the generic row: the date or date range
-  ("Apr 2022 – Mar 2025", "Apr 2026 – present") and the type in the rail;
-  title, "venue, location" and the first paragraph in main; "Details →"
-  (or "Permalink" for a link post) in acts.
-{% endcomment %}{% include base_path %}{% assign entry = include.post | default: post %}{% assign entry_heading = include.heading | default: "h3" %}
-{% if include.type != "grid" and include.compact != true and entry.collection == "talks" %}
-  {% include archive-single-talk.html post=entry heading=entry_heading %}
-{% elsif include.type != "grid" and include.compact != true and entry.collection == "publications" %}
-  {% include pub-row.html post=entry heading=entry_heading %}
+{% include base_path %}
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
 {% else %}
-{% if entry.id %}{% assign entry_title = entry.title | markdownify | remove: "<p>" | remove: "</p>" | strip %}{% else %}{% assign entry_title = entry.title | default: entry.url %}{% endif %}
-{% unless entry_title contains 'lang=' %}{% assign entry_title = entry_title | replace: "侯登哲", '<span lang="zh">侯登哲</span>' %}{% endunless %}
-{% assign entry_title_sr = entry_title | strip_html | escape %}
-{% assign entry_link = entry.link | strip %}
-{% if entry_link != "" %}{% assign entry_href = entry_link %}{% else %}{% assign entry_href = entry.url | prepend: base_path %}{% endif %}
-{% if entry.collection == "posts" %}{% assign entry_date_format = "%b %-d, %Y" %}{% elsif entry.collection == "publications" %}{% assign entry_date_format = "%Y" %}{% else %}{% assign entry_date_format = "%b %Y" %}{% endif %}
-{% assign entry_type = entry.talk_type | default: entry.type | remove: " presentation" | strip %}
-{% if entry.collection == "publications" %}{% case entry.category %}{% when "manuscripts" %}{% assign entry_type = "Journal" %}{% when "conferences" %}{% assign entry_type = "Conference" %}{% when "preprints" %}{% assign entry_type = "Preprint" %}{% when "books" %}{% assign entry_type = "Book" %}{% endcase %}{% endif %}
-{% if include.type == "grid" %}
-<article class="related-item">
-  {% if entry.date %}<p class="mono">{% include date-range.html start=entry.date end=entry.date_end format=entry_date_format %}</p>{% endif %}
-  <{{ entry_heading }} class="row-title"{% if entry.title_lang %} lang="{{ entry.title_lang }}"{% endif %}><a href="{{ entry_href }}">{{ entry_title }}</a></{{ entry_heading }}>
-</article>
-{% elsif include.compact %}
-<li class="grid row row--compact">
-  <p class="rail">{% if entry.date %}<span class="meta-yr">{% include date-range.html start=entry.date end=entry.date_end format=entry_date_format %}</span>{% endif %}{% if entry_type != "" %}<span class="meta-type">{{ entry_type }}</span>{% endif %}</p>
-  <div class="main">
-    <{{ entry_heading }} class="row-title"{% if entry.title_lang %} lang="{{ entry.title_lang }}"{% endif %}><a href="{{ entry_href }}">{{ entry_title }}</a></{{ entry_heading }}>
-    <p class="path">{{ entry.url }}</p>
-  </div>
-</li>
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
 {% else %}
-{% assign entry_excerpt = entry.excerpt | markdownify | remove: "<p>" | remove: "</p>" | strip %}
-<li class="grid row entry" itemscope itemtype="http://schema.org/CreativeWork">
-  <p class="rail">{% if entry.date %}<span class="meta-yr">{% include date-range.html start=entry.date end=entry.date_end format=entry_date_format %}</span>{% endif %}{% if entry_type != "" %}<span class="meta-type">{{ entry_type }}</span>{% endif %}{% if entry.read_time %}<span class="meta-type">{% include read-time.html %}</span>{% endif %}</p>
-  <div class="main">
-    <{{ entry_heading }} class="row-title" itemprop="headline"{% if entry.title_lang %} lang="{{ entry.title_lang }}"{% endif %}><a href="{{ entry_href }}"{% if entry_link == "" %} rel="permalink"{% endif %}>{{ entry_title }}</a></{{ entry_heading }}>
-    {% if entry.venue or entry.location %}<p class="sub">{% if entry.venue %}<span{% if entry.venue_lang %} lang="{{ entry.venue_lang }}"{% endif %}>{{ entry.venue }}</span>{% endif %}{% if entry.venue and entry.location %}, {% endif %}{% if entry.location %}<span>{{ entry.location }}</span>{% endif %}</p>{% endif %}
-    {% if entry_excerpt != "" %}<p class="note" itemprop="description">{{ entry_excerpt }}</p>{% endif %}
-  </div>
-  {% if entry.id %}<p class="acts">{% if entry_link != "" %}<a href="{{ base_path }}{{ entry.url }}" rel="permalink">Permalink <span class="ar e" aria-hidden="true">&rarr;</span><span class="sr-only">: {{ entry_title_sr }}</span></a>{% else %}<a href="{{ entry_href }}">Details <span class="ar e" aria-hidden="true">&rarr;</span><span class="sr-only">: {{ entry_title_sr }}</span></a>{% endif %}</p>{% endif %}
-</li>
+  {% assign title = post.title %}
 {% endif %}
-{% endif %}
+
+<div class="{{ include.type | default: "list" }}__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    {% if include.type == "grid" and teaser %}
+      <div class="archive__item-teaser">
+        <img src=
+          {% if teaser contains "://" %}
+            "{{ teaser }}"
+          {% else %}
+            "{{ teaser | prepend: "/images/" | prepend: base_path }}"
+          {% endif %}
+          alt="">
+      </div>
+    {% endif %}
+
+    <h2 class="archive__item-title" itemprop="headline">
+      {% if post.link %}
+        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+      {% else %}
+        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+      {% endif %}
+    </h2>
+    
+    {% if post.read_time %}
+      <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
+    {% endif %}
+
+        {% if post.collection == 'teaching' %}
+          <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+        {% elsif post.collection == 'publications' %}
+          <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+        {% elsif post.date %}
+         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
+        {% endif %}
+
+    {% if post.excerpt and site.read_more != 'enabled' %}
+    <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
+    {% elsif post.excerpt and site.read_more == 'enabled' %}
+    <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p>
+    {% endif %}
+    
+    {% if post.citation and post.paperurl and post.slidesurl and post.bibtexurl %}
+      <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.paperurl }}">Read Paper</a> | <a href="{{ post.slidesurl }}">Download Slides</a> | <a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
+    {% elsif post.citation and post.paperurl and post.slidesurl %}
+      <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.paperurl }}">Read Paper</a> | <a href="{{ post.slidesurl }}">Download Slides</a></p>
+    {% elsif post.citation and post.paperurl and post.bibtexurl %}
+      <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.paperurl }}">Read Paper</a> | <a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
+    {% elsif post.citation and post.paperurl %}
+      <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.paperurl }}">Read Paper</a></p>
+    {% elsif post.citation and post.slidesurl and post.bibtexurl %}
+      <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.slidesurl }}">Download Slides</a> | <a href="{{ post.bibtexurl}}">Download Bibtex</a></p>
+    {% elsif post.citation and post.slidesurl %}
+      <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.slidesurl }}">Download Slides</a></p>
+    {% elsif post.citation and post.bibtexurl %}
+      <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
+    {% elsif post.citation %}
+      <p>Recommended citation: {{ post.citation }}</p>
+    {% elsif post.paperurl and post.bibtexurl %}
+      <p><a href=" {{ post.paperurl }} ">Read Paper</a> | <a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
+    {% elsif post.paperurl %}
+      <p><a href=" {{ post.paperurl }} ">Read Paper</a></p>
+    {% elsif post.slidesurl and post.bibtexurl %}
+      <p><a href="{{ post.slidesurl }}">Download Slides</a> | <a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
+    {% elsif post.slidesurl %}
+      <p><a href="{{ post.slidesurl }}">Download Slides</a></p>
+    {% elsif post.bibtexurl %}
+      <p><a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
+    {% endif %}
+
+  </article>
+</div>

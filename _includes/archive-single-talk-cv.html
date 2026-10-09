@@ -1,13 +1,41 @@
-{% comment %}
-  One CV row for a presentation (`post`), emitted as an <li> inside the
-  CV's <ol class="rows">: month and type in the rail ("Sep 2026",
-  "Invited talk"); title (linked to the details page), then
-  "event, location" in main. No actions.
-{% endcomment %}{% include base_path %}{% assign cv_talk_type = post.talk_type | default: post.type | remove: " presentation" | strip %}
-<li class="grid row cv-row cv-talk">
-  <p class="rail">{% if post.date %}<time class="cv-when" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %Y' }}</time>{% endif %}{% if cv_talk_type != "" %}<span class="cv-note">{{ cv_talk_type }}</span>{% endif %}</p>
-  <div class="main">
-    <h3 class="row-title"{% if post.title_lang %} lang="{{ post.title_lang }}"{% endif %}><a href="{{ base_path }}{{ post.url }}">{{ post.title | markdownify | remove: "<p>" | remove: "</p>" | strip }}</a></h3>
-    {% if post.venue or post.location %}<p class="sub">{% if post.venue %}<span{% if post.venue_lang %} lang="{{ post.venue_lang }}"{% endif %}>{{ post.venue }}</span>{% if post.location %}, {% endif %}{% endif %}{% if post.location %}{{ post.location }}{% endif %}</p>{% endif %}
-  </div>
-</li>
+{% include base_path %}
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+<div class="{{ include.type | default: "list" }}__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    <li>
+    {% if include.type == "grid" and teaser %}
+      <div class="archive__item-teaser">
+        <img src=
+          {% if teaser contains "://" %}
+            "{{ teaser }}"
+          {% else %}
+            "{{ teaser | prepend: "/images/" | prepend: base_path }}"
+          {% endif %}
+          alt="">
+      </div>
+    {% endif %}
+    <h3 class="archive__item-title" itemprop="headline">
+      {% if post.link %}
+        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+      {% else %}
+        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+      {% endif %}
+    </h3>
+    {% if post.date %}<p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {{ post.date | date: '%B %d, %Y' }}</p>{% endif %}
+    {% if post.venue%}<p class="archive__item-excerpt" itemprop="description">{{post.type}} at {{ post.venue }},  {{post.location}}</p>{% endif %}
+    </li>
+  </article>
+</div>
+

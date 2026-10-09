@@ -1,12 +1,16 @@
-{% comment %}
-  Previous / next at the foot of a detail page, as two quiet rows in the
-  rail | main grid: the direction in the rail (mono), the neighbouring
-  item's title in main. Jekyll orders a collection by date, so
-  "Previous" is the older item and "Next" the newer one.
-  Rendered inside .d-foot by _layouts/single.html.
-{% endcomment %}{% include base_path %}{% if page.previous or page.next %}
-<nav class="pager" aria-label="Previous and next">
-  {% if page.previous %}{% assign pager_title = page.previous.title | markdownify | strip_html | strip %}<a class="grid pager-row" href="{{ base_path }}{{ page.previous.url }}" rel="prev"><span class="pager-k"><span class="ar w" aria-hidden="true">&larr;</span> {{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</span><span class="pager-t"{% if page.previous.title_lang %} lang="{{ page.previous.title_lang }}"{% endif %}>{{ pager_title }}</span></a>{% endif %}
-  {% if page.next %}{% assign pager_title = page.next.title | markdownify | strip_html | strip %}<a class="grid pager-row" href="{{ base_path }}{{ page.next.url }}" rel="next"><span class="pager-k">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }} <span class="ar e" aria-hidden="true">&rarr;</span></span><span class="pager-t"{% if page.next.title_lang %} lang="{{ page.next.title_lang }}"{% endif %}>{{ pager_title }}</span></a>{% endif %}
-</nav>
+{% include base_path %}
+
+{% if page.previous or page.next %}
+  <nav class="pagination">
+    {% if page.previous %}
+      <a href="{{ base_path }}{{ page.previous.url }}" class="pagination--pager" title="{{ page.previous.title | markdownify | strip_html }}">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a>
+    {% else %}
+      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a>
+    {% endif %}
+    {% if page.next %}
+      <a href="{{ base_path }}{{ page.next.url }}" class="pagination--pager" title="{{ page.next.title | markdownify | strip_html }}">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}</a>
+    {% else %}
+      <a href="#" class="pagination--pager disabled">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}</a>
+    {% endif %}
+  </nav>
 {% endif %}

@@ -4,46 +4,18 @@ title: "Presentations"
 permalink: /talks/
 author_profile: true
 ---
-{% comment %}
-  Page head (years covered, item count), then International and Domestic
-  sections, newest first. Each presentation is a row of
-  archive-single-talk.html: month and type in the rail; title, "event,
-  location" and the first paragraph in main; "Details →" in acts.
-{% endcomment %}
-{% include base_path %}
-{% assign talks_all = site.talks | sort: "date" %}
-{% assign talks_first_year = talks_all.first.date | date: "%Y" %}{% assign talks_last_year = talks_all.last.date | date: "%Y" %}
-{% capture talks_span %}{% if talks_first_year == talks_last_year %}{{ talks_last_year }}{% else %}{{ talks_first_year }}–{{ talks_last_year }}{% endif %}{% endcapture %}
-{% capture talks_count %}{{ talks_all.size }} {% if talks_all.size == 1 %}item{% else %}items{% endif %}{% endcapture %}
-{% include page-head.html eyebrow=talks_span meta=talks_count title=page.title %}
 
-{% assign talk_groups = "international|International conferences,domestic|Domestic conferences" | split: "," %}
-{% for talk_group in talk_groups %}
-  {% assign talk_key = talk_group | split: "|" | first %}
-  {% assign talk_title = talk_group | split: "|" | last %}
-  {% assign group_talks = site.talks | where: "category", talk_key | sort: "date" | reverse %}
-  {% if group_talks.size == 0 %}{% continue %}{% endif %}
-  {% capture talk_index %}{% if group_talks.size < 10 %}0{% endif %}{{ group_talks.size }}{% endcapture %}
-  {% capture talk_heading_id %}{{ talk_key }}-h{% endcapture %}
-<section class="section" id="{{ talk_key }}" aria-labelledby="{{ talk_heading_id }}">
-  <div class="wrap">
-    {% include section-head.html index=talk_index note="items" title=talk_title id=talk_heading_id %}
-    <ol class="rows">
-      {% for post in group_talks %}{% include archive-single-talk.html post=post %}{% endfor %}
-    </ol>
-  </div>
-</section>
+{% assign international = site.talks | where: "category", "international" | sort: "date" | reverse %}
+{% assign domestic = site.talks | where: "category", "domestic" | sort: "date" | reverse %}
+
+## International Conferences
+
+{% for post in international %}
+  {% include archive-single-talk.html %}
 {% endfor %}
 
-{% assign talks_other = site.talks | where_exp: "t", "t.category != 'international'" | where_exp: "t", "t.category != 'domestic'" | sort: "date" | reverse %}
-{% if talks_other.size > 0 %}
-  {% capture talk_index %}{% if talks_other.size < 10 %}0{% endif %}{{ talks_other.size }}{% endcapture %}
-<section class="section" id="other" aria-labelledby="other-h">
-  <div class="wrap">
-    {% include section-head.html index=talk_index note="items" title="Other presentations" id="other-h" %}
-    <ol class="rows">
-      {% for post in talks_other %}{% include archive-single-talk.html post=post %}{% endfor %}
-    </ol>
-  </div>
-</section>
-{% endif %}
+## Domestic Conferences
+
+{% for post in domestic %}
+  {% include archive-single-talk.html %}
+{% endfor %}

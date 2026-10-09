@@ -1,71 +1,333 @@
-{% comment %}
-  A CV rendered from _data/cv.json (JSON Resume format) in the site's row
-  system: one numbered section per non-empty block, each row with the
-  date or period in the rail and the entry in main (styles: cv.css).
-  Not used at the moment: /cv-json/ (_pages/cv-json.md) redirects to the
-  CV page (/cv/, _pages/cv.md), which is the maintained CV. To use it,
-  give a page `layout: cv-layout` with no `sections` and include this
-  file in its body.
-{% endcomment %}{% assign cv = site.data.cv %}{% assign cvt_total = 0 %}{% assign cvt_blocks = "summary,work,education,skills,publications,presentations,teaching,service,portfolio,languages,interests,references" | split: "," %}{% for cvt_key in cvt_blocks %}{% if cvt_key == "summary" %}{% if cv.basics.summary %}{% assign cvt_total = cvt_total | plus: 1 %}{% endif %}{% elsif cv[cvt_key].size > 0 %}{% assign cvt_total = cvt_total | plus: 1 %}{% endif %}{% endfor %}{% capture cvt_total %}{% if cvt_total < 10 %}0{% endif %}{{ cvt_total }}{% endcapture %}{% assign cvt_n = 0 %}
+{% assign cv = site.data.cv %}
 
-<section class="section cv-section" aria-label="Contact">
-  <div class="wrap">
-    <ul class="rows cv-rows">
-      <li class="grid row cv-row cv-entry">
-        <p class="rail"><span class="label">Contact</span></p>
-        <div class="main">
-          {% if cv.basics.label %}<h2 class="row-title">{{ cv.basics.label }}</h2>{% endif %}
-          <ul class="cv-details">
-            {% if cv.basics.email %}<li><a href="mailto:{{ cv.basics.email }}">{{ cv.basics.email }}</a></li>{% endif %}
-            {% if cv.basics.phone and cv.basics.phone != "" %}<li>{{ cv.basics.phone }}</li>{% endif %}
-            {% if cv.basics.website %}<li><a href="{{ cv.basics.website }}">{{ cv.basics.website }}</a></li>{% endif %}
-            {% if cv.basics.location.city %}<li>{{ cv.basics.location.city }}{% if cv.basics.location.region %}, {{ cv.basics.location.region }}{% endif %}{% if cv.basics.location.countryCode %}, {{ cv.basics.location.countryCode }}{% endif %}</li>{% endif %}
+<style>
+  .archive {
+    width: 80%;
+    margin: 0 auto;
+    float: none;
+    padding-right: 0;
+  }
+  
+  @media (min-width: 80em) {
+    .archive {
+      width: 70%;
+    }
+  }
+</style>
+
+<div class="cv-container">
+  <!-- Basic Information -->
+  <div class="cv-section cv-header">
+    <h1>{{ cv.basics.name }}</h1>
+    {% if cv.basics.label %}
+    <h2>{{ cv.basics.label }}</h2>
+    {% endif %}
+    
+    <div class="cv-contact">
+      {% if cv.basics.email %}
+      <div class="cv-contact-item">
+        <i class="fas fa-envelope"></i> {{ cv.basics.email }}
+      </div>
+      {% endif %}
+      
+      {% if cv.basics.phone %}
+      <div class="cv-contact-item">
+        <i class="fas fa-phone"></i> {{ cv.basics.phone }}
+      </div>
+      {% endif %}
+      
+      {% if cv.basics.website %}
+      <div class="cv-contact-item">
+        <i class="fas fa-globe"></i> <a href="{{ cv.basics.website }}" target="_blank">{{ cv.basics.website }}</a>
+      </div>
+      {% endif %}
+      
+      {% if cv.basics.location.city %}
+      <div class="cv-contact-item">
+        <i class="fas fa-map-marker-alt"></i> {{ cv.basics.location.city }}{% if cv.basics.location.region %}, {{ cv.basics.location.region }}{% endif %}{% if cv.basics.location.countryCode %}, {{ cv.basics.location.countryCode }}{% endif %}
+      </div>
+      {% endif %}
+    </div>
+    
+    {% if cv.basics.profiles.size > 0 %}
+    <div class="cv-profiles">
+      {% for profile in cv.basics.profiles %}
+      <a href="{{ profile.url }}" target="_blank" class="cv-profile-link">
+        <i class="fab fa-{{ profile.network | downcase }}"></i> {{ profile.network }}
+      </a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+  
+  {% if cv.basics.summary %}
+  <!-- Summary -->
+  <div class="cv-section">
+    <h2>Summary</h2>
+    <p>{{ cv.basics.summary }}</p>
+  </div>
+  {% endif %}
+  
+  {% if cv.education.size > 0 %}
+  <!-- Education -->
+  <div class="cv-section">
+    <h2>Education</h2>
+    <ul class="cv-list">
+      {% for education in cv.education %}
+      <li class="cv-item">
+        <div class="cv-item-header">
+          <div class="cv-item-title">{{ education.area }}</div>
+          <div class="cv-item-date">{{ education.endDate }}</div>
+        </div>
+        <div class="cv-item-content">
+          <div class="cv-item-subtitle">{{ education.institution }}</div>
+          {% if education.gpa %}
+          <div class="cv-item-detail">GPA: {{ education.gpa }}</div>
+          {% endif %}
+          {% if education.courses.size > 0 %}
+          <div class="cv-item-detail">
+            <strong>Courses:</strong> {{ education.courses | join: ", " }}
+          </div>
+          {% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+  
+  {% if cv.work.size > 0 %}
+  <!-- Work Experience -->
+  <div class="cv-section">
+    <h2>Work Experience</h2>
+    <ul class="cv-list">
+      {% for work in cv.work %}
+      <li class="cv-item">
+        <div class="cv-item-header">
+          <div class="cv-item-title">{{ work.position }}</div>
+          <div class="cv-item-date">{{ work.startDate }}{% if work.endDate != '' %} - {{ work.endDate }}{% elsif work.startDate != '' %} - present{% endif %}</div>
+        </div>
+        <div class="cv-item-content">
+          <div class="cv-item-subtitle">{{ work.company }}</div>
+          {% if work.summary %}
+          <div class="cv-item-detail">{{ work.summary }}</div>
+          {% endif %}
+          {% if work.highlights.size > 0 %}
+          <ul class="cv-highlights">
+            {% for highlight in work.highlights %}
+            <li>{{ highlight }}</li>
+            {% endfor %}
           </ul>
+          {% endif %}
         </div>
-        {% if cv.basics.profiles.size > 0 %}<p class="acts">{% for profile in cv.basics.profiles %}<a href="{{ profile.url }}">{{ profile.network }} <span class="ar ne" aria-hidden="true">&#8599;</span></a>{% endfor %}</p>{% endif %}
       </li>
+      {% endfor %}
     </ul>
   </div>
-</section>
+  {% endif %}
+  
+  {% if cv.skills.size > 0 %}
+  <!-- Skills -->
+  <div class="cv-section">
+    <h2>Skills</h2>
+    <div class="cv-skills">
+      {% for skill in cv.skills %}
+      <div class="cv-skill-category">
+        <h3>{{ skill.name }}</h3>
+        <ul class="cv-skill-list">
+          {% for keyword in skill.keywords %}
+          <li>{{ keyword }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+  
+  {% if cv.publications.size > 0 %}
+  <!-- Publications -->
+  <div class="cv-section">
+    <h2>Publications</h2>
+    <ul class="cv-list">
+      {% for publication in cv.publications %}
+      <li class="cv-item">
+        <div class="cv-item-header">
+          <div class="cv-item-title">{{ publication.name }}</div>
+          <div class="cv-item-date">{{ publication.releaseDate | slice: 0, 4 }}</div>
+        </div>
+        <div class="cv-item-content">
+          <div class="cv-item-subtitle">{{ publication.publisher }}</div>
+          {% if publication.summary %}
+          <div class="cv-item-detail">{{ publication.summary }}</div>
+          {% endif %}
+          {% if publication.website %}
+          <div class="cv-item-detail">
+            <a href="{{ publication.website }}" target="_blank">View Publication</a>
+          </div>
+          {% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+  
+  {% if cv.presentations.size > 0 %}
+  <!-- Presentations/Talks -->
+  <div class="cv-section">
+    <h2>Presentations</h2>
+    <ul class="cv-list">
+      {% for talk in cv.presentations %}
+      <li class="cv-item">
+        <div class="cv-item-header">
+          <div class="cv-item-title">{{ talk.name }}</div>
+          <div class="cv-item-date">{{ talk.date | slice: 0, 4 }}</div>
+        </div>
+        <div class="cv-item-content">
+          <div class="cv-item-subtitle">{{ talk.event }}</div>
+          {% if talk.location %}
+          <div class="cv-item-detail">{{ talk.location }}</div>
+          {% endif %}
+          {% if talk.description %}
+          <div class="cv-item-detail">{{ talk.description }}</div>
+          {% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+  
+  {% if cv.teaching.size > 0 %}
+  <!-- Teaching -->
+  <div class="cv-section">
+    <h2>Teaching</h2>
+    <ul class="cv-list">
+      {% for teaching in cv.teaching %}
+      <li class="cv-item">
+        <div class="cv-item-header">
+          <div class="cv-item-title">{{ teaching.course }}</div>
+          <div class="cv-item-date">{{ teaching.date | slice: 0, 4 }}</div>
+        </div>
+        <div class="cv-item-content">
+          <div class="cv-item-subtitle">{{ teaching.institution }}</div>
+          {% if teaching.role %}
+          <div class="cv-item-detail">Role: {{ teaching.role }}</div>
+          {% endif %}
+          {% if teaching.description %}
+          <div class="cv-item-detail">{{ teaching.description }}</div>
+          {% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
 
-{% for cvt_key in cvt_blocks %}
-{% if cvt_key == "summary" %}{% unless cv.basics.summary %}{% continue %}{% endunless %}{% elsif cv[cvt_key].size == 0 or cv[cvt_key] == nil %}{% continue %}{% endif %}
-{% assign cvt_n = cvt_n | plus: 1 %}{% capture cvt_index %}{% if cvt_n < 10 %}0{% endif %}{{ cvt_n }}{% endcapture %}
-{% case cvt_key %}{% when "work" %}{% assign cvt_title = "Work experience" %}{% else %}{% assign cvt_title = cvt_key | capitalize %}{% endcase %}
-{% capture cvt_id %}cv-{{ cvt_key }}{% endcapture %}{% capture cvt_heading_id %}cv-{{ cvt_key }}-h{% endcapture %}
-<section class="section cv-section" id="{{ cvt_id }}" aria-labelledby="{{ cvt_heading_id }}">
-  <div class="wrap">
-    {% include section-head.html index=cvt_index total=cvt_total title=cvt_title id=cvt_heading_id %}
-    <ul class="rows cv-rows">
-    {% if cvt_key == "summary" %}
-      <li class="grid row cv-row cv-entry"><div class="main"><p class="cv-text">{{ cv.basics.summary }}</p></div></li>
-    {% else %}{% for item in cv[cvt_key] %}
-      {% case cvt_key %}
-      {% when "work" %}{% assign r_when = item.startDate | slice: 0, 7 %}{% if item.endDate != "" %}{% assign r_end = item.endDate | slice: 0, 7 %}{% else %}{% assign r_end = "present" %}{% endif %}{% capture r_when %}{{ r_when }} – {{ r_end }}{% endcapture %}{% assign r_title = item.position %}{% assign r_text = item.company %}{% assign r_more = item.summary %}{% assign r_list = item.highlights %}
-      {% when "education" %}{% capture r_when %}{{ item.startDate | slice: 0, 7 }} – {{ item.endDate | slice: 0, 7 }}{% endcapture %}{% assign r_title = item.area %}{% assign r_text = item.institution %}{% if item.gpa %}{% capture r_more %}GPA: {{ item.gpa }}{% endcapture %}{% else %}{% assign r_more = nil %}{% endif %}{% assign r_list = item.courses %}
-      {% when "skills" %}{% assign r_when = nil %}{% assign r_title = item.name %}{% assign r_text = item.keywords | join: ", " %}{% assign r_more = nil %}{% assign r_list = nil %}
-      {% when "publications" %}{% assign r_when = item.releaseDate | slice: 0, 4 %}{% assign r_title = item.name %}{% assign r_text = item.publisher %}{% assign r_more = item.summary %}{% assign r_list = nil %}
-      {% when "presentations" %}{% assign r_when = item.date | slice: 0, 7 %}{% assign r_title = item.name %}{% capture r_text %}{{ item.event }}{% if item.location %}, {{ item.location }}{% endif %}{% endcapture %}{% assign r_more = item.description %}{% assign r_list = nil %}
-      {% when "teaching" %}{% assign r_when = item.date | slice: 0, 4 %}{% assign r_title = item.course %}{% assign r_text = item.institution %}{% assign r_more = item.description %}{% assign r_list = nil %}
-      {% when "service" %}{% if item.startDate != "" %}{% capture r_when %}{{ item.startDate }} – {% if item.endDate != "" %}{{ item.endDate }}{% else %}present{% endif %}{% endcapture %}{% else %}{% assign r_when = nil %}{% endif %}{% assign r_title = item.position %}{% if item.url != "" %}{% capture r_text %}<a href="{{ item.url }}">{{ item.organization }}</a>{% endcapture %}{% else %}{% assign r_text = item.organization %}{% endif %}{% assign r_more = item.summary %}{% assign r_list = nil %}
-      {% when "portfolio" %}{% assign r_when = item.date | slice: 0, 4 %}{% assign r_title = item.name %}{% assign r_text = item.category | capitalize %}{% assign r_more = item.description %}{% assign r_list = nil %}
-      {% when "languages" %}{% assign r_when = nil %}{% assign r_title = item.language %}{% assign r_text = item.fluency %}{% assign r_more = nil %}{% assign r_list = nil %}
-      {% when "interests" %}{% assign r_when = nil %}{% assign r_title = item.name %}{% assign r_text = item.keywords | join: ", " %}{% assign r_more = nil %}{% assign r_list = nil %}
-      {% when "references" %}{% assign r_when = nil %}{% assign r_title = item.name %}{% assign r_text = item.reference %}{% assign r_more = nil %}{% assign r_list = nil %}
-      {% endcase %}
-      {% assign r_url = item.website | default: item.url %}{% if cvt_key == "service" %}{% assign r_url = nil %}{% endif %}
-      <li class="grid row cv-row cv-entry">
-        {% if r_when and r_when != "" %}<p class="rail"><span class="cv-when">{{ r_when }}</span></p>{% endif %}
-        <div class="main">
-          <h3 class="row-title">{{ r_title }}</h3>
-          {% if r_text and r_text != "" %}<p class="sub">{{ r_text }}</p>{% endif %}
-          {% if r_more and r_more != "" %}<p class="note">{{ r_more }}</p>{% endif %}
-          {% if r_list.size > 0 %}<ul class="cv-details">{% for line in r_list %}<li>{{ line }}</li>{% endfor %}</ul>{% endif %}
+  {% if cv.service.size > 0 %}
+  <!-- Service -->
+  <div class="cv-section">
+    <h2>Service</h2>
+    <ul class="cv-list">
+      {% for service in cv.service %}
+      <li class="cv-item">
+        <div class="cv-item-header">
+          <div class="cv-item-title">{{ service.position }}</div>
+          <div class="cv-item-date">{% if service.startDate != '' %}{{ service.startDate }}{% endif %}{% if service.endDate != '' %} - {{ service.endDate }}{% elsif service.startDate != '' %} - present{% endif %}</div>
         </div>
-        {% if r_url and r_url != "" %}<p class="acts"><a href="{{ r_url }}">Link <span class="ar ne" aria-hidden="true">&#8599;</span></a></p>{% endif %}
+        <div class="cv-item-content">
+          <div class="cv-item-subtitle">{% if service.url != '' %}<a href="{{ service.url }}" target="_blank">{{ service.organization }}</a>{% else %}{{ service.organization }}{% endif %}</div>
+          {% if service.summary %}
+          <div class="cv-item-detail">{{ service.summary }}</div>
+          {% endif %}
+        </div>
       </li>
-    {% endfor %}{% endif %}
+      {% endfor %}
     </ul>
   </div>
-</section>
-{% endfor %}
+  {% endif %}
+
+  {% if cv.portfolio.size > 0 %}
+  <!-- Portfolio -->
+  <div class="cv-section">
+    <h2>Portfolio</h2>
+    <ul class="cv-list">
+      {% for item in cv.portfolio %}
+      <li class="cv-item">
+        <div class="cv-item-header">
+          <div class="cv-item-title">{{ item.name }}</div>
+          <div class="cv-item-date">{{ item.date | slice: 0, 4 }}</div>
+        </div>
+        <div class="cv-item-content">
+          <div class="cv-item-subtitle">{{ item.category | capitalize }}</div>
+          {% if item.description %}
+          <div class="cv-item-detail">{{ item.description }}</div>
+          {% endif %}
+          {% if item.url %}
+          <div class="cv-item-detail">
+            <a href="{{ item.url }}" target="_blank">View Project</a>
+          </div>
+          {% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+  
+  {% if cv.languages.size > 0 %}
+  <!-- Languages -->
+  <div class="cv-section">
+    <h2>Languages</h2>
+    <ul class="cv-list">
+      {% for language in cv.languages %}
+      <li class="cv-item">
+        <div class="cv-item-content">
+          <div class="cv-item-title">{{ language.language }}</div>
+          <div class="cv-item-detail">{{ language.fluency }}</div>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+  
+  {% if cv.interests.size > 0 %}
+  <!-- Interests -->
+  <div class="cv-section">
+    <h2>Interests</h2>
+    <ul class="cv-list">
+      {% for interest in cv.interests %}
+      <li class="cv-item">
+        <div class="cv-item-content">
+          <div class="cv-item-title">{{ interest.name }}</div>
+          {% if interest.keywords.size > 0 %}
+          <div class="cv-item-detail">{{ interest.keywords | join: ", " }}</div>
+          {% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+  
+  {% if cv.references.size > 0 %}
+  <!-- References -->
+  <div class="cv-section">
+    <h2>References</h2>
+    <ul class="cv-list">
+      {% for reference in cv.references %}
+      <li class="cv-item">
+        <div class="cv-item-content">
+          <div class="cv-item-title">{{ reference.name }}</div>
+          {% if reference.reference %}
+          <div class="cv-item-detail">{{ reference.reference }}</div>
+          {% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</div>

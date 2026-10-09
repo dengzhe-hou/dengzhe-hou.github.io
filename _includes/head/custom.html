@@ -5,23 +5,406 @@
 <!-- Google Search Console verification -->
 <meta name="google-site-verification" content="SHcgDoDZ8sMeXN9BrWp_ESykM7Xjk4UBPqm6AcRNB_0" />
 
-<!-- favicon: "DH" monogram drawn from plain geometry in images/favicon.svg
-     (ink tile, white letters, the H crossbar in the accent). The PNG and ICO
-     files are renders of it; the 180/192/512 icons give the letters more room.
-     The SVG is listed last so browsers that support it prefer it. -->
-<link rel="icon" href="{{ base_path }}/images/favicon.ico" sizes="32x32"/>
+<!-- Support for Academicons -->
+<link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"/>
+
+<!-- favicon from https://commons.wikimedia.org/wiki/File:OOjs_UI_icon_academic-progressive.svg -->
+<link rel="apple-touch-icon" sizes="180x180" href="{{ base_path }}/images/apple-touch-icon-180x180.png"/>
+<link rel="icon" type="image/svg+xml" href="{{ base_path }}/images/favicon.svg"/>
 <link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-32x32.png" sizes="32x32"/>
 <link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-192x192.png" sizes="192x192"/>
-<link rel="icon" type="image/svg+xml" href="{{ base_path }}/images/favicon.svg"/>
-<link rel="apple-touch-icon" sizes="180x180" href="{{ base_path }}/images/apple-touch-icon-180x180.png"/>
 <link rel="manifest" href="{{ base_path }}/images/manifest.json"/>
-<!-- Browser UI colour = page background (--bg) of each theme. The media
-     queries follow the system; the script makes an explicit choice from the
-     header toggle (data-theme on <html>) win, now and whenever it changes. -->
-<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"/>
-<meta name="theme-color" content="#0b0b0c" media="(prefers-color-scheme: dark)"/>
-<script>(function(){var r=document.documentElement,m=document.querySelectorAll('meta[name="theme-color"]');function sync(){var t=r.getAttribute('data-theme');for(var i=0;i<m.length;i++){if(!m[i].hasAttribute('data-system')){m[i].setAttribute('data-system',m[i].getAttribute('content'));}m[i].setAttribute('content',t==='dark'?'#0b0b0c':t==='light'?'#ffffff':m[i].getAttribute('data-system'));}}sync();if(window.MutationObserver){new MutationObserver(sync).observe(r,{attributes:true,attributeFilter:['data-theme']});}})();</script>
-<meta name="color-scheme" content="light dark"/>
+<link rel="icon" href="/images/favicon.ico"/>
+<meta name="theme-color" content="#ffffff"/>
+<meta name="color-scheme" content="light"/>
+
+<!-- Google Fonts: Source Serif 4 for running text, Inter for headings and UI -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet"/>
+
+<!-- Custom: Clean academic theme — slate navy + teal accent -->
+<style>
+  /* ═══ Palette ══════════════════════════════
+     primary  #1e3a5f  (deep navy)
+     accent   #0d9488  (teal)
+     nav      #0f172a  (slate-900)
+  ════════════════════════════════════════════ */
+  :root {
+    color-scheme: light;
+    --p:  #1e3a5f;          /* deep navy */
+    --a:  #0f766e;          /* teal accent (darkened for AA text contrast) */
+    --a-on-dark: #5eead4;   /* readable teal on the navy header and footer */
+    --nav: #0f172a;         /* slate-900 */
+    --ink: #1e293b;         /* slate-800 body text */
+    --muted: #475569;       /* slate-600 */
+    --card-bg: #ffffff;
+    --card-s: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+    --card-h: 0 4px 16px rgba(0,0,0,0.12);
+  }
+
+  /* ── Fonts ────────────────────────────── */
+  /* Running text is set in Source Serif 4; headings, navigation and other
+     interface chrome stay in Inter so the two roles read differently. */
+  body, .page__content, .archive {
+    font-family: 'Source Serif 4', Charter, Georgia, serif;
+  }
+  .sidebar, .masthead, .btn, .page__footer,
+  h1, h2, h3, h4, h5, h6,
+  .page__title, .archive__item-title, .author__name {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  /* Serif needs a touch more size and leading than Inter at the same em. */
+  .page__content > p, .page__content > ul, .page__content > ol,
+  .archive > p, .archive > ul, .archive > ol {
+    font-size: 1.06em;
+    line-height: 1.66;
+  }
+  .page__meta time,
+  .archive__item-excerpt .date {
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 0.78em;
+    letter-spacing: 0.03em;
+  }
+
+  /* ── Nav bar ──────────────────────────── */
+  .masthead {
+    --global-bg-color: var(--nav);
+    --global-border-color: #475569;
+    --global-masthead-link-color: #ffffff;
+    --global-masthead-link-color-hover: var(--a-on-dark);
+    background: var(--nav) !important;
+    border-bottom: 2px solid var(--a) !important;
+  }
+  .masthead::after { display: none !important; }
+  .masthead__menu-item,
+  .greedy-nav,
+  .greedy-nav button {
+    background: transparent !important;
+    background-color: transparent !important;
+  }
+  .masthead__menu-item--lg a {
+    color: #f1f5f9 !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.01em;
+    -webkit-text-fill-color: #f1f5f9 !important;
+  }
+  .masthead a, .masthead__menu-item a {
+    color: #ffffff !important;
+    letter-spacing: 0.03em;
+    font-size: 0.88em;
+  }
+  .masthead__menu-item a:hover,
+  .masthead__menu-item a:focus-visible { color: var(--a-on-dark) !important; }
+  .masthead__menu-item.selected a {
+    color: #fff !important;
+    border-bottom: 2px solid var(--a) !important;
+  }
+
+  /* ── Page body ──────────────────────────── */
+  body { background: #f8fafc !important; }
+
+  /* ── Sidebar ──────────────────────────── */
+  .author__avatar img {
+    border-radius: 14px !important;
+    border: 2px solid rgba(13,148,136,0.3) !important;
+    box-shadow: 0 4px 20px rgba(15,23,42,0.12) !important;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .author__avatar img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 30px rgba(15,23,42,0.18) !important;
+  }
+  .author__name {
+    color: var(--ink) !important;
+    font-size: 1.05em !important;
+    font-weight: 700 !important;
+  }
+  .author__bio {
+    color: var(--muted) !important;
+    font-size: 0.875rem !important;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+  .author__urls li { font-size: 0.875rem; }
+  .author__urls a {
+    color: var(--ink) !important;
+    font-size: inherit !important;
+    transition: color 0.18s;
+  }
+  .author__urls a:hover { color: var(--a) !important; }
+
+  /* ── Page title (h1) ──────────────────── */
+  .page__title {
+    color: var(--p) !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.02em;
+    -webkit-text-fill-color: var(--p) !important;
+  }
+
+  /* ── Section headings (h2) ────────────── */
+  /* Card titles are also h2.archive__item-title, so they must be excluded
+     or they inherit the uppercase section-label treatment. */
+  .page__content h2:not(.archive__item-title) {
+    font-size: 1.32em;
+    font-weight: 700;
+    color: var(--p);
+    letter-spacing: -0.015em;
+    text-transform: none;
+    margin-top: 2.1em;
+    padding-bottom: 0.3em;
+    border-bottom: none !important;
+    position: relative;
+  }
+  .page__content h2:not(.archive__item-title)::after {
+    content: "";
+    display: block;
+    height: 3px;
+    margin-top: 0.35em;
+    background: linear-gradient(90deg, var(--p), var(--a) 70%, transparent);
+    border-radius: 2px;
+  }
+
+  /* ── Links ────────────────────────────── */
+  .page__content a:not(.btn),
+  .page__content a:not(.btn):visited {
+    color: var(--p) !important;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(30,58,95,0.5);
+    transition: color 0.18s, border-color 0.18s;
+  }
+  .page__content a:not(.btn):hover {
+    color: var(--a) !important;
+    border-bottom-color: var(--a);
+  }
+  .btn--primary,
+  .btn--primary:visited {
+    color: #ffffff !important;
+    background-color: var(--p);
+  }
+  .btn--primary:hover,
+  .btn--primary:focus-visible {
+    color: #ffffff !important;
+    background-color: var(--a);
+  }
+
+  /* ── Publication / talk cards ─────────── */
+  .archive__item {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 1rem 1.3rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--card-s);
+    border-left: 3px solid var(--a);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .archive__item::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--p), var(--a));
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+  .archive__item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--card-h);
+  }
+  .archive__item:hover::before { opacity: 1; }
+  .archive__item-title {
+    margin-top: 0 !important;
+    font-size: 1.06em !important;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.005em;
+    text-transform: none;
+  }
+  .archive__item .archive__item-title a {
+    color: var(--ink) !important;
+    font-weight: 600;
+    border-bottom: none !important;
+  }
+  .archive__item .archive__item-title a:hover { color: var(--a) !important; }
+  .archive__item-excerpt {
+    color: var(--muted);
+    font-size: 0.93em !important;
+    line-height: 1.62;
+  }
+
+  /* ── News / info table ────────────────── */
+  .page__content table {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    width: 100%;
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+  .page__content table thead { display: none; }
+  .page__content table td {
+    border: none !important;
+    padding: 0.3em 0.65em !important;
+    background: transparent !important;
+    font-size: inherit;
+    vertical-align: top;
+  }
+  .page__content table tr:nth-child(odd) td { background: transparent !important; }
+  .page__content table td:first-child {
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-weight: 600;
+    color: var(--a);
+    min-width: 7em;
+    padding-top: 0.45em !important;
+  }
+
+  /* ── Footer ───────────────────────────── */
+  .page__footer {
+    background: var(--nav) !important;
+    border-top: 2px solid var(--a) !important;
+  }
+  .page__footer-copyright, .page__footer a {
+    color: rgba(255,255,255,0.5) !important;
+  }
+  .page__footer a:hover { color: var(--a-on-dark) !important; }
+
+  /* ── Responsive ───────────────────────── */
+  @media (max-width: 768px) {
+    .author__avatar img { border-radius: 50% !important; }
+  }
+
+  /* ── Focus visibility (a11y) ──────────── */
+  .greedy-nav button:focus-visible {
+    outline: 2px solid var(--a-on-dark) !important;
+    outline-offset: 2px;
+  }
+
+  /* ── Mobile: relax 3-col tables, bigger tap targets ── */
+  @media (max-width: 600px) {
+    .page__content table td:first-child {
+      min-width: 4.5em;
+    }
+    .greedy-nav a { padding: 0.75rem 0; }
+    .author__urls a { padding-top: 0.35rem !important; padding-bottom: 0.35rem !important; }
+  }
+
+
+  /* ── Compact homepage and research ────── */
+  .page__title { font-size: 1.7rem; line-height: 1.2; }
+  .profile-intro { max-width: 52rem; }
+  .profile-intro > p { font-size: 1.06rem; line-height: 1.66; }
+  .profile-background { font-size: 1rem; line-height: 1.65; }
+  .profile-background summary, .news-archive summary, .cv-entry summary {
+    width: fit-content;
+    padding: 0.45rem 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--p);
+    cursor: pointer;
+  }
+  .profile-background[open] > summary, .news-archive[open] > summary,
+  .cv-entry details[open] > summary { margin-bottom: 0.7rem; }
+  .profile-background summary:focus-visible, .news-archive summary:focus-visible,
+  .cv-entry summary:focus-visible, .research-card a:focus-visible,
+  .publication-entry a:focus-visible {
+    outline: 2px solid var(--a);
+    outline-offset: 4px;
+  }
+  .research-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.1rem;
+    margin: 1rem 0 2rem;
+  }
+  .research-card {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    background: var(--card-bg);
+    border: 1px solid #dbe3eb;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(15,23,42,0.04);
+  }
+  .page__content a.research-card__figure {
+    position: relative;
+    display: block;
+    padding: 0.65rem;
+    border-bottom: 1px solid #e2e8f0;
+    border-radius: 8px 8px 0 0;
+  }
+  .research-card__figure img { display: block; width: 100%; height: auto; }
+  .research-card__figure span {
+    position: absolute;
+    right: 0.65rem;
+    bottom: 0.45rem;
+    padding: 0.15rem 0.35rem;
+    background: rgba(255,255,255,0.95);
+    color: var(--p);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 0.8125rem;
+    text-decoration: underline;
+  }
+  .research-card__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: flex-start;
+    padding: 1.1rem;
+  }
+  .research-card h3 {
+    margin: 0 0 0.7rem;
+    font-size: 1.12rem;
+    font-weight: 650;
+    line-height: 1.35;
+  }
+  .page__content .research-card h3 a { border-bottom: 0; }
+  .research-card h3 a:hover { text-decoration: underline; }
+  .research-card__body > p { margin: 0 0 1.1rem; font-size: 1rem; line-height: 1.6; color: var(--muted); }
+  .research-card__link { margin-top: auto; margin-bottom: 0; font-size: 0.875rem; text-decoration: none !important; }
+  .news-list table { font-size: 0.9375rem; }
+  .news-archive { margin-top: 0.65rem; }
+
+  /* ── Education and teaching entries ───── */
+  .cv-entries { margin-bottom: 1.5rem; }
+  .cv-entry { padding: 1rem 0; border-bottom: 1px solid #dbe3eb; }
+  .cv-entry:last-child { border-bottom: 0; }
+  .cv-entry__heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.3rem 1rem; }
+  .cv-entry__heading h3 { flex: 1 1 18rem; margin: 0; font-size: 1.05rem; line-height: 1.4; color: var(--ink); }
+  .cv-entry__date { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 0.875rem; color: var(--muted); white-space: nowrap; }
+  .cv-entry > p { margin: 0.4rem 0; font-size: 1rem; line-height: 1.6; }
+  .cv-entry details { font-size: 0.9375rem; line-height: 1.6; }
+  .cv-entry details ul { padding-left: 1.25rem; }
+
+  /* ── Publications: one concise entry per paper ── */
+  .publication-category { margin: 2rem 0 0.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #cbd5e1; font-size: 1.3rem; color: var(--p); }
+  .publication-entry { padding: 1.15rem 0; border-bottom: 1px solid #dbe3eb; }
+  .publication-entry__title { margin: 0 0 0.45rem; font-size: 1.06rem; line-height: 1.4; font-weight: 650; }
+  .publication-entry__title a { color: var(--p); text-decoration: none; }
+  .publication-entry__title a:hover { text-decoration: underline; }
+  .publication-entry__authors, .publication-entry__meta { margin: 0 0 0.35rem; font-size: 0.875rem; line-height: 1.6; color: var(--muted); }
+  .publication-entry__meta, .publication-entry__links { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+  .publication-entry__meta { display: flex; gap: 0.65rem; flex-wrap: wrap; }
+  .publication-entry__meta span + span { padding-left: 0.65rem; border-left: 1px solid #cbd5e1; }
+  .publication-entry__links { display: flex; flex-wrap: wrap; gap: 0.35rem 1rem; margin-top: 0.6rem; font-size: 0.875rem; font-weight: 600; }
+  .publication-entry__links a { padding: 0.25rem 0; color: var(--p); text-underline-offset: 0.18em; }
+
+  @media (min-width: 640px) and (max-width: 1199px) {
+    .research-grid { grid-template-columns: minmax(0, 1fr); }
+    .research-card { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); }
+    .page__content a.research-card__figure { align-self: center; border-bottom: 0; }
+  }
+  @media (max-width: 639px) {
+    .research-grid { grid-template-columns: minmax(0, 1fr); }
+    .cv-entry__heading { flex-direction: column; }
+    .cv-entry__heading h3 { flex: auto; }
+    .publication-entry__links a { padding: 0.5rem 0; }
+  }
+
+</style>
 
 <!-- JSON-LD structured data for Google -->
 <script type="application/ld+json">

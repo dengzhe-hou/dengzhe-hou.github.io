@@ -4,95 +4,34 @@ title: "Publications"
 permalink: /publications/
 author_profile: true
 ---
-{% comment %}
-  Page head (years covered, item count), the Google Scholar line, a filter
-  row (All · Journal · Conference · Preprint), then one section per
-  category in the order of publication_category in _config.yml. Inside a
-  section the papers are grouped by year: the year and the type sit once in
-  the rail (sticky on wide screens), each paper is a row of
-  publication-list-item.html. Categories without papers are skipped.
-  Without JavaScript the filter links jump to the sections; with it they
-  show one category at a time (and keep #category in the address).
-{% endcomment %}
+
+{% if site.author.googlescholar %}
+  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+{% endif %}
+
 {% include base_path %}
-{% assign pubs_all = site.publications | sort: "date" | reverse %}
-{% assign pubs_first_year = pubs_all.last.date | date: "%Y" %}{% assign pubs_last_year = pubs_all.first.date | date: "%Y" %}
-{% capture pubs_span %}{% if pubs_first_year == pubs_last_year %}{{ pubs_last_year }}{% else %}{{ pubs_first_year }}–{{ pubs_last_year }}{% endif %}{% endcapture %}
-{% capture pubs_count %}{{ pubs_all.size }} {% if pubs_all.size == 1 %}item{% else %}items{% endif %}{% endcapture %}
-{% include page-head.html eyebrow=pubs_span meta=pubs_count title=page.title %}
 
-<div class="wrap">
-  <div class="grid page-head__row list-tools">
-    {% if site.author.googlescholar %}<p class="lead page-intro">You can also find my articles on <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>.</p>{% endif %}
-    <nav class="filter" id="pub-filter" aria-label="Publication type">
-      <ul>
-        <li><a href="#pub-list" data-filter="all" aria-current="true">All</a></li>
-        {% for category in site.publication_category %}{% assign cat_pubs = pubs_all | where: "category", category[0] %}{% if cat_pubs.size > 0 %}{% case category[0] %}{% when "manuscripts" %}{% assign cat_short = "Journal" %}{% when "conferences" %}{% assign cat_short = "Conference" %}{% when "preprints" %}{% assign cat_short = "Preprint" %}{% when "books" %}{% assign cat_short = "Book" %}{% else %}{% assign cat_short = category[1].title %}{% endcase %}
-        <li><a href="#{{ category[0] }}" data-filter="{{ category[0] }}">{{ cat_short }}</a></li>{% endif %}{% endfor %}
-      </ul>
-    </nav>
-    <p class="sr-only" id="pub-filter-status" role="status" aria-live="polite"></p>
-  </div>
+<div class="publications-list">
+<!-- New style rendering if publication categories are defined -->
+{% if site.publication_category %}
+  {% for category in site.publication_category  %}
+    {% assign title_shown = false %}
+    {% for post in site.publications reversed %}
+      {% if post.category != category[0] %}
+        {% continue %}
+      {% endif %}
+      {% unless title_shown %}
+        <h2 class="publication-category">{{ category[1].title }}</h2>
+        {% assign title_shown = true %}
+      {% endunless %}
+      {% include publication-list-item.html %}
+    {% endfor %}
+  {% endfor %}
+{% else %}
+  {% for post in site.publications reversed %}
+    {% include publication-list-item.html %}
+  {% endfor %}
+{% endif %}
 </div>
 
-<div id="pub-list" class="pub-list">
-{% for category in site.publication_category %}
-  {% assign cat_pubs = pubs_all | where: "category", category[0] %}
-  {% if cat_pubs.size == 0 %}{% continue %}{% endif %}
-  {% case category[0] %}{% when "manuscripts" %}{% assign cat_short = "Journal" %}{% when "conferences" %}{% assign cat_short = "Conference" %}{% when "preprints" %}{% assign cat_short = "Preprint" %}{% when "books" %}{% assign cat_short = "Book" %}{% else %}{% assign cat_short = category[1].title %}{% endcase %}
-  {% capture cat_index %}{% if cat_pubs.size < 10 %}0{% endif %}{{ cat_pubs.size }}{% endcapture %}
-  {% capture cat_heading_id %}{{ category[0] }}-h{% endcapture %}
-  {% assign cat_title = category[1].title | capitalize %}
-  {% assign cat_years = cat_pubs | group_by_exp: "p", "p.date | date: '%Y'" %}
-  <section class="section" id="{{ category[0] }}" aria-labelledby="{{ cat_heading_id }}" data-pub-cat data-count="{{ cat_pubs.size }}">
-    <div class="wrap">
-      {% include section-head.html index=cat_index note="items" title=cat_title id=cat_heading_id %}
-      <div class="years">
-        {% for year in cat_years %}
-        <div class="grid group year">
-          <p class="rail"><span class="year-label"><time class="meta-yr" datetime="{{ year.name }}">{{ year.name }}</time><span class="meta-type">{{ cat_short }}</span></span></p>
-          <ol class="span-main-acts sublist">
-            {% for post in year.items %}{% include publication-list-item.html post=post %}{% endfor %}
-          </ol>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </section>
-{% endfor %}
-</div>
 
-<script>
-(function () {
-  var nav = document.getElementById('pub-filter');
-  if (!nav || !nav.addEventListener) return;
-  var links = nav.querySelectorAll('a[data-filter]');
-  var sections = document.querySelectorAll('[data-pub-cat]');
-  var status = document.getElementById('pub-filter-status');
-  function show(filter, remember) {
-    var shown = 0, i;
-    for (i = 0; i < sections.length; i++) {
-      var on = filter === 'all' || sections[i].id === filter;
-      sections[i].hidden = !on;
-      if (on) shown += parseInt(sections[i].getAttribute('data-count'), 10) || 0;
-    }
-    for (i = 0; i < links.length; i++) {
-      if (links[i].getAttribute('data-filter') === filter) links[i].setAttribute('aria-current', 'true');
-      else links[i].removeAttribute('aria-current');
-    }
-    if (status) status.textContent = shown + (shown === 1 ? ' publication' : ' publications') + ' shown';
-    if (remember && window.history && history.replaceState) {
-      history.replaceState(null, '', filter === 'all' ? location.pathname + location.search : '#' + filter);
-    }
-  }
-  nav.addEventListener('click', function (e) {
-    var a = e.target.closest ? e.target.closest('a[data-filter]') : null;
-    if (!a) return;
-    e.preventDefault();
-    show(a.getAttribute('data-filter'), true);
-  });
-  var hash = location.hash.slice(1);
-  var target = hash ? document.getElementById(hash) : null;
-  if (target && target.hasAttribute('data-pub-cat')) show(hash, false);
-})();
-</script>

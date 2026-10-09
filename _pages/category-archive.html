@@ -4,34 +4,19 @@ permalink: /categories/
 title: "Posts and Presentations by Category"
 author_profile: true
 ---
-{% comment %}
-  Posts and presentations grouped by category (a talk's "category", e.g.
-  international / domestic): one section per category (its count in the
-  rail), newest first. Presentations use the same row as /talks/.
-{% endcomment %}
+
 {% include base_path %}
 {% assign category_documents = site.posts | concat: site.talks %}
-{% capture category_grouping %}{% include group-by-array collection=category_documents field="categories" %}{% endcapture %}
-{% capture categories_meta %}{{ category_documents.size }} {% if category_documents.size == 1 %}item{% else %}items{% endif %}{% endcapture %}
-{% capture categories_label %}{{ group_names.size }} {% if group_names.size == 1 %}category{% else %}categories{% endif %}{% endcapture %}
-{% include page-head.html eyebrow=categories_label meta=categories_meta title=page.title %}
+{% include group-by-array collection=category_documents field="categories" %}
 
-{% if group_names.size > 0 %}
 {% for category in group_names %}
   {% assign posts = group_items[forloop.index0] | sort: "date" | reverse %}
-  {% capture category_index %}{% if posts.size < 10 %}0{% endif %}{{ posts.size }}{% endcapture %}
-  {% capture category_id %}{{ category | slugify }}{% endcapture %}
-  {% capture category_heading_id %}{{ category_id }}-h{% endcapture %}
-  {% assign category_title = category | capitalize %}
-<section class="section" id="{{ category_id }}" aria-labelledby="{{ category_heading_id }}">
-  <div class="wrap">
-    {% include section-head.html index=category_index note="items" title=category_title id=category_heading_id %}
-    <ol class="rows">
-      {% for post in posts %}{% include archive-single.html post=post %}{% endfor %}
-    </ol>
-  </div>
-</section>
+  <h2 id="{{ category | slugify }}" class="archive__subtitle">{{ category }}</h2>
+  {% for post in posts %}
+    {% if post.collection == 'talks' %}
+      {% include archive-single-talk.html %}
+    {% else %}
+      {% include archive-single.html %}
+    {% endif %}
+  {% endfor %}
 {% endfor %}
-{% else %}
-<div class="wrap list-body"><p class="empty">Nothing here yet.</p></div>
-{% endif %}

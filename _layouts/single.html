@@ -1,213 +1,109 @@
 ---
 layout: default
 ---
-{% comment %}
-  Detail pages and generic prose pages. One skeleton, four kinds:
-    publication  (collection publications)  /publication/…
-    talk         (collection talks; _layouts/talk.html points here)  /talks/…
-    teaching     (collection teaching)  /teaching/…
-    page         anything else (terms, 404, posts, portfolio)
 
-  Page head (shared with every inner page, _includes/page-head.html):
-    eyebrow  left: kind label (theme tag + "Journal article"; talk type;
-             course type; or page.eyebrow), right: year / full date /
-             date range / "Updated …"
-    h1       page.title (title_lang -> lang attribute)
-  Head row (hairline on top, the rail | main | acts row of the lists):
-    rail     "← All publications" (or presentations / teaching)
-    main     publication: authors (Hou, D. bold, from the citation) + venue
-             talk / teaching: venue (venue_lang) + location
-    acts     Paper ↗, Slides ↗, BibTeX ↓, Cite ↓, Direct link ↗ (whichever exist)
-  Then: the paper's figure (from selected_research in _pages/about.md, if
-  listed there), the body (Markdown, .prose, in main), the Recommended
-  citation panel (publications), related research cards (same theme),
-  categories / tags and the previous / next rows.
-{% endcomment %}
 {% include base_path %}
-{% assign coll = page.collection %}
-{% case coll %}
-  {% when "publications" %}{% assign kind = "publication" %}{% assign back_url = "/publications/" %}{% assign back_text = "All publications" %}
-  {% when "talks" %}{% assign kind = "talk" %}{% assign back_url = "/talks/" %}{% assign back_text = "All presentations" %}
-  {% when "teaching" %}{% assign kind = "teaching" %}{% assign back_url = "/teaching/" %}{% assign back_text = "All teaching" %}
-  {% else %}{% assign kind = "page" %}{% assign back_url = nil %}
-{% endcase %}
-{% assign overlay = false %}{% if page.header.overlay_color or page.header.overlay_image %}{% assign overlay = true %}{% endif %}
 
-{% comment %} ---- Title ---- {% endcomment %}
-{% assign title_html = page.title | markdownify | remove: "<p>" | remove: "</p>" | strip %}
-{% unless title_html contains 'lang=' %}{% assign title_html = title_html | replace: "侯登哲", '<span lang="zh">侯登哲</span>' %}{% endunless %}
-
-{% comment %} ---- Eyebrow: kind label (left) and date (right) ---- {% endcomment %}
-{% assign eyebrow_left = "" %}{% assign eyebrow_right = "" %}{% assign home_item = nil %}
-{% if kind == "publication" %}
-  {% assign home_page = site.pages | where: "layout", "home" | first %}
-  {% if home_page.selected_research %}{% assign home_item = home_page.selected_research | where: "url", page.url | first %}{% endif %}
-  {% case page.category %}
-    {% when "manuscripts" %}{% assign pub_type = "Journal article" %}
-    {% when "conferences" %}{% assign pub_type = "Conference paper" %}
-    {% when "preprints" %}{% assign pub_type = "Preprint" %}
-    {% when "books" %}{% assign pub_type = "Book" %}
-    {% else %}{% assign pub_type = site.publication_category[page.category].title %}
-  {% endcase %}
-  {% capture eyebrow_left %}{% if home_item.theme %}{% include theme-tag.html theme=home_item.theme %}{% endif %}{% if pub_type %}<span class="kind">{{ pub_type }}</span>{% endif %}{% endcapture %}
-  {% if page.date %}{% capture eyebrow_right %}<time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%Y' }}</time>{% endcapture %}{% endif %}
-{% elsif kind == "talk" %}
-  {% assign talk_label = page.talk_type | default: page.type | remove: " presentation" | strip %}
-  {% if talk_label != "" %}{% capture eyebrow_left %}<span class="kind">{{ talk_label }}</span>{% endcapture %}{% endif %}
-  {% if page.date %}{% capture eyebrow_right %}<time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%b %-d, %Y' }}</time>{% endcapture %}{% endif %}
-{% elsif kind == "teaching" %}
-  {% if page.type %}{% capture eyebrow_left %}<span class="kind">{{ page.type }}</span>{% endcapture %}{% endif %}
-  {% if page.date %}{% capture eyebrow_right %}{% include date-range.html start=page.date end=page.date_end %}{% endcapture %}{% endif %}
-{% else %}
-  {% if page.modified or page.date %}
-    {% assign page_date = page.modified | default: page.date %}
-    {% capture page_date_html %}{% if page.modified %}Updated{% else %}Published{% endif %} <time datetime="{{ page_date | date: '%Y-%m-%d' }}">{{ page_date | date: '%b %-d, %Y' }}</time>{% endcapture %}
-  {% endif %}
-  {% if page.eyebrow %}{% assign eyebrow_left = page.eyebrow %}{% assign eyebrow_right = page_date_html %}{% else %}{% assign eyebrow_left = page_date_html %}{% endif %}
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% include page__hero.html %}
 {% endif %}
-{% if page.read_time %}{% capture read_time %}{% include read-time.html %}{% endcapture %}{% capture eyebrow_right %}{{ eyebrow_right }}{% if eyebrow_right != "" %} &middot; {% endif %}{{ read_time | strip }}{% endcapture %}{% endif %}
-{% assign eyebrow_left = eyebrow_left | strip %}{% assign eyebrow_right = eyebrow_right | strip %}
-{% if eyebrow_left == "" %}{% assign eyebrow_left = nil %}{% endif %}
-{% if eyebrow_right == "" %}{% assign eyebrow_right = nil %}{% endif %}
 
-{% comment %} ---- Facts (main of the head row) ---- {% endcomment %}
-{% capture facts %}
-  {% if kind == "publication" %}
-    {% if page.citation %}
-      {% assign cite_year = page.date | date: "%Y" | prepend: "(" | append: ")." %}
-      {% assign authors = page.citation | split: cite_year | first | strip %}
-      {% unless authors == page.citation %}<p class="d-authors">{{ authors | replace: "Hou, D.", "<strong>Hou, D.</strong>" }}</p>{% endunless %}
-    {% endif %}
-    {% if page.venue %}<p class="d-venue"{% if page.venue_lang %} lang="{{ page.venue_lang }}"{% endif %}><span class="sr-only">Published in </span>{{ page.venue }}</p>{% endif %}
-  {% elsif kind == "talk" or kind == "teaching" %}
-    {% if page.venue %}<p class="d-event"{% if page.venue_lang %} lang="{{ page.venue_lang }}"{% endif %}>{{ page.venue }}</p>{% endif %}
-    {% if page.location %}<p class="d-place">{{ page.location }}</p>{% endif %}
-  {% endif %}
-{% endcapture %}{% assign facts = facts | strip %}
-
-{% comment %} ---- Actions (acts of the head row) ---- {% endcomment %}
-{% capture actions %}
-  {% if page.paperurl %}<a href="{{ page.paperurl | strip }}">Paper <span class="ar ne" aria-hidden="true">&#8599;</span></a>{% endif %}
-  {% if page.slidesurl %}<a href="{{ page.slidesurl | strip }}">Slides <span class="ar ne" aria-hidden="true">&#8599;</span></a>{% endif %}
-  {% if page.bibtexurl %}<a href="{{ page.bibtexurl | strip }}">BibTeX <span class="ar s" aria-hidden="true">&darr;</span></a>{% endif %}
-  {% if page.link %}<a href="{{ page.link | strip }}">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct link" }} <span class="ar ne" aria-hidden="true">&#8599;</span></a>{% endif %}
-  {% if kind == "publication" and page.citation %}<a href="#cite">Cite <span class="ar s" aria-hidden="true">&darr;</span></a>{% endif %}
-{% endcapture %}{% assign actions = actions | strip %}
-
-{% if overlay or page.header.image %}{% include page__hero.html %}{% endif %}
-
-{% if page.url != "/" and site.breadcrumbs %}{% unless paginator %}{% include breadcrumbs.html %}{% endunless %}{% endif %}
-
-<article class="detail detail--{{ kind }}{% if page.classes %} {{ page.classes }}{% endif %}" itemscope itemtype="http://schema.org/CreativeWork">
-  {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
-  {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
-  {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">{% endif %}
-  {% if page.modified %}<meta itemprop="dateModified" content="{{ page.modified | date: "%B %d, %Y" }}">{% endif %}
-
-  {% unless overlay %}
-    {% if page.title %}{% include page-head.html eyebrow=eyebrow_left meta=eyebrow_right title=title_html title_lang=page.title_lang %}{% endif %}
+{% if page.url != "/" and site.breadcrumbs %}
+  {% unless paginator %}
+    {% include breadcrumbs.html %}
   {% endunless %}
-
-  {% if back_url or facts != "" or actions != "" %}
-  <div class="wrap">
-    <div class="grid d-head">
-      {% if back_url %}<p class="rail d-back"><a class="act" href="{{ base_path }}{{ back_url }}"><span class="ar w" aria-hidden="true">&larr;</span> {{ back_text }}</a></p>{% endif %}
-      {% if facts != "" %}<div class="main d-facts">{{ facts }}</div>{% endif %}
-      {% if actions != "" %}<p class="acts d-acts">{{ actions }}</p>{% endif %}
-    </div>
-  </div>
-  {% endif %}
-
-  {% if home_item.image_path %}
-  <div class="wrap">
-    <figure class="grid d-figure">
-      <div class="d-plate"><img src="{{ base_path }}/images/{{ home_item.image_path }}" alt="" loading="lazy"></div>
-      {% if home_item.alt %}<figcaption>{{ home_item.alt }}</figcaption>{% endif %}
-      <p class="d-fig-link"><a class="act" href="{{ base_path }}/images/{{ home_item.image_path }}">Full figure <span class="ar ne" aria-hidden="true">&#8599;</span></a></p>
-    </figure>
-  </div>
-  {% endif %}
-
-  {% assign body = content | strip %}
-  {% if body != "" %}
-  <div class="wrap">
-    <div class="grid d-body{% if back_url == nil and facts == "" and actions == "" %} d-body--lead{% endif %}">
-      <div class="main prose" itemprop="text">
-        {{ content }}
-      </div>
-    </div>
-  </div>
-  {% endif %}
-
-  {% if kind == "publication" and page.citation %}
-  <div class="wrap">
-    <section class="grid d-cite" id="cite" aria-labelledby="cite-h">
-      <div class="main cite-panel">
-        <div class="cite-top">
-          <h2 class="label" id="cite-h">Recommended citation</h2>
-          <button class="btn cite-copy" type="button" data-copy="cite-text" hidden>Copy</button>
-        </div>
-        <p class="cite-text" id="cite-text">{{ page.citation | replace: 'Hou, D.', '<strong>Hou, D.</strong>' }}</p>
-        {% if page.paperurl or page.slidesurl or page.bibtexurl %}
-        <p class="acts-row">
-          {% if page.paperurl %}<a class="act" href="{{ page.paperurl | strip }}">Read paper <span class="ar ne" aria-hidden="true">&#8599;</span></a>{% endif %}
-          {% if page.slidesurl %}<a class="act" href="{{ page.slidesurl | strip }}">Download slides <span class="ar s" aria-hidden="true">&darr;</span></a>{% endif %}
-          {% if page.bibtexurl %}<a class="act" href="{{ page.bibtexurl | strip }}">Download BibTeX <span class="ar s" aria-hidden="true">&darr;</span></a>{% endif %}
-        </p>
-        {% endif %}
-        <p class="sr-only" role="status" id="cite-status"></p>
-      </div>
-    </section>
-  </div>
-  <script>(function(){var b=document.querySelector('.cite-copy');var t=document.getElementById('cite-text');var s=document.getElementById('cite-status');if(!b||!t||!navigator.clipboard||!window.isSecureContext){return;}b.hidden=false;var timer;b.addEventListener('click',function(){var text=(t.innerText||t.textContent).replace(/\s+/g,' ').trim();navigator.clipboard.writeText(text).then(function(){b.textContent='Copied';if(s){s.textContent='Citation copied to the clipboard';}clearTimeout(timer);timer=setTimeout(function(){b.textContent='Copy';if(s){s.textContent='';}},2000);},function(){b.textContent='Copy failed';});});})();</script>
-  {% endif %}
-
-  {% if home_item.theme %}
-    {% assign related = home_page.selected_research | where: "theme", home_item.theme %}
-    {% assign related_count = 0 %}{% for item in related %}{% if item.url != page.url %}{% assign related_count = related_count | plus: 1 %}{% endif %}{% endfor %}
-    {% if related_count > 0 %}
-    <section class="section d-related" aria-labelledby="related-h">
-      <div class="wrap">
-        {% capture related_title %}Related research{% endcapture %}
-        {% capture related_tag %}{% include theme-tag.html theme=home_item.theme %}{% endcapture %}
-        <div class="grid section-head">
-          <p class="idx">{{ related_tag }}</p>
-          <h2 class="h2" id="related-h">{{ related_title }}</h2>
-        </div>
-        <div class="grid work">
-          {% assign related_shown = 0 %}{% for item in related %}{% if item.url != page.url and related_shown < 3 %}{% assign related_shown = related_shown | plus: 1 %}{% include work-card.html item=item %}{% endif %}{% endfor %}
-        </div>
-      </div>
-    </section>
-    {% endif %}
-  {% endif %}
-
-  {% capture taxonomy %}{% include page__taxonomy.html %}{% endcapture %}{% assign taxonomy = taxonomy | strip %}
-  {% capture pager %}{% include post_pagination.html %}{% endcapture %}{% assign pager = pager | strip %}
-  {% if taxonomy != "" or pager != "" %}
-  <footer class="wrap d-foot">
-    {{ taxonomy }}
-    {{ pager }}
-  </footer>
-  {% endif %}
-
-  {% if page.share %}<div class="wrap d-extra">{% include social-share.html %}</div>{% endif %}
-  {% if site.comments.provider and page.comments %}<div class="wrap d-extra">{% include comments.html %}</div>{% endif %}
-</article>
-
-{% if page.id and page.related and site.related_posts.size > 0 %}
-<section class="section d-related" aria-labelledby="related-posts-h">
-  <div class="wrap">
-    {% assign related_label = site.data.ui-text[site.locale].related_label | default: "You may also enjoy" %}
-    {% include section-head.html title=related_label id="related-posts-h" %}
-    <ol class="rows">
-      {% for post in site.related_posts limit:4 %}
-      <li class="grid row">
-        <p class="rail"><time class="meta-yr" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %-d, %Y' }}</time></p>
-        <div class="main"><h3 class="row-title"><a href="{{ base_path }}{{ post.url }}">{{ post.title | markdownify | remove: "<p>" | remove: "</p>" | strip }}</a></h3></div>
-      </li>
-      {% endfor %}
-    </ol>
-  </div>
-</section>
 {% endif %}
+
+<div id="main" role="main">
+  {% include sidebar.html %}
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">{% endif %}
+    {% if page.modified %}<meta itemprop="dateModified" content="{{ page.modified | date: "%B %d, %Y" }}">{% endif %}
+
+    <div class="page__inner-wrap">
+      {% unless page.header.overlay_color or page.header.overlay_image %}
+        <header>
+          {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
+          {% if page.read_time %}
+            <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
+          {% endif %}
+        {% if page.modified %}
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time></p>
+        {% endif %}
+        
+        {% if page.collection == 'teaching' %}
+          <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
+        {% elsif page.venue and page.date %}
+          <p>Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
+        {% elsif page.date %}
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
+        {% endif %}    
+        </header>
+      {% endunless %}
+
+      <section class="page__content" itemprop="text">
+        {{ content }}
+
+        {% if page.citation and page.paperurl and page.slidesurl and page.bibtexurl %}
+          <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">Read Paper</a> | <a href="{{ page.slidesurl }}">Download Slides</a> | <a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
+        {% elsif page.citation and page.paperurl and page.slidesurl %}
+          <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">Read Paper</a> | <a href="{{ page.slidesurl }}">Download Slides</a></p>
+        {% elsif page.citation and page.paperurl and page.bibtexurl %}
+          <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">Read Paper</a> | <a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
+        {% elsif page.citation and page.paperurl %}
+          <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.paperurl }}">Read Paper</a></p>
+        {% elsif page.citation and page.slidesurl and page.bibtexurl %}
+          <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.slidesurl }}">Download Slides</a> | <a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
+        {% elsif page.citation and page.slidesurl %}
+          <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.slidesurl }}">Download Slides</a></p>
+        {% elsif page.slidesurl and page.bibtexurl %}
+          <p style="font-size: smaller"><a href="{{ page.slidesurl }}">Download Slides</a> | <a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
+        {% elsif page.paperurl and page.bibtexurl %}
+          <p style="font-size: smaller"><a href="{{ page.paperurl }}">Read Paper</a> | <a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
+        {% elsif page.citation and page.bibtexurl %}
+          <p style="font-size: smaller">Recommended citation: {{ page.citation }}<br /><a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
+        {% elsif page.citation %}
+          <p style="font-size: smaller">Recommended citation: {{ page.citation }}</p>
+        {% elsif page.slidesurl %}
+          <p style="font-size: smaller"><a href="{{ page.slidesurl }}">Download Slides</a></p>
+        {% elsif page.bibtexurl %}
+          <p style="font-size: smaller"><a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
+        {% endif %}
+
+        {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
+      </section>
+
+      <footer class="page__meta">
+        {% if site.data.ui-text[site.locale].meta_label %}
+          <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
+        {% endif %}
+        {% include page__taxonomy.html %}
+      </footer>
+
+      {% if page.share %}{% include social-share.html %}{% endif %}
+
+      {% include post_pagination.html %}
+    </div>
+
+    {% if site.comments.provider and page.comments %}
+      {% include comments.html %}
+    {% endif %}
+  </article>
+
+  {% comment %}<!-- only show related on a post page when not disabled -->{% endcomment %}
+  {% if page.id and page.related and site.related_posts.size > 0 %}
+    <div class="page__related">
+      {% if site.data.ui-text[site.locale].related_label %}
+        <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "You May Also Enjoy" }}</h4>
+      {% endif %}
+      <div class="grid__wrapper">
+        {% for post in site.related_posts limit:4 %}
+          {% include archive-single.html type="grid" %}
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+</div>

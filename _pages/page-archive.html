@@ -4,18 +4,10 @@ title: "Page Archive"
 permalink: /page-archive/
 author_profile: false
 ---
-{% comment %}
-  Every page of the site (not the collection documents; see /sitemap/ for
-  those) as short index rows: title and path.
-{% endcomment %}
-{% include base_path %}
-{% assign archive_pages = site.html_pages | where_exp: "p", "p.sitemap != false" | where_exp: "p", "p.redirect_to == nil" | sort: "url" %}
-{% capture archive_meta %}{{ archive_pages.size }} {% if archive_pages.size == 1 %}page{% else %}pages{% endif %}{% endcapture %}
-{% capture archive_updated %}Updated {{ site.time | date: "%Y-%m-%d" }}{% endcapture %}
-{% include page-head.html eyebrow=archive_updated meta=archive_meta title=page.title %}
 
-<div class="wrap list-body">
-  <ol class="rows">
-    {% for post in archive_pages %}{% include archive-single.html post=post heading="h2" compact=true %}{% endfor %}
-  </ol>
-</div>
+{% include base_path %}
+{% for post in site.pages %}
+  {% unless post.sitemap == false or post.redirect_to %}
+  {% include archive-single.html %}
+  {% endunless %}
+{% endfor %}

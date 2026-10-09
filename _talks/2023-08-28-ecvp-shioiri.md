@@ -12,4 +12,4 @@ category: international
 
 Poster presented at ECVP 2023. EEG analysis of preparatory neural activity preceding voluntary self-initiated attention shifts.
 
-**Authors:** Satoshi Shioiri, Wei Wu, Kazuya Kobayashi, <strong class="author-self">Dengzhe Hou</strong>, Shin Ono, Yoshiyuki Sato, Yasuhiro Hatori, Chia-huei Tseng
+**Authors:** Satoshi Shioiri, Wei Wu, Kazuya Kobayashi, Dengzhe Hou, Shin Ono, Yoshiyuki Sato, Yasuhiro Hatori, Chia-huei Tseng
