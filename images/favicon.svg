@@ -1,11 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
   <title>DH</title>
-  <!-- "DH" monogram drawn from plain geometry (no fonts), on a 32-unit grid
-       so it stays crisp at 16px and 32px. -->
-  <rect width="32" height="32" rx="7" fill="#0f172a"/>
-  <!-- D: stem plus a half-ellipse bowl; H: two stems and a crossbar -->
+  <!-- "DH" monogram from plain geometry (no fonts) on a 16-unit pixel grid, so
+       it stays crisp at 16 and 32px. Ink tile, white letters; the crossbar of
+       the H is the site's one accent (dark-theme value, for contrast on ink):
+       the link between the two stems. The PNG/ICO favicons are renders of this
+       file; the 180/192/512 icons use the same letters with more padding. -->
+  <rect width="16" height="16" fill="#0b0b0c"/>
   <path fill="#ffffff" fill-rule="evenodd"
-        d="M4 6H8A7 8 0 0 1 8 22H4Z M8 10V18A3 4 0 0 0 8 10Z
-           M17 6h4v6h3V6h4V22h-4v-6h-3V22h-4Z"/>
-  <rect x="4" y="24" width="24" height="2" rx="1" fill="#5eead4"/>
+        d="M1 3H3.28C6.628 3 7 4.8 7 8C7 11.2 6.628 13 3.28 13H1Z
+           M3 5V11H3.28C4.656 11 5 10.1 5 8C5 5.9 4.656 5 3.28 5Z
+           M9 3h2v10h-2Z M13 3h2v10h-2Z"/>
+  <path fill="#8ea4ff" d="M11 7h2v2h-2Z"/>
 </svg>

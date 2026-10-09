@@ -1,0 +1,30 @@
+# The two research themes, shown as columns on the home page
+# (_includes/research-themes.html) and as tags on research cards.
+#   label   theme name (also used as the tag text, e.g. selected_research.theme in _pages/about.md)
+#   marker  fill = filled dot, ring = outlined ring
+#   dir     direction shown at the right of the label
+#   topics  keyword rows under the text (numbered automatically)
+
+- label: AI4Brain
+  marker: fill
+  dir: AI → Brain
+  title: AI for understanding the brain
+  text: >-
+    Reliable decoding and automated analysis of EEG, and understanding self-initiated attention
+    through EEG, eye tracking, and computational modeling.
+  topics:
+    - Preprocessing instability
+    - Per-trial uncertainty
+    - Feature attribution
+
+- label: Brain4AI
+  marker: ring
+  dir: Brain → AI
+  title: Brain and cognitive science for understanding and improving AI
+  text: >-
+    Drawing on cognitive neuroscience to understand, evaluate, and improve AI systems, especially
+    large language models.
+  topics:
+    - Working memory
+    - Cumulative state tracking
+    - Cognitive ability structure

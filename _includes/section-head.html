@@ -1,0 +1,15 @@
+{% comment %}
+  Section head: index in the rail, heading in main, optional link in acts.
+    index          "01"                    total  "05"  -> "01 / 05"
+    note           text after the index instead of a total, e.g. "items" -> "06 items"
+    title          heading text            id     heading id (use it in aria-labelledby)
+    level          "h2" (default) or "h1"
+    link_url       optional head link (right on desktop, under the heading on small screens)
+    link_text      its text
+    link_external  true -> ↗ instead of →
+{% endcomment %}{% assign level = include.level | default: "h2" %}
+<div class="grid section-head">
+  {% if include.index %}<p class="idx" aria-hidden="true"><b>{{ include.index }}</b>{% if include.total %} / {{ include.total }}{% endif %}{% if include.note %} {{ include.note }}{% endif %}</p>{% endif %}
+  <{{ level }} class="h2"{% if include.id %} id="{{ include.id }}"{% endif %}>{{ include.title }}</{{ level }}>
+  {% if include.link_url %}<a class="head-link" href="{{ include.link_url }}">{{ include.link_text }} {% if include.link_external %}<span class="ar ne" aria-hidden="true">&#8599;</span>{% else %}<span class="ar e" aria-hidden="true">&rarr;</span>{% endif %}</a>{% endif %}
+</div>

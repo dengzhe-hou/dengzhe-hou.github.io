@@ -1,24 +1,27 @@
 ---
 layout: default
 ---
-
-{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
-  {% include page__hero.html %}
-{% endif %}
-
-{% if page.url != "/" and site.breadcrumbs %}
-  {% unless paginator %}
-    {% include breadcrumbs.html %}
-  {% endunless %}
-{% endif %}
-
-<div id="main" role="main"{% if page.classes %} class="{{ page.classes }}"{% endif %}>
-  {% include sidebar.html %}
-
-  <div class="archive">
-    {% unless page.header.overlay_color or page.header.overlay_image %}
-      <h1 class="page__title">{{ page.title }}</h1>
-    {% endunless %}
-    {{ content }}
+{% comment %}
+  List and archive pages (publications, presentations, teaching, sitemap,
+  the post/page archives) and simple Markdown pages that use it.
+  - A page that renders its own page head (it includes page-head.html, for
+    instance to show a computed count) is output as is: it lays out its own
+    .wrap sections.
+  - Any other page gets the standard page head (front matter: title, and
+    optionally eyebrow, head_meta, intro) and its content as Markdown prose
+    in the main column.
+{% endcomment %}
+{% if content contains 'class="page-head"' %}
+{{ content }}
+{% else %}
+{% assign archive_title = page.title | default: site.title | markdownify | remove: "<p>" | remove: "</p>" | strip %}
+{% unless archive_title contains 'lang=' %}{% assign archive_title = archive_title | replace: "侯登哲", '<span lang="zh">侯登哲</span>' %}{% endunless %}
+{% include page-head.html eyebrow=page.eyebrow meta=page.head_meta title=archive_title title_lang=page.title_lang intro=page.intro %}
+<div class="wrap archive-body{% unless page.intro %} archive-body--rule{% endunless %}">
+  <div class="grid">
+    <div class="main prose{% if page.classes %} {{ page.classes }}{% endif %}">
+      {{ content }}
+    </div>
   </div>
 </div>
+{% endif %}

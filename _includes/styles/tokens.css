@@ -1,0 +1,49 @@
+/* ===== Tokens ==========================================================
+   Every colour, font stack and spacing step of the site. Light values sit on
+   :root. Dark values apply when the visitor's system is dark and they have
+   not picked "light" with the header toggle, or whenever they picked "dark"
+   (the toggle writes data-theme on <html>; see assets/js/site.js).
+   The accent is a signal colour only: Latest dot, theme markers, highlighted
+   diagram path, link hover, focus ring. Never a fill or a background. */
+:root{
+  color-scheme:light;
+  --bg:#ffffff;
+  --bg-veil:rgba(255,255,255,.84);   /* sticky header, with backdrop blur */
+  --surface:#f6f6f4;                 /* the one tinted band (Current work), code and citation panels */
+  --plate:#f2f2f0;                   /* figure plates */
+  --ink:#0b0b0c;                     /* primary text, headings      19.7:1 */
+  --ink-2:#45454b;                   /* body and secondary text      9.5:1 */
+  --ink-3:#66666d;                   /* mono meta, labels, captions  5.7:1 */
+  --line:#e6e6e3;                    /* hairlines */
+  --line-2:#cfcfcb;                  /* control borders */
+  --link-line:#8c8c93;               /* inline-link underline        3.3:1 */
+  --motif:#dadadd;                   /* diagram mesh (decorative) */
+  --motif-2:#8c8c93;                 /* diagram outlines (decorative) */
+  --accent:#1f44e0;                  /* the one accent               7.1:1 */
+
+  --sans:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --display:"Inter Tight","Inter",ui-sans-serif,system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --ja:"Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif;
+  --zh:"Noto Sans SC","PingFang SC","Noto Sans JP",sans-serif;
+
+  --gutter:clamp(20px,4.5vw,64px);   /* page side padding */
+  --gap:clamp(16px,2.2vw,32px);      /* 12-column grid gap */
+  --section:clamp(64px,5.8vw,84px);  /* space above each section */
+  --head-h:64px;                     /* header height (56px at <=720px) */
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#0b0b0c;--bg-veil:rgba(11,11,12,.82);--surface:#141416;--plate:#d6d6d2;
+    --ink:#ededee;--ink-2:#a9a9b0;--ink-3:#8e8e96;
+    --line:#242428;--line-2:#3a3a40;--link-line:#6c6c74;--motif:#303035;--motif-2:#6c6c74;--accent:#8ea4ff;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0b0b0c;--bg-veil:rgba(11,11,12,.82);--surface:#141416;--plate:#d6d6d2;
+  --ink:#ededee;--ink-2:#a9a9b0;--ink-3:#8e8e96;
+  --line:#242428;--line-2:#3a3a40;--link-line:#6c6c74;--motif:#303035;--motif-2:#6c6c74;--accent:#8ea4ff;
+}

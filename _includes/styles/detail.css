@@ -1,0 +1,134 @@
+/* ===== Detail pages ====================================================
+   _layouts/single.html: publication, talk (via _layouts/talk.html) and
+   teaching detail pages, and generic prose pages (Terms, 404); also
+   _layouts/splash.html and _includes/page__hero.html.
+     .detail
+       page-head        eyebrow (kind label | date), h1.page-title
+       .d-head          hairline row: back link (rail) | facts (main) | actions (acts)
+       .d-figure        the paper's figure on a plate, columns 4-12
+       .d-body          the Markdown body (.prose) in main
+       .d-cite          "Recommended citation" panel (publications)
+       .d-related       research cards of the same theme (publications)
+       .d-foot          categories / tags rows, then previous / next rows */
+
+/* ----- Page head additions ---------------------------------------------- */
+/* kind label left, date right; when the two wrap, the date starts the
+   second line at the left (space-between with a lone item = flex-start) */
+.detail .eyebrow{justify-content:space-between;column-gap:24px}
+.detail .eyebrow .e3{margin-left:0;padding-left:0}
+.detail .eyebrow .e1{display:inline-flex;align-items:center;flex-wrap:wrap;gap:4px 16px}
+.detail .page-title:lang(ja),.page-hero .page-title:lang(ja){font-family:var(--ja);letter-spacing:0;line-height:1.25}
+
+/* ----- Head row: back link | facts | actions ------------------------------ */
+.d-head{margin-top:clamp(28px,3vw,40px);padding-top:clamp(20px,2vw,28px);border-top:1px solid var(--line);row-gap:10px;align-items:start}
+.d-back .act{min-height:26px;gap:10px}
+.d-facts{grid-column:4 / span 7;min-width:0}
+.d-authors,.d-venue,.d-event{font-size:17px;line-height:1.55;color:var(--ink-2);text-wrap:pretty}
+.d-authors strong{font-weight:600;color:var(--ink)}
+.d-venue{font-style:italic}
+.d-venue:lang(ja){font-style:normal}
+.d-authors+.d-venue{margin-top:2px}
+.d-event{color:var(--ink)}
+.d-place{margin-top:2px;font-size:16px;line-height:1.55;color:var(--ink-2)}
+.d-acts{display:flex;flex-direction:column;align-items:flex-end;margin-top:-3px}
+.d-acts a{display:inline-flex;align-items:center;gap:8px;min-height:32px;font:400 13px/1 var(--mono);color:var(--ink-2);text-decoration:none;white-space:nowrap}
+.d-acts a:hover{color:var(--accent)}
+
+/* ----- Figure: the paper's full figure on a plate -------------------------- */
+.d-figure{margin-top:clamp(32px,3.4vw,48px);row-gap:14px}
+.d-plate{grid-column:4 / -1;background:var(--plate);padding:clamp(8px,1.2vw,16px)}
+.d-plate img{width:100%;max-width:880px;height:auto;margin-inline:auto;mix-blend-mode:multiply}
+.d-figure figcaption{grid-column:4 / span 7;font-size:15px;line-height:1.5;color:var(--ink-3);text-wrap:pretty}
+.d-fig-link{grid-column:11 / -1;justify-self:end;margin-top:-10px}
+
+/* ----- Body ---------------------------------------------------------------- */
+.d-body{margin-top:clamp(32px,3.4vw,48px)}
+.d-head+.d-body{margin-top:clamp(28px,3vw,40px)}
+/* generic pages have no head row: the body opens with the hairline instead */
+.d-body--lead{margin-top:clamp(28px,3vw,40px);padding-top:clamp(24px,2.4vw,32px);border-top:1px solid var(--line)}
+.d-body .prose{display:flow-root;min-width:0}
+.d-body .prose>p>img,.d-body .prose figure img{width:100%}
+.d-body .prose :is(th,td):first-child{white-space:nowrap}
+.d-body .prose .author-self{white-space:nowrap}
+
+/* "On this page" (Terms): kramdown's {:toc} inside <nav class="toc">.
+   From 721px it floats out of main into the rail (columns 1-3); the
+   widths are the rail's in units of main's width (7 columns, 9 at <=1023px). */
+.prose>.toc{margin:0 0 32px}
+.prose>.toc+*{margin-top:0}
+.prose .toc .label{margin-bottom:8px}
+.prose .toc ul{list-style:none;padding:0;margin:0}
+.prose .toc li,.prose .toc li+li,.prose .toc li>ul{margin:0}
+.prose .toc a{display:flex;align-items:center;min-height:36px;padding-block:6px;border-top:1px solid var(--line);font-size:15px;line-height:1.35;color:var(--ink-2);text-decoration:none}
+.prose .toc>ul{border-bottom:1px solid var(--line)}
+.prose .toc ul ul a{padding-left:16px}
+.prose .toc ul ul ul a{padding-left:32px}
+.prose .toc a:hover{color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent)}
+@media (min-width:1024px){
+  .d-body .prose>.toc{float:left;width:calc((300% - 4 * var(--gap)) / 7);margin:0 0 24px calc(-1 * (300% + 3 * var(--gap)) / 7)}
+}
+@media (min-width:721px) and (max-width:1023px){
+  .d-body .prose>.toc{float:left;width:calc((100% - 2 * var(--gap)) / 3);margin:0 0 24px calc(-1 * (100% + var(--gap)) / 3)}
+}
+
+/* Action links in a page body (404) */
+.prose .d-links{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:0 28px}
+.prose .d-links li{margin:0}
+
+/* ----- Recommended citation ----------------------------------------------- */
+.d-cite{margin-top:clamp(40px,4vw,56px)}
+.cite-panel{grid-column:4 / span 7;background:var(--surface);padding:clamp(18px,1.8vw,24px) clamp(20px,2.2vw,32px) clamp(20px,2vw,28px)}
+.cite-top{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:40px}
+.cite-top .label{color:var(--ink)}
+.cite-copy[hidden]{display:none}
+.cite-text{margin-top:8px;font-size:16px;line-height:1.6;color:var(--ink-2);overflow-wrap:anywhere;text-wrap:pretty}
+.cite-text strong{font-weight:600;color:var(--ink)}
+.cite-panel .acts-row{margin-top:10px;margin-bottom:-8px}
+
+/* ----- Related research (cards from _includes/work-card.html) -------------- */
+.d-related .section-head .idx{display:flex;align-items:center}
+@media (min-width:1024px){
+  /* one or two cards start on the column-4 axis like the rest of the page;
+     three fill the row as on the home page */
+  .d-related .work-item:first-child:nth-last-child(-n+2){grid-column:4 / span 4}
+}
+
+/* ----- Foot: categories / tags, previous / next ----------------------------- */
+.d-foot{margin-top:var(--section)}
+.d-foot>:last-child{border-bottom:1px solid var(--line)}
+.tax-row{border-top:1px solid var(--line);padding-block:14px;align-items:baseline}
+.tax-terms{font-size:16px;line-height:1.55;color:var(--ink-2)}
+.tax-terms a{text-transform:capitalize}
+.pager-row{border-top:1px solid var(--line);padding-block:18px;align-items:baseline;row-gap:4px;color:inherit;text-decoration:none}
+.pager-k{grid-column:1 / span 3;display:inline-flex;align-items:baseline;gap:8px;font:400 13px/1.5 var(--mono);color:var(--ink-3)}
+.pager-t{grid-column:4 / span 7;font:500 1.0625rem/1.35 var(--display);letter-spacing:-.01em;color:var(--ink-2);text-wrap:pretty}
+.pager-t:lang(ja){font-family:var(--ja);letter-spacing:0}
+.pager-row:hover .pager-k{color:var(--accent)}
+.pager-row:hover .pager-t{color:var(--ink);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.24em;text-decoration-color:var(--accent)}
+.d-extra{margin-top:var(--section)}
+
+/* ----- Page hero (header.image / header.overlay_image) ---------------------- */
+.page-hero__figure{margin-top:clamp(32px,3.6vw,52px)}
+.page-hero__figure img{width:100%;background:var(--plate)}
+.page-hero__figure figcaption{margin-top:12px;font-size:15px;line-height:1.5;color:var(--ink-3)}
+.page-hero--overlay .page-hero__figure{margin-top:clamp(28px,3vw,40px)}
+.page-hero__meta{grid-column:4 / -1}
+
+/* ----- Responsive ----------------------------------------------------------- */
+@media (max-width:1023px){
+  .d-facts,.d-figure figcaption,.cite-panel,.pager-t,.d-fig-link{grid-column:4 / -1}
+  .d-fig-link{justify-self:start;margin-top:-6px}
+  .d-acts{flex-direction:row;flex-wrap:wrap;align-items:center;gap:0 24px;margin-top:0}
+}
+@media (max-width:720px){
+  .d-head{row-gap:6px;padding-top:12px}
+  .d-back .act{min-height:44px}
+  .d-facts,.d-plate,.d-figure figcaption,.cite-panel,.pager-k,.pager-t,.d-fig-link{grid-column:1 / -1}
+  .d-acts a{min-height:44px}
+  .d-body .prose{font-size:16px}
+  .cite-panel{padding:16px 18px 20px}
+  .cite-top{min-height:44px}
+  .cite-top .btn{height:44px}
+  .tax-row{row-gap:2px}
+  .pager-row{padding-block:16px}
+}

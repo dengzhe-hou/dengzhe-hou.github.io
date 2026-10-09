@@ -1,0 +1,47 @@
+{% comment %}
+  Site footer. On the home page it opens with the large contact block
+  (CONTACT label, email, postal line). Then four cells: name, profiles
+  (site.author, see author-links.html), site links (_data/navigation.yml)
+  and the colophon.
+{% endcomment %}{% include base_path %}{% assign name_zh = site.author.name_zh | default: "侯登哲" %}{% capture address %}{{ site.author.employer }}, Tohoku University, {{ site.author.location }}{% endcapture %}{% assign address = site.author.address | default: address %}
+<footer class="site-footer">
+  <div class="wrap">
+    {% if page.layout == "home" and site.author.email %}
+    <div class="grid foot-contact">
+      <p class="label">Contact</p>
+      <div class="body">
+        <a class="foot-mail" href="mailto:{{ site.author.email }}"><span class="v">{{ site.author.email | replace: "@", "@<wbr>" }}</span><span class="ar ne" aria-hidden="true">&#8599;</span></a>
+        <p class="foot-addr">{{ address }}</p>
+      </div>
+    </div>
+    {% endif %}
+    <div class="grid foot">
+      <div class="foot-name-col"><p class="foot-name">{{ site.author.name }}<span lang="zh">{{ name_zh }}</span></p></div>
+      <div>
+        <p class="label" id="foot-profiles">Profiles</p>
+        <ul aria-labelledby="foot-profiles">
+          {% if site.author.email and page.layout != "home" %}<li><a href="mailto:{{ site.author.email }}">Email</a></li>{% endif %}
+          {% include author-links.html %}
+        </ul>
+      </div>
+      <div>
+        <p class="label" id="foot-site">Site</p>
+        <ul aria-labelledby="foot-site">
+          {% for link in site.data.navigation.main %}
+          <li><a href="{% unless link.url contains '://' %}{{ base_path }}{% endunless %}{{ link.url }}">{{ link.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="colophon-col">
+        <p class="label" id="foot-colophon">Colophon</p>
+        <ul class="colophon" aria-labelledby="foot-colophon">
+          <li>&copy; {{ site.time | date: "%Y" }} {{ site.author.name | default: site.name }}</li>
+          <li><span>Built with&nbsp;<a href="https://jekyllrb.com" rel="nofollow">Jekyll</a>&nbsp;&amp;&nbsp;<a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a></span></li>
+          {% unless site.atom_feed.hide %}<li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}">Atom feed</a></li>{% endunless %}
+          <li><a href="{{ base_path }}/sitemap/">Sitemap</a></li>
+          <li>Updated&nbsp;<time datetime="{{ site.time | date: '%Y-%m-%d' }}">{{ site.time | date: "%Y-%m-%d" }}</time></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

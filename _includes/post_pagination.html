@@ -1,24 +1,12 @@
 {% comment %}
-  Quiet previous/next links at the foot of a detail page: a direction label
-  with the neighbouring item's title underneath, over a hairline rule.
-{% endcomment %}
-{% include base_path %}
-
-{% if page.previous or page.next %}
-  <nav class="pager" aria-label="Previous and next">
-    {% if page.previous %}
-      {% assign pager_title = page.previous.title | markdownify | strip_html | strip %}
-      <a href="{{ base_path }}{{ page.previous.url }}" class="pager__link pager__link--prev" rel="prev">
-        <span class="pager__label"><span aria-hidden="true">&larr; </span>{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</span>
-        <span class="pager__title"{% if page.previous.title_lang %} lang="{{ page.previous.title_lang }}"{% endif %}>{{ pager_title }}</span>
-      </a>
-    {% endif %}
-    {% if page.next %}
-      {% assign pager_title = page.next.title | markdownify | strip_html | strip %}
-      <a href="{{ base_path }}{{ page.next.url }}" class="pager__link pager__link--next" rel="next">
-        <span class="pager__label">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}<span aria-hidden="true"> &rarr;</span></span>
-        <span class="pager__title"{% if page.next.title_lang %} lang="{{ page.next.title_lang }}"{% endif %}>{{ pager_title }}</span>
-      </a>
-    {% endif %}
-  </nav>
+  Previous / next at the foot of a detail page, as two quiet rows in the
+  rail | main grid: the direction in the rail (mono), the neighbouring
+  item's title in main. Jekyll orders a collection by date, so
+  "Previous" is the older item and "Next" the newer one.
+  Rendered inside .d-foot by _layouts/single.html.
+{% endcomment %}{% include base_path %}{% if page.previous or page.next %}
+<nav class="pager" aria-label="Previous and next">
+  {% if page.previous %}{% assign pager_title = page.previous.title | markdownify | strip_html | strip %}<a class="grid pager-row" href="{{ base_path }}{{ page.previous.url }}" rel="prev"><span class="pager-k"><span class="ar w" aria-hidden="true">&larr;</span> {{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</span><span class="pager-t"{% if page.previous.title_lang %} lang="{{ page.previous.title_lang }}"{% endif %}>{{ pager_title }}</span></a>{% endif %}
+  {% if page.next %}{% assign pager_title = page.next.title | markdownify | strip_html | strip %}<a class="grid pager-row" href="{{ base_path }}{{ page.next.url }}" rel="next"><span class="pager-k">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }} <span class="ar e" aria-hidden="true">&rarr;</span></span><span class="pager-t"{% if page.next.title_lang %} lang="{{ page.next.title_lang }}"{% endif %}>{{ pager_title }}</span></a>{% endif %}
+</nav>
 {% endif %}

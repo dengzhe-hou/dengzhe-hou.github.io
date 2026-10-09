@@ -4,9 +4,22 @@ title: "Teaching"
 permalink: /teaching/
 author_profile: true
 ---
-
+{% comment %}
+  Page head (years covered, item count), then one row per course, newest
+  first (archive-single.html): the date range and the course type in the
+  rail; title, "institution, location" and the first paragraph in main;
+  "Details →" in acts.
+{% endcomment %}
 {% include base_path %}
+{% assign teaching_all = site.teaching | sort: "date" | reverse %}
+{% assign teaching_first_year = teaching_all.last.date | date: "%Y" %}{% assign teaching_last_year = teaching_all.first.date | date: "%Y" %}
+{% assign teaching_ongoing = teaching_all | where: "date_end", "present" %}
+{% capture teaching_span %}{% if teaching_ongoing.size > 0 %}{{ teaching_first_year }}–present{% elsif teaching_first_year == teaching_last_year %}{{ teaching_last_year }}{% else %}{{ teaching_first_year }}–{{ teaching_last_year }}{% endif %}{% endcapture %}
+{% capture teaching_count %}{{ teaching_all.size }} {% if teaching_all.size == 1 %}item{% else %}items{% endif %}{% endcapture %}
+{% include page-head.html eyebrow=teaching_span meta=teaching_count title=page.title %}
 
-{% for post in site.teaching reversed %}
-  {% include archive-single.html heading="h2" %}
-{% endfor %}
+<div class="wrap list-body">
+  <ol class="rows">
+    {% for post in teaching_all %}{% include archive-single.html post=post heading="h2" %}{% endfor %}
+  </ol>
+</div>

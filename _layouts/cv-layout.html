@@ -1,39 +1,74 @@
 ---
-layout: compress
+layout: default
 ---
-
+{% comment %}
+  The CV (/cv/, _pages/cv.md). Everything comes from the page's front matter:
+    heading    the h1 (title stays "CV" for the tab, search results and nav)
+    sections   in order; each is numbered ("01 / 11"), listed in the section
+               index under the title, and rendered as a section head plus
+               rows on the site grid: rail (dates, labels) | main | acts.
+               A section either has `rows` (see the comment in cv.md) or a
+               `collection` (publications, talks, teaching), whose documents
+               are rendered by archive-single-cv.html /
+               archive-single-talk-cv.html, newest first.
+    pdf        optional path of a PDF version ("PDF ↗" in the page head)
+  Styles: _includes/styles/cv.css.
+{% endcomment %}
 {% include base_path %}
+{% assign cv_sections = page.sections %}
+{% capture cv_total %}{% if cv_sections.size < 10 %}0{% endif %}{{ cv_sections.size }}{% endcapture %}
+{% capture cv_updated %}Updated <time datetime="{{ site.time | date: '%Y-%m-%d' }}">{{ site.time | date: '%b %Y' }}</time>{% endcapture %}
+{% if page.pdf %}{% capture cv_pdf %}{{ base_path }}{{ page.pdf }}{% endcapture %}{% else %}{% assign cv_pdf = nil %}{% endif %}
+{% assign cv_heading = page.heading | default: page.title %}
+{% include page-head.html eyebrow=site.author.name meta=cv_updated title=cv_heading link_url=cv_pdf link_text="PDF" link_external=true %}
 
-<!doctype html>
-<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %} | {{ site.name | default: site.title }}</title>
-    {% include head.html %}
-    {% include head/custom.html %}
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/cv-layout.css">
-  </head>
+{% if cv_sections.size > 0 %}
+<div class="wrap">
+  <nav class="grid cv-toc" aria-labelledby="cv-toc-h">
+    <p class="label rail" id="cv-toc-h">Contents</p>
+    <ol class="cv-toc-list">
+      {% for cv_section in cv_sections %}<li><a href="#{{ cv_section.id }}"><span class="n" aria-hidden="true">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span><span class="t">{{ cv_section.title }}</span>{% if cv_section.collection %}<span class="c">{{ site[cv_section.collection].size }}<span class="sr-only"> items</span></span>{% endif %}</a></li>{% endfor %}
+    </ol>
+  </nav>
+</div>
+{% endif %}
 
-  <body class="cv-layout">
-    {% include browser-upgrade.html %}
-    {% include masthead.html %}
-
-    <div id="main" role="main">
-      <div class="container">
-        {{ content }}
-      </div>
-    </div>
-
-    <div class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer.html %}
-      </footer>
-    </div>
-
-    {% include scripts.html %}
-
-  </body>
-</html>
+{% for cv_section in cv_sections %}
+{% capture cv_index %}{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}{% endcapture %}
+{% capture cv_heading_id %}{{ cv_section.id }}-h{% endcapture %}
+{% if cv_section.link_url %}{% capture cv_link %}{{ base_path }}{{ cv_section.link_url }}{% endcapture %}{% else %}{% assign cv_link = nil %}{% endif %}
+<section class="section cv-section" id="{{ cv_section.id }}" aria-labelledby="{{ cv_heading_id }}">
+  <div class="wrap">
+    {% include section-head.html index=cv_index total=cv_total title=cv_section.title id=cv_heading_id link_url=cv_link link_text=cv_section.link_text %}
+    {% if cv_section.collection %}
+    {% assign cv_docs = site[cv_section.collection] | sort: "date" | reverse %}
+    <ol class="rows cv-rows">
+      {% for post in cv_docs %}{% if cv_section.collection == "talks" %}{% include archive-single-talk-cv.html %}{% else %}{% include archive-single-cv.html %}{% endif %}{% endfor %}
+    </ol>
+    {% else %}
+    <ul class="rows cv-rows">
+      {% for row in cv_section.rows %}
+      <li class="grid row cv-row cv-entry"{% if row.id %} id="{{ row.id }}"{% endif %}>
+        {% if row.theme or row.label or row.when %}<p class="rail">{% if row.theme %}{% include theme-tag.html theme=row.theme %}{% endif %}{% if row.label %}<span class="label">{{ row.label }}</span>{% endif %}{% if row.when %}<span class="cv-when">{{ row.when }}</span>{% endif %}{% if row.note %}<span class="cv-note">{{ row.note }}</span>{% endif %}</p>{% endif %}
+        <div class="main">
+          {% if row.title %}<h3 class="row-title">{{ row.title | markdownify | remove: "<p>" | remove: "</p>" | strip }}</h3>{% endif %}
+          {% if row.text %}<p class="{% if row.title %}sub{% else %}cv-text{% endif %}">{{ row.text | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>{% endif %}
+          {% if row.details %}<ul class="cv-details">{% for line in row.details %}<li>{{ line | markdownify | remove: "<p>" | remove: "</p>" | strip }}</li>{% endfor %}</ul>{% endif %}
+          {% if row.items %}<ul class="cv-items">{% for line in row.items %}<li>{{ line | markdownify | remove: "<p>" | remove: "</p>" | strip }}</li>{% endfor %}</ul>{% endif %}
+          {% if row.statement %}<p class="cv-statement">{{ row.statement | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>{% endif %}
+        </div>
+        {% if row.links %}<p class="acts">{% for link in row.links %}{% assign link_internal = link.url | slice: 0 %}<a href="{% if link_internal == '/' %}{{ base_path }}{% endif %}{{ link.url }}">{{ link.text }} <span class="ar ne" aria-hidden="true">&#8599;</span></a>{% endfor %}</p>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</section>
+{% endfor %}
+{% assign cv_body = content | strip %}{% if content contains 'class="section cv-section"' %}
+{{ content }}
+{% elsif cv_body != "" %}
+<div class="wrap cv-body">
+  <div class="grid"><div class="main prose">{{ content }}</div></div>
+</div>
+{% endif %}

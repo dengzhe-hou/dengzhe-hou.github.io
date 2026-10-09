@@ -5,7 +5,11 @@ modified: 2016-06-06
 ---
 
 {% include base_path %}
-{% include toc %}
+<nav class="toc" aria-labelledby="toc-h" markdown="1">
+<p class="label" id="toc-h">On this page</p>
+* Table of contents
+{:toc}
+</nav>
 
 ## Privacy Policy
 

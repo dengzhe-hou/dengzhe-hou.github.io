@@ -1,0 +1,21 @@
+{% comment %}
+  One publication as a list row: year + type in the rail; title, authors
+  (the site owner in bold) and venue (italic) in main; "Paper ↗" and
+  "Details →" in acts. Use inside <ol class="rows">.
+    post     a document from site.publications
+    actions  false hides the acts column (e.g. on the CV)
+    heading  title element, "h3" (default) or "h2"
+  The author list is the part of the citation before "(year).", so the
+  citation field stays the single source. The type is the short form of
+  the category (manuscripts -> Journal, conferences -> Conference,
+  preprints -> Preprint, books -> Book).
+{% endcomment %}{% include base_path %}{% assign pub = include.post %}{% assign pub_heading = include.heading | default: "h3" %}{% assign pub_year = pub.date | date: "%Y" %}{% assign pub_cite_year = pub_year | prepend: "(" | append: ")." %}{% assign pub_authors = pub.citation | split: pub_cite_year | first | strip | replace: "Hou, D.", "<strong>Hou, D.</strong>" %}{% case pub.category %}{% when "manuscripts" %}{% assign pub_type = "Journal" %}{% when "conferences" %}{% assign pub_type = "Conference" %}{% when "preprints" %}{% assign pub_type = "Preprint" %}{% when "books" %}{% assign pub_type = "Book" %}{% else %}{% assign pub_type = site.publication_category[pub.category].title %}{% endcase %}
+<li class="grid row pub">
+  <p class="rail"><time class="meta-yr" datetime="{{ pub_year }}">{{ pub_year }}</time>{% if pub_type %}<span class="meta-type">{{ pub_type }}</span>{% endif %}</p>
+  <div class="main">
+    <{{ pub_heading }} class="row-title"{% if pub.title_lang %} lang="{{ pub.title_lang }}"{% endif %}><a href="{{ base_path }}{{ pub.url }}">{{ pub.title }}</a></{{ pub_heading }}>
+    {% if pub_authors != "" %}<p class="authors">{{ pub_authors }}</p>{% endif %}
+    {% if pub.venue %}<p class="venue"{% if pub.venue_lang %} lang="{{ pub.venue_lang }}"{% endif %}>{{ pub.venue }}</p>{% endif %}
+  </div>
+  {% unless include.actions == false %}<p class="acts">{% if pub.paperurl %}<a href="{{ pub.paperurl | strip }}">Paper <span class="ar ne" aria-hidden="true">&#8599;</span><span class="sr-only">: {{ pub.title | strip_html | escape }}</span></a>{% endif %}{% if pub.slidesurl %}<a href="{{ pub.slidesurl | strip }}">Slides <span class="ar ne" aria-hidden="true">&#8599;</span></a>{% endif %}{% if pub.bibtexurl %}<a href="{{ pub.bibtexurl | strip }}">BibTeX <span class="ar s" aria-hidden="true">&darr;</span></a>{% endif %}<a href="{{ base_path }}{{ pub.url }}">Details <span class="ar e" aria-hidden="true">&rarr;</span><span class="sr-only">: {{ pub.title | strip_html | escape }}</span></a></p>{% endunless %}
+</li>

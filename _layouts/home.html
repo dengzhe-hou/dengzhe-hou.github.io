@@ -1,0 +1,83 @@
+---
+layout: default
+---
+{% comment %}
+  Home page. Content comes from:
+    _pages/about.md     eyebrow, name_zh, portrait, the lead (page body),
+                        current_work, selected_research, selected_publications,
+                        background
+    _config.yml         author: name, email, profile links
+    _data/themes.yml    research themes (columns and tags)
+    _data/news.yml      news (newest first; the first item is the "Latest" line)
+  Sections: hero, 01 research themes, 02 selected research,
+  03 selected publications, 04 news, 05 background & affiliations.
+{% endcomment %}
+{% include base_path %}
+{% assign name_first = site.author.name | split: " " | first %}{% assign name_rest = site.author.name | remove_first: name_first | strip %}
+{% assign latest = site.data.news | first %}
+{% assign latest_ym = latest.date | slice: 0, 7 %}
+{% if latest.short %}{% assign latest_text = latest.short %}{% else %}{% assign latest_text = latest.text | markdownify | strip_html | truncatewords: 12 %}{% endif %}
+
+<section class="hero" aria-labelledby="name">
+  <div class="wrap">
+    {% if page.eyebrow %}<p class="eyebrow label rise" style="--i:0"><span class="e1">{{ page.eyebrow.unit }},</span><span class="e2">{{ page.eyebrow.institution }}</span><span class="e3">{{ page.eyebrow.place }}</span></p>{% endif %}
+    <h1 id="name" class="name rise" style="--i:1"><span class="n1">{{ name_first }}</span> <span class="n2">{{ name_rest }}{% if page.name_zh %}<span class="name-zh" lang="zh">{{ page.name_zh }}</span>{% endif %}</span></h1>
+    <div class="grid hero-row rise" style="--i:2">
+      <figure class="portrait">
+        <img src="{{ base_path }}/images/{{ page.portrait.small }}" srcset="{{ base_path }}/images/{{ page.portrait.small }} 640w, {{ base_path }}/images/{{ page.portrait.src }} {{ page.portrait.width }}w" sizes="(max-width:720px) 112px, (max-width:1239px) 22vw, 296px" width="640" height="640" alt="{{ page.portrait.alt | escape }}" fetchpriority="high">
+      </figure>
+      <div class="lead">{{ content }}</div>
+      {% if latest %}<p class="latest"><a href="#news"><span class="mk mk--fill" aria-hidden="true"></span><span class="label">Latest</span><time datetime="{{ latest_ym }}">{{ latest_ym | append: "-01" | date: "%b %Y" }}</time><span class="t">{{ latest_text | strip }}</span><span class="ar s" aria-hidden="true">&darr;</span></a></p>{% endif %}
+      <ul class="contact" aria-label="Contact and profiles">
+        {% if site.author.email %}<li><a class="email" href="mailto:{{ site.author.email }}"><span class="k">Email</span><span class="v">{{ site.author.email }}</span><span class="ar ne" aria-hidden="true">&#8599;</span></a></li>{% endif %}
+        {% include author-links.html arrows=true %}
+        <li><a href="{{ base_path }}/cv/">CV <span class="ar e" aria-hidden="true">&rarr;</span></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="research" aria-labelledby="research-h">
+  <div class="wrap">
+    {% include section-head.html index="01" total="05" title="Research themes" id="research-h" %}
+    {% include research-themes.html %}
+  </div>
+</section>
+
+{% if page.selected_research %}
+<section class="section" id="selected-research" aria-labelledby="work-h">
+  <div class="wrap">
+    {% include section-head.html index="02" total="05" title="Selected research" id="work-h" %}
+    <div class="grid work">
+      {% for project in page.selected_research %}{% include work-card.html item=project %}{% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="section" id="selected-publications" aria-labelledby="pubs-h">
+  <div class="wrap">
+    {% capture pubs_url %}{{ base_path }}/publications/{% endcapture %}
+    {% include section-head.html index="03" total="05" title="Selected publications" id="pubs-h" link_url=pubs_url link_text="All publications" %}
+    <ol class="rows">
+      {% for selected_url in page.selected_publications %}{% assign selected_post = site.publications | where: "url", selected_url | first %}{% if selected_post %}{% include pub-row.html post=selected_post %}{% endif %}{% endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="section news" id="news" aria-labelledby="news-h">
+  <div class="wrap">
+    {% include section-head.html index="04" total="05" title="News" id="news-h" %}
+    {% include news-list.html %}
+  </div>
+</section>
+
+<section class="section" id="background" aria-labelledby="bg-h">
+  <div class="wrap">
+    {% capture cv_url %}{{ base_path }}/cv/{% endcapture %}
+    {% include section-head.html index="05" total="05" title="Background &amp; affiliations" id="bg-h" link_url=cv_url link_text="Full CV" %}
+    <dl class="rows deflist">
+      {% for entry in page.background %}<div class="grid row"><dt class="label">{{ entry.label }}</dt><dd>{{ entry.text | markdownify | remove: "<p>" | remove: "</p>" | strip }}</dd></div>{% endfor %}
+    </dl>
+  </div>
+</section>

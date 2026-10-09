@@ -24,7 +24,7 @@ repository               : "dengzhe-hou/dengzhe-hou.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "avatar.jpg"   # face-centred crop of profile.jpg for the small sidebar avatar
+  avatar           : "profile.jpg"
   name             : "Dengzhe Hou"
   pronouns         : # example: "she/her"  
   bio              : "Assistant Professor, Tohoku University"

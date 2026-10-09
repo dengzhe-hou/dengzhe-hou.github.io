@@ -1,0 +1,4 @@
+{% comment %}
+  Theme tag: marker + uppercase mono label, e.g. {% include theme-tag.html theme="AI4Brain" %}.
+  The marker (filled dot or ring) comes from _data/themes.yml.
+{% endcomment %}{% assign tag_theme = site.data.themes | where: "label", include.theme | first %}<span class="tag"><span class="mk{% if tag_theme.marker == 'fill' %} mk--fill{% endif %}" aria-hidden="true"></span>{{ include.theme }}</span>

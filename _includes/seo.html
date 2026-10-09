@@ -57,8 +57,10 @@
 {% endif %}
 
 {% comment %} One share image for every card: the page's header image, else the
-   site-wide og_image (images/og-card.png, 1200x630). Always an absolute URL,
-   since base_path is site.url. {% endcomment %}
+   site-wide og_image (images/og-card.png, 1200x630: name, 侯登哲, the
+   homepage lead, the full photo and the AI-brain diagram on white). Always an
+   absolute URL, since base_path is site.url. The alt text reuses the Chinese
+   name from the home page's front matter (name_zh). {% endcomment %}
 {% assign seo_image = nil %}
 {% assign seo_image_alt = nil %}
 {% if page.header.image %}
@@ -67,7 +69,8 @@
   {% assign seo_image = page.header.overlay_image %}
 {% elsif site.og_image %}
   {% assign seo_image = site.og_image %}
-  {% capture seo_image_alt %}{{ site.author.name }}, {{ site.author.bio }}. Research themes: AI4Brain and Brain4AI.{% endcapture %}
+  {% assign seo_home = site.pages | where: "url", "/" | first %}
+  {% capture seo_image_alt %}{{ site.author.name }}{% if seo_home.name_zh %} ({{ seo_home.name_zh }}){% endif %}, {{ site.author.bio }}. Photo, and a diagram of AI and the brain informing each other in two directions: AI4Brain and Brain4AI.{% endcapture %}
 {% endif %}
 {% if seo_image %}
   {% unless seo_image contains "://" %}
@@ -135,8 +138,9 @@
 <!-- end SEO -->
 
 <!-- Open Graph protocol data (https://ogp.me/), used by social media -->
-<meta property="og:locale" content="{{ site.locale | default: "en" }}">
-<meta property="og:site_name" content="{{ site.title }}"> 
+{% comment %} Open Graph wants language_TERRITORY with an underscore (en_US). {% endcomment %}
+<meta property="og:locale" content="{{ site.locale | default: "en" | replace: "-", "_" }}">
+<meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:title" content="{{ seo_page_title }}">
 <meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}">
 {% if page.excerpt %}

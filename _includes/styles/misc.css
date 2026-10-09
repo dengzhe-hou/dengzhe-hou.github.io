@@ -1,0 +1,74 @@
+/* ===== Misc: 404, sitemap, archives, terms and any leftovers (filled in by the misc rollout). */
+
+/* ===== Talk map (_pages/talkmap.html) ==================================
+   Page head, then the map (Leaflet, monochrome Esri canvas tiles, one
+   accent dot per place) across the full frame with a "Source" caption row,
+   then "Places": one dated-group row per place (sticky place in the rail,
+   its presentations in main).
+   leaflet.css loads after this file, so every override here is scoped under
+   .tm-map to win on specificity. */
+.tm-map-section{padding-top:clamp(24px,2.4vw,32px)}
+.tm-map{position:relative;height:clamp(300px,42vw,560px);background:var(--surface);overflow:hidden}
+.tm-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;font-size:15px;line-height:1.5;color:var(--ink-3)}
+.tm-fallback p{max-width:34em;text-wrap:balance}
+.tm-caption{margin-top:14px;align-items:baseline;row-gap:4px}
+.tm-caption .main{font-size:15px;line-height:1.5;color:var(--ink-3);text-wrap:pretty}
+.tm-caption code{font-family:var(--mono);font-size:.9em;color:var(--ink-2)}
+.tm-caption .tm-standalone{grid-column:11 / -1;justify-self:end;min-height:32px}
+
+/* Leaflet chrome in the site's terms: hairlines, radius 0, no shadows */
+.tm-map.leaflet-container{background:var(--surface);font:400 15px/1.45 var(--sans);color:var(--ink)}
+.tm-map .leaflet-tile-pane{filter:grayscale(1)}
+.tm-map.leaflet-container a{color:inherit}
+.tm-map .leaflet-bar,.tm-map.leaflet-touch .leaflet-bar{border:1px solid var(--line-2);border-radius:0;box-shadow:none;background-clip:padding-box}
+.tm-map .leaflet-bar a,.tm-map.leaflet-touch .leaflet-bar a{width:40px;height:40px;line-height:39px;border-radius:0;border-bottom:1px solid var(--line);
+  background:var(--bg);color:var(--ink-2);font:400 18px/39px var(--mono);text-indent:0;transition:color .2s}
+.tm-map .leaflet-bar a:last-child,.tm-map.leaflet-touch .leaflet-bar a:last-child{border-bottom:0}
+.tm-map .leaflet-bar a:hover,.tm-map .leaflet-bar a:focus{background:var(--bg);color:var(--ink)}
+.tm-map .leaflet-bar a.leaflet-disabled{background:var(--bg);color:var(--line-2)}
+.tm-map .leaflet-control-zoom{margin:16px 0 0 16px}
+.tm-map.leaflet-container .leaflet-control-attribution{margin:0;padding:2px 8px;background:var(--bg-veil);color:var(--ink-3);font:400 12px/1.6 var(--sans)}
+.tm-map .leaflet-control-attribution a{color:var(--ink-2);text-decoration:underline;text-decoration-color:var(--link-line)}
+.tm-map .leaflet-control-attribution a:hover{color:var(--ink);text-decoration-color:var(--accent)}
+
+/* Place markers: accent dot with a ring in the page colour (12/15/18px for 1/2/3+ presentations) */
+.tm-map .tm-pin{border-radius:50%;background:var(--accent);border:2px solid var(--bg);cursor:pointer}
+.tm-map .tm-pin:hover{outline:1px solid var(--accent);outline-offset:2px}
+.tm-map .tm-pin:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+/* Popups: a bordered panel, place label, then the presentations with hairlines between */
+.tm-map .leaflet-popup-content-wrapper{border-radius:0;background:var(--bg);color:var(--ink);border:1px solid var(--line-2);box-shadow:none;padding:0}
+.tm-map .leaflet-popup-tip{background:var(--bg);border:1px solid var(--line-2);box-shadow:none}
+.tm-map .leaflet-popup-tip-container{margin-top:-1px}
+.tm-map .leaflet-popup-content{margin:14px 44px 14px 16px;font:400 15px/1.45 var(--sans)}
+.tm-map.leaflet-container a.leaflet-popup-close-button{top:0;right:0;width:40px;height:40px;display:grid;place-items:center;font:400 20px/1 var(--mono);color:var(--ink-3)}
+.tm-map.leaflet-container a.leaflet-popup-close-button:hover{color:var(--ink)}
+.tm-pop-place{font:400 12px/1.5 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin:0 0 6px}
+.tm-pop li{padding-block:8px}
+.tm-pop li+li{border-top:1px solid var(--line)}
+.tm-map.leaflet-container a.tm-pop-title{display:block;font:500 15px/1.35 var(--display);letter-spacing:-.01em;color:var(--ink);text-decoration:none}
+.tm-map.leaflet-container a.tm-pop-title:hover{text-decoration:underline;text-decoration-color:var(--accent)}
+.tm-pop-sub{display:block;margin-top:2px;font-size:14px;line-height:1.45;color:var(--ink-2)}
+.tm-pop .tm-when{white-space:nowrap}
+.tm-map .leaflet-popup-scrolled{border:0;overflow-y:auto}
+
+/* Places list */
+.tm-places .tm-count{display:block;color:var(--ink-3)}
+.tm-title{display:block;font:500 1.0625rem/1.35 var(--display);letter-spacing:-.01em;color:var(--ink);text-decoration:none;text-wrap:pretty}
+.tm-title:hover{text-decoration:underline;text-decoration-color:var(--accent)}
+.tm-sub{display:block;margin-top:3px}
+.tm-when{white-space:nowrap}
+.tm-sub time{font:400 13px/1 var(--mono);letter-spacing:.01em;color:var(--ink-3)}
+
+@media (max-width:1023px){
+  .tm-caption .tm-standalone{grid-column:4 / -1;justify-self:start}
+}
+@media (max-width:720px){
+  .tm-map{height:360px}
+  .tm-caption .tm-standalone{grid-column:1 / -1;min-height:44px}
+  .tm-map .leaflet-control-zoom{margin:12px 0 0 12px}
+  .tm-map .leaflet-bar a,.tm-map.leaflet-touch .leaflet-bar a{width:44px;height:44px;line-height:43px}
+  .tm-map .leaflet-popup-content{margin-right:40px}
+  .tm-places .tm-count{display:inline}
+  .tm-places .tm-count::before{content:"\00b7";margin:0 .6em}
+}

@@ -1,21 +1,29 @@
 {% comment %}
-  Compact CV entry (publications and teaching), emitted as an <li> because
-  the CV page wraps these in a <ul>. Publications show the full reference
-  (site owner in bold), with its arXiv ID, DOI or volume; other items show
-  type, venue and the date or period (date_end).
-{% endcomment %}
-{% include base_path %}
-{% assign entry_title = post.title | markdownify | remove: "<p>" | remove: "</p>" | strip %}
-<li class="list-entry list-entry--compact" itemscope itemtype="http://schema.org/CreativeWork">
-  <h3 class="list-entry__title" itemprop="headline"{% if post.title_lang %} lang="{{ post.title_lang }}"{% endif %}><a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ entry_title }}</a></h3>
-  {% if post.collection == "publications" %}
-    {% assign entry_citation = post.citation | strip | replace: 'Hou, D.', '<strong>Hou, D.</strong>' %}
-    {% if entry_citation != "" %}<p class="list-entry__authors list-entry__citation">{{ entry_citation }}</p>{% else %}<p class="list-entry__meta"><span{% if post.venue_lang %} lang="{{ post.venue_lang }}"{% endif %}>{{ post.venue }}</span> <time class="date" datetime="{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}</time></p>{% endif %}
-  {% else %}
-    <p class="list-entry__meta">
-      {% if post.type %}<span class="tag">{{ post.type }}</span>{% endif %}
-      {% if post.venue %}<span{% if post.venue_lang %} lang="{{ post.venue_lang }}"{% endif %}>{{ post.venue }}</span>{% endif %}
-      {% if post.date %}{% include date-range.html start=post.date end=post.date_end %}{% endif %}
-    </p>
-  {% endif %}
+  One CV row for a publication or a course (`post`), emitted as an <li>
+  inside the CV's <ol class="rows">. No actions: the title links to the
+  details page.
+  - Publication: year and type in the rail; title, then the full reference
+    from `citation` split into authors (the site owner in bold) and source
+    (venue in italics, then volume, pages, arXiv ID or DOI; a trailing
+    URL becomes a link).
+  - Course: the date or period (date_end) and the type in the rail; title,
+    then the institution.
+{% endcomment %}{% include base_path %}
+{% if post.collection == "publications" %}{% assign cv_year = post.date | date: "%Y" %}{% assign cv_cite_key = cv_year | prepend: "(" | append: ")." %}{% assign cv_cite = post.citation | strip %}{% assign cv_authors = "" %}{% assign cv_source = "" %}{% if cv_cite contains cv_cite_key %}{% assign cv_authors = cv_cite | split: cv_cite_key | first | strip %}{% assign cv_rest = cv_cite | remove_first: cv_authors | remove_first: cv_cite_key | strip %}{% if cv_rest contains "<i>" %}{% assign cv_cite_title = cv_rest | split: "<i>" | first %}{% assign cv_source = cv_rest | remove_first: cv_cite_title | strip %}{% else %}{% assign cv_source = cv_rest %}{% endif %}{% assign cv_authors = cv_authors | replace: "Hou, D.", "<strong>Hou, D.</strong>" %}{% if cv_source contains " https://" %}{% assign cv_src_head = cv_source | split: " https://" | first %}{% assign cv_src_url = cv_source | split: " https://" | last | strip | prepend: "https://" %}{% assign cv_src_end = "" %}{% assign cv_src_last = cv_src_url | slice: -1, 1 %}{% if cv_src_last == "." %}{% assign cv_src_len = cv_src_url.size | minus: 1 %}{% assign cv_src_url = cv_src_url | slice: 0, cv_src_len %}{% assign cv_src_end = "." %}{% endif %}{% capture cv_source %}{{ cv_src_head }} <a href="{{ cv_src_url }}">{{ cv_src_url }}</a>{{ cv_src_end }}{% endcapture %}{% endif %}{% elsif cv_cite != "" %}{% assign cv_authors = cv_cite | replace: "Hou, D.", "<strong>Hou, D.</strong>" %}{% endif %}{% case post.category %}{% when "manuscripts" %}{% assign cv_type = "Journal" %}{% when "conferences" %}{% assign cv_type = "Conference" %}{% when "preprints" %}{% assign cv_type = "Preprint" %}{% when "books" %}{% assign cv_type = "Book" %}{% else %}{% assign cv_type = site.publication_category[post.category].title %}{% endcase %}
+<li class="grid row cv-row cv-pub">
+  <p class="rail"><time class="cv-when" datetime="{{ cv_year }}">{{ cv_year }}</time>{% if cv_type %}<span class="cv-note">{{ cv_type }}</span>{% endif %}</p>
+  <div class="main">
+    <h3 class="row-title"{% if post.title_lang %} lang="{{ post.title_lang }}"{% endif %}><a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a></h3>
+    {% if cv_authors != "" %}<p class="authors">{{ cv_authors }}</p>{% endif %}
+    {% if cv_source != "" %}<p class="cv-source">{{ cv_source }}</p>{% elsif post.venue %}<p class="cv-source"{% if post.venue_lang %} lang="{{ post.venue_lang }}"{% endif %}><i>{{ post.venue }}</i></p>{% endif %}
+  </div>
 </li>
+{% else %}
+<li class="grid row cv-row">
+  <p class="rail">{% if post.date %}{% capture cv_range %}{% include date-range.html start=post.date end=post.date_end %}{% endcapture %}<span class="cv-when">{{ cv_range | strip }}</span>{% endif %}{% if post.type %}<span class="cv-note">{{ post.type }}</span>{% endif %}</p>
+  <div class="main">
+    <h3 class="row-title"{% if post.title_lang %} lang="{{ post.title_lang }}"{% endif %}><a href="{{ base_path }}{{ post.url }}">{{ post.title | markdownify | remove: "<p>" | remove: "</p>" | strip }}</a></h3>
+    {% if post.venue %}<p class="sub"><span{% if post.venue_lang %} lang="{{ post.venue_lang }}"{% endif %}>{{ post.venue }}</span></p>{% endif %}
+  </div>
+</li>
+{% endif %}

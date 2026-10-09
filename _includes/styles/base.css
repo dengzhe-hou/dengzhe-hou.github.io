@@ -1,0 +1,159 @@
+/* ===== Base ============================================================
+   Reset, type scale, links, focus, the 12-column frame, section heads,
+   labels, arrows, markers, tags, action links, controls and Markdown prose.
+   Sizes follow the owner-approved restrained scale (SPEC section 2). */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:calc(var(--head-h) + 16px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--sans);
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+img,svg,video{max-width:100%}
+img{display:block;height:auto}
+h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd,figure,blockquote{margin:0}
+h1,h2,h3,h4,h5,h6{font-weight:500}
+ul,ol{padding:0;list-style:none}
+:lang(ja){font-family:var(--ja);letter-spacing:0}
+:lang(zh){font-family:var(--zh);letter-spacing:0}
+strong,b{font-weight:600;color:var(--ink)}
+a{color:inherit;text-decoration-line:underline;text-decoration-thickness:1px;text-underline-offset:.24em;
+  text-decoration-color:var(--link-line);transition:text-decoration-color .2s,color .2s}
+a:hover{color:var(--ink);text-decoration-color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:1px}
+[tabindex="-1"]:focus{outline:0}
+::selection{background:var(--ink);color:var(--bg)}
+button{font:inherit}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip{position:absolute;left:var(--gutter);top:-100px;z-index:30;background:var(--ink);color:var(--bg);padding:12px 16px;font:500 14px/18px var(--sans);text-decoration:none}
+.skip:focus{top:12px}
+.skip:hover{color:var(--bg)}
+
+/* ===== Frame: wrap + 12-column grid ====================================
+   .rail = columns 1-3 (index, year, month, dt label)
+   .main = columns 4-10 (every title and paragraph: the one measure)
+   .acts = columns 11-12 (right-aligned actions and section links)
+   <=1023px: main and acts span 4-12 (acts drops under main).
+   <=720px: one column; the rail stacks above main. */
+.wrap{width:100%;max-width:calc(1280px + 2*var(--gutter));margin-inline:auto;padding-inline:var(--gutter)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap)}
+.rail{grid-column:1 / span 3}
+.main{grid-column:4 / span 7}
+.acts{grid-column:11 / -1}
+.span-main-acts{grid-column:4 / -1}
+
+/* ===== Small type ====================================================== */
+.mono{font-family:var(--mono);font-size:13px;line-height:1.5;letter-spacing:.01em;color:var(--ink-3)}
+.label{font-family:var(--mono);font-size:12px;line-height:1.5;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.ink{color:var(--ink)}
+.ink-2{color:var(--ink-2)}
+.ink-3{color:var(--ink-3)}
+
+/* Arrow glyphs inside links: .ne = external (↗), .e = internal (→), .s = in page (↓) */
+.ar{display:inline-block;font-family:var(--mono);transition:transform .25s var(--ease)}
+a:hover .ar.ne{transform:translate(2px,-2px)}
+a:hover .ar.e{transform:translateX(3px)}
+a:hover .ar.s{transform:translateY(2px)}
+a:hover .ar.w{transform:translateX(-3px)}
+
+/* Theme markers: AI4Brain = filled accent dot, Brain4AI = accent ring */
+.mk{display:inline-block;width:7px;height:7px;border-radius:50%;flex:none;border:1.5px solid var(--accent)}
+.mk--fill{background:var(--accent)}
+
+/* Tags: no pills. A theme tag is a marker plus an uppercase mono label
+   (<span class="tag"><span class="mk mk--fill"></span>AI4Brain</span>);
+   any other category is plain mono text (<span class="tag tag--plain">Journal</span>). */
+.tag{display:inline-flex;align-items:center;gap:8px;font:400 12px/1.5 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+.tag--plain{font-size:13px;letter-spacing:.01em;text-transform:none;color:var(--ink-3)}
+
+/* Action links: mono 13px + arrow, e.g. "Paper ↗", "Details →" */
+.act{display:inline-flex;align-items:center;gap:8px;min-height:40px;font:400 13px/1 var(--mono);color:var(--ink-2);text-decoration:none;white-space:nowrap}
+.act:hover{color:var(--accent)}
+.acts-row{display:flex;flex-wrap:wrap;gap:0 24px}
+
+/* Controls: 40px squares (or 40px tall), 1px border, radius 0, no fills */
+.btn,.icon-btn,.menu-btn{display:inline-grid;place-items:center;height:40px;padding:0 14px;border:1px solid var(--line-2);border-radius:0;
+  background:transparent;color:var(--ink-2);cursor:pointer;font:400 13px/1 var(--mono);letter-spacing:.02em;text-decoration:none;
+  transition:color .2s,border-color .2s}
+.btn:hover,.icon-btn:hover,.menu-btn:hover{color:var(--ink);border-color:var(--ink-3)}
+
+/* Hairlines */
+.rule{border:0;border-top:1px solid var(--line);margin:0}
+.rule--ink{border-top-color:var(--ink)}
+
+/* ===== Headings ======================================================== */
+/* Page title (h1 on inner pages) */
+.page-title{font:500 clamp(2rem,1.5rem + 1.6vw,2.75rem)/1.05 var(--display);letter-spacing:-.03em;color:var(--ink);text-wrap:balance}
+/* Lead / intro sentence */
+.lead{font:400 clamp(1.125rem,1rem + .3vw,1.3125rem)/1.5 var(--display);letter-spacing:-.01em;color:var(--ink-2);text-wrap:pretty}
+.lead strong{font-weight:500}
+/* Card / theme / list title */
+.h3{font:500 1.125rem/1.2 var(--display);letter-spacing:-.02em;text-wrap:balance}
+
+/* ===== Sections ========================================================
+   <section class="section"><div class="wrap">
+     _includes/section-head.html (index, total, title, id, link_url, link_text)
+     …rows…
+   </div></section> */
+.section{padding-top:var(--section)}
+.section-head{--h2:clamp(1.5rem,1.15rem + .9vw,1.875rem);border-top:1px solid var(--line);padding-top:clamp(16px,1.6vw,22px);
+  margin-bottom:clamp(28px,3vw,40px);align-items:baseline}
+.section-head .idx{grid-column:1 / span 3;font:400 13px/1 var(--mono);color:var(--ink-3);letter-spacing:.02em}
+.section-head .idx b{font-weight:400;color:var(--ink)}
+.h2{grid-column:4 / span 7;font:500 var(--h2,clamp(1.5rem,1.15rem + .9vw,1.875rem))/1.04 var(--display);letter-spacing:-.025em;text-wrap:balance}
+.head-link{grid-column:11 / -1;justify-self:end;display:inline-flex;align-items:center;gap:8px;min-height:40px;white-space:nowrap;
+  font:400 13px/1 var(--mono);color:var(--ink);text-decoration:none}
+.head-link:hover{color:var(--accent)}
+
+/* ===== Prose: Markdown content ========================================
+   Wrap rendered Markdown in .prose (it styles descendants only; place it in
+   .main or any column). */
+.prose{color:var(--ink-2);text-wrap:pretty}
+.prose>*+*{margin-top:1em}
+.prose strong{font-weight:600}
+.prose h2,.prose h3,.prose h4{color:var(--ink);font-family:var(--display);text-wrap:balance}
+.prose h2{font-size:clamp(1.25rem,1.1rem + .45vw,1.5rem);line-height:1.2;letter-spacing:-.02em;margin-top:2em}
+.prose h3{font-size:1.125rem;line-height:1.25;letter-spacing:-.015em;margin-top:1.75em}
+.prose h4{font:400 12px/1.5 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-top:1.75em}
+.prose h2+*,.prose h3+*,.prose h4+*{margin-top:.6em}
+.prose>:first-child{margin-top:0}
+.prose ul,.prose ol{padding-left:1.25em}
+.prose ul{list-style:disc}
+.prose ol{list-style:decimal;padding-left:1.5em}
+.prose ul ul{list-style:circle}
+.prose li+li,.prose li>ul,.prose li>ol{margin-top:.4em}
+.prose li::marker{color:var(--ink-3)}
+.prose blockquote{padding-left:20px;border-left:1px solid var(--ink);color:var(--ink-2)}
+.prose hr{border:0;border-top:1px solid var(--line);margin-block:2em}
+.prose code{font-family:var(--mono);font-size:.82em;background:var(--surface);padding:.12em .32em;color:var(--ink)}
+.prose pre{background:var(--surface);padding:16px 20px;overflow-x:auto;font:400 13px/1.6 var(--mono);color:var(--ink);tab-size:2}
+.prose pre code{background:none;padding:0;font-size:inherit}
+.prose table{display:block;max-width:100%;overflow-x:auto;border-collapse:collapse;font-size:15px;line-height:1.5}
+.prose th,.prose td{padding:10px 20px 10px 0;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.prose th{font:400 12px/1.5 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);border-bottom-color:var(--ink)}
+.prose figure img,.prose>p>img{background:var(--plate)}
+.prose figcaption{margin-top:10px;font:400 13px/1.5 var(--mono);color:var(--ink-3)}
+.prose dt{font-weight:500;color:var(--ink)}
+.prose dd+dt{margin-top:.75em}
+.prose sup,.prose sub{line-height:0}
+.prose .footnotes{font-size:15px}
+
+/* ===== Motion ========================================================== */
+.rise{animation:rise .8s var(--ease) both;animation-delay:calc(var(--i,0) * 70ms + 40ms)}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+
+/* ===== Responsive ====================================================== */
+@media (max-width:1023px){
+  .main,.h2,.acts{grid-column:4 / -1}
+  .head-link{grid-column:4 / -1;justify-self:start;grid-row:2;margin-top:4px}
+}
+@media (max-width:720px){
+  :root{--head-h:56px}
+  .grid{grid-template-columns:minmax(0,1fr)}
+  .rail,.main,.acts,.span-main-acts,.h2,.section-head .idx,.head-link{grid-column:1 / -1!important}
+  .section-head{row-gap:8px;margin-bottom:28px}
+  .section-head .idx{grid-row:1}
+  .h2{grid-row:2}
+  .head-link{grid-row:3;margin-top:0}
+  .act{min-height:44px}
+}

@@ -4,14 +4,30 @@ permalink: /tags/
 title: "Posts by Tags"
 author_profile: true
 ---
-
+{% comment %}
+  Posts grouped by tag: one section per tag (its count in the rail), one
+  row per post.
+{% endcomment %}
 {% include base_path %}
-{% include group-by-array collection=site.posts field="tags" %}
+{% capture tag_grouping %}{% include group-by-array collection=site.posts field="tags" %}{% endcapture %}
+{% capture tags_meta %}{{ group_names.size }} {% if group_names.size == 1 %}tag{% else %}tags{% endif %}{% endcapture %}
+{% include page-head.html eyebrow="Posts by tag" meta=tags_meta title=page.title %}
 
+{% if group_names.size > 0 %}
 {% for tag in group_names %}
   {% assign posts = group_items[forloop.index0] %}
-  <h2 id="{{ tag | slugify }}" class="archive__subtitle">{{ tag }}</h2>
-  {% for post in posts %}
-    {% include archive-single.html %}
-  {% endfor %}
+  {% capture tag_index %}{% if posts.size < 10 %}0{% endif %}{{ posts.size }}{% endcapture %}
+  {% capture tag_id %}{{ tag | slugify }}{% endcapture %}
+  {% capture tag_heading_id %}{{ tag_id }}-h{% endcapture %}
+<section class="section" id="{{ tag_id }}" aria-labelledby="{{ tag_heading_id }}">
+  <div class="wrap">
+    {% include section-head.html index=tag_index note="items" title=tag id=tag_heading_id %}
+    <ol class="rows">
+      {% for post in posts %}{% include archive-single.html post=post %}{% endfor %}
+    </ol>
+  </div>
+</section>
 {% endfor %}
+{% else %}
+<div class="wrap list-body"><p class="empty">No tagged posts yet.</p></div>
+{% endif %}

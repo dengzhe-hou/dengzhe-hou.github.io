@@ -1,16 +1,11 @@
 {
 	"name": "Dengzhe Hou",
-	"short_name": "DH",
+	"short_name": "Dengzhe Hou",
 	"start_url": "/",
 	"display": "browser",
-	"theme_color": "#0f172a",
-	"background_color": "#f8fafc",
+	"theme_color": "#ffffff",
+	"background_color": "#ffffff",
 	"icons": [
-		{
-			"src": "/images/favicon.svg",
-			"sizes": "any",
-			"type": "image/svg+xml"
-		},
 		{
 			"src": "/images/favicon-192x192.png",
 			"sizes": "192x192",
@@ -20,6 +15,12 @@
 			"src": "/images/favicon-512x512.png",
 			"sizes": "512x512",
 			"type": "image/png"
+		},
+		{
+			"src": "/images/favicon-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "maskable"
 		}
 	]
 }

@@ -1,0 +1,30 @@
+{% comment %}
+  Home: news from _data/news.yml (newest first), grouped by month. Items
+  with "archived: true" go into the collapsed "Earlier news" disclosure.
+  Each item's text is Markdown.
+{% endcomment %}{% assign news_recent = site.data.news | where_exp: "n", "n.archived != true" %}{% assign news_earlier = site.data.news | where: "archived", true %}
+<div class="rows">
+  {% assign news_groups = news_recent | group_by: "date" %}
+  {% for group in news_groups %}{% assign ym = group.name | slice: 0, 7 %}
+  <div class="grid group">
+    <p class="rail"><time class="stick" datetime="{{ ym }}">{{ ym | append: "-01" | date: "%b %Y" }}</time></p>
+    <ul class="main items">
+      {% for item in group.items %}<li>{{ item.text | markdownify | remove: "<p>" | remove: "</p>" | strip }}</li>{% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+  {% if news_earlier.size > 0 %}{% assign first_year = news_earlier.last.date | slice: 0, 4 %}{% assign last_year = news_earlier.first.date | slice: 0, 4 %}
+  <details class="disclosure news-archive">
+    <summary><span class="rail">{{ first_year }}{% if first_year != last_year %}–{{ last_year }}{% endif %}</span><span class="main">Earlier news</span><span class="acts"><span class="plus" aria-hidden="true"></span></span></summary>
+    {% assign news_groups = news_earlier | group_by: "date" %}
+    {% for group in news_groups %}{% assign ym = group.name | slice: 0, 7 %}
+    <div class="grid group">
+      <p class="rail"><time class="stick" datetime="{{ ym }}">{{ ym | append: "-01" | date: "%b %Y" }}</time></p>
+      <ul class="main items">
+        {% for item in group.items %}<li>{{ item.text | markdownify | remove: "<p>" | remove: "</p>" | strip }}</li>{% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </details>
+  {% endif %}
+</div>

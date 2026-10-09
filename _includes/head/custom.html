@@ -5,35 +5,23 @@
 <!-- Google Search Console verification -->
 <meta name="google-site-verification" content="SHcgDoDZ8sMeXN9BrWp_ESykM7Xjk4UBPqm6AcRNB_0" />
 
-<!-- Support for Academicons -->
-<link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"/>
-
-<!-- favicon: "DH" monogram drawn from plain geometry in images/favicon.svg;
-     the PNG and ICO sizes are renders of that SVG -->
-<link rel="apple-touch-icon" sizes="180x180" href="{{ base_path }}/images/apple-touch-icon-180x180.png"/>
-<link rel="icon" type="image/svg+xml" href="{{ base_path }}/images/favicon.svg"/>
+<!-- favicon: "DH" monogram drawn from plain geometry in images/favicon.svg
+     (ink tile, white letters, the H crossbar in the accent). The PNG and ICO
+     files are renders of it; the 180/192/512 icons give the letters more room.
+     The SVG is listed last so browsers that support it prefer it. -->
+<link rel="icon" href="{{ base_path }}/images/favicon.ico" sizes="32x32"/>
 <link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-32x32.png" sizes="32x32"/>
 <link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-192x192.png" sizes="192x192"/>
+<link rel="icon" type="image/svg+xml" href="{{ base_path }}/images/favicon.svg"/>
+<link rel="apple-touch-icon" sizes="180x180" href="{{ base_path }}/images/apple-touch-icon-180x180.png"/>
 <link rel="manifest" href="{{ base_path }}/images/manifest.json"/>
-<link rel="icon" href="{{ base_path }}/images/favicon.ico" sizes="32x32"/>
-<meta name="theme-color" content="#0f172a"/>
-<meta name="color-scheme" content="light"/>
-
-<!-- Google Fonts: Source Serif 4 for running text, Inter for headings and UI,
-     Noto Sans/Serif JP for Japanese text and the Chinese name (Google serves
-     CJK fonts in small unicode-range slices, so only the glyphs used load) -->
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@400;600;700&family=Noto+Serif+JP:wght@400;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet"/>
-
-<!-- Custom: Clean academic theme — slate navy + teal accent.
-     base.css holds the tokens and shared rules; the others style one area each. -->
-<style>
-{% include head/styles/base.css %}
-{% include head/styles/chrome.css %}
-{% include head/styles/lists.css %}
-{% include head/styles/home.css %}
-</style>
+<!-- Browser UI colour = page background (--bg) of each theme. The media
+     queries follow the system; the script makes an explicit choice from the
+     header toggle (data-theme on <html>) win, now and whenever it changes. -->
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)"/>
+<meta name="theme-color" content="#0b0b0c" media="(prefers-color-scheme: dark)"/>
+<script>(function(){var r=document.documentElement,m=document.querySelectorAll('meta[name="theme-color"]');function sync(){var t=r.getAttribute('data-theme');for(var i=0;i<m.length;i++){if(!m[i].hasAttribute('data-system')){m[i].setAttribute('data-system',m[i].getAttribute('content'));}m[i].setAttribute('content',t==='dark'?'#0b0b0c':t==='light'?'#ffffff':m[i].getAttribute('data-system'));}}sync();if(window.MutationObserver){new MutationObserver(sync).observe(r,{attributes:true,attributeFilter:['data-theme']});}})();</script>
+<meta name="color-scheme" content="light dark"/>
 
 <!-- JSON-LD structured data for Google -->
 <script type="application/ld+json">
@@ -43,7 +31,7 @@
   "name": "Dengzhe Hou",
   "alternateName": "侯登哲",
   "url": "https://dengzhe-hou.github.io",
-  "image": "https://dengzhe-hou.github.io/images/avatar.jpg",
+  "image": "https://dengzhe-hou.github.io/images/profile.jpg",
   "jobTitle": "Assistant Professor",
   "worksFor": {
     "@type": "EducationalOrganization",
