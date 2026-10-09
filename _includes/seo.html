@@ -11,20 +11,31 @@
 {% endif %}
 
 {% if seo_title %}
-  {% assign seo_title = seo_title | markdownify | strip_html | strip_newlines | escape_once %}
+  {% assign seo_title = seo_title | replace: "|", "&#124;" | markdownify | strip_html | normalize_whitespace | escape_once %}
 {% endif %}
+
+{% assign seo_page_title = page.title | default: site.title | replace: "|", "&#124;" | markdownify | strip_html | normalize_whitespace | escape_once %}
 
 {% if site.url %}
   {% assign canonical_url = page.url | replace: "index.html", "" | prepend: site.url %}
 {% endif %}
 
-<title>{{ seo_title | default: site.title }}{% if paginator %}{% unless paginator.page == 1 %} {{ site.title_separator }} {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}{% endif %}</title>
+<title>{{ seo_title | default: seo_page_title }}{% if paginator %}{% unless paginator.page == 1 %} {{ site.title_separator }} {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}{% endif %}</title>
 
 {% assign seo_description = page.description | default: page.excerpt | default: site.description %}
 {% if seo_description %}
-  {% assign seo_description = seo_description | markdownify | strip_html | strip_newlines | escape_once %}
+  {% assign seo_description = seo_description | replace: "|", "&#124;" | markdownify | strip_html | normalize_whitespace | escape_once %}
 {% endif %}
 <meta name="description" content="{{ seo_description }}">
+
+{% comment %} Shared by og:description and twitter:description so both cards show the same text. {% endcomment %}
+{% if page.excerpt %}
+  {% assign social_description = seo_description %}
+{% elsif site.og_description %}
+  {% assign social_description = site.og_description | strip_html | normalize_whitespace | escape_once %}
+{% else %}
+  {% assign social_description = seo_description %}
+{% endif %}
 
 {% assign seo_author = page.author | default: page.author[0] | default: site.author[0] %}
 {% if seo_author %}
@@ -50,23 +61,24 @@
 
 {% if site.twitter.username %}
   <meta name="twitter:site" content="@{{ site.twitter.username | replace: "@", "" }}">
-  <meta name="twitter:title" content="{{ page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once }}">
-  <meta name="twitter:description" content="{{ seo_description }}">
-  <meta name="twitter:url" content="{{ canonical_url }}">
+{% endif %}
+<meta name="twitter:title" content="{{ seo_page_title }}">
+<meta name="twitter:description" content="{{ social_description }}">
+<meta name="twitter:url" content="{{ canonical_url }}">
 
-  {% if page.header.image %}
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="{% if page.header.image contains "://" %}{{ page.header.image }}{% else %}{{ page.header.image | prepend: "/images/" | prepend: base_path }}{% endif %}">
-  {% else %}
-    <meta name="twitter:card" content="summary">
-    {% if site.og_image %}
-      <meta name="twitter:image" content="{{ site.og_image | prepend: "/images/" | prepend: base_path }}">
-    {% endif %}
+{% assign twitter_image = page.header.image | default: page.header.overlay_image | default: page.header.teaser %}
+{% if twitter_image %}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{% if twitter_image contains "://" %}{{ twitter_image }}{% else %}{{ twitter_image | prepend: "/images/" | prepend: base_path }}{% endif %}">
+{% else %}
+  <meta name="twitter:card" content="summary">
+  {% if site.og_image %}
+    <meta name="twitter:image" content="{% if site.og_image contains "://" %}{{ site.og_image }}{% else %}{{ site.og_image | prepend: "/images/" | prepend: base_path }}{% endif %}">
   {% endif %}
+{% endif %}
 
-  {% if seo_author_twitter %}
-    <meta name="twitter:creator" content="@{{ seo_author_twitter }}">
-  {% endif %}
+{% if site.twitter.username and seo_author_twitter %}
+  <meta name="twitter:creator" content="@{{ seo_author_twitter }}">
 {% endif %}
 
 {% if site.facebook %}
@@ -91,7 +103,7 @@
     {
       "@context" : "http://schema.org",
       "@type" : "{% if site.social.type %}{{ site.social.type }}{% else %}Person{% endif %}",
-      "name" : "{{ site.social.name | default: site.name }}",
+      "name" : {{ site.social.name | default: site.name | jsonify }},
       "url" : {{ seo_url | jsonify }},
       "sameAs" : {{ site.social.links | jsonify }}
     }
@@ -115,14 +127,12 @@
 <!-- Open Graph protocol data (https://ogp.me/), used by social media -->
 <meta property="og:locale" content="{{ site.locale | default: "en" }}">
 <meta property="og:site_name" content="{{ site.title }}"> 
-<meta property="og:title" content="{{ page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once }}">
+<meta property="og:title" content="{{ seo_page_title }}">
 {% if page.date %}
   <meta property="og:type" content="article">
 {% endif %}
-{% if page.excerpt %}
-  <meta property="og:description" name="description" content="{{ seo_description }}">
-{% elsif site.og_description %}
-  <meta property="og:description" name="description" content="{{ site.og_description }}">
+{% if social_description %}
+  <meta property="og:description" content="{{ social_description }}">
 {% endif %}
 {% if seo_url %}
   <meta property="og:url" content="{{ page.url | prepend: seo_url | replace: "/index.html", "/" }}">

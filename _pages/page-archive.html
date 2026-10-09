@@ -6,7 +6,7 @@ author_profile: false
 ---
 
 {% include base_path %}
-{% for post in site.pages %}
+{% for post in site.html_pages %}
   {% unless post.sitemap == false or post.redirect_to %}
   {% include archive-single.html %}
   {% endunless %}

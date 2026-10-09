@@ -63,8 +63,6 @@ Connecting these directions, my current work explores aligning brain signals (EE
 
 <div class="news-list" markdown="1">
 
-| | |
-|---|---|
 | **Sep 2026** | **Invited talk** at [RSJ2026 Open Forum OF7](https://ac.rsj-web.org/2026/openforum/#of7), "テクノロジーの質的進化と組織統制", 44th Annual Conference of the Robotics Society of Japan, Kanazawa. Speaking on neurotechnology with Michael Zielewski |
 | **Aug 2026** | Co-authored presentation accepted at the [Japan Institute of Marketing Science (JIMS) Research Conference](http://www.jims.gr.jp/%e7%a0%94%e7%a9%b6%e5%a4%a7%e4%bc%9a/), Waseda University, 14–15 Nov 2026: “生成AI活用事例における社会倫理的リスクと炎上要因の定量分析” |
 | **Aug 2026** | Paper accepted at **IEEE SMC 2026** (Bellevue, USA), [Subject-Specific Analysis of Self-Initiated Attention Shifts from EEG](/publication/2026-arxiv-subject-specific) |
@@ -77,8 +75,6 @@ Connecting these directions, my current work explores aligning brain signals (EE
 <details class="news-archive" markdown="1">
 <summary>Earlier news</summary>
 
-| | |
-|---|---|
 | **Aug 2026** | [Kaggle](https://www.kaggle.com/monkeydz) **Silver Medal** in [ROGII - Wellbore Geology Prediction](https://www.kaggle.com/competitions/rogii-wellbore-geology-prediction) (89/6125) |
 | **Jul 2026** | [KANMixer](/publication/2026-scirep-kanmixer) published in ***Scientific Reports***: a compact KAN-centered mixer for long-term forecasting, and an honest account of when KANs actually help |
 | **Jul 2026** | Two new preprints on arXiv: [CogEEGAgent](/publication/2026-arxiv-cogeegagent) (autonomous cognitive EEG analysis) and [CogArena](/publication/2026-arxiv-cogarena) (cognitive ability structure in LLMs) |
@@ -205,8 +201,6 @@ Supervisors: Prof. [Kazunori Yamada](https://yamada-lab.gr.jp/ja/index.html), As
 
 ## Grants, Fellowships & Awards
 
-| | |
-|---|---|
 | **2026–2027** | **[KAKENHI Grant-in-Aid for Research Activity Start-up](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-26K25566/)** (PI, 26K25566): 注意テンプレートの表象形式：計算モデル階層・脳波・視線追跡による解明 (¥2,600,000) |
 | **2026** | [Kaggle](https://www.kaggle.com/monkeydz) **Silver Medal**, [ROGII - Wellbore Geology Prediction](https://www.kaggle.com/competitions/rogii-wellbore-geology-prediction) (89/6125), [certificate](/images/kaggle-rogii-silver-2026.png) |
 | **2026** | **Research Grant (PI)**, [Center for So-Go-Chi (Convergence Knowledge) Informatics](https://www.aisogochi.tohoku.ac.jp/), Tohoku University (¥400,000) |

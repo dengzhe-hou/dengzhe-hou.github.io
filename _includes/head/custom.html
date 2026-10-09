@@ -102,7 +102,7 @@
   }
 
   /* ── Page body ──────────────────────────── */
-  body { background: #f8fafc !important; }
+  html, body { background: #f8fafc !important; }
 
   /* ── Sidebar ──────────────────────────── */
   .author__avatar img {
@@ -233,6 +233,9 @@
     font-size: 0.93em !important;
     line-height: 1.62;
   }
+  /* CV lists: each entry is an <li> wrapping its card; the bullet stays inside the card */
+  li.list__item { display: block; }
+  li.list__item > .archive__item > div { display: list-item; margin-bottom: 0.5em; }
 
   /* ── News / info table ────────────────── */
   .page__content table {
@@ -243,7 +246,10 @@
     font-size: 0.875rem;
     line-height: 1.6;
   }
-  .page__content table thead { display: none; }
+  .page__content table thead:not(:has(th:not(:empty))) { display: none; }
+  /* Real header rows (e.g. "Course | Term") keep the table's plain look */
+  .page__content table thead { background: transparent; }
+  .page__content table th { border: none !important; padding: 0.3em 0.65em !important; }
   .page__content table td {
     border: none !important;
     padding: 0.3em 0.65em !important;
