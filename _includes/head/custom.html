@@ -142,6 +142,8 @@
     line-height: 1.2;
     text-transform: lowercase;
   }
+  /* Headings written inside a paper, talk or course page keep their case */
+  .page__content--item h2 { text-transform: none; }
   .page__content h3 { font-size: 1.05rem; font-weight: 600; line-height: 1.35; }
   .page__content p, .page__content li, .archive p, .archive li { font-size: 1rem; line-height: 1.65; }
   .page__content > p, .archive > p { margin: 0 0 16px; }
@@ -363,7 +365,23 @@
 
   /* ── Detail pages ───────────────────────── */
   .page__content p[style*="smaller"] { font-size: 0.875rem !important; color: var(--secondary); }
-  .page__meta, .page__date { font-family: var(--sans); font-size: 0.875rem; color: var(--secondary); }
+  .page__meta { font-family: var(--sans); font-size: 0.875rem; color: var(--secondary); }
+  .page__date, .archive .archive__item p.page__date { font-family: var(--sans); font-size: 0.8rem; font-weight: 600; color: var(--accent); }
+  .page__content .cv-list, .archive .cv-list { margin: 0 0 16px; padding: 0; list-style: none; }
+  .page__taxonomy i, .page__meta-title { display: none; }
+  .page__taxonomy strong { font-weight: 400; }
+  .page__taxonomy .page__taxonomy-item, .page__taxonomy .page__taxonomy-item:visited {
+    margin: 0; padding: 0; border: 0; background: none; font-size: 0.875rem; color: var(--secondary);
+  }
+  .page__share { margin-top: 24px; padding-top: 12px; border-top: 1px solid var(--row-rule); }
+  .page__share-title { margin-bottom: 6px; font-size: 0.875rem; font-weight: 600; text-transform: none; letter-spacing: 0; color: var(--text); }
+  .page__share .btn { margin: 0 4px 4px 0; padding: 6px 10px; border: 1px solid var(--button-edge) !important; }
+  .pagination--pager, .pagination--pager:visited {
+    border: 1px solid var(--button-edge) !important; border-radius: 3px; background: transparent !important;
+    font-family: var(--sans); font-size: 0.875rem; font-weight: 400; color: var(--text) !important;
+  }
+  .pagination--pager:hover { border-color: var(--accent) !important; color: var(--accent) !important; text-decoration: none; }
+  .pagination--pager.disabled { color: var(--button-edge) !important; }
   .btn, .btn:visited {
     padding: 2.4px 8px;
     border: 1px solid var(--button-edge);
@@ -387,7 +405,7 @@
   }
   .page__footer footer { padding-top: 32px; padding-bottom: 32px; text-align: center; }
   .page__footer-copyright { font-family: var(--serif); font-size: 0.875rem; line-height: 1.65; color: var(--footer); }
-  .page__footer a, .page__footer a:visited { color: var(--footer); }
+  .page__footer a, .page__footer a:visited { color: var(--secondary); }
   .page__footer a:hover { color: var(--accent); }
 
   /* ── Narrow screens ─────────────────────── */
@@ -397,6 +415,7 @@
     .profile__icons { justify-content: center; }
     .pub { flex-direction: column; align-items: flex-start; gap: 10px; }
     .pub__thumb img { width: 100%; max-width: 360px; height: auto; aspect-ratio: 16 / 9; }
+    .site-nav { gap: 0 12px; }
     .site-nav a { padding: 6px 0; }
     .talk { gap: 12px; }
     .talk__date { width: 64px; }

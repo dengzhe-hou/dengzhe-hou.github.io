@@ -10,7 +10,10 @@
         {% else %}
           {% assign domain = base_path %}
         {% endif %}
-        <a href="{{ domain }}{{ link.url }}"{% if page.url contains link.url and link.url != '/' %} class="is-active" aria-current="page"{% endif %}>{{ link.title }}</a>
+        {% assign active = false %}
+        {% if page.url contains link.url and link.url != '/' %}{% assign active = true %}{% endif %}
+        {% if page.collection and link.url contains page.collection %}{% assign active = true %}{% endif %}
+        <a href="{{ domain }}{{ link.url }}"{% if active %} class="is-active" aria-current="page"{% endif %}>{{ link.title }}</a>
       {% endfor %}
     </nav>
   </div>

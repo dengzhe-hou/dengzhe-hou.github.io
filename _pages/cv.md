@@ -54,17 +54,17 @@ redirect_from:
 Across these directions, my current work explores aligning brain signals (EEG, fMRI) with representations in large language and vision-language models.
 
 ## Publications
-  <ul>{% for post in site.publications reversed %}
+  <ul class="cv-list">{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
 
 ## Talks & Presentations
-  <ul>{% for post in site.talks reversed %}
+  <ul class="cv-list">{% for post in site.talks reversed %}
     {% include archive-single-talk-cv.html  %}
   {% endfor %}</ul>
 
 ## Teaching
-  <ul>{% for post in site.teaching reversed %}
+  <ul class="cv-list">{% for post in site.teaching reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
 
