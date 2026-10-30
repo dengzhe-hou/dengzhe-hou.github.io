@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: "Dengzhe Hou (侯登哲)"
-author_profile: true
+profile: true
 redirect_from:
   - /about/
   - /about.html
