@@ -1,0 +1,21 @@
+{% include base_path %}
+{% assign author = site.author %}
+<div class="profile">
+  <img class="profile__photo" src="{{ base_path }}/images/{{ author.avatar }}" alt="Portrait of {{ author.name }}" width="200" height="200">
+  <div class="profile__text">
+    <h1 class="profile__name" itemprop="headline">{{ author.name }} <span lang="zh">侯登哲</span></h1>
+    <p class="profile__desc">
+      Assistant Professor<br>
+      <a href="https://www.is.tohoku.ac.jp/en/">Graduate School of Information Sciences</a><br>
+      <a href="https://www.tohoku.ac.jp/en/">Tohoku University</a>, {{ author.location }}
+    </p>
+    <ul class="profile__icons">
+      {% if author.email %}<li><a href="mailto:{{ author.email }}" title="Email"><i class="fas fa-envelope" aria-hidden="true"></i><span class="sr-only">Email</span></a></li>{% endif %}
+      {% if author.googlescholar %}<li><a href="{{ author.googlescholar }}" title="Google Scholar"><i class="ai ai-google-scholar" aria-hidden="true"></i><span class="sr-only">Google Scholar</span></a></li>{% endif %}
+      {% if author.orcid %}<li><a href="{{ author.orcid }}" title="ORCID"><i class="ai ai-orcid" aria-hidden="true"></i><span class="sr-only">ORCID</span></a></li>{% endif %}
+      {% if author.github %}<li><a href="https://github.com/{{ author.github }}" title="GitHub"><i class="fab fa-github" aria-hidden="true"></i><span class="sr-only">GitHub</span></a></li>{% endif %}
+      {% if author.linkedin %}<li><a href="https://www.linkedin.com/in/{{ author.linkedin }}" title="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i><span class="sr-only">LinkedIn</span></a></li>{% endif %}
+      {% if author.researchgate %}<li><a href="{{ author.researchgate }}" title="ResearchGate"><i class="fab fa-researchgate" aria-hidden="true"></i><span class="sr-only">ResearchGate</span></a></li>{% endif %}
+    </ul>
+  </div>
+</div>
