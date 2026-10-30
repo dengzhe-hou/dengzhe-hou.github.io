@@ -80,9 +80,8 @@ Connecting these directions, my current work explores aligning brain signals (EE
 | **Jul 2026** | Two new preprints on arXiv: [CogEEGAgent](/publication/2026-arxiv-cogeegagent) (autonomous cognitive EEG analysis) and [CogArena](/publication/2026-arxiv-cogarena) (cognitive ability structure in LLMs) |
 | **Jul 2026** | Awarded a **research grant** (PI) from the [Center for So-Go-Chi (Convergence Knowledge) Informatics](https://www.aisogochi.tohoku.ac.jp/), Tohoku University |
 | **Jul 2026** | Appointed to the **Editorial Board** of [*Interdisciplinary Information Sciences*](https://www.is.tohoku.ac.jp/en/iis/) (Tohoku University GSIS) |
-| **Jun 2026** | Joined the Tohoku University × **NTT DATA Group** joint research on technology governance ([TechGov](https://techgov.udac.tohoku.ac.jp/ja/index.html#home)) as a research member |
 | **Jun 2026** | PVIR [poster](/publication/2026-cvpr-pvir) presented at **CVPR 2026 Workshop VGBE**, Denver, Colorado |
-| **May 2026** | Joined the [TechGov](https://techgov.udac.tohoku.ac.jp/ja/index.html#home) initiative at UDAC, Tohoku University |
+| **May 2026** | Joined the [TechGov](https://techgov.udac.tohoku.ac.jp/ja/index.html#home) initiative at UDAC, Tohoku University, and from June the Tohoku University × **NTT DATA Group** joint research on technology governance as a research member |
 | **May 2026** | New preprint on arXiv, [Subject-Specific Analysis of Self-Initiated Attention Shifts from EEG](https://arxiv.org/abs/2605.18251). SHAP-based within-subject decoding of self-initiated attention |
 | **May 2026** | New preprint on arXiv, [Same Brain, Different Prediction](https://arxiv.org/abs/2605.07212). Preprocessing pipelines flip up to 42% of EEG decoding predictions, and we introduce a diagnostic and a regularization fix |
 | **May 2026** | Updated preprint. [WMF-AM v2](https://arxiv.org/abs/2603.27343) reframes our LLM probe around working-memory depth and isolates cumulative state tracking as the dominant bottleneck |
@@ -227,19 +226,18 @@ Supervisors: Prof. [Kazunori Yamada](https://yamada-lab.gr.jp/ja/index.html), As
 | **2021–2023** | [Kamei Memorial Foundation](https://kmfo.or.jp/) Scholarship for International Students (公益財団法人亀井記念財団) |
 | **2016** | Tongji University Undergraduate Entrance Scholarship |
 
-## Editorial Board
+## Service
 
 - **Editorial Board Member**, *[Interdisciplinary Information Sciences](https://www.is.tohoku.ac.jp/en/iis/)* (Tohoku University GSIS), 2026–present
 
-## Reviewer
-
-- *npj Science of Learning*
-- *Cognitive Neurodynamics*
-- *Journal of NeuroEngineering and Rehabilitation*
-- *Scientific Reports*
-- *Discover Neuroscience*
-- European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD 2026)
-- International Joint Conference on Neural Networks (IJCNN)
+- **Reviewer**
+  - *npj Science of Learning*
+  - *Cognitive Neurodynamics*
+  - *Journal of NeuroEngineering and Rehabilitation*
+  - *Scientific Reports*
+  - *Discover Neuroscience*
+  - European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD 2026)
+  - International Joint Conference on Neural Networks (IJCNN)
 
 ## Links
 

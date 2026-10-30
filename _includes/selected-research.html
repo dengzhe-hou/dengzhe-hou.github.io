@@ -8,7 +8,7 @@
     <div class="pub__body">
       <p class="pub__title"><a href="{{ base_path }}{{ project.url }}">{{ project.title }}</a></p>
       <div class="pub__excerpt">{{ project.excerpt | markdownify }}</div>
-      <p class="pub__links"><a class="pub-link" href="{{ base_path }}{{ project.url }}">{{ project.btn_label | downcase }}</a> <a class="pub-link" href="{{ base_path }}/images/{{ project.image_path }}">figure</a></p>
+      <p class="pub__links"><a class="pub-link" href="{{ base_path }}{{ project.url }}">{{ project.btn_label | downcase }}</a></p>
     </div>
   </li>
   {% endfor %}
