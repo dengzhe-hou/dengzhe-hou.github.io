@@ -104,6 +104,16 @@ Connecting these directions, my current work explores aligning brain signals (EE
 </details>
 </div>
 
+## Prospective Students
+
+I am looking for master's and PhD students who want to work with me in the [Yamada Laboratory](https://yamada-lab.gr.jp/en/index.html) at the Graduate School of Information Sciences, Tohoku University. Prof. [Kazunori Yamada](https://yamada-lab.gr.jp/en/team.html) is the formal supervisor, and I co-advise students and guide their day-to-day research on projects such as these.
+
+- Making EEG decoding reliable, by measuring how preprocessing and modeling choices change predictions and building methods that hold up across them
+- Studying the neural mechanisms of attention with simultaneous EEG and eye tracking, together with computational models
+- Evaluating and understanding large language models with methods from cognitive science, such as working-memory probes and the structure of cognitive abilities
+
+To join, apply through the GSIS entrance examination as described on the lab's [How to Join](https://yamada-lab.gr.jp/en/join.html) page. If one of these topics interests you, email me your CV and a short paragraph about your research interests, with "Prospective student" in the subject line.
+
 ## Education
 
 <div class="cv-entries" markdown="1">
