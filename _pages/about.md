@@ -229,7 +229,6 @@ Supervisors: Prof. [Kazunori Yamada](https://yamada-lab.gr.jp/ja/index.html), As
 ## Service
 
 - **Editorial Board Member**, *[Interdisciplinary Information Sciences](https://www.is.tohoku.ac.jp/en/iis/)* (Tohoku University GSIS), 2026–present
-
 - **Reviewer**
   - *npj Science of Learning*
   - *Cognitive Neurodynamics*
