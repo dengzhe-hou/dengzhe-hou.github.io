@@ -62,6 +62,7 @@
 
   html { font-size: 16px; background: #ffffff; }
   body {
+    padding-top: 0 !important;
     background: #ffffff;
     color: var(--text);
     font: 400 1rem/1.65 var(--serif);
@@ -171,7 +172,7 @@
     cursor: pointer;
     font-size: 0.875rem;
     color: var(--accent);
-    list-style-position: outside;
+    list-style-position: inside;
   }
   details > summary:hover { text-decoration: underline; }
   details[open] > summary { margin-bottom: 12px; }
@@ -179,6 +180,7 @@
   .news-archive { margin-top: 8px; }
 
   /* ── Dated row lists: news, grants (tables with no header row) ── */
+  .page__content table { font-family: var(--serif); }
   .page__content table:not(:has(thead)) {
     display: table;
     width: 100%;
@@ -224,7 +226,7 @@
   .page__content table:has(thead) td { border: 0; border-bottom: 1px solid var(--row-rule); }
 
   /* ── Publication rows (selected research, publications page) ── */
-  .pub-list { margin: 0; padding: 0; list-style: none; }
+  .page__content .pub-list { margin: 0; padding: 0; list-style: none; }
   .pub-list > li.pub { margin: 0; }
   .pub {
     display: flex;
