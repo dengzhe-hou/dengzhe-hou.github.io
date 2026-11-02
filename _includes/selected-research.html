@@ -14,7 +14,7 @@
   {% endfor %}
 </ul>
 <script>
-  /* On first hover a row fetches its figure strip, which then pans up and down inside the thumbnail.
+  /* On first hover a row fetches its strip of paper pages, which then pans up and down inside the thumbnail.
      Block comment only: the compress layout joins this script onto one line. */
   (function () {
     function load(row) {
@@ -25,7 +25,7 @@
       im.onload = function () {
         var travel = box.clientWidth * im.naturalHeight / im.naturalWidth - box.clientHeight;
         im.style.setProperty('--end', -travel + 'px');
-        im.style.setProperty('--dur', Math.max(4, travel / 30) + 's');
+        im.style.setProperty('--dur', Math.max(4, travel / 70) + 's');
         im.classList.add('ready');
       };
       im.src = box.dataset.strip;
