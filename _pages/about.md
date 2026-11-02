@@ -8,6 +8,7 @@ redirect_from:
 
 selected_research:
   - image_path: research-cogbattery.jpg
+    strip_path: research-cogbattery-strip.webp
     alt: "Overview of CogBattery: 54 language models measured on 13 text-adapted cognitive paradigms, task-score structure and held-out family prediction, and condition-level comparison with human reference data"
     title: "CogBattery: Human-Referenced LLM Evaluation"
     excerpt: "We compare 54 open-weight language models with human data on 13 cognitive paradigms. Models can match the direction of a human effect while making different errors, so matching effect directions does not establish human-like behavior."
@@ -15,6 +16,7 @@ selected_research:
     btn_label: "Read more"
     btn_class: "btn--primary"
   - image_path: research-same-brain.jpg
+    strip_path: research-same-brain-strip.webp
     alt: "Overview of the preprocessing multiverse: one EEG trial expanded into 128 pipeline variants, prediction flips, and the NA-PGI mitigation"
     title: "Same Brain, Different Prediction"
     excerpt: "Changing only the preprocessing pipeline can flip up to 42% of EEG predictions. We measure this instability and introduce a method to reduce it."
@@ -22,6 +24,7 @@ selected_research:
     btn_label: "Read more"
     btn_class: "btn--primary"
   - image_path: research-wmf-am.jpg
+    strip_path: research-wmf-am-strip.webp
     alt: "The WMF-AM probe: human working memory, an LLM tracking a hidden cumulative state without a scratchpad, and per-model results across depth K"
     title: "Probing Working Memory in LLMs"
     excerpt: "WMF-AM tests whether language models can maintain and update intermediate results without a scratchpad. The probe spans 28 models from 12 families."
@@ -29,6 +32,7 @@ selected_research:
     btn_label: "Read more"
     btn_class: "btn--primary"
   - image_path: research-fmt-theta.jpg
+    strip_path: research-fmt-theta-strip.webp
     alt: "Frontal-midline theta power ramping up in the two seconds before a self-initiated attention shift, separated by shift type"
     title: "Frontal-Midline Theta Ramping"
     excerpt: "EEG and eye tracking reveal frontal-midline theta ramping before self-initiated attention shifts, providing a neural marker of voluntary attentional preparation."

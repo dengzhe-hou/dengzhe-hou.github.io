@@ -2,7 +2,7 @@
 <ul class="pub-list pub-list--thumbs">
   {% for project in page.selected_research %}
   <li class="pub">
-    <a class="pub__thumb" href="{{ base_path }}/images/{{ project.image_path }}" aria-label="View full-size figure for {{ project.title | escape }}">
+    <a class="pub__thumb" href="{{ base_path }}/images/{{ project.image_path }}" aria-label="View full-size figure for {{ project.title | escape }}"{% if project.strip_path %} data-strip="{{ site.baseurl }}/images/{{ project.strip_path }}"{% endif %}>
       <img src="{{ base_path }}/images/{{ project.image_path }}" alt="{{ project.alt | escape }}" width="880" height="495" loading="lazy">
     </a>
     <div class="pub__body">
@@ -13,3 +13,25 @@
   </li>
   {% endfor %}
 </ul>
+<script>
+  // On first hover a row fetches its figure strip, which then pans up and down inside the thumbnail
+  (function () {
+    function load(row) {
+      var box = row && row.querySelector('.pub__thumb[data-strip]');
+      if (!box || box.querySelector('.pub__strip')) return;
+      var im = new Image();
+      im.className = 'pub__strip'; im.alt = ''; im.decoding = 'async';
+      im.onload = function () {
+        var travel = box.clientWidth * im.naturalHeight / im.naturalWidth - box.clientHeight;
+        im.style.setProperty('--end', -travel + 'px');
+        im.style.setProperty('--dur', Math.max(4, travel / 30) + 's');
+        im.classList.add('ready');
+      };
+      im.src = box.dataset.strip;
+      box.appendChild(im);
+    }
+    var list = document.querySelector('.pub-list--thumbs');
+    list.addEventListener('pointerover', function (ev) { if (ev.pointerType === 'mouse') load(ev.target.closest('.pub')); });
+    list.addEventListener('focusin', function (ev) { load(ev.target.closest('.pub')); });
+  })();
+</script>
