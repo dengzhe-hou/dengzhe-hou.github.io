@@ -14,7 +14,8 @@
   {% endfor %}
 </ul>
 <script>
-  // On first hover a row fetches its figure strip, which then pans up and down inside the thumbnail
+  /* On first hover a row fetches its figure strip, which then pans up and down inside the thumbnail.
+     Block comment only: the compress layout joins this script onto one line. */
   (function () {
     function load(row) {
       var box = row && row.querySelector('.pub__thumb[data-strip]');
