@@ -7,6 +7,13 @@ redirect_from:
   - /about.html
 
 selected_research:
+  - image_path: research-cogbattery.jpg
+    alt: "Overview of CogBattery: 54 language models measured on 13 text-adapted cognitive paradigms, task-score structure and held-out family prediction, and condition-level comparison with human reference data"
+    title: "CogBattery: Human-Referenced LLM Evaluation"
+    excerpt: "We compare 54 open-weight language models with human data on 13 cognitive paradigms. Models can match the direction of a human effect while making different errors, so matching effect directions does not establish human-like behavior."
+    url: "/publication/2026-arxiv-cogbattery"
+    btn_label: "Read more"
+    btn_class: "btn--primary"
   - image_path: research-same-brain.jpg
     alt: "Overview of the preprocessing multiverse: one EEG trial expanded into 128 pipeline variants, prediction flips, and the NA-PGI mitigation"
     title: "Same Brain, Different Prediction"
@@ -77,7 +84,7 @@ Connecting these directions, my current work explores aligning brain signals (EE
 
 | **Aug 2026** | [Kaggle](https://www.kaggle.com/monkeydz) **Silver Medal** in [ROGII - Wellbore Geology Prediction](https://www.kaggle.com/competitions/rogii-wellbore-geology-prediction) (89/6125) |
 | **Jul 2026** | [KANMixer](/publication/2026-scirep-kanmixer) published in ***Scientific Reports***: a compact KAN-centered mixer for long-term forecasting, and an honest account of when KANs actually help |
-| **Jul 2026** | Two new preprints on arXiv: [CogEEGAgent](/publication/2026-arxiv-cogeegagent) (autonomous cognitive EEG analysis) and [CogArena](/publication/2026-arxiv-cogarena) (cognitive ability structure in LLMs) |
+| **Jul 2026** | Two new preprints on arXiv: [CogEEGAgent](/publication/2026-arxiv-cogeegagent) (autonomous cognitive EEG analysis) and [CogBattery](/publication/2026-arxiv-cogbattery) (first released as CogArena; human-referenced evaluation of cognitive tasks in LLMs) |
 | **Jul 2026** | Awarded a **research grant** (PI) from the [Center for So-Go-Chi (Convergence Knowledge) Informatics](https://www.aisogochi.tohoku.ac.jp/), Tohoku University |
 | **Jul 2026** | Appointed to the **Editorial Board** of [*Interdisciplinary Information Sciences*](https://www.is.tohoku.ac.jp/en/iis/) (Tohoku University GSIS) |
 | **Jun 2026** | PVIR [poster](/publication/2026-cvpr-pvir) presented at **CVPR 2026 Workshop VGBE**, Denver, Colorado |
