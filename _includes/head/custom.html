@@ -248,7 +248,7 @@
   }
   /* Figure strip that pans inside the thumbnail while the row is hovered */
   .page__content .pub__thumb { position: relative; display: block; overflow: hidden; border-radius: 4px; }
-  .pub__strip { position: absolute; top: 0; left: 0; width: 100%; height: auto; opacity: 0; background: #ffffff; transition: opacity .25s; pointer-events: none; }
+  .pub__thumb img.pub__strip { position: absolute; top: 0; left: 0; width: 100%; height: auto; object-fit: initial; border-radius: 0; opacity: 0; background: #ffffff; transition: opacity .25s; pointer-events: none; }
   @media (hover: hover) and (prefers-reduced-motion: no-preference) {
     .pub:hover .pub__strip.ready, .pub:focus-within .pub__strip.ready {
       opacity: 1;
