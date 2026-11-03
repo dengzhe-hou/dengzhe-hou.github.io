@@ -6,7 +6,7 @@ en:
   school_url: https://www.is.tohoku.ac.jp/en/
   university: Tohoku University
   university_url: https://www.tohoku.ac.jp/en/
-  location: Sendai, Japan
+  location: ", Sendai, Japan"
   portrait: Portrait of Dengzhe Hou
   figure: View full-size figure for
   og_locale: en_US
@@ -17,7 +17,7 @@ zh-CN:
   school_url: https://www.is.tohoku.ac.jp/en/
   university: 东北大学
   university_url: https://www.tohoku.ac.jp/en/
-  location: 日本仙台
+  location: （日本仙台）
   portrait: 侯登哲的照片
   figure: 查看大图
   og_locale: zh_CN
@@ -28,7 +28,7 @@ ja:
   school_url: https://www.is.tohoku.ac.jp/jp/
   university: 東北大学
   university_url: https://www.tohoku.ac.jp/japanese/
-  location: 仙台
+  location: （仙台）
   portrait: 侯 登哲の写真
   figure: 図を拡大表示
   og_locale: ja_JP
