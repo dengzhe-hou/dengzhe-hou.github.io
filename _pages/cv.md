@@ -39,19 +39,26 @@ redirect_from:
 
 ## Research Interests
 
-### AI4Brain
+### AI4Cog (AI for cognitive science)
+
+* Computational models of self-initiated attention and decision-making (accumulation-to-bound)
+* Comparing language models with human behavior
+
+### Cog4AI (cognitive science for AI)
+
+* Cognitive science as a framework for understanding, evaluating, and improving AI systems
+* Cognitive probes and evaluation protocols for LLMs and decision models (working memory, cumulative state tracking, human-referenced cognitive task batteries, System One decision models)
+
+### AI4Brain (AI for neuroscience)
 
 * Reliable decoding and automated analysis of EEG (preprocessing-induced instability, per-trial uncertainty, feature attribution)
 * Visual attention and self-initiated attentional control
 * Eye movement–EEG integration (gaze-contingent paradigms, saccades and microsaccades)
-* Decision-related neural dynamics and computational modeling (accumulation-to-bound, time–frequency analysis)
+* Decision-related neural dynamics (time–frequency analysis)
 
-### Brain4AI
+### Brain4AI (neuroscience for AI)
 
-* Cognitive neuroscience as a framework for understanding, evaluating, and improving AI systems
-* Cognitive probes and evaluation protocols for LLMs (working memory, cumulative state tracking, cognitive ability structure)
-
-Across these directions, my current work explores aligning brain signals (EEG, fMRI) with representations in large language and vision-language models.
+* Aligning brain signals (EEG, fMRI) with representations in large language and vision-language models
 
 ## Publications
   <ul class="cv-list">{% for post in site.publications reversed %}
