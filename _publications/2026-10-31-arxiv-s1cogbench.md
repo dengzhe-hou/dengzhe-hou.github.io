@@ -13,3 +13,5 @@ citation: 'Hou, D., &amp; Yamada, K. D. (2026). S1CogBench: What System One Deci
 Software increasingly asks language models for decisions, in routing, guardrails and automated gates. System One decision models, also called typed decision models, such as Jev and Laya, return one fast decision over the legal options and leave no text to inspect. A fast, well-formed decision does not show that the model used the evidence. Cognitive experiments can test this, because they vary task demands and measure how behavior changes.
 
 S1CogBench evaluates five open models and Jev on 24 cognitive tasks, keeping conditions and scoring apart from disclosed adaptations. Decision models vary widely in reliability, acting well does not imply predicting humans, aggregate scores hide how decisions respond to conditions, and speed comes mainly from answering without generation. It is, to our knowledge, the first benchmark of System One decision models on established cognitive experiments.
+
+**Code:** [github.com/dengzhe-hou/S1CogBench](https://github.com/dengzhe-hou/S1CogBench)
