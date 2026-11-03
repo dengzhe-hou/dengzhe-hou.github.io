@@ -33,14 +33,14 @@ ja:
   figure: 図を拡大表示
   og_locale: ja_JP
 
-# The switcher on the homepage, in this order
+# The header button cycles through the homepages in this order and wraps around
 languages:
   - lang: en
     label: English
     url: /
-  - lang: zh-CN
-    label: 中文
-    url: /zh/
   - lang: ja
     label: 日本語
     url: /ja/
+  - lang: zh-CN
+    label: 中文
+    url: /zh/

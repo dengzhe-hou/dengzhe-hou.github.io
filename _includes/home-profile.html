@@ -19,10 +19,5 @@
       {% if author.twitter %}<li><a href="https://x.com/{{ author.twitter }}" title="X"><i class="fab fa-x-twitter" aria-hidden="true"></i><span class="sr-only">X</span></a></li>{% endif %}
       {% if author.researchgate %}<li><a href="{{ author.researchgate }}" title="ResearchGate"><i class="fab fa-researchgate" aria-hidden="true"></i><span class="sr-only">ResearchGate</span></a></li>{% endif %}
     </ul>
-    <nav class="lang-switch" aria-label="Language">
-      {% for l in site.data.i18n.languages %}{% unless forloop.first %}<span aria-hidden="true">·</span>{% endunless %}
-      {% if l.lang == page.lang or l.lang == 'en' and page.lang == nil %}<span class="is-active" lang="{{ l.lang }}" aria-current="page">{{ l.label }}</span>{% else %}<a href="{{ base_path }}{{ l.url }}" lang="{{ l.lang }}" hreflang="{{ l.lang }}">{{ l.label }}</a>{% endif %}
-      {% endfor %}
-    </nav>
   </div>
 </div>

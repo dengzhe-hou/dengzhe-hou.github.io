@@ -16,5 +16,11 @@
         <a href="{{ domain }}{{ link.url }}"{% if active %} class="is-active" aria-current="page"{% endif %}>{{ link.title }}</a>
       {% endfor %}
     </nav>
+    {% if page.profile %}
+      {% assign langs = site.data.i18n.languages %}
+      {% assign next = langs[1] %}
+      {% for l in langs %}{% if l.lang == page.lang %}{% assign next = langs[forloop.index] | default: langs[0] %}{% endif %}{% endfor %}
+      <a class="lang-btn" href="{{ base_path }}{{ next.url }}" lang="{{ next.lang }}" hreflang="{{ next.lang }}" title="{{ next.label }}"><i class="fas fa-language" aria-hidden="true"></i> {{ next.label }}</a>
+    {% endif %}
   </div>
 </header>
