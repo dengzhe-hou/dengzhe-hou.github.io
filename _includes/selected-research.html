@@ -1,8 +1,9 @@
 {% include base_path %}
+{% assign t = site.data.i18n[page.lang] | default: site.data.i18n.en %}
 <ul class="pub-list pub-list--thumbs">
   {% for project in page.selected_research %}
   <li class="pub">
-    <a class="pub__thumb" href="{{ base_path }}/images/{{ project.image_path }}" aria-label="View full-size figure for {{ project.title | escape }}"{% if project.strip_path %} data-strip="{{ site.baseurl }}/images/{{ project.strip_path }}"{% endif %}>
+    <a class="pub__thumb" href="{{ base_path }}/images/{{ project.image_path }}" aria-label="{{ t.figure }} {{ project.title | escape }}"{% if project.strip_path %} data-strip="{{ site.baseurl }}/images/{{ project.strip_path }}"{% endif %}>
       <img src="{{ base_path }}/images/{{ project.image_path }}" alt="{{ project.alt | escape }}" width="880" height="495" loading="lazy">
     </a>
     <div class="pub__body">

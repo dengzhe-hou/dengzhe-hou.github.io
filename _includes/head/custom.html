@@ -25,6 +25,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet"/>
+{% if page.lang == "zh-CN" %}<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet"/>{% endif %}
 
 <!-- Site style: a quiet single-column academic page after the David Lindell
      reference in Look et al. (looketal.com): white page, 900px column, serif
@@ -61,6 +62,8 @@
   }
 
   html { font-size: 16px; background: #ffffff; }
+  /* Simplified Chinese glyphs on the Chinese homepage */
+  html:lang(zh) { --serif: 'Source Serif 4', 'Noto Serif SC', 'Songti SC', 'SimSun', Georgia, serif; --sans: 'Source Sans 3', 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif; }
   body {
     padding-top: 0 !important;
     background: #ffffff;
@@ -167,6 +170,8 @@
   .profile__icons a, .profile__icons a:visited { color: var(--icon); }
   .profile__icons a:hover { color: var(--accent); text-decoration: none; }
   .profile-intro > p { margin: 0 0 16px; }
+  .lang-switch { display: flex; flex-wrap: wrap; gap: 4px 8px; margin-top: 14px; font-family: var(--sans); font-size: 0.875rem; color: var(--secondary); }
+  .lang-switch .is-active { color: var(--text); font-weight: 600; }
 
   /* ── Disclosure toggles ("Earlier news", background) ── */
   details > summary {
@@ -422,7 +427,7 @@
   @media (max-width: 576px) {
     .profile { flex-direction: column; align-items: center; text-align: center; }
     .profile__photo { width: 160px; height: 160px; }
-    .profile__icons { justify-content: center; }
+    .profile__icons, .lang-switch { justify-content: center; }
     .pub { flex-direction: column; align-items: flex-start; gap: 10px; }
     .pub__thumb img { width: 100%; max-width: 360px; height: auto; aspect-ratio: 16 / 9; }
     .site-nav { gap: 0 12px; }
