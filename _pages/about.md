@@ -7,6 +7,14 @@ redirect_from:
   - /about.html
 
 selected_research:
+  - image_path: research-s1cogbench.jpg
+    strip_path: research-s1cogbench-strip.webp
+    alt: "S1CogBench overview: six example tasks among the 24 cognitive tasks, and how open and API decision models are evaluated on predicting human choices, executing their own actions and reporting probabilities"
+    title: "S1CogBench: System One Decision Models on Cognitive Experiments"
+    excerpt: "We test System One decision models, which return one fast decision and no text, on 24 cognitive tasks. A fast, well-formed decision does not show that the model used the evidence, and aggregate scores hide how decisions respond to task conditions."
+    url: "/publication/2026-arxiv-s1cogbench"
+    btn_label: "Read more"
+    btn_class: "btn--primary"
   - image_path: research-cogbattery.jpg
     strip_path: research-cogbattery-strip.webp
     alt: "Overview of CogBattery: 54 language models measured on 13 text-adapted cognitive paradigms, task-score structure and held-out family prediction, and condition-level comparison with human reference data"
@@ -15,19 +23,20 @@ selected_research:
     url: "/publication/2026-arxiv-cogbattery"
     btn_label: "Read more"
     btn_class: "btn--primary"
+  - image_path: research-wmip.jpg
+    strip_path: research-wmip-strip.webp
+    alt: "WMIP: a human working-memory updating task mapped onto an LLM probe, and accuracy across 18 models falling as updates accumulate from 3 to 100"
+    title: "WMIP: Probing Cumulative State Tracking in LLMs"
+    excerpt: "A programmable probe of how language models track updates within one prompt. Across 18 LLMs, accuracy is 84.9% on single-step arithmetic but 31.7% after three to seven updates, and output instructions substantially change measured accuracy."
+    url: "/publication/2026-arxiv-wmip"
+    btn_label: "Read more"
+    btn_class: "btn--primary"
   # Set aside for now; uncomment to show them again
   # - image_path: research-same-brain.jpg
   #   alt: "Overview of the preprocessing multiverse: one EEG trial expanded into 128 pipeline variants, prediction flips, and the NA-PGI mitigation"
   #   title: "Same Brain, Different Prediction"
   #   excerpt: "Changing only the preprocessing pipeline can flip up to 42% of EEG predictions. We measure this instability and introduce a method to reduce it."
   #   url: "/publication/2026-arxiv-same-brain"
-  #   btn_label: "Read more"
-  #   btn_class: "btn--primary"
-  # - image_path: research-wmf-am.jpg
-  #   alt: "The WMF-AM probe: human working memory, an LLM tracking a hidden cumulative state without a scratchpad, and per-model results across depth K"
-  #   title: "Probing Working Memory in LLMs"
-  #   excerpt: "WMF-AM tests whether language models can maintain and update intermediate results without a scratchpad. The probe spans 28 models from 12 families."
-  #   url: "/publication/2026-arxiv-wmf-am"
   #   btn_label: "Read more"
   #   btn_class: "btn--primary"
   # - image_path: research-fmt-theta.jpg
@@ -72,6 +81,7 @@ Connecting these directions, my current work explores aligning brain signals (EE
 
 <div class="news-list" markdown="1">
 
+| **Oct 2026** | New preprint on arXiv, [S1CogBench](/publication/2026-arxiv-s1cogbench): System One decision models, which return one fast decision without text, tested on 24 cognitive experiments |
 | **Sep 2026** | **Invited talk** at [RSJ2026 Open Forum OF7](https://ac.rsj-web.org/2026/openforum/#of7), "テクノロジーの質的進化と組織統制", 44th Annual Conference of the Robotics Society of Japan, Kanazawa. Speaking on neurotechnology with Michael Zielewski |
 | **Aug 2026** | Co-authored presentation accepted at the [Japan Institute of Marketing Science (JIMS) Research Conference](http://www.jims.gr.jp/%e7%a0%94%e7%a9%b6%e5%a4%a7%e4%bc%9a/), Waseda University, 14–15 Nov 2026: “生成AI活用事例における社会倫理的リスクと炎上要因の定量分析” |
 | **Aug 2026** | Paper accepted at **IEEE SMC 2026** (Bellevue, USA), [Subject-Specific Analysis of Self-Initiated Attention Shifts from EEG](/publication/2026-arxiv-subject-specific) |
