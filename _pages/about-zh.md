@@ -35,19 +35,12 @@ selected_research:
 
 我的研究涵盖四个相互关联的方向，分别是 **AI4Cog**（面向认知科学的 AI）、**Cog4AI**（面向 AI 的认知科学）、**AI4Brain**（面向神经科学的 AI）和 **Brain4AI**（面向 AI 的神经科学）。
 
-<details id="research-interests" class="profile-background" markdown="1">
-<summary>背景与研究兴趣</summary>
+<details id="background" class="profile-background" markdown="1">
+<summary>背景</summary>
 
 我在[信息科学研究科（GSIS）](https://www.is.tohoku.ac.jp/en/)任职，隶属于[山田研究室](https://yamada-lab.gr.jp/ja/index.html)和[国际交流推进室（ILO）](https://www.is.tohoku.ac.jp/introduction/ilo/)，并兼任[未踏规模数据分析中心（UDAC）](https://udac.tohoku.ac.jp/)社会整合研究部门的职务。
 
 我在[塩入諭教授（Prof. Satoshi Shioiri）](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=zh-CN)的[视觉认知与系统实验室](https://sites.google.com/view/shioiri-satoshi/)获得博士学位，读博期间曾在**哈佛医学院／麻省总医院**的 Sydney Cash Lab 担任访问博士生。
-
-我的工作分为四个方向。
-
-- **AI4Cog**，构建自发注意和决策相关动态的计算模型，并把语言模型与人类行为进行比较。
-- **Cog4AI**，借助认知科学来理解、评估和改进 AI 系统，包括工作记忆和累积状态追踪的探针、以人类数据为参照的认知任务组合，以及面向 System One 决策模型的认知实验。
-- **AI4Brain**，让脑电（EEG）解码和自动化分析更加可靠，研究预处理引起的预测不稳定、单试次的不确定性与特征归因，并通过脑电和眼动追踪理解自发注意。
-- **Brain4AI**，把脑信号（EEG、fMRI）与大语言模型和视觉语言模型的表征对齐。
 
 [完整简历（英文）](/cv/)
 

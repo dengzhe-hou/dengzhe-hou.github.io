@@ -35,19 +35,12 @@ selected_research:
 
 研究は互いにつながった四つの方向にまたがっています。**AI4Cog**（認知科学のための AI）、**Cog4AI**（AI のための認知科学）、**AI4Brain**（神経科学のための AI）、**Brain4AI**（AI のための神経科学）です。
 
-<details id="research-interests" class="profile-background" markdown="1">
-<summary>経歴と研究テーマ</summary>
+<details id="background" class="profile-background" markdown="1">
+<summary>経歴</summary>
 
 [大学院情報科学研究科](https://www.is.tohoku.ac.jp/jp/)では[山田研究室](https://yamada-lab.gr.jp/ja/index.html)と[情報科学国際交流推進室（ILO）](https://www.is.tohoku.ac.jp/introduction/ilo/)に所属し、[未踏スケールデータアナリティクスセンター（UDAC）](https://udac.tohoku.ac.jp/)ソーシャルインテグレーション研究部門を兼務しています。
 
 [塩入 諭 教授](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=ja)の[研究室](https://sites.google.com/view/shioiri-satoshi/)（Visual Cognition and Systems Laboratory）で博士号を取得しました。在学中、**ハーバード大学医学大学院／マサチューセッツ総合病院**の Sydney Cash Lab に Visiting PhD Scholar として滞在しました。
-
-研究は次の四つの方向で進めています。
-
-- **AI4Cog** では、自発的注意と意思決定に関わるダイナミクスの計算モデルをつくり、言語モデルと人間の行動を比べます。
-- **Cog4AI** では、認知科学を使って AI システムを理解し、評価し、改善します。ワーキングメモリと累積的な状態追跡のプローブ、人間のデータを参照する認知課題バッテリー、System One 型意思決定モデルのための認知実験を扱っています。
-- **AI4Brain** では、脳波（EEG）の解読と解析の自動化を信頼できるものにします。前処理が引き起こす予測の不安定性、試行ごとの不確実性と特徴寄与、脳波と視線計測による自発的注意の理解に取り組んでいます。
-- **Brain4AI** では、脳信号（EEG、fMRI）と、大規模言語モデルや視覚言語モデルの表現とを対応づけます。
 
 [CV（英語）](/cv/)
 

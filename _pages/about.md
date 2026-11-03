@@ -54,19 +54,12 @@ I am an **Assistant Professor** at [Tohoku University](https://www.tohoku.ac.jp/
 
 My research spans four connected directions, **AI4Cog** (AI for cognitive science), **Cog4AI** (cognitive science for AI), **AI4Brain** (AI for neuroscience) and **Brain4AI** (neuroscience for AI).
 
-<details id="research-interests" class="profile-background" markdown="1">
-<summary>Background & research interests</summary>
+<details id="background" class="profile-background" markdown="1">
+<summary>Background</summary>
 
 At the [Graduate School of Information Sciences (GSIS)](https://www.is.tohoku.ac.jp/en/), I am affiliated with the [Yamada Laboratory](https://yamada-lab.gr.jp/ja/index.html) and the [International Liaison Office (ILO)](https://www.is.tohoku.ac.jp/introduction/ilo/), with a concurrent appointment in the Social Integration Research Division of the [Unprecedented-scale Data Analytics Center (UDAC)](https://udac.tohoku.ac.jp/).
 
 I received my Ph.D. under [Prof. Satoshi Shioiri](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=en) at the [Visual Cognition and Systems Laboratory](https://sites.google.com/view/shioiri-satoshi/), and was a Visiting PhD Scholar in the Sydney Cash Lab at **Harvard Medical School / Massachusetts General Hospital**.
-
-My work covers four connected directions.
-
-- **AI4Cog**, computational models of self-initiated attention and decision-related dynamics, and comparing language models with human behavior.
-- **Cog4AI**, drawing on cognitive science to understand, evaluate and improve AI systems, with probes of working memory and cumulative state tracking, human-referenced cognitive task batteries, and cognitive experiments for System One decision models.
-- **AI4Brain**, reliable decoding and automated analysis of EEG, including preprocessing-induced instability, per-trial uncertainty and feature attribution, and understanding self-initiated attention through EEG and eye tracking.
-- **Brain4AI**, aligning brain signals (EEG, fMRI) with representations in large language and vision-language models.
 
 [Full CV](/cv/)
 
