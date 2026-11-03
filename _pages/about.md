@@ -52,7 +52,7 @@ selected_research:
 
 I am an **Assistant Professor** at [Tohoku University](https://www.tohoku.ac.jp/en/), Japan.
 
-My research spans **AI4Brain** (AI for understanding the brain) and **Brain4AI** (brain and cognitive science for understanding and improving AI).
+My research spans four connected directions, **AI4Cog** (AI for cognitive science), **Cog4AI** (cognitive science for AI), **AI4Brain** (AI for neuroscience) and **Brain4AI** (neuroscience for AI).
 
 <details id="research-interests" class="profile-background" markdown="1">
 <summary>Background & research interests</summary>
@@ -61,12 +61,12 @@ At the [Graduate School of Information Sciences (GSIS)](https://www.is.tohoku.ac
 
 I received my Ph.D. under [Prof. Satoshi Shioiri](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=en) at the [Visual Cognition and Systems Laboratory](https://sites.google.com/view/shioiri-satoshi/), and was a Visiting PhD Scholar in the Sydney Cash Lab at **Harvard Medical School / Massachusetts General Hospital**.
 
-My work focuses on two connected directions:
+My work covers four connected directions.
 
-- **AI4Brain:** Reliable decoding and automated analysis of EEG, including preprocessing-induced instability, per-trial uncertainty, and feature attribution; understanding self-initiated attention through EEG, eye tracking, and computational modeling.
-- **Brain4AI:** Drawing on cognitive neuroscience to understand, evaluate, and improve AI systems, with a focus on working memory, cumulative state tracking, and the structure of cognitive abilities in large language models.
-
-Connecting these directions, my current work explores aligning brain signals (EEG, fMRI) with representations in large language and vision-language models.
+- **AI4Cog**, computational models of self-initiated attention and decision-related dynamics, and comparing language models with human behavior.
+- **Cog4AI**, drawing on cognitive science to understand, evaluate and improve AI systems, with probes of working memory and cumulative state tracking, human-referenced cognitive task batteries, and cognitive experiments for System One decision models.
+- **AI4Brain**, reliable decoding and automated analysis of EEG, including preprocessing-induced instability, per-trial uncertainty and feature attribution, and understanding self-initiated attention through EEG and eye tracking.
+- **Brain4AI**, aligning brain signals (EEG, fMRI) with representations in large language and vision-language models.
 
 [Full CV](/cv/)
 
