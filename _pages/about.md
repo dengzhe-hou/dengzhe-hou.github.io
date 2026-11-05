@@ -54,7 +54,7 @@ I am an **Assistant Professor** at [Tohoku University](https://www.tohoku.ac.jp/
 
 My research spans four connected directions, **AI4Cog** (AI for cognitive science), **Cog4AI** (cognitive science for AI), **AI4Brain** (AI for neuroscience) and **Brain4AI** (neuroscience for AI).
 
-**I am actively looking for collaborators.** If our interests overlap, see [how we could work together](#collaboration).
+**I am looking for collaborators in all four directions.** [Email me](mailto:hou.dengzhe.t8@dc.tohoku.ac.jp?subject=Collaboration)
 
 <details id="background" class="profile-background" markdown="1">
 <summary>Background</summary>
@@ -71,17 +71,6 @@ I received my Ph.D. under [Prof. Satoshi Shioiri](https://scholar.google.com/cit
 ## Selected Research
 
 {% include selected-research.html %}
-
-## Collaboration {#collaboration}
-
-I am actively looking for collaborators and would be glad to hear from you. I especially welcome
-
-- labs with behavioral, EEG, eye-tracking or fMRI data who want to compare people with language models or build computational models of their data
-- AI and machine learning groups who want to test language models, agents or decision models with methods from cognitive science
-- groups who need EEG analysis that is reliable, reproducible or automated
-- joint grant applications (KAKENHI, JST and international programs), research visits and student exchange in either direction, and joint research with companies
-
-I can contribute task design, modeling, analysis code, and my benchmarks and EEG analysis tools. [Email me](mailto:hou.dengzhe.t8@dc.tohoku.ac.jp?subject=Collaboration) with "Collaboration" in the subject line. A few lines about your project are enough.
 
 ## News
 

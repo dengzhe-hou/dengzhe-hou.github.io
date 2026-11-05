@@ -35,7 +35,7 @@ selected_research:
 
 我的研究涵盖四个相互关联的方向，分别是 **AI4Cog**（面向认知科学的 AI）、**Cog4AI**（面向 AI 的认知科学）、**AI4Brain**（面向神经科学的 AI）和 **Brain4AI**（面向 AI 的神经科学）。
 
-**我正在积极寻找合作者。** 如果我们的兴趣有交集，欢迎看看[合作方式](#collaboration)。
+**这四个方向都欢迎合作。** [发邮件给我](mailto:hou.dengzhe.t8@dc.tohoku.ac.jp?subject=%E5%90%88%E4%BD%9C)
 
 <details id="background" class="profile-background" markdown="1">
 <summary>背景</summary>
@@ -52,17 +52,6 @@ selected_research:
 ## 代表性研究
 
 {% include selected-research.html %}
-
-## 合作 {#collaboration}
-
-我正在积极寻找合作者，欢迎随时联系。特别欢迎下面几类合作。
-
-- 拥有行为、脑电、眼动或 fMRI 数据，想把人与语言模型进行比较或为数据建立计算模型的实验室
-- 希望用认知科学的方法测试语言模型、智能体或决策模型的 AI 与机器学习团队
-- 需要可靠、可复现或自动化脑电分析的团队
-- 联合申请科研经费（KAKENHI、JST 及国际项目）、双向的研究访问和学生交流，以及与企业的合作研究
-
-我可以提供任务设计、建模和分析代码，以及我开发的基准与脑电分析工具。请[发邮件](mailto:hou.dengzhe.t8@dc.tohoku.ac.jp?subject=%E5%90%88%E4%BD%9C)给我，标题写“合作”，附上几行项目简介就够了。
 
 ## 新闻
 
