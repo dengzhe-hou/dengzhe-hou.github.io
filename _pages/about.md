@@ -250,6 +250,7 @@ Supervisors: Prof. [Kazunori Yamada](https://yamada-lab.gr.jp/ja/index.html), As
   - *Journal of NeuroEngineering and Rehabilitation*
   - *Scientific Reports*
   - *Discover Neuroscience*
+  - *Frontiers in Artificial Intelligence*
   - European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD 2026)
   - International Joint Conference on Neural Networks (IJCNN)
 
