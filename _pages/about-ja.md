@@ -1,7 +1,7 @@
 ---
 permalink: /ja/
 title: "侯 登哲 (Dengzhe Hou)"
-description: "東北大学大学院情報科学研究科 助教。AI4Cog、Cog4AI、AI4Brain、Brain4AI の四つの方向で研究しています。"
+description: "東北大学大学院情報科学研究科 特任助教。研究テーマは AI4Cog、Cog4AI、AI4Brain、Brain4AI の四つです。"
 lang: ja
 profile: true
 
@@ -10,7 +10,7 @@ selected_research:
     strip_path: research-s1cogbench-strip.webp
     alt: "S1CogBench の概要。24 の認知課題のうち 6 つの例と、オープンモデルと API の意思決定モデルを、人間の選択の予測、自身の行動の実行、確率の報告で評価する流れ"
     title: "S1CogBench: System One Decision Models on Cognitive Experiments"
-    excerpt: "テキストを出さず一つの速い判断だけを返す System One 型意思決定モデルを、24 の認知課題で検証しました。速く形式の整った判断が出ても、モデルが証拠を使ったとは限りません。また、集計スコアでは課題条件に応じた判断の変化が見えなくなります。"
+    excerpt: "推論過程を出力せず、即座に一つの判断を返す System One 型意思決定モデルを、24 の認知課題で検証しました。速く形式の整った判断が出ても、モデルが証拠を使ったとは限りません。また、集計スコアでは課題条件に応じた判断の変化が見えなくなります。"
     url: "/publication/2026-arxiv-s1cogbench"
     btn_label: "詳しく見る"
   - image_path: research-cogbattery.jpg
@@ -31,11 +31,11 @@ selected_research:
 
 <div class="profile-intro" markdown="1">
 
-[東北大学](https://www.tohoku.ac.jp/japanese/)の**助教**です。
+[東北大学](https://www.tohoku.ac.jp/japanese/)大学院情報科学研究科 **特任助教**
 
-研究は互いにつながった四つの方向にまたがっています。**AI4Cog**（認知科学のための AI）、**Cog4AI**（AI のための認知科学）、**AI4Brain**（神経科学のための AI）、**Brain4AI**（AI のための神経科学）です。
+研究テーマは互いに関連する次の四つです。**AI4Cog**（認知科学のための AI）、**Cog4AI**（AI のための認知科学）、**AI4Brain**（神経科学のための AI）、**Brain4AI**（AI のための神経科学）です。
 
-**4つの方向いずれでも共同研究者を募集しています。** [メールはこちら](mailto:hou.dengzhe.t8@dc.tohoku.ac.jp?subject=%E5%85%B1%E5%90%8C%E7%A0%94%E7%A9%B6)
+**いずれのテーマでも共同研究を歓迎します。** [メールはこちら](mailto:hou.dengzhe.t8@dc.tohoku.ac.jp?subject=%E5%85%B1%E5%90%8C%E7%A0%94%E7%A9%B6)
 
 <details id="background" class="profile-background" markdown="1">
 <summary>経歴</summary>
@@ -57,13 +57,13 @@ selected_research:
 
 <div class="news-list" markdown="1">
 
-| **2026年10月** | arXiv に新しいプレプリント [S1CogBench](/publication/2026-arxiv-s1cogbench) を公開。テキストを出さず一つの速い判断だけを返す System One 型意思決定モデルを、24 の認知実験で検証 |
+| **2026年10月** | arXiv に新しいプレプリント [S1CogBench](/publication/2026-arxiv-s1cogbench) を公開。推論過程を出力せず、即座に一つの判断を返す System One 型意思決定モデルを、24 の認知実験で検証 |
 | **2026年9月** | [RSJ2026 オープンフォーラム OF7](https://ac.rsj-web.org/2026/openforum/#of7)「テクノロジーの質的進化と組織統制」（第44回日本ロボット学会学術講演会、金沢）で**招待講演**。Michael Zielewski とともにニューロテクノロジーについて話題提供 |
 | **2026年8月** | 共著の発表が[日本マーケティング・サイエンス学会（JIMS）研究大会](http://www.jims.gr.jp/%e7%a0%94%e7%a9%b6%e5%a4%a7%e4%bc%9a/)（早稲田大学、2026年11月14–15日）に採択。「生成AI活用事例における社会倫理的リスクと炎上要因の定量分析」 |
 | **2026年8月** | 論文 [Subject-Specific Analysis of Self-Initiated Attention Shifts from EEG](/publication/2026-arxiv-subject-specific) が **IEEE SMC 2026**（米国ベルビュー）に採択 |
 | **2026年8月** | [TimePre](/publication/2026-tmlr-timepre) が **Transactions on Machine Learning Research (TMLR)** に採択 |
 | **2026年8月** | 東北大学[情報科学研究科](https://www.is.tohoku.ac.jp/jp/)の**研究助成**（代表、Interdisciplinary Research Project Development Support）に採択。「認知科学実験パラダイムに基づくAIシステム認知能力評価プラットフォームの開拓」 |
-| **2026年8月** | arXiv に新しいプレプリント [Control-Diverse Reinforcement Fine-Tuning](/publication/2026-arxiv-cd-rft) を公開。RL による事後学習は、活性が多様に見える場合でも、タスク間で共有される一部の構成要素に*制御*を集中させる。このボトルネックを緩めるとマルチタスク性能が上がる |
+| **2026年8月** | arXiv に新しいプレプリント [Control-Diverse Reinforcement Fine-Tuning](/publication/2026-arxiv-cd-rft) を公開。RL による事後学習では、活性が多様に見えても、*制御*はタスク間で共有される一部の要素に集中する。このボトルネックを緩めるとマルチタスク性能が向上する |
 | **2026年8月** | [第12回 CWRU–東北大学 Data Science in Engineering and Life Sciences シンポジウム](https://sites.google.com/case.edu/2026-cwru-tohoku-symposium/event-program)（米国クリーブランド）で**招待講演**。"From Preprocessing Choices to LLM Agents: Automated and Verifiable Cognitive EEG Analysis" |
 | **2026年8月** | [**科研費 研究活動スタート支援**](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-26K25566/)（代表、26K25566）に採択。「注意テンプレートの表象形式：計算モデル階層・脳波・視線追跡による解明」 |
 
@@ -81,7 +81,7 @@ selected_research:
 | **2026年5月** | arXiv に新しいプレプリント [Same Brain, Different Prediction](https://arxiv.org/abs/2605.07212) を公開。前処理パイプラインの違いで脳波デコーディングの予測が最大42%反転することを示し、診断法と正則化による対策を提案 |
 | **2026年5月** | プレプリントを更新。[WMF-AM v2](https://arxiv.org/abs/2603.27343) では LLM プローブをワーキングメモリの深さを軸に組み直し、累積的な状態追跡が主なボトルネックであることを切り分けた |
 | **2026年4月** | 共同研究者として参加したプレプリント [Vibe Medicine: Redefining Biomedical Research Through Human-AI Co-Work](https://arxiv.org/abs/2604.23674) を公開 |
-| **2026年4月** | 東北大学大学院情報科学研究科の**助教**に着任（山田研究室、情報科学国際交流推進室）。[UDAC](https://udac.tohoku.ac.jp/) ソーシャルインテグレーション研究部門を兼務 |
+| **2026年4月** | 東北大学大学院情報科学研究科の**特任助教**に着任（山田研究室、情報科学国際交流推進室）。[UDAC](https://udac.tohoku.ac.jp/) ソーシャルインテグレーション研究部門を兼務 |
 | **2026年4月** | 東北大学大学院情報科学研究科で [Machine Learning Basics](https://gp-ds.tohoku.ac.jp/ja/index.html) を担当 |
 | **2026年3月** | 論文 Physics-Aware Video Instance Removal Benchmark が **CVPR 2026 Workshop VGBE** に採択 |
 | **2026年3月** | LLM のワーキングメモリプローブの初版を arXiv に公開。当時の題名は [Beyond Completion: Probing Cumulative State Tracking to Predict LLM Agent Performance](https://arxiv.org/abs/2603.27343)（のちに改訂し WMF-AM に改題） |
@@ -104,7 +104,7 @@ selected_research:
 
 - **AI4Cog**（認知科学のための AI）では、計算モデルや言語モデルを使って人間の注意と意思決定を説明し、人間のデータと比べます。
 - **Cog4AI**（AI のための認知科学）では、ワーキングメモリのプローブから人間のデータを参照する課題バッテリーまで、確立された認知実験で言語モデルや意思決定モデルを検証します。
-- **AI4Brain**（神経科学のための AI）では、脳波解析を信頼できる自動化されたものにします。前処理やモデルの選択が結果をどう変えるかの測定から、認知脳波解析を実行して検証する LLM エージェントまでを扱い、脳波と視線の同時計測による注意研究も行います。
+- **AI4Brain**（神経科学のための AI）では、信頼性が高く自動化された脳波解析を目指します。前処理やモデルの選択が結果をどう変えるかの測定から、認知脳波解析を実行して検証する LLM エージェントまでを扱い、脳波と視線の同時計測による注意研究も行います。
 - **Brain4AI**（AI のための神経科学）では、脳信号（EEG、fMRI）と言語モデルや視覚言語モデルの表現とを対応づけます。
 
 入学するには、研究室の[学生募集](https://yamada-lab.gr.jp/ja/join.html)ページにあるとおり、情報科学研究科の入学試験に出願してください。これらのテーマに興味があれば、件名に「Prospective student」と書き、CV と研究関心を短くまとめた文章をメールで送ってください。
@@ -170,7 +170,7 @@ selected_research:
 
 ## 教育
 
-**担当教員**、東北大学大学院情報科学研究科
+東北大学大学院情報科学研究科 **担当教員**
 
 <div class="cv-entries" markdown="1">
 
@@ -180,7 +180,7 @@ selected_research:
 <span class="cv-entry__date">2026年4月 – 現在</span>
 </div>
 
-東北大学大学院情報科学研究科、[GP-DS](https://gp-ds.tohoku.ac.jp/ja/index.html)。講義資料は [Samy Baladram](https://www.samybaladram.com/) の教材をもとにしています。
+東北大学大学院情報科学研究科、[GP-DS](https://gp-ds.tohoku.ac.jp/ja/index.html)。講義資料は [Samy Baladram 准教授](https://www.samybaladram.com/)の教材をもとにしています。
 
 </section>
 
@@ -196,7 +196,7 @@ selected_research:
 
 </div>
 
-**ティーチング・アシスタント**、東北大学大学院情報科学研究科（2022 – 2025）
+東北大学大学院情報科学研究科 **ティーチング・アシスタント**（2022 – 2025）
 
 担当教員は[山田 和範 教授](https://yamada-lab.gr.jp/ja/index.html)と [Samy Baladram 准教授](https://www.samybaladram.com/)です。
 
@@ -208,23 +208,23 @@ selected_research:
 
 | **2026–2027** | **[科研費 研究活動スタート支援](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-26K25566/)**（代表、26K25566）「注意テンプレートの表象形式：計算モデル階層・脳波・視線追跡による解明」（260万円） |
 | **2026** | [Kaggle](https://www.kaggle.com/monkeydz) **銀メダル**、[ROGII - Wellbore Geology Prediction](https://www.kaggle.com/competitions/rogii-wellbore-geology-prediction)（6125チーム中89位）、[証明書](/images/kaggle-rogii-silver-2026.png) |
-| **2026** | **研究助成（代表）**、東北大学[総合知インフォマティクス研究センター](https://www.aisogochi.tohoku.ac.jp/)（40万円） |
-| **2026–** | 研究員、東北大学 × NTTデータグループ テクノロジーガバナンス共同研究（[TechGov](https://techgov.udac.tohoku.ac.jp/ja/index.html#home)、UDAC）（個人配分100万円、総額4,000万円） |
-| **2026** | **研究助成（代表）**、東北大学大学院情報科学研究科 Interdisciplinary Research Project Development Support「認知科学実験パラダイムに基づくAIシステム認知能力評価プラットフォームの開拓」（50万円） |
+| **2026** | 東北大学[総合知インフォマティクス研究センター](https://www.aisogochi.tohoku.ac.jp/) **研究助成（代表）**（40万円） |
+| **2026–** | 東北大学 × NTTデータグループ テクノロジーガバナンス共同研究（[TechGov](https://techgov.udac.tohoku.ac.jp/ja/index.html#home)、UDAC）研究員（個人配分100万円、総額4,000万円） |
+| **2026** | 東北大学大学院情報科学研究科 Interdisciplinary Research Project Development Support **研究助成（代表）**「認知科学実験パラダイムに基づくAIシステム認知能力評価プラットフォームの開拓」（50万円） |
 | **2026** | [Kaggle Expert](https://www.kaggle.com/monkeydz)、[CSIRO Image2Biomass Prediction](https://www.kaggle.com/competitions/csiro-biomass) 銅メダル（3805チーム中355位） |
-| **2025–2026** | **[日本学術振興会 特別研究員 DC2](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-25KJ0641)**（修了） |
+| **2025–2026** | **[日本学術振興会 特別研究員 DC2](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-25KJ0641)**（採用期間終了） |
 | **2025** | [Kaggle](https://www.kaggle.com/monkeydz) [Santa 2024: The Perplexity Permutation Puzzle](https://www.kaggle.com/competitions/santa-2024) 銅メダル（1514チーム中148位） |
 | **2024–2028** | [科研費 基盤研究(A)](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-24H00700/)「自発的脳機能の神経基盤理解」（代表 塩入 諭 教授） |
-| **2024** | [第32回博士後期課程学生発表会 ベストプレゼンテーション賞](https://www.is.tohoku.ac.jp/jp/activity/award/detail---id-1555.html)、東北大学大学院情報科学研究科 |
+| **2024** | 東北大学大学院情報科学研究科 [第32回博士後期課程学生発表会 ベストプレゼンテーション賞](https://www.is.tohoku.ac.jp/jp/activity/award/detail---id-1555.html) |
 | **2023** | ECVP Student Travel Award |
 | **2023–2025** | [JST 次世代研究者挑戦的研究プログラム](https://pgd.tohoku.ac.jp/rpc/next_generation.html) |
-| **2022–現在** | 東北大学 [GP-DS](https://gp-ds.tohoku.ac.jp/ja/index.html) リサーチ・アシスタント |
+| **2022–2026** | 東北大学 [GP-DS](https://gp-ds.tohoku.ac.jp/ja/index.html) リサーチ・アシスタント |
 | **2021–2023** | [公益財団法人亀井記念財団](https://kmfo.or.jp/) 外国人留学生奨学金 |
 | **2016** | 同済大学 学部入学奨学金 |
 
 ## 学術活動
 
-- **編集委員**、*[Interdisciplinary Information Sciences](https://www.is.tohoku.ac.jp/en/iis/)*（東北大学大学院情報科学研究科）、2026年–現在
+- *[Interdisciplinary Information Sciences](https://www.is.tohoku.ac.jp/en/iis/)*（東北大学大学院情報科学研究科）**編集委員**、2026年–現在
 - **査読**
   - *npj Science of Learning*
   - *Cognitive Neurodynamics*

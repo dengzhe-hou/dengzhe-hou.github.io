@@ -1,7 +1,7 @@
 ---
 permalink: /zh/
 title: "侯登哲 (Dengzhe Hou)"
-description: "日本东北大学信息科学研究科助理教授，研究涵盖 AI4Cog、Cog4AI、AI4Brain 和 Brain4AI 四个方向。"
+description: "日本东北大学信息科学研究科特任助理教授，研究涵盖 AI4Cog、Cog4AI、AI4Brain 和 Brain4AI 四个方向。"
 lang: zh-CN
 profile: true
 
@@ -31,7 +31,7 @@ selected_research:
 
 <div class="profile-intro" markdown="1">
 
-我是日本[东北大学](https://www.tohoku.ac.jp/en/)的**助理教授**。
+日本[东北大学](https://www.tohoku.ac.jp/en/)信息科学研究科**特任助理教授**
 
 我的研究涵盖四个相互关联的方向，分别是 **AI4Cog**（面向认知科学的 AI）、**Cog4AI**（面向 AI 的认知科学）、**AI4Brain**（面向神经科学的 AI）和 **Brain4AI**（面向 AI 的神经科学）。
 
@@ -81,7 +81,7 @@ selected_research:
 | **2026年5月** | 在 arXiv 发布新预印本 [Same Brain, Different Prediction](https://arxiv.org/abs/2605.07212)。只改变预处理流程就会让多达 42% 的脑电解码预测翻转，我们提出了诊断方法和正则化修正 |
 | **2026年5月** | 更新预印本。[WMF-AM v2](https://arxiv.org/abs/2603.27343) 围绕工作记忆深度重新组织 LLM 探针，确认累积状态追踪是主要瓶颈 |
 | **2026年4月** | 作为合作者参与的新预印本 [Vibe Medicine: Redefining Biomedical Research Through Human-AI Co-Work](https://arxiv.org/abs/2604.23674) 发布 |
-| **2026年4月** | 入职东北大学信息科学研究科，任**助理教授**（山田研究室、国际交流推进室），并兼任 [UDAC](https://udac.tohoku.ac.jp/) 社会整合研究部门职务 |
+| **2026年4月** | 入职东北大学信息科学研究科，任**特任助理教授**（山田研究室、国际交流推进室），并兼任 [UDAC](https://udac.tohoku.ac.jp/) 社会整合研究部门职务 |
 | **2026年4月** | 在东北大学信息科学研究科讲授 [Machine Learning Basics](https://gp-ds.tohoku.ac.jp/ja/index.html) |
 | **2026年3月** | 论文 Physics-Aware Video Instance Removal Benchmark 被 **CVPR 2026 Workshop VGBE** 接收 |
 | **2026年3月** | LLM 工作记忆探针的第一版发布在 arXiv，当时题为 [Beyond Completion: Probing Cumulative State Tracking to Predict LLM Agent Performance](https://arxiv.org/abs/2603.27343)（后经修订改名为 WMF-AM） |
@@ -218,7 +218,7 @@ selected_research:
 | **2024** | [第 32 届博士后期课程学生发表会最佳报告奖](https://www.is.tohoku.ac.jp/jp/activity/award/detail---id-1555.html)，东北大学信息科学研究科 |
 | **2023** | ECVP Student Travel Award |
 | **2023–2025** | [JST 下一代研究者挑战性研究项目](https://pgd.tohoku.ac.jp/rpc/next_generation.html) |
-| **2022–至今** | 东北大学 [GP-DS](https://gp-ds.tohoku.ac.jp/ja/index.html) 研究助理（RA） |
+| **2022–2026** | 东北大学 [GP-DS](https://gp-ds.tohoku.ac.jp/ja/index.html) 研究助理（RA） |
 | **2021–2023** | [公益财团法人龟井纪念财团](https://kmfo.or.jp/)留学生奖学金 |
 | **2016** | 同济大学本科新生奖学金 |
 
