@@ -58,6 +58,7 @@ selected_research:
 <div class="news-list" markdown="1">
 
 | **2026年10月** | 在 arXiv 发布新预印本 [S1CogBench](/publication/2026-arxiv-s1cogbench)，在 24 个认知实验上测试只给出一个快速决策、不输出文字的 System One 决策模型 |
+| **2026年10月** | 预印本大幅修订并改名为 [WMIP](/publication/2026-arxiv-wmip)（原 WMF-AM），在 18 个 LLM 上新做了实验。单步算术准确率为 84.9%，经过三到七次更新后降到 31.7% |
 | **2026年9月** | 在 [RSJ2026 开放论坛 OF7](https://ac.rsj-web.org/2026/openforum/#of7)「テクノロジーの質的進化と組織統制」（第 44 届日本机器人学会学术年会，金泽）作**特邀报告**，与 Michael Zielewski 一起介绍神经技术 |
 | **2026年8月** | 合作报告被[日本市场营销科学学会（JIMS）研究大会](http://www.jims.gr.jp/%e7%a0%94%e7%a9%b6%e5%a4%a7%e4%bc%9a/)（早稻田大学，2026年11月14–15日）接收，题目为「生成AI活用事例における社会倫理的リスクと炎上要因の定量分析」 |
 | **2026年8月** | 论文 [Subject-Specific Analysis of Self-Initiated Attention Shifts from EEG](/publication/2026-arxiv-subject-specific) 被 **IEEE SMC 2026**（美国贝尔维尤）接收 |
@@ -71,7 +72,7 @@ selected_research:
 <summary>更早的新闻</summary>
 
 | **2026年8月** | 在 [Kaggle](https://www.kaggle.com/monkeydz) [ROGII - Wellbore Geology Prediction](https://www.kaggle.com/competitions/rogii-wellbore-geology-prediction) 获得**银牌**（6125 支队伍中排名第 89） |
-| **2026年7月** | [KANMixer](/publication/2026-scirep-kanmixer) 发表于 ***Scientific Reports***，提出一个以 KAN 为核心的紧凑长期预测混合器，并如实分析 KAN 在什么情况下真正有用 |
+| **2026年7月** | [KANMixer](/publication/2026-scirep-kanmixer) 发表于 ***Scientific Reports***，提出一个以 KAN 为核心的紧凑长期预测混合器，并分析 KAN 在什么情况下真正有用 |
 | **2026年7月** | 在 arXiv 发布两篇新预印本，[CogEEGAgent](/publication/2026-arxiv-cogeegagent)（自主完成认知脑电分析）和 [CogBattery](/publication/2026-arxiv-cogbattery)（初版名为 CogArena，以人类数据为参照评估 LLM 的认知任务表现） |
 | **2026年7月** | 获得东北大学[综合知信息学研究中心](https://www.aisogochi.tohoku.ac.jp/)的**研究资助**（负责人） |
 | **2026年7月** | 受聘为 [*Interdisciplinary Information Sciences*](https://www.is.tohoku.ac.jp/en/iis/)（东北大学信息科学研究科）**编委** |
@@ -170,7 +171,7 @@ selected_research:
 
 ## 教学
 
-**授课教师**，东北大学信息科学研究科
+东北大学信息科学研究科 **授课教师**
 
 <div class="cv-entries" markdown="1">
 
@@ -180,7 +181,7 @@ selected_research:
 <span class="cv-entry__date">2026年4月 – 至今</span>
 </div>
 
-东北大学信息科学研究科 · [GP-DS](https://gp-ds.tohoku.ac.jp/ja/index.html)。课程材料改编自 [Samy Baladram](https://www.samybaladram.com/) 的教材。
+东北大学信息科学研究科 · [GP-DS](https://gp-ds.tohoku.ac.jp/ja/index.html)。课程材料改编自 [Samy Baladram 副教授](https://www.samybaladram.com/)的教材。
 
 </section>
 
@@ -196,7 +197,7 @@ selected_research:
 
 </div>
 
-**助教（TA）**，东北大学信息科学研究科（2022 – 2025）
+东北大学信息科学研究科 **助教（TA）**（2022–2025）
 
 指导教师为[山田和范教授](https://yamada-lab.gr.jp/ja/index.html)和 [Samy Baladram 副教授](https://www.samybaladram.com/)。
 
@@ -208,14 +209,14 @@ selected_research:
 
 | **2026–2027** | **[日本学术振兴会科研费 研究活动启动支援](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-26K25566/)**（负责人，26K25566），「注意テンプレートの表象形式：計算モデル階層・脳波・視線追跡による解明」（260 万日元） |
 | **2026** | [Kaggle](https://www.kaggle.com/monkeydz) **银牌**，[ROGII - Wellbore Geology Prediction](https://www.kaggle.com/competitions/rogii-wellbore-geology-prediction)（6125 支队伍中第 89），[证书](/images/kaggle-rogii-silver-2026.png) |
-| **2026** | **研究资助（负责人）**，东北大学[综合知信息学研究中心](https://www.aisogochi.tohoku.ac.jp/)（40 万日元） |
-| **2026–** | 研究员，东北大学 × NTT DATA 集团技术治理联合研究（[TechGov](https://techgov.udac.tohoku.ac.jp/ja/index.html#home)，UDAC）（个人分配 100 万日元，项目总额 4000 万日元） |
-| **2026** | **研究资助（负责人）**，东北大学信息科学研究科跨学科研究项目培育支持，「認知科学実験パラダイムに基づくAIシステム認知能力評価プラットフォームの開拓」（50 万日元） |
+| **2026** | 东北大学[综合知信息学研究中心](https://www.aisogochi.tohoku.ac.jp/) **研究资助（负责人）**（40 万日元） |
+| **2026–** | 东北大学 × NTT DATA 集团技术治理联合研究（[TechGov](https://techgov.udac.tohoku.ac.jp/ja/index.html#home)，UDAC）研究员（个人分配 100 万日元，项目总额 4000 万日元） |
+| **2026** | 东北大学信息科学研究科跨学科研究项目培育支持 **研究资助（负责人）**，「認知科学実験パラダイムに基づくAIシステム認知能力評価プラットフォームの開拓」（50 万日元） |
 | **2026** | [Kaggle Expert](https://www.kaggle.com/monkeydz)，[CSIRO Image2Biomass Prediction](https://www.kaggle.com/competitions/csiro-biomass) 铜牌（3805 支队伍中第 355） |
-| **2025–2026** | **[日本学术振兴会特别研究员 DC2](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-25KJ0641)**（已结题） |
+| **2025–2026** | **[日本学术振兴会特别研究员 DC2](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-25KJ0641)**（已结束） |
 | **2025** | [Kaggle](https://www.kaggle.com/monkeydz) [Santa 2024: The Perplexity Permutation Puzzle](https://www.kaggle.com/competitions/santa-2024) 铜牌（1514 支队伍中第 148） |
 | **2024–2028** | [日本学术振兴会科研费 基盘研究(A)](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-24H00700/)，「自発的脳機能の神経基盤理解」（负责人 塩入諭教授） |
-| **2024** | [第 32 届博士后期课程学生发表会最佳报告奖](https://www.is.tohoku.ac.jp/jp/activity/award/detail---id-1555.html)，东北大学信息科学研究科 |
+| **2024** | 东北大学信息科学研究科[第 32 届博士后期课程学生发表会最佳报告奖](https://www.is.tohoku.ac.jp/jp/activity/award/detail---id-1555.html) |
 | **2023** | ECVP Student Travel Award |
 | **2023–2025** | [JST 下一代研究者挑战性研究项目](https://pgd.tohoku.ac.jp/rpc/next_generation.html) |
 | **2022–2026** | 东北大学 [GP-DS](https://gp-ds.tohoku.ac.jp/ja/index.html) 研究助理（RA） |
@@ -224,7 +225,7 @@ selected_research:
 
 ## 学术服务
 
-- **编委**，*[Interdisciplinary Information Sciences](https://www.is.tohoku.ac.jp/en/iis/)*（东北大学信息科学研究科），2026年至今
+- *[Interdisciplinary Information Sciences](https://www.is.tohoku.ac.jp/en/iis/)*（东北大学信息科学研究科）**编委**，2026年至今
 - **审稿人**
   - *npj Science of Learning*
   - *Cognitive Neurodynamics*

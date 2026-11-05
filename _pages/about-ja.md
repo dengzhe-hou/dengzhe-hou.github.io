@@ -58,6 +58,7 @@ selected_research:
 <div class="news-list" markdown="1">
 
 | **2026年10月** | arXiv に新しいプレプリント [S1CogBench](/publication/2026-arxiv-s1cogbench) を公開。推論過程を出力せず、即座に一つの判断を返す System One 型意思決定モデルを、24 の認知実験で検証 |
+| **2026年10月** | プレプリントを大幅に改訂し、[WMIP](/publication/2026-arxiv-wmip)（旧 WMF-AM）に改題。18 の LLM で新たに実験し、1 ステップの算術では正答率 84.9% だが、3〜7 回の更新後には 31.7% に下がる |
 | **2026年9月** | [RSJ2026 オープンフォーラム OF7](https://ac.rsj-web.org/2026/openforum/#of7)「テクノロジーの質的進化と組織統制」（第44回日本ロボット学会学術講演会、金沢）で**招待講演**。Michael Zielewski とともにニューロテクノロジーについて話題提供 |
 | **2026年8月** | 共著の発表が[日本マーケティング・サイエンス学会（JIMS）研究大会](http://www.jims.gr.jp/%e7%a0%94%e7%a9%b6%e5%a4%a7%e4%bc%9a/)（早稲田大学、2026年11月14–15日）に採択。「生成AI活用事例における社会倫理的リスクと炎上要因の定量分析」 |
 | **2026年8月** | 論文 [Subject-Specific Analysis of Self-Initiated Attention Shifts from EEG](/publication/2026-arxiv-subject-specific) が **IEEE SMC 2026**（米国ベルビュー）に採択 |
@@ -196,7 +197,7 @@ selected_research:
 
 </div>
 
-東北大学大学院情報科学研究科 **ティーチング・アシスタント**（2022 – 2025）
+東北大学大学院情報科学研究科 **ティーチング・アシスタント**（2022–2025）
 
 担当教員は[山田 和範 教授](https://yamada-lab.gr.jp/ja/index.html)と [Samy Baladram 准教授](https://www.samybaladram.com/)です。
 

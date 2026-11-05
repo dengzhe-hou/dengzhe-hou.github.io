@@ -59,7 +59,7 @@ My research spans four connected directions, **AI4Cog** (AI for cognitive scienc
 <details id="background" class="profile-background" markdown="1">
 <summary>Background</summary>
 
-At the [Graduate School of Information Sciences (GSIS)](https://www.is.tohoku.ac.jp/en/), I am affiliated with the [Yamada Laboratory](https://yamada-lab.gr.jp/ja/index.html) and the [International Liaison Office (ILO)](https://www.is.tohoku.ac.jp/introduction/ilo/), with a concurrent appointment in the Social Integration Research Division of the [Unprecedented-scale Data Analytics Center (UDAC)](https://udac.tohoku.ac.jp/).
+At the [Graduate School of Information Sciences (GSIS)](https://www.is.tohoku.ac.jp/en/), I am affiliated with the [Yamada Laboratory](https://yamada-lab.gr.jp/en/index.html) and the [International Liaison Office (ILO)](https://www.is.tohoku.ac.jp/introduction/ilo/), with a concurrent appointment in the Social Integration Research Division of the [Unprecedented-scale Data Analytics Center (UDAC)](https://udac.tohoku.ac.jp/).
 
 I received my Ph.D. under [Prof. Satoshi Shioiri](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=en) at the [Visual Cognition and Systems Laboratory](https://sites.google.com/view/shioiri-satoshi/), and was a Visiting PhD Scholar in the Sydney Cash Lab at **Harvard Medical School / Massachusetts General Hospital**.
 
@@ -77,12 +77,13 @@ I received my Ph.D. under [Prof. Satoshi Shioiri](https://scholar.google.com/cit
 <div class="news-list" markdown="1">
 
 | **Oct 2026** | New preprint on arXiv, [S1CogBench](/publication/2026-arxiv-s1cogbench): System One decision models, which return one fast decision without text, tested on 24 cognitive experiments |
+| **Oct 2026** | Substantially revised preprint, now titled [WMIP](/publication/2026-arxiv-wmip) (formerly WMF-AM), with new experiments on 18 LLMs. Accuracy is 84.9% on single-step arithmetic but 31.7% after three to seven updates |
 | **Sep 2026** | **Invited talk** at [RSJ2026 Open Forum OF7](https://ac.rsj-web.org/2026/openforum/#of7), "テクノロジーの質的進化と組織統制", 44th Annual Conference of the Robotics Society of Japan, Kanazawa. Speaking on neurotechnology with Michael Zielewski |
 | **Aug 2026** | Co-authored presentation accepted at the [Japan Institute of Marketing Science (JIMS) Research Conference](http://www.jims.gr.jp/%e7%a0%94%e7%a9%b6%e5%a4%a7%e4%bc%9a/), Waseda University, 14–15 Nov 2026: “生成AI活用事例における社会倫理的リスクと炎上要因の定量分析” |
 | **Aug 2026** | Paper accepted at **IEEE SMC 2026** (Bellevue, USA), [Subject-Specific Analysis of Self-Initiated Attention Shifts from EEG](/publication/2026-arxiv-subject-specific) |
 | **Aug 2026** | [TimePre](/publication/2026-tmlr-timepre) accepted at **Transactions on Machine Learning Research (TMLR)** |
 | **Aug 2026** | Awarded a **research grant** (PI) from [GSIS](https://www.is.tohoku.ac.jp/en/), Tohoku University, under Interdisciplinary Research Project Development Support: 認知科学実験パラダイムに基づくAIシステム認知能力評価プラットフォームの開拓 |
-| **Aug 2026** | New preprint on arXiv, [Control-Diverse Reinforcement Fine-Tuning](/publication/2026-arxiv-cd-rft). RL post-training concentrates *control* on a shared set of components across tasks, even where activations look diverse — and relieving that bottleneck improves multi-task performance |
+| **Aug 2026** | New preprint on arXiv, [Control-Diverse Reinforcement Fine-Tuning](/publication/2026-arxiv-cd-rft). RL post-training concentrates *control* on a shared set of components across tasks, even where activations look diverse; relieving that bottleneck improves multi-task performance |
 | **Aug 2026** | **Invited talk** at the [12th Annual CWRU-Tohoku Data Science in Engineering and Life Sciences Symposium](https://sites.google.com/case.edu/2026-cwru-tohoku-symposium/event-program), Cleveland, USA: "From Preprocessing Choices to LLM Agents: Automated and Verifiable Cognitive EEG Analysis" |
 | **Aug 2026** | Awarded [**KAKENHI Grant-in-Aid for Research Activity Start-up**](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-26K25566/) (PI, 26K25566): the representational format of attentional templates, probed with computational model hierarchies, EEG and eye tracking |
 
@@ -90,7 +91,7 @@ I received my Ph.D. under [Prof. Satoshi Shioiri](https://scholar.google.com/cit
 <summary>Earlier news</summary>
 
 | **Aug 2026** | [Kaggle](https://www.kaggle.com/monkeydz) **Silver Medal** in [ROGII - Wellbore Geology Prediction](https://www.kaggle.com/competitions/rogii-wellbore-geology-prediction) (89/6125) |
-| **Jul 2026** | [KANMixer](/publication/2026-scirep-kanmixer) published in ***Scientific Reports***: a compact KAN-centered mixer for long-term forecasting, and an honest account of when KANs actually help |
+| **Jul 2026** | [KANMixer](/publication/2026-scirep-kanmixer) published in ***Scientific Reports***: a compact KAN-centered mixer for long-term forecasting, and an analysis of when KANs help |
 | **Jul 2026** | Two new preprints on arXiv: [CogEEGAgent](/publication/2026-arxiv-cogeegagent) (autonomous cognitive EEG analysis) and [CogBattery](/publication/2026-arxiv-cogbattery) (first released as CogArena; human-referenced evaluation of cognitive tasks in LLMs) |
 | **Jul 2026** | Awarded a **research grant** (PI) from the [Center for So-Go-Chi (Convergence Knowledge) Informatics](https://www.aisogochi.tohoku.ac.jp/), Tohoku University |
 | **Jul 2026** | Appointed to the **Editorial Board** of [*Interdisciplinary Information Sciences*](https://www.is.tohoku.ac.jp/en/iis/) (Tohoku University GSIS) |
@@ -145,7 +146,7 @@ Graduate School of Information Sciences, Tohoku University
 
 - Thesis: *Exploring Brain Mechanisms of Self-Initiated Attention Shift: Simultaneous Recording of EEG and Eye Movements*
 - Advisors: [Prof. Satoshi Shioiri](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=en), [Prof. Shuichi Sakamoto](https://scholar.google.com/citations?user=h7ymzUgAAAAJ&hl=en), [Prof. Chia-huei Tseng](https://scholar.google.com/citations?hl=en&user=g00AZTcAAAAJ)
-- Visual Cognition and Systems Lab · [Graduate Program in Data Science (GPDS)](https://gp-ds.tohoku.ac.jp/ja/index.html)
+- Visual Cognition and Systems Lab · [Graduate Program in Data Science (GP-DS)](https://gp-ds.tohoku.ac.jp/ja/index.html)
 - [JST Next Generation Researcher Challenging Research Program](https://pgd.tohoku.ac.jp/rpc/next_generation.html)
 
 </details>
@@ -163,7 +164,7 @@ Graduate School of Information Sciences, Tohoku University
 <summary>Advisors & program</summary>
 
 - Advisors: [Prof. Satoshi Shioiri](https://scholar.google.com/citations?user=I9qDcUsAAAAJ&hl=en), [Prof. Chia-huei Tseng](https://scholar.google.com/citations?hl=en&user=g00AZTcAAAAJ)
-- Visual Cognition and Systems Lab · [GPDS](https://gp-ds.tohoku.ac.jp/ja/index.html) (joined Apr 2022)
+- Visual Cognition and Systems Lab · [GP-DS](https://gp-ds.tohoku.ac.jp/ja/index.html) (joined Apr 2022)
 
 </details>
 </section>
@@ -199,7 +200,7 @@ Tongji University · Automation
 <span class="cv-entry__date">Apr 2026 – present</span>
 </div>
 
-GSIS, Tohoku University · [GPDS](https://gp-ds.tohoku.ac.jp/ja/index.html). Course materials adapted from [Samy Baladram](https://www.samybaladram.com/).
+GSIS, Tohoku University · [GP-DS](https://gp-ds.tohoku.ac.jp/ja/index.html). Course materials adapted from those by Assoc. Prof. [Samy Baladram](https://www.samybaladram.com/).
 
 </section>
 
@@ -215,9 +216,9 @@ GSIS, Tohoku University
 
 </div>
 
-**Teaching Assistant**, Graduate School of Information Sciences, Tohoku University (2022 – 2025)
+**Teaching Assistant**, Graduate School of Information Sciences, Tohoku University (2022–2025)
 
-Supervisors: Prof. [Kazunori Yamada](https://yamada-lab.gr.jp/ja/index.html), Assoc. Prof. [Samy Baladram](https://www.samybaladram.com/)
+Supervisors: Prof. [Kazunori Yamada](https://yamada-lab.gr.jp/en/index.html), Assoc. Prof. [Samy Baladram](https://www.samybaladram.com/)
 
 - **Spring 2024**: Machine Learning Basics, Data Science Programming Basics, Data Engineering, Data Science Training I & II
 - **Fall 2023**: Data Science Basics
@@ -237,7 +238,7 @@ Supervisors: Prof. [Kazunori Yamada](https://yamada-lab.gr.jp/ja/index.html), As
 | **2024** | [Best Presentation Award](https://www.is.tohoku.ac.jp/jp/activity/award/detail---id-1555.html), 32nd Doctoral Student Presentation, Tohoku University |
 | **2023** | ECVP Student Travel Award |
 | **2023–2025** | [JST Next Generation Researcher Challenging Research Program](https://pgd.tohoku.ac.jp/rpc/next_generation.html) |
-| **2022–2026** | Tohoku University [GPDS](https://gp-ds.tohoku.ac.jp/ja/index.html) Research Assistant |
+| **2022–2026** | Tohoku University [GP-DS](https://gp-ds.tohoku.ac.jp/ja/index.html) Research Assistant |
 | **2021–2023** | [Kamei Memorial Foundation](https://kmfo.or.jp/) Scholarship for International Students (公益財団法人亀井記念財団) |
 | **2016** | Tongji University Undergraduate Entrance Scholarship |
 
@@ -257,9 +258,9 @@ Supervisors: Prof. [Kazunori Yamada](https://yamada-lab.gr.jp/ja/index.html), As
 ## Links
 
 - [International Liaison Office (ILO)](https://www.is.tohoku.ac.jp/introduction/ilo/)
-- [Graduate Program in Data Science (GPDS)](https://gp-ds.tohoku.ac.jp/ja/index.html)
-- [Yamada Laboratory](https://yamada-lab.gr.jp/ja/index.html)
+- [Graduate Program in Data Science (GP-DS)](https://gp-ds.tohoku.ac.jp/ja/index.html)
+- [Yamada Laboratory](https://yamada-lab.gr.jp/en/index.html)
 - [TOHOKU AI GROUP](https://tai.udac.tohoku.ac.jp/ja/index.html), Artificial Intelligence Research Group at Tohoku University
 - [Graduate School of Information Sciences (GSIS)](https://www.is.tohoku.ac.jp/en/), Tohoku University
 - [Unprecedented-scale Data Analytics Center (UDAC)](https://udac.tohoku.ac.jp/), Social Integration Research Division
-- [Collaborative Research Laboratory for Technology Governance (TechGov)](https://techgov.udac.tohoku.ac.jp/ja/index.html), Tohoku University × NTT Data Group
+- [Collaborative Research Laboratory for Technology Governance (TechGov)](https://techgov.udac.tohoku.ac.jp/ja/index.html), Tohoku University × NTT DATA Group
