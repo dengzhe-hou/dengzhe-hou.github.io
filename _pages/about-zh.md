@@ -59,6 +59,7 @@ selected_research:
 
 | **2026年10月** | 在 arXiv 发布新预印本 [S1CogBench](/publication/2026-arxiv-s1cogbench)，在 24 个认知实验上测试只给出一个快速决策、不输出文字的 System One 决策模型 |
 | **2026年10月** | 预印本大幅修订并改名为 [WMIP](/publication/2026-arxiv-wmip)（原 WMF-AM），在 18 个 LLM 上新做了实验。单步算术准确率为 84.9%，经过三到七次更新后降到 31.7% |
+| **2026年10月** | 预印本修订并改名为 [CogBattery](/publication/2026-arxiv-cogbattery)（原 CogArena），在 13 个认知范式上把 54 个开源权重语言模型与人类数据比较，发现效应方向一致并不等于行为像人 |
 | **2026年9月** | 在 [RSJ2026 开放论坛 OF7](https://ac.rsj-web.org/2026/openforum/#of7)「テクノロジーの質的進化と組織統制」（第 44 届日本机器人学会学术年会，金泽）作**特邀报告**，与 Michael Zielewski 一起介绍神经技术 |
 | **2026年8月** | 合作报告被[日本市场营销科学学会（JIMS）研究大会](http://www.jims.gr.jp/%e7%a0%94%e7%a9%b6%e5%a4%a7%e4%bc%9a/)（早稻田大学，2026年11月14–15日）接收，题目为「生成AI活用事例における社会倫理的リスクと炎上要因の定量分析」 |
 | **2026年8月** | 论文 [Subject-Specific Analysis of Self-Initiated Attention Shifts from EEG](/publication/2026-arxiv-subject-specific) 被 **IEEE SMC 2026**（美国贝尔维尤）接收 |

@@ -78,6 +78,7 @@ I received my Ph.D. under [Prof. Satoshi Shioiri](https://scholar.google.com/cit
 
 | **Oct 2026** | New preprint on arXiv, [S1CogBench](/publication/2026-arxiv-s1cogbench): System One decision models, which return one fast decision without text, tested on 24 cognitive experiments |
 | **Oct 2026** | Substantially revised preprint, now titled [WMIP](/publication/2026-arxiv-wmip) (formerly WMF-AM), with new experiments on 18 LLMs. Accuracy is 84.9% on single-step arithmetic but 31.7% after three to seven updates |
+| **Oct 2026** | Revised preprint, renamed [CogBattery](/publication/2026-arxiv-cogbattery) (formerly CogArena). We compare 54 open-weight language models with human data on 13 cognitive paradigms and find that matching the direction of a human effect does not establish human-like behavior |
 | **Sep 2026** | **Invited talk** at [RSJ2026 Open Forum OF7](https://ac.rsj-web.org/2026/openforum/#of7), "テクノロジーの質的進化と組織統制", 44th Annual Conference of the Robotics Society of Japan, Kanazawa. Speaking on neurotechnology with Michael Zielewski |
 | **Aug 2026** | Co-authored presentation accepted at the [Japan Institute of Marketing Science (JIMS) Research Conference](http://www.jims.gr.jp/%e7%a0%94%e7%a9%b6%e5%a4%a7%e4%bc%9a/), Waseda University, 14–15 Nov 2026: “生成AI活用事例における社会倫理的リスクと炎上要因の定量分析” |
 | **Aug 2026** | Paper accepted at **IEEE SMC 2026** (Bellevue, USA), [Subject-Specific Analysis of Self-Initiated Attention Shifts from EEG](/publication/2026-arxiv-subject-specific) |
