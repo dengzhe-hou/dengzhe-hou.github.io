@@ -26,7 +26,7 @@
       im.onload = function () {
         var travel = box.clientWidth * im.naturalHeight / im.naturalWidth - box.clientHeight;
         im.style.setProperty('--end', -travel + 'px');
-        im.style.setProperty('--dur', Math.max(4, travel / 70) + 's');
+        im.style.setProperty('--dur', Math.min(12, Math.max(4, travel / 200)) + 's');
         im.classList.add('ready');
       };
       im.src = box.dataset.strip;
