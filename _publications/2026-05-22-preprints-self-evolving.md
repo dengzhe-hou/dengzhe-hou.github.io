@@ -1,13 +1,15 @@
 ---
-title: "Self-Evolving Agent Engineering for Healthcare: Methodologies and Applications"
+title: "A Survey on Recursive Self-Improvement in Healthcare AI Agents"
 collection: publications
 category: preprints
 permalink: /publication/2026-preprints-self-evolving
-excerpt: 'A survey of how healthcare AI agents are built to improve themselves, covering the methodologies behind self-evolving agent engineering and where they are actually deployed in clinical and biomedical settings.'
+excerpt: 'A survey of recursive self-improvement in healthcare AI agents, separating what an agent changes about itself (memory, skills, training material, or the procedures that produce future improvements) from performance gains and clinical validation, with an evidence map of 85 studies.'
 date: 2026-05-22
-venue: 'Preprints.org'
-paperurl: 'https://www.preprints.org/manuscript/202605.1547'
-citation: 'Hou, D., Wu, Z., Zeng, Y., Jiang, L., Lin, F., &amp; Yamada, K. (2026). Self-Evolving Agent Engineering for Healthcare: Methodologies and Applications. <i>Preprints.org</i>.'
+venue: 'alphaXiv preprint'
+paperurl: 'https://www.alphaxiv.org/abs/2611.recursive-self-improvement-healthcare-agents'
+citation: 'Hou, D., Wu, Z., Zeng, Y., Jiang, L., Lin, F., &amp; Yamada, K. D. (2026). A Survey on Recursive Self-Improvement in Healthcare AI Agents. <i>alphaXiv</i>.'
 ---
 
-Healthcare agents are increasingly built to refine their own policies rather than to run a fixed pipeline. This work reviews the methodologies behind self-evolving agent engineering, how such systems accumulate and reuse experience, and the clinical and biomedical applications where the approach has been put to work.
+Healthcare agents are increasingly built to refine their own policies rather than to run a fixed pipeline. This survey separates what an agent changes about itself, whether persistent memory, reusable skills, training material or the procedures that generate future improvements, from performance benefit and clinical validation, and maps the evidence across 85 studies.
+
+[alphaXiv](https://www.alphaxiv.org/abs/2611.recursive-self-improvement-healthcare-agents) · [Project site](https://dengzhe-hou.github.io/RSI-Healthcare-Agents/) · [GitHub](https://github.com/dengzhe-hou/RSI-Healthcare-Agents) · [Preprints.org v1](https://www.preprints.org/manuscript/202605.1547) (first released as *Self-Evolving Agent Engineering for Healthcare: Methodologies and Applications*)

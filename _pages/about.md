@@ -76,6 +76,7 @@ I received my Ph.D. under [Prof. Satoshi Shioiri](https://scholar.google.com/cit
 
 <div class="news-list" markdown="1">
 
+| **Nov 2026** | Revised survey, now titled [A Survey on Recursive Self-Improvement in Healthcare AI Agents](/publication/2026-preprints-self-evolving) (formerly Self-Evolving Agent Engineering for Healthcare), now on [alphaXiv](https://www.alphaxiv.org/abs/2611.recursive-self-improvement-healthcare-agents) with an [interactive evidence map](https://dengzhe-hou.github.io/RSI-Healthcare-Agents/) of 85 studies |
 | **Oct 2026** | New preprint on arXiv, [S1CogBench](/publication/2026-arxiv-s1cogbench): System One decision models, which return one fast decision without text, tested on 24 cognitive experiments |
 | **Oct 2026** | Substantially revised preprint, now titled [WMIP](/publication/2026-arxiv-wmip) (formerly WMF-AM), with new experiments on 18 LLMs. Accuracy is 84.9% on single-step arithmetic but 31.7% after three to seven updates |
 | **Oct 2026** | Revised preprint, renamed [CogBattery](/publication/2026-arxiv-cogbattery) (formerly CogArena). We compare 54 open-weight language models with human data on 13 cognitive paradigms and find that matching the direction of a human effect does not establish human-like behavior |
