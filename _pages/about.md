@@ -226,6 +226,9 @@ GSIS, Tohoku University
 
 </div>
 
+<details class="news-archive" markdown="1">
+<summary>Earlier teaching (Teaching Assistant, 2022–2025)</summary>
+
 **Teaching Assistant**, Graduate School of Information Sciences, Tohoku University (2022–2025)
 
 Supervisors: Prof. [Kazunori Yamada](https://yamada-lab.gr.jp/en/index.html), Assoc. Prof. [Samy Baladram](https://www.samybaladram.com/)
@@ -233,6 +236,8 @@ Supervisors: Prof. [Kazunori Yamada](https://yamada-lab.gr.jp/en/index.html), As
 - **Spring 2024**: Machine Learning Basics, Data Science Programming Basics, Data Engineering, Data Science Training I & II
 - **Fall 2023**: Data Science Basics
 - **Spring 2022**: Data Science Training I, Data Science Skill Up Exercise
+
+</details>
 
 ## Grants, Fellowships & Awards
 
