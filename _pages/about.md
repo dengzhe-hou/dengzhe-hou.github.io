@@ -241,6 +241,10 @@ Supervisors: Prof. [Kazunori Yamada](https://yamada-lab.gr.jp/en/index.html), As
 | **2026** | **Research Grant (PI)**, [Center for So-Go-Chi (Convergence Knowledge) Informatics](https://www.aisogochi.tohoku.ac.jp/), Tohoku University (¥400,000) |
 | **2026–** | Research Member, Tohoku University × NTT DATA Group Joint Research on Technology Governance ([TechGov](https://techgov.udac.tohoku.ac.jp/ja/index.html#home), UDAC) (¥1,000,000 individual allocation, of ¥40,000,000 total project) |
 | **2026** | **Research Grant (PI)**, Interdisciplinary Research Project Development Support, Graduate School of Information Sciences (GSIS), Tohoku University: 認知科学実験パラダイムに基づくAIシステム認知能力評価プラットフォームの開拓 (¥500,000) |
+
+<details class="news-archive" markdown="1">
+<summary>Earlier grants and awards</summary>
+
 | **2026** | [Kaggle Expert](https://www.kaggle.com/monkeydz) – Bronze Medal, [CSIRO Image2Biomass Prediction](https://www.kaggle.com/competitions/csiro-biomass) (355/3805) |
 | **2025–2026** | **[JSPS DC2 Research Fellowship](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-25KJ0641)** (completed) |
 | **2025** | [Kaggle](https://www.kaggle.com/monkeydz) Bronze Medal, [Santa 2024: The Perplexity Permutation Puzzle](https://www.kaggle.com/competitions/santa-2024) (148/1514) |
@@ -251,6 +255,8 @@ Supervisors: Prof. [Kazunori Yamada](https://yamada-lab.gr.jp/en/index.html), As
 | **2022–2026** | Tohoku University [GP-DS](https://gp-ds.tohoku.ac.jp/ja/index.html) Research Assistant |
 | **2021–2023** | [Kamei Memorial Foundation](https://kmfo.or.jp/) Scholarship for International Students (公益財団法人亀井記念財団) |
 | **2016** | Tongji University Undergraduate Entrance Scholarship |
+
+</details>
 
 ## Service
 
