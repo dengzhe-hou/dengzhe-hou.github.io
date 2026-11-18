@@ -89,6 +89,10 @@ I received my Ph.D. under [Prof. Satoshi Shioiri](https://scholar.google.com/cit
 | **Oct 2026** | Substantially revised preprint, now titled [WMIP](/publication/2026-arxiv-wmip) (formerly WMF-AM), with new experiments on 18 LLMs. Accuracy is 84.9% on single-step arithmetic but 31.7% after three to seven updates |
 | **Oct 2026** | Revised preprint, renamed [CogBattery](/publication/2026-arxiv-cogbattery) (formerly CogArena). We compare 54 open-weight language models with human data on 13 cognitive paradigms and find that matching the direction of a human effect does not establish human-like behavior |
 | **Sep 2026** | **Invited talk** at [RSJ2026 Open Forum OF7](https://ac.rsj-web.org/2026/openforum/#of7), "テクノロジーの質的進化と組織統制", 44th Annual Conference of the Robotics Society of Japan, Kanazawa. Speaking on neurotechnology with Michael Zielewski |
+
+<details class="news-archive" markdown="1">
+<summary>Earlier news</summary>
+
 | **Aug 2026** | Co-authored presentation accepted at the [Japan Institute of Marketing Science (JIMS) Research Conference](http://www.jims.gr.jp/%e7%a0%94%e7%a9%b6%e5%a4%a7%e4%bc%9a/), Waseda University, 14–15 Nov 2026: “生成AI活用事例における社会倫理的リスクと炎上要因の定量分析” |
 | **Aug 2026** | Paper accepted at **IEEE SMC 2026** (Bellevue, USA), [Subject-Specific Analysis of Self-Initiated Attention Shifts from EEG](/publication/2026-arxiv-subject-specific) |
 | **Aug 2026** | [TimePre](/publication/2026-tmlr-timepre) accepted at **Transactions on Machine Learning Research (TMLR)** |
@@ -96,10 +100,6 @@ I received my Ph.D. under [Prof. Satoshi Shioiri](https://scholar.google.com/cit
 | **Aug 2026** | New preprint on arXiv, [Control-Diverse Reinforcement Fine-Tuning](/publication/2026-arxiv-cd-rft). RL post-training concentrates *control* on a shared set of components across tasks, even where activations look diverse; relieving that bottleneck improves multi-task performance |
 | **Aug 2026** | **Invited talk** at the [12th Annual CWRU-Tohoku Data Science in Engineering and Life Sciences Symposium](https://sites.google.com/case.edu/2026-cwru-tohoku-symposium/event-program), Cleveland, USA: "From Preprocessing Choices to LLM Agents: Automated and Verifiable Cognitive EEG Analysis" |
 | **Aug 2026** | Awarded [**KAKENHI Grant-in-Aid for Research Activity Start-up**](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-26K25566/) (PI, 26K25566): the representational format of attentional templates, probed with computational model hierarchies, EEG and eye tracking |
-
-<details class="news-archive" markdown="1">
-<summary>Earlier news</summary>
-
 | **Aug 2026** | [Kaggle](https://www.kaggle.com/monkeydz) **Silver Medal** in [ROGII - Wellbore Geology Prediction](https://www.kaggle.com/competitions/rogii-wellbore-geology-prediction) (89/6125) |
 | **Jul 2026** | [KANMixer](/publication/2026-scirep-kanmixer) published in ***Scientific Reports***: a compact KAN-centered mixer for long-term forecasting, and an analysis of when KANs help |
 | **Jul 2026** | Two new preprints on arXiv: [CogEEGAgent](/publication/2026-arxiv-cogeegagent) (autonomous cognitive EEG analysis) and [CogBattery](/publication/2026-arxiv-cogbattery) (first released as CogArena; human-referenced evaluation of cognitive tasks in LLMs) |
