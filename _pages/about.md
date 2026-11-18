@@ -7,6 +7,14 @@ redirect_from:
   - /about.html
 
 selected_research:
+  - image_path: research-rsi-healthcare.jpg
+    strip_path: research-rsi-healthcare-strip.webp
+    alt: "Timeline of selected healthcare-agent studies from 2024 to 2026, grouped by what each one updates: memory and experience, skills, tools and workflows, or parameters and training generators"
+    title: "A Survey on Recursive Self-Improvement in Healthcare AI Agents"
+    excerpt: "We map 85 healthcare-agent studies by what each one changes, from memory and skills to training generators. Current evidence mainly supports component updates and selected generator gains, while revised improvement procedures remain untested."
+    url: "/publication/2026-preprints-self-evolving"
+    btn_label: "Read more"
+    btn_class: "btn--primary"
   - image_path: research-s1cogbench.jpg
     strip_path: research-s1cogbench-strip.webp
     alt: "S1CogBench overview: six example tasks among the 24 cognitive tasks, and how open and API decision models are evaluated on predicting human choices, executing their own actions and reporting probabilities"
