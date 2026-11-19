@@ -210,7 +210,7 @@ selected_research:
 
 | **2026–2027** | **[日本学术振兴会科研费 研究活动启动支援](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-26K25566/)**（负责人，26K25566），「注意テンプレートの表象形式：計算モデル階層・脳波・視線追跡による解明」（260 万日元） |
 | **2026** | [Kaggle](https://www.kaggle.com/monkeydz) **银牌**，[ROGII - Wellbore Geology Prediction](https://www.kaggle.com/competitions/rogii-wellbore-geology-prediction)（6125 支队伍中第 89），[证书](/images/kaggle-rogii-silver-2026.png) |
-| **2026** | 东北大学[综合知信息学研究中心](https://www.aisogochi.tohoku.ac.jp/) **研究资助（负责人）**（40 万日元） |
+| **2026** | 东北大学[综合知信息学研究中心](https://www.aisogochi.tohoku.ac.jp/) **研究资助（负责人）**「脑电基础模型对非脑源伪迹依赖性的系统检验」（40 万日元） |
 | **2026–** | 东北大学 × NTT DATA 集团技术治理联合研究（[TechGov](https://techgov.udac.tohoku.ac.jp/ja/index.html#home)，UDAC）研究员（个人分配 100 万日元，项目总额 4000 万日元） |
 | **2026** | 东北大学信息科学研究科跨学科研究项目培育支持 **研究资助（负责人）**，「認知科学実験パラダイムに基づくAIシステム認知能力評価プラットフォームの開拓」（50 万日元） |
 | **2026** | [Kaggle Expert](https://www.kaggle.com/monkeydz)，[CSIRO Image2Biomass Prediction](https://www.kaggle.com/competitions/csiro-biomass) 铜牌（3805 支队伍中第 355） |

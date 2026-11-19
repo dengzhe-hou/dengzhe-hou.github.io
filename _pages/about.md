@@ -243,7 +243,7 @@ Supervisors: Prof. [Kazunori Yamada](https://yamada-lab.gr.jp/en/index.html), As
 
 | **2026–2027** | **[KAKENHI Grant-in-Aid for Research Activity Start-up](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-26K25566/)** (PI, 26K25566): 注意テンプレートの表象形式：計算モデル階層・脳波・視線追跡による解明 (¥2,600,000) |
 | **2026** | [Kaggle](https://www.kaggle.com/monkeydz) **Silver Medal**, [ROGII - Wellbore Geology Prediction](https://www.kaggle.com/competitions/rogii-wellbore-geology-prediction) (89/6125), [certificate](/images/kaggle-rogii-silver-2026.png) |
-| **2026** | **Research Grant (PI)**, [Center for So-Go-Chi (Convergence Knowledge) Informatics](https://www.aisogochi.tohoku.ac.jp/), Tohoku University (¥400,000) |
+| **2026** | **Research Grant (PI)**, [Center for So-Go-Chi (Convergence Knowledge) Informatics](https://www.aisogochi.tohoku.ac.jp/), Tohoku University, "Systematic evaluation of non-brain artifact dependence in EEG foundation models" (¥400,000) |
 | **2026–** | Research Member, Tohoku University × NTT DATA Group Joint Research on Technology Governance ([TechGov](https://techgov.udac.tohoku.ac.jp/ja/index.html#home), UDAC) (¥1,000,000 individual allocation, of ¥40,000,000 total project) |
 | **2026** | **Research Grant (PI)**, Interdisciplinary Research Project Development Support, Graduate School of Information Sciences (GSIS), Tohoku University: 認知科学実験パラダイムに基づくAIシステム認知能力評価プラットフォームの開拓 (¥500,000) |
 

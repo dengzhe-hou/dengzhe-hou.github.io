@@ -210,7 +210,7 @@ selected_research:
 
 | **2026–2027** | **[科研費 研究活動スタート支援](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-26K25566/)**（代表、26K25566）「注意テンプレートの表象形式：計算モデル階層・脳波・視線追跡による解明」（260万円） |
 | **2026** | [Kaggle](https://www.kaggle.com/monkeydz) **銀メダル**、[ROGII - Wellbore Geology Prediction](https://www.kaggle.com/competitions/rogii-wellbore-geology-prediction)（6125チーム中89位）、[証明書](/images/kaggle-rogii-silver-2026.png) |
-| **2026** | 東北大学[総合知インフォマティクス研究センター](https://www.aisogochi.tohoku.ac.jp/) **研究助成（代表）**（40万円） |
+| **2026** | 東北大学[総合知インフォマティクス研究センター](https://www.aisogochi.tohoku.ac.jp/) **研究助成（代表）**「脳波基盤モデルにおける非脳源アーティファクト依存性の体系的検証」（40万円） |
 | **2026–** | 東北大学 × NTTデータグループ テクノロジーガバナンス共同研究（[TechGov](https://techgov.udac.tohoku.ac.jp/ja/index.html#home)、UDAC）研究員（個人配分100万円、総額4,000万円） |
 | **2026** | 東北大学大学院情報科学研究科 Interdisciplinary Research Project Development Support **研究助成（代表）**「認知科学実験パラダイムに基づくAIシステム認知能力評価プラットフォームの開拓」（50万円） |
 | **2026** | [Kaggle Expert](https://www.kaggle.com/monkeydz)、[CSIRO Image2Biomass Prediction](https://www.kaggle.com/competitions/csiro-biomass) 銅メダル（3805チーム中355位） |
