@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="EEGJev is a System One decision model and benchmark for multi-task EEG question answering.">
   <title>EEGJev | System One EEG decision model and benchmark</title>
-  <link rel="stylesheet" href="assets/site.css?v=research-home">
-  <script src="assets/site.js?v=paper-figures" defer></script>
+  <link rel="stylesheet" href="assets/site.css?v=editorial-home">
+  <script src="assets/site.js?v=question-types" defer></script>
 </head>
 <body>
   <a class="skip" href="#overview">Skip to content</a>
@@ -14,6 +14,7 @@
     <div class="header-inner">
       <a class="brand" href="#overview">EEGJev</a>
       <nav class="nav" aria-label="Sections">
+        <a href="#overview">Overview</a>
         <a href="#benchmark">Benchmark</a>
         <a href="#model">Model</a>
         <a href="#evaluation">Evaluation</a>
@@ -30,11 +31,21 @@
   <main id="overview">
     <section class="hero" aria-labelledby="title">
       <div class="hero-inner wrap">
-        <p class="hero-brand" aria-hidden="true">EEG<span>Jev</span></p>
+        <p class="hero-brand" aria-hidden="true">EEGJev</p>
         <div class="hero-grid">
           <div class="hero-copy">
-            <h1 id="title" class="hero-heading">A <em>System One</em> decision model and benchmark for <em>multi-task EEG question answering</em></h1>
-            <p class="hero-description">Ask different questions about the same EEG. EEGJev uses the question and offered answers to decide what to read from the signal. EEGJev-Bench measures how well that decision follows the question and when a model should decline.</p>
+            <h1 id="title" class="hero-heading">
+              <span>A <em>System One</em> decision model</span>
+              <span>and benchmark for <em>multi-task</em></span>
+              <span><em>EEG question answering</em></span>
+            </h1>
+            <ul class="capabilities" aria-label="Project features">
+              <li><a href="#question-types">Six question types</a></li>
+              <li><a href="#model">One-pass decisions</a></li>
+              <li><a href="#participant-split">Held-out participants</a></li>
+              <li><a href="#decision-reliability">Matched refusal tests</a></li>
+            </ul>
+            <p class="hero-description"><strong>EEGJev</strong> uses the question and offered answers to decide what to read from the EEG. <strong>EEGJev-Bench</strong> measures whether that decision follows the question and when a model should decline.</p>
             <div class="actions">
               <a class="button primary" href="#benchmark">Explore the benchmark</a>
               <a class="button" href="https://github.com/dengzhe-hou/EEGJev">GitHub</a>
@@ -42,24 +53,57 @@
               <a class="button" href="https://huggingface.co/datasets/dengzhe-hou/EEGJev-Bench">Dataset</a>
             </div>
           </div>
-          <div class="bench-card">
+          <section class="bench-card" id="question-types" data-view="tasks" aria-labelledby="bench-card-title">
             <div class="card-head">
-              <h2>EEGJev-Bench</h2>
+              <h2 id="bench-card-title">EEGJev-Bench coverage</h2>
               <div class="switcher" role="group" aria-label="Benchmark card view">
-                <button type="button" aria-pressed="true" data-track-view="tasks">Tasks</button>
-                <button type="button" aria-pressed="false" data-track-view="metrics">Scoring</button>
+                <button type="button" aria-pressed="true" data-track-view="tasks" aria-controls="bench-tracks">Tasks</button>
+                <button type="button" aria-pressed="false" data-track-view="metrics" aria-controls="bench-tracks">Scoring</button>
               </div>
             </div>
-            <div class="bench-rows" aria-live="polite">
-              <div class="bench-row"><span class="track rest">D1</span><span>Single attribute</span><span class="row-value" data-metric="Balanced accuracy">109</span></div>
-              <div class="bench-row"><span class="track rest">D2</span><span>Paired attributes</span><span class="row-value" data-metric="Per answer and joint">59</span></div>
-              <div class="bench-row"><span class="track rest">D3</span><span>Ordered bins</span><span class="row-value" data-metric="Balanced accuracy">22</span></div>
-              <div class="bench-row"><span class="track act">D4</span><span>Answer or decline</span><span class="row-value" data-metric="Group balanced">31</span></div>
-              <div class="bench-row"><span class="track time">T1</span><span>Compare two windows</span><span class="row-value" data-metric="Accuracy">93</span></div>
-              <div class="bench-row"><span class="track time">T2</span><span>Locate an event</span><span class="row-value" data-metric="Accuracy">17</span></div>
+            <ul class="bench-rows" id="bench-tracks" aria-live="polite">
+              <li class="bench-row">
+                <span class="track rest">D1</span>
+                <span class="track-name"><strong>Single attribute</strong><small>One question for an EEG window</small></span>
+                <span class="task-bar rest" aria-hidden="true"><span style="--task-width: 100.0%"></span></span>
+                <span class="row-value" data-metric="Balanced accuracy">109</span>
+              </li>
+              <li class="bench-row">
+                <span class="track rest">D2</span>
+                <span class="track-name"><strong>Paired attributes</strong><small>Two questions for the same window</small></span>
+                <span class="task-bar rest" aria-hidden="true"><span style="--task-width: 54.1%"></span></span>
+                <span class="row-value" data-metric="Per answer and joint">59</span>
+              </li>
+              <li class="bench-row">
+                <span class="track rest">D3</span>
+                <span class="track-name"><strong>Ordered bins</strong><small>Answers in ordered ranges</small></span>
+                <span class="task-bar rest" aria-hidden="true"><span style="--task-width: 20.2%"></span></span>
+                <span class="row-value" data-metric="Balanced accuracy">22</span>
+              </li>
+              <li class="bench-row">
+                <span class="track act">D4</span>
+                <span class="track-name"><strong>Answer or decline</strong><small>Paired answerable and refusal cases</small></span>
+                <span class="task-bar act" aria-hidden="true"><span style="--task-width: 28.4%"></span></span>
+                <span class="row-value" data-metric="Group balanced">31</span>
+              </li>
+              <li class="bench-row">
+                <span class="track time">T1</span>
+                <span class="track-name"><strong>Compare two windows</strong><small>Two EEG segments</small></span>
+                <span class="task-bar time" aria-hidden="true"><span style="--task-width: 85.3%"></span></span>
+                <span class="row-value" data-metric="Accuracy">93</span>
+              </li>
+              <li class="bench-row">
+                <span class="track time">T2</span>
+                <span class="track-name"><strong>Locate an event</strong><small>One longer EEG window</small></span>
+                <span class="task-bar time" aria-hidden="true"><span style="--task-width: 15.6%"></span></span>
+                <span class="row-value" data-metric="Accuracy">17</span>
+              </li>
+            </ul>
+            <div class="card-foot">
+              <p class="card-note" id="track-note">Scored tasks by question type</p>
+              <a href="#benchmark">Benchmark design</a>
             </div>
-            <p class="card-note" id="track-note">Scored tasks by question type</p>
-          </div>
+          </section>
         </div>
       </div>
     </section>
@@ -114,9 +158,9 @@
       <section id="evaluation" class="section">
         <h2>Compare the same decisions</h2>
         <div class="details">
-          <div><h3>Held-out people</h3><p>Test participants are held out from v1.3 training. Scores weight the contributing sources equally.</p></div>
+          <div id="participant-split"><h3>Held-out people</h3><p>Test participants are held out from v1.3 training. Scores weight the contributing sources equally.</p></div>
           <div><h3>Matched tasks</h3><p>Each pairwise comparison uses the tasks that both models cover. The score depends on the question type.</p></div>
-          <div><h3>Decision reliability</h3><p>Paired questions hold the EEG and options fixed. Refusal tests pair answerable cases with cases that omit the correct option.</p></div>
+          <div id="decision-reliability"><h3>Decision reliability</h3><p>Paired questions hold the EEG and options fixed. Refusal tests pair answerable cases with cases that omit the correct option.</p></div>
         </div>
       </section>
 
