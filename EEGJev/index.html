@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="EEGJev is a System One decision model and benchmark for multi-task EEG question answering.">
   <title>EEGJev | System One EEG decision model and benchmark</title>
-  <link rel="stylesheet" href="assets/site.css?v=interactive-evaluation">
+  <link rel="stylesheet" href="assets/site.css?v=compact-scores">
   <script src="assets/site.js?v=interactive-evaluation" defer></script>
   <script src="assets/scoring.js" defer></script>
   <script src="assets/reliability.js" defer></script>
+  <script src="assets/results-data.js" defer></script>
+  <script src="assets/results.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#overview">Skip to content</a>
@@ -17,6 +19,7 @@
       <a class="brand" href="#overview">EEGJev</a>
       <nav class="nav" aria-label="Sections">
         <a href="#overview">Overview</a>
+        <a href="#leaderboard">Results</a>
         <a href="#benchmark">Benchmark</a>
         <a href="#model">Model</a>
         <a href="#scoring">Scoring</a>
@@ -50,61 +53,20 @@
             </ul>
             <p class="hero-description"><strong>EEGJev</strong> uses the question and offered answers to decide what to read from the EEG. <strong>EEGJev-Bench</strong> measures whether that decision follows the question and when a model should decline.</p>
             <div class="actions">
-              <a class="button primary" href="#benchmark">Explore the benchmark</a>
+              <a class="button primary" href="#leaderboard">Explore the results <span aria-hidden="true">→</span></a>
               <a class="button" href="https://github.com/dengzhe-hou/EEGJev">GitHub</a>
               <a class="button" href="https://huggingface.co/dengzhe-hou/EEGJev">Model</a>
               <a class="button" href="https://huggingface.co/datasets/dengzhe-hou/EEGJev-Bench">Dataset</a>
             </div>
           </div>
-          <section class="bench-card" id="question-types" data-view="tasks" aria-labelledby="bench-card-title">
+          <section class="bench-card" id="question-types" aria-labelledby="bench-card-title">
             <div class="card-head">
-              <h2 id="bench-card-title">EEGJev-Bench coverage</h2>
-              <div class="switcher" role="group" aria-label="Benchmark card view">
-                <button type="button" aria-pressed="true" data-track-view="tasks" aria-controls="bench-tracks">Tasks</button>
-                <button type="button" aria-pressed="false" data-track-view="metrics" aria-controls="bench-tracks">Scoring</button>
-              </div>
+              <h2 id="bench-card-title">EEGJev-Bench scores</h2>
             </div>
-            <ul class="bench-rows" id="bench-tracks" aria-live="polite">
-              <li class="bench-row">
-                <span class="track rest">D1</span>
-                <span class="track-name"><strong>Single attribute</strong><small>One question for an EEG window</small></span>
-                <span class="task-bar rest" aria-hidden="true"><span style="--task-width: 100.0%"></span></span>
-                <span class="row-value" data-metric="Balanced accuracy">109</span>
-              </li>
-              <li class="bench-row">
-                <span class="track rest">D2</span>
-                <span class="track-name"><strong>Paired attributes</strong><small>Two questions for the same window</small></span>
-                <span class="task-bar rest" aria-hidden="true"><span style="--task-width: 54.1%"></span></span>
-                <span class="row-value" data-metric="Per answer and joint">59</span>
-              </li>
-              <li class="bench-row">
-                <span class="track rest">D3</span>
-                <span class="track-name"><strong>Ordered bins</strong><small>Answers in ordered ranges</small></span>
-                <span class="task-bar rest" aria-hidden="true"><span style="--task-width: 20.2%"></span></span>
-                <span class="row-value" data-metric="Balanced accuracy">22</span>
-              </li>
-              <li class="bench-row">
-                <span class="track act">D4</span>
-                <span class="track-name"><strong>Answer or decline</strong><small>Paired answerable and refusal cases</small></span>
-                <span class="task-bar act" aria-hidden="true"><span style="--task-width: 28.4%"></span></span>
-                <span class="row-value" data-metric="Group balanced">31</span>
-              </li>
-              <li class="bench-row">
-                <span class="track time">T1</span>
-                <span class="track-name"><strong>Compare two windows</strong><small>Two EEG segments</small></span>
-                <span class="task-bar time" aria-hidden="true"><span style="--task-width: 85.3%"></span></span>
-                <span class="row-value" data-metric="Accuracy">93</span>
-              </li>
-              <li class="bench-row">
-                <span class="track time">T2</span>
-                <span class="track-name"><strong>Locate an event</strong><small>One longer EEG window</small></span>
-                <span class="task-bar time" aria-hidden="true"><span style="--task-width: 15.6%"></span></span>
-                <span class="row-value" data-metric="Accuracy">17</span>
-              </li>
-            </ul>
+            <div id="hero-results" class="hero-results"></div>
             <div class="card-foot">
-              <p class="card-note" id="track-note">Scored tasks by question type</p>
-              <a href="#scoring">Try the scoring demo</a>
+              <p class="card-note" id="track-note" aria-live="polite">Balanced accuracy</p>
+              <a href="#leaderboard">All comparisons <span aria-hidden="true">→</span></a>
             </div>
           </section>
         </div>
@@ -120,6 +82,50 @@
     </div>
 
     <div class="wrap content">
+      <section id="leaderboard" class="section" aria-labelledby="results-title" hidden>
+        <p class="eyebrow">EEGJev-Bench v1.3</p>
+        <h2 id="results-title">Results by question type</h2>
+        <p class="section-intro">Compare scores on the same test tasks. Each source contributes equally to a score.</p>
+        <div class="results-shell">
+          <div class="results-header">
+            <div class="results-types" aria-label="Select a question type" role="group"></div>
+            <label class="results-search">
+              <span aria-hidden="true">⌕</span>
+              <span class="sr-only">Search baseline models</span>
+              <input type="search" id="baseline-search" placeholder="Find a baseline" autocomplete="off">
+            </label>
+          </div>
+          <div class="results-content" id="task-results">
+            <div class="results-about">
+              <h3 id="result-track"></h3>
+              <p id="result-metric"></p>
+              <a id="result-scoring" href="#scoring">Try the scoring rule <span aria-hidden="true">↗</span></a>
+            </div>
+            <div id="results-ranked"></div>
+            <div class="pair-head">
+              <h4 id="pair-heading">Matched comparisons</h4>
+              <p class="pair-key"><span>EEGJev</span><span>Baseline</span></p>
+            </div>
+            <div class="results-filters">
+              <label id="protocol-filter" hidden>Comparison
+                <select id="result-protocol"></select>
+              </label>
+              <label>Sort by
+                <select id="result-sort">
+                  <option value="paper">Paper order</option>
+                  <option value="tasks">Common tasks</option>
+                  <option value="delta">EEGJev score difference</option>
+                  <option value="name">Baseline name</option>
+                </select>
+              </label>
+              <p id="result-count" role="status"></p>
+            </div>
+            <div id="matched-results" aria-labelledby="pair-heading"></div>
+            <p class="results-note">Scores are from Fig. 4 of the paper. Each row reports its own matched task set; the difference is EEGJev minus the baseline in percentage points.</p>
+          </div>
+        </div>
+      </section>
+
       <section id="benchmark" class="section">
         <p class="eyebrow">The benchmark</p>
         <h2>What changes when the question changes?</h2>
@@ -522,9 +528,9 @@
       <section id="resources" class="section">
         <h2>Code, model and benchmark</h2>
         <div class="resources">
-          <a class="resource" href="https://github.com/dengzhe-hou/EEGJev"><strong>GitHub</strong><span>Code, evaluation and reproducibility documents. Repository access required.</span></a>
-          <a class="resource" href="https://huggingface.co/dengzhe-hou/EEGJev"><strong>HF Model</strong><span>Model card. Repository access required.</span></a>
-          <a class="resource" href="https://huggingface.co/datasets/dengzhe-hou/EEGJev-Bench"><strong>HF Dataset</strong><span>Benchmark card and evaluation protocol. Repository access required.</span></a>
+          <a class="resource" href="https://github.com/dengzhe-hou/EEGJev"><strong>GitHub</strong><span>Code, evaluation and reproducibility documents.</span></a>
+          <a class="resource" href="https://huggingface.co/dengzhe-hou/EEGJev"><strong>HF Model</strong><span>Model card and architecture figure.</span></a>
+          <a class="resource" href="https://huggingface.co/datasets/dengzhe-hou/EEGJev-Bench"><strong>HF Dataset</strong><span>Benchmark card, scoring protocol and synthetic examples.</span></a>
         </div>
       </section>
     </div>
