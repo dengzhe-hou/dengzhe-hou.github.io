@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="EEGJev is a System One decision model and benchmark for multi-task EEG question answering.">
   <title>EEGJev | System One EEG decision model and benchmark</title>
-  <link rel="stylesheet" href="assets/site.css?v=editorial-home">
-  <script src="assets/site.js?v=question-types" defer></script>
+  <link rel="stylesheet" href="assets/site.css?v=interactive-evaluation">
+  <script src="assets/site.js?v=interactive-evaluation" defer></script>
+  <script src="assets/scoring.js" defer></script>
+  <script src="assets/reliability.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#overview">Skip to content</a>
@@ -17,7 +19,8 @@
         <a href="#overview">Overview</a>
         <a href="#benchmark">Benchmark</a>
         <a href="#model">Model</a>
-        <a href="#evaluation">Evaluation</a>
+        <a href="#scoring">Scoring</a>
+        <a href="#decision-reliability">Reliability</a>
         <a href="#resources">Resources</a>
       </nav>
       <div class="header-links">
@@ -101,7 +104,7 @@
             </ul>
             <div class="card-foot">
               <p class="card-note" id="track-note">Scored tasks by question type</p>
-              <a href="#benchmark">Benchmark design</a>
+              <a href="#scoring">Try the scoring demo</a>
             </div>
           </section>
         </div>
@@ -157,10 +160,362 @@
 
       <section id="evaluation" class="section">
         <h2>Compare the same decisions</h2>
-        <div class="details">
+        <div class="details evaluation-details">
           <div id="participant-split"><h3>Held-out people</h3><p>Test participants are held out from v1.3 training. Scores weight the contributing sources equally.</p></div>
           <div><h3>Matched tasks</h3><p>Each pairwise comparison uses the tasks that both models cover. The score depends on the question type.</p></div>
-          <div id="decision-reliability"><h3>Decision reliability</h3><p>Paired questions hold the EEG and options fixed. Refusal tests pair answerable cases with cases that omit the correct option.</p></div>
+        </div>
+      </section>
+
+      <section id="scoring" class="section explore-section" aria-labelledby="scoring-title">
+        <p class="eyebrow">Scoring</p>
+        <h2 id="scoring-title">Try the scoring rules</h2>
+        <p class="section-intro">Select a question type and see how your choices are scored.</p>
+        <div class="demo-shell">
+          <div class="demo-tabs" role="tablist" aria-label="Question types" data-demo-tabs>
+            <button type="button" id="score-tab-d1" role="tab" aria-controls="score-panel-d1" aria-selected="false" tabindex="-1">D1</button>
+            <button type="button" id="score-tab-d2" role="tab" aria-controls="score-panel-d2" aria-selected="true" tabindex="0">D2</button>
+            <button type="button" id="score-tab-d3" role="tab" aria-controls="score-panel-d3" aria-selected="false" tabindex="-1">D3</button>
+            <button type="button" id="score-tab-d4" role="tab" aria-controls="score-panel-d4" aria-selected="false" tabindex="-1">D4</button>
+            <button type="button" id="score-tab-t1" role="tab" aria-controls="score-panel-t1" aria-selected="false" tabindex="-1">T1</button>
+            <button type="button" id="score-tab-t2" role="tab" aria-controls="score-panel-t2" aria-selected="false" tabindex="-1">T2</button>
+          </div>
+            <section class="demo-panel" id="score-panel-d1" role="tabpanel" aria-labelledby="score-tab-d1" hidden>
+              <div class="demo-panel-top">
+                <div>
+                  <p class="demo-tag">D1</p>
+                  <h3>Single attribute</h3>
+                </div>
+                <p class="demo-note">109 scored tasks across 17 sources</p>
+              </div>
+              <form class="demo-columns" data-scoring-type="d1">
+                <div class="demo-surface">
+                  <p class="demo-tag">Illustrative example</p>
+                  <p>Suppose this EEG window was recorded with the participant’s eyes closed.</p>
+                  <fieldset class="demo-question" data-score-answer="1">
+                    <legend>What was the eye state?</legend>
+                    <div class="demo-options">
+                      <label class="demo-option"><input type="radio" name="d1-0" value="0" required> Eyes open</label>
+                      <label class="demo-option"><input type="radio" name="d1-0" value="1" required> Eyes closed</label>
+                    </div>
+                  </fieldset>
+                  <div class="demo-actions">
+                    <button type="submit" class="button primary">Check answer</button>
+                    <button type="reset" class="button">Reset</button>
+                  </div>
+                </div>
+                <div class="demo-surface">
+                  <h4>How scoring works</h4>
+                  <p>The benchmark reports balanced accuracy. Within a task, each answer label contributes equally.</p>
+                  <dl class="demo-results" data-scoring-results hidden>
+                    <div class="demo-stat"><dt>Correctness</dt><dd data-scoring-result="correct"></dd></div>
+                  </dl>
+                  <p class="sr-only" role="status" data-scoring-feedback></p>
+                </div>
+              </form>
+            </section>
+            <section class="demo-panel" id="score-panel-d2" role="tabpanel" aria-labelledby="score-tab-d2">
+              <div class="demo-panel-top">
+                <div>
+                  <p class="demo-tag">D2</p>
+                  <h3>Paired attributes</h3>
+                </div>
+                <p class="demo-note">59 scored tasks across 10 sources</p>
+              </div>
+              <form class="demo-columns" data-scoring-type="d2">
+                <div class="demo-surface">
+                  <p class="demo-tag">Illustrative example</p>
+                  <p>Both questions use the same EEG window. In this example, the trial showed a fearful face and cued the left hand.</p>
+                  <fieldset class="demo-question" data-score-answer="0">
+                    <legend>Which facial expression was shown?</legend>
+                    <div class="demo-options">
+                      <label class="demo-option"><input type="radio" name="d2-0" value="0" required> Fearful</label>
+                      <label class="demo-option"><input type="radio" name="d2-0" value="1" required> Happy</label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="demo-question" data-score-answer="0">
+                    <legend>Which hand did the cue indicate?</legend>
+                    <div class="demo-options">
+                      <label class="demo-option"><input type="radio" name="d2-1" value="0" required> Left hand</label>
+                      <label class="demo-option"><input type="radio" name="d2-1" value="1" required> Right hand</label>
+                    </div>
+                  </fieldset>
+                  <div class="demo-actions">
+                    <button type="submit" class="button primary">Check answers</button>
+                    <button type="reset" class="button">Reset</button>
+                  </div>
+                </div>
+                <div class="demo-surface">
+                  <h4>How scoring works</h4>
+                  <p>The benchmark reports balanced accuracy per attribute and a joint score. The aggregate joint score balances observed combinations of the two true answers.</p>
+                  <p class="demo-formula">Joint credit for one pair = 1 if both answers are correct, or 0 otherwise.</p>
+                  <dl class="demo-results" data-scoring-results hidden>
+                    <div class="demo-stat"><dt>Questions correct</dt><dd data-scoring-result="correct"></dd></div>
+                    <div class="demo-stat"><dt>Joint credit</dt><dd data-scoring-result="joint"></dd></div>
+                  </dl>
+                  <p class="sr-only" role="status" data-scoring-feedback></p>
+                </div>
+              </form>
+            </section>
+            <section class="demo-panel" id="score-panel-d3" role="tabpanel" aria-labelledby="score-tab-d3" hidden>
+              <div class="demo-panel-top">
+                <div>
+                  <p class="demo-tag">D3</p>
+                  <h3>Ordered bins</h3>
+                </div>
+                <p class="demo-note">22 scored tasks across 6 sources</p>
+              </div>
+              <form class="demo-columns" data-scoring-type="d3">
+                <div class="demo-surface">
+                  <p class="demo-tag">Illustrative example</p>
+                  <p>Suppose the task label for this illustrative recording is 2-back.</p>
+                  <fieldset class="demo-question" data-score-answer="1">
+                    <legend>What was the task load?</legend>
+                    <div class="demo-options">
+                      <label class="demo-option"><input type="radio" name="d3-0" value="0" required> 1-back</label>
+                      <label class="demo-option"><input type="radio" name="d3-0" value="1" required> 2-back</label>
+                      <label class="demo-option"><input type="radio" name="d3-0" value="2" required> 3-back</label>
+                    </div>
+                  </fieldset>
+                  <div class="demo-actions">
+                    <button type="submit" class="button primary">Check answer</button>
+                    <button type="reset" class="button">Reset</button>
+                  </div>
+                </div>
+                <div class="demo-surface">
+                  <h4>How scoring works</h4>
+                  <p>The benchmark reports balanced accuracy and the mean absolute distance between the chosen and true bins.</p>
+                  <dl class="demo-results" data-scoring-results hidden>
+                    <div class="demo-stat"><dt>Correctness</dt><dd data-scoring-result="correct"></dd></div>
+                    <div class="demo-stat"><dt>Distance in bins</dt><dd data-scoring-result="distance"></dd></div>
+                  </dl>
+                  <p class="sr-only" role="status" data-scoring-feedback></p>
+                </div>
+              </form>
+            </section>
+            <section class="demo-panel" id="score-panel-d4" role="tabpanel" aria-labelledby="score-tab-d4" hidden>
+              <div class="demo-panel-top">
+                <div>
+                  <p class="demo-tag">D4</p>
+                  <h3>Answer or decline</h3>
+                </div>
+                <p class="demo-note">31 scored tasks across 11 sources</p>
+              </div>
+              <form class="demo-columns" data-scoring-type="d4">
+                <div class="demo-surface">
+                  <p class="demo-tag">Illustrative example</p>
+                  <p>The correct label is Fearful in both versions. Each version offers two options.</p>
+                  <fieldset class="demo-question" data-score-answer="0">
+                    <legend>Fearful or Neutral is offered. What should the decoder do?</legend>
+                    <div class="demo-options">
+                      <label class="demo-option"><input type="radio" name="d4-0" value="0" required> Answer</label>
+                      <label class="demo-option"><input type="radio" name="d4-0" value="1" required> Decline</label>
+                    </div>
+                  </fieldset>
+                  <fieldset class="demo-question" data-score-answer="1">
+                    <legend>Happy or Neutral is offered. What should the decoder do?</legend>
+                    <div class="demo-options">
+                      <label class="demo-option"><input type="radio" name="d4-1" value="0" required> Answer</label>
+                      <label class="demo-option"><input type="radio" name="d4-1" value="1" required> Decline</label>
+                    </div>
+                  </fieldset>
+                  <div class="demo-actions">
+                    <button type="submit" class="button primary">Check answers</button>
+                    <button type="reset" class="button">Reset</button>
+                  </div>
+                </div>
+                <div class="demo-surface">
+                  <h4>How scoring works</h4>
+                  <p>The benchmark averages answering when the correct option is present and declining when it is absent. It uses groups with the same offered label set.</p>
+                  <p class="demo-formula">Group score = (answer rate on controls + refusal recall) ÷ 2.</p>
+                  <dl class="demo-results" data-scoring-results hidden>
+                    <div class="demo-stat"><dt>Decisions correct</dt><dd data-scoring-result="correct"></dd></div>
+                    <div class="demo-stat"><dt>Example mean</dt><dd data-scoring-result="mean"></dd></div>
+                  </dl>
+                  <p class="sr-only" role="status" data-scoring-feedback></p>
+                </div>
+              </form>
+            </section>
+            <section class="demo-panel" id="score-panel-t1" role="tabpanel" aria-labelledby="score-tab-t1" hidden>
+              <div class="demo-panel-top">
+                <div>
+                  <p class="demo-tag">T1</p>
+                  <h3>Compare two windows</h3>
+                </div>
+                <p class="demo-note">93 scored tasks across 16 sources</p>
+              </div>
+              <form class="demo-columns" data-scoring-type="t1">
+                <div class="demo-surface">
+                  <p class="demo-tag">Illustrative example</p>
+                  <p>The two windows have the same duration and come from one participant. In this example, the eyes were open in A and closed in B.</p>
+                  <fieldset class="demo-question" data-score-answer="1">
+                    <legend>Which window shows eyes closed?</legend>
+                    <div class="demo-options">
+                      <label class="demo-option"><input type="radio" name="t1-0" value="0" required> Window A</label>
+                      <label class="demo-option"><input type="radio" name="t1-0" value="1" required> Window B</label>
+                    </div>
+                  </fieldset>
+                  <div class="demo-actions">
+                    <button type="submit" class="button primary">Check answer</button>
+                    <button type="reset" class="button">Reset</button>
+                  </div>
+                </div>
+                <div class="demo-surface">
+                  <h4>How scoring works</h4>
+                  <p>The benchmark reports accuracy. It averages four linked views of the same pair before aggregating across people, tasks and sources.</p>
+                  <dl class="demo-results" data-scoring-results hidden>
+                    <div class="demo-stat"><dt>Correctness</dt><dd data-scoring-result="correct"></dd></div>
+                  </dl>
+                  <p class="sr-only" role="status" data-scoring-feedback></p>
+                </div>
+              </form>
+            </section>
+            <section class="demo-panel" id="score-panel-t2" role="tabpanel" aria-labelledby="score-tab-t2" hidden>
+              <div class="demo-panel-top">
+                <div>
+                  <p class="demo-tag">T2</p>
+                  <h3>Locate an event</h3>
+                </div>
+                <p class="demo-note">17 scored tasks across 8 sources</p>
+              </div>
+              <form class="demo-columns" data-scoring-type="t2">
+                <div class="demo-surface">
+                  <p class="demo-tag">Illustrative example</p>
+                  <p>Suppose a cue occurs at 11 s in this illustrative 16 s EEG window.</p>
+                  <fieldset class="demo-question" data-score-answer="1">
+                    <legend>Which half contains the cue?</legend>
+                    <div class="demo-options">
+                      <label class="demo-option"><input type="radio" name="t2-0" value="0" required> First half</label>
+                      <label class="demo-option"><input type="radio" name="t2-0" value="1" required> Second half</label>
+                    </div>
+                  </fieldset>
+                  <div class="demo-actions">
+                    <button type="submit" class="button primary">Check answer</button>
+                    <button type="reset" class="button">Reset</button>
+                  </div>
+                </div>
+                <div class="demo-surface">
+                  <h4>How scoring works</h4>
+                  <p>The benchmark reports accuracy. It averages the linked placements of each event before aggregating across people, tasks and sources.</p>
+                  <dl class="demo-results" data-scoring-results hidden>
+                    <div class="demo-stat"><dt>Correctness</dt><dd data-scoring-result="correct"></dd></div>
+                  </dl>
+                  <p class="sr-only" role="status" data-scoring-feedback></p>
+                </div>
+              </form>
+            </section>
+        </div>
+        <aside class="demo-summary" aria-labelledby="ev-aggregation-heading">
+          <h3 id="ev-aggregation-heading">How task scores are combined</h3>
+          <p>Within each source, average its task scores. Then give every contributing source equal weight for that question type.</p>
+          <p class="demo-formula">
+            <span>Benchmark score =</span>
+            <span class="demo-fraction" role="math" aria-label="sum of source scores divided by number of sources">
+              <span>sum of source scores</span>
+              <span>number of sources</span>
+            </span>
+          </p>
+        </aside>
+      </section>
+
+      <section id="decision-reliability" class="section explore-section" aria-labelledby="reliability-heading">
+        <p class="eyebrow">Decision reliability</p>
+        <h2 id="reliability-heading">Change one thing and see what should happen</h2>
+        <p class="section-intro">Keep the EEG window fixed and change the question, the order of the options, or which options are available.</p>
+        <div class="demo-shell">
+          <div class="demo-tabs" data-demo-tabs role="tablist" aria-label="Reliability checks">
+            <button id="reliability-question-tab" type="button" role="tab" aria-controls="reliability-question" aria-selected="true">Change the question</button>
+            <button id="reliability-order-tab" type="button" role="tab" aria-controls="reliability-order" aria-selected="false" tabindex="-1">Reorder options</button>
+            <button id="reliability-refusal-tab" type="button" role="tab" aria-controls="reliability-refusal" aria-selected="false" tabindex="-1">Remove an option</button>
+          </div>
+
+          <div id="reliability-question" class="demo-panel" role="tabpanel" aria-labelledby="reliability-question-tab" tabindex="0">
+            <div class="demo-panel-top">
+              <span class="demo-tag">D2</span>
+              <h3>Same EEG and options, different question</h3>
+            </div>
+            <div class="demo-columns">
+              <div class="demo-surface">
+                <h4>Ask about</h4>
+                <div class="demo-options" role="group" aria-label="Attribute to ask about">
+                  <button type="button" class="demo-option" data-rel-topic="expression" aria-pressed="true">Facial expression</button>
+                  <button type="button" class="demo-option" data-rel-topic="hand" aria-pressed="false">Response hand</button>
+                </div>
+                <p data-rel-question aria-live="polite">Which expression was on the face shown?</p>
+                <p class="demo-note">The EEG window and all six options stay fixed.</p>
+              </div>
+              <div class="demo-surface">
+                <h4>Choose an answer</h4>
+                <div class="demo-options" role="group" aria-label="Fixed answer options">
+                  <button type="button" class="demo-option" data-rel-answer="angry" aria-pressed="false">Angry</button>
+                  <button type="button" class="demo-option" data-rel-answer="fearful" aria-pressed="false">Fearful</button>
+                  <button type="button" class="demo-option" data-rel-answer="happy-closed" aria-pressed="false">Happy (mouth closed)</button>
+                  <button type="button" class="demo-option" data-rel-answer="happy-open" aria-pressed="false">Happy (mouth open)</button>
+                  <button type="button" class="demo-option" data-rel-answer="left" aria-pressed="false">Left hand</button>
+                  <button type="button" class="demo-option" data-rel-answer="right" aria-pressed="false">Right hand</button>
+                </div>
+                <p class="demo-feedback" data-rel-question-feedback aria-live="polite">Choose an option, then switch the question to try the same list again.</p>
+              </div>
+            </div>
+            <p class="demo-note">Illustrative example based on the labels shown in Fig. 2.</p>
+          </div>
+
+          <div id="reliability-order" class="demo-panel" role="tabpanel" aria-labelledby="reliability-order-tab" tabindex="0" hidden>
+            <div class="demo-panel-top">
+              <span class="demo-tag">D1</span>
+              <h3>Same answer, new position</h3>
+            </div>
+            <p>Which hand was the participant instructed to respond with in this block?</p>
+            <div class="demo-columns">
+              <div class="demo-surface">
+                <h4>Answer options</h4>
+                <div class="demo-options" data-rel-order-options role="group" aria-label="Answer options">
+                  <button type="button" class="demo-option" data-rel-order-answer="left" aria-pressed="true">Left hand</button>
+                  <button type="button" class="demo-option" data-rel-order-answer="right" aria-pressed="false">Right hand</button>
+                </div>
+                <div class="demo-actions">
+                  <button type="button" class="button" data-rel-swap>Swap options</button>
+                </div>
+              </div>
+              <div class="demo-surface">
+                <h4>Selected answer</h4>
+                <p class="demo-feedback" data-rel-order-feedback aria-live="polite">Left hand is option 1.</p>
+                <p class="demo-note">The highlighted answer follows its label. Its position can change.</p>
+              </div>
+            </div>
+            <p class="demo-note">Illustrative example. The EEG, question and answer labels stay fixed.</p>
+          </div>
+
+          <div id="reliability-refusal" class="demo-panel" role="tabpanel" aria-labelledby="reliability-refusal-tab" tabindex="0" hidden>
+            <div class="demo-panel-top">
+              <span class="demo-tag">D4</span>
+              <h3>Same question, different options</h3>
+            </div>
+            <p>Which expression was on the face shown?</p>
+            <p class="demo-note">Both versions share the same EEG window and have three options. Choose a response for each.</p>
+            <div class="demo-columns">
+              <div class="demo-surface" data-rel-case data-expected="decline">
+                <h4>Correct option removed</h4>
+                <div class="demo-options" role="group" aria-label="Responses when the correct option is missing">
+                  <button type="button" class="demo-option" data-rel-response="angry" aria-pressed="false">Angry</button>
+                  <button type="button" class="demo-option" data-rel-response="happy-closed" aria-pressed="false">Happy (mouth closed)</button>
+                  <button type="button" class="demo-option" data-rel-response="happy-open" aria-pressed="false">Happy (mouth open)</button>
+                  <button type="button" class="demo-option" data-rel-response="decline" aria-pressed="false">Decline</button>
+                </div>
+                <p class="demo-feedback" data-rel-case-feedback aria-live="polite">“Fearful” was removed from the options.</p>
+              </div>
+              <div class="demo-surface" data-rel-case data-expected="fearful">
+                <h4>Distractor removed</h4>
+                <div class="demo-options" role="group" aria-label="Responses when the correct option is available">
+                  <button type="button" class="demo-option" data-rel-response="angry" aria-pressed="false">Angry</button>
+                  <button type="button" class="demo-option" data-rel-response="fearful" aria-pressed="false">Fearful</button>
+                  <button type="button" class="demo-option" data-rel-response="happy-closed" aria-pressed="false">Happy (mouth closed)</button>
+                  <button type="button" class="demo-option" data-rel-response="decline" aria-pressed="false">Decline</button>
+                </div>
+                <p class="demo-feedback" data-rel-case-feedback aria-live="polite">“Happy (mouth open)” was removed from the options.</p>
+              </div>
+            </div>
+            <p class="demo-note">Pair from Fig. 2. Declining is a separate response in both versions.</p>
+          </div>
         </div>
       </section>
 
