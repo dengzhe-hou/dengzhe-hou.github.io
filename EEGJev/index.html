@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="EEGJev is a System One decision model and benchmark for multi-task EEG question answering.">
   <title>EEGJev | System One EEG decision model and benchmark</title>
-  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css">
   <script src="assets/site.js" defer></script>
 </head>
@@ -13,7 +12,7 @@
   <a class="skip" href="#overview">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="#overview"><img src="assets/mark.svg" alt="" width="26" height="26">EEGJev</a>
+      <a class="brand" href="#overview">EEGJev</a>
       <nav class="nav" aria-label="Sections">
         <a href="#overview">Overview</a>
         <a href="#benchmark">Benchmark</a>
@@ -68,38 +67,24 @@
         <p class="eyebrow">The benchmark</p>
         <h2>What changes when the question changes?</h2>
         <p class="section-intro">EEGJev-Bench spans 19 public EEG sources, with 17 contributing to test scores. Its six question types cover attributes, comparisons, event timing, and decisions about when to decline.</p>
-        <div class="example">
-          <div class="example-signal">
-            <p class="eyebrow">Illustrative EEG window</p>
-            <svg viewBox="0 0 420 120" role="img" aria-label="Three stylized EEG traces from the same illustrative window">
-              <path class="grid-line" d="M0 20H420 M0 60H420 M0 100H420 M70 0V120 M140 0V120 M210 0V120 M280 0V120 M350 0V120"/>
-              <path class="wave" d="M0 22l10 2 8-8 9 7 8-5 9 7 8-3 7-10 6 15 8-9 8 3 10-2 8 6 10-4 7 8 7-17 7 13 8-4 9 4 9-7 10 4 9-5 8 9 9-4 8 6 7-19 6 16 8-3 9 1 8-7 8 9 8-2 8 2 9-6 8 7 8-3 9 2 8-8 8 7 8 2 9-5 8 6 9-4 9 1 8-6 9 8 8-2 8 3 9-7 8 4 7-2 5 1"/>
-              <path class="wave second" d="M0 61l12-3 8 6 9-4 7-7 8 11 9-5 9 2 6-4 10 7 8-2 10-10 7 13 7-4 9 3 8-1 8-6 8 6 9-3 10 2 9 5 8-9 8 5 8-5 9 8 9-5 7-15 7 22 8-6 8 5 8-5 9 1 9 3 8-8 8 6 8-4 9 5 9-3 8-1 9 6 8-9 8 5 9-2 9 3 9-6 8 4 8-2 9 2 11-2 7 3"/>
-              <path class="wave third" d="M0 100l9-2 8 4 8-2 9 5 7-10 8 5 9-3 9 6 8-4 8-6 9 11 9-3 8 3 9-7 8 3 8 6 8-12 8 6 8 2 10-7 8 7 8-3 8 4 8-6 9 7 9-2 6-18 7 21 8-6 9 3 8 1 9-6 8 4 8-3 9 4 8-2 8 3 9-8 8 6 8-3 8 2 9 4 9-7 8 4 9-6 10 7 9-3 9 2 9-3 7 3"/>
-            </svg>
-            <p>Same window and choices for both questions.</p>
-          </div>
-          <div class="example-question">
-            <div class="switcher" role="group" aria-label="Select a question">
-              <button type="button" aria-pressed="true" data-question="expression">Expression</button>
-              <button type="button" aria-pressed="false" data-question="hand">Response hand</button>
-            </div>
-            <h3 id="question-text">What was the facial expression?</h3>
-            <ul class="choices" aria-label="Offered choices">
-              <li class="answer" data-choice="fearful" aria-current="true">Fearful</li>
-              <li data-choice="happy">Happy</li>
-              <li data-choice="left">Left hand</li>
-              <li data-choice="right">Right hand</li>
-            </ul>
-            <p class="example-answer" id="example-answer" aria-live="polite">Example answer: Fearful</p>
-          </div>
-        </div>
+        <figure class="paper-figure paper-figure-tall">
+          <a href="assets/paper/figure-2-benchmark.png" aria-label="Open full-size benchmark figure">
+            <img src="assets/paper/figure-2-benchmark.png" width="1500" height="1883" loading="lazy" alt="EEGJev-Bench source data, participant split, six types of EEG question and scoring">
+          </a>
+          <figcaption><strong>Fig. 2</strong> Benchmark construction and example questions. <a href="assets/paper/figure-2-benchmark.png">View full size ↗</a></figcaption>
+        </figure>
       </section>
 
       <section id="model" class="section">
         <p class="eyebrow">The model</p>
         <h2>From EEG and a question to a decision</h2>
         <p class="section-intro">EEGJev scores all offered answers in a single pass through the decision head. Each choice receives a score that the application can use directly.</p>
+        <figure class="paper-figure">
+          <a href="assets/paper/figure-1-model.png" aria-label="Open full-size model figure">
+            <img src="assets/paper/figure-1-model.png" width="1400" height="669" loading="lazy" alt="EEGJev architecture with EEG and text branches, a shared decision head and candidate scores">
+          </a>
+          <figcaption><strong>Fig. 1</strong> The EEGJev model. <a href="assets/paper/figure-1-model.png">View full size ↗</a></figcaption>
+        </figure>
         <div class="features">
           <article>
             <h3>Read the EEG</h3>
@@ -138,7 +123,7 @@
   </main>
   <footer class="site-footer">
     <div class="wrap footer-inner">
-      <a class="brand" href="#overview"><img src="assets/mark.svg" alt="" width="22" height="22">EEGJev</a>
+      <a class="brand" href="#overview">EEGJev</a>
       <a href="#overview">Back to top ↑</a>
     </div>
   </footer>
