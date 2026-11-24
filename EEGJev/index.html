@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="EEGJev is a System One decision model and benchmark for multi-task EEG question answering.">
   <title>EEGJev | System One EEG decision model and benchmark</title>
-  <link rel="stylesheet" href="assets/site.css?v=dataset-link">
+  <link rel="stylesheet" href="assets/site.css?v=research-home">
   <script src="assets/site.js?v=paper-figures" defer></script>
 </head>
 <body>
@@ -14,16 +14,15 @@
     <div class="header-inner">
       <a class="brand" href="#overview">EEGJev</a>
       <nav class="nav" aria-label="Sections">
-        <a href="#overview">Overview</a>
         <a href="#benchmark">Benchmark</a>
         <a href="#model">Model</a>
         <a href="#evaluation">Evaluation</a>
         <a href="#resources">Resources</a>
       </nav>
       <div class="header-links">
-        <a href="https://github.com/dengzhe-hou/EEGJev">GitHub <span aria-hidden="true">↗</span></a>
-        <a href="https://huggingface.co/dengzhe-hou/EEGJev">HF Model <span aria-hidden="true">↗</span></a>
-        <a href="https://huggingface.co/datasets/dengzhe-hou/EEGJev-Bench">HF Dataset <span aria-hidden="true">↗</span></a>
+        <a href="https://github.com/dengzhe-hou/EEGJev">GitHub</a>
+        <a href="https://huggingface.co/dengzhe-hou/EEGJev">HF Model</a>
+        <a href="https://huggingface.co/datasets/dengzhe-hou/EEGJev-Bench">HF Dataset</a>
       </div>
     </div>
   </header>
@@ -31,14 +30,16 @@
   <main id="overview">
     <section class="hero" aria-labelledby="title">
       <div class="hero-inner wrap">
-        <h1 id="title">EEGJev</h1>
+        <p class="hero-brand" aria-hidden="true">EEG<span>Jev</span></p>
         <div class="hero-grid">
           <div class="hero-copy">
-            <p class="hero-heading">A <em>System One</em> decision model and benchmark for <em>multi-task EEG question answering</em></p>
+            <h1 id="title" class="hero-heading">A <em>System One</em> decision model and benchmark for <em>multi-task EEG question answering</em></h1>
             <p class="hero-description">Ask different questions about the same EEG. EEGJev uses the question and offered answers to decide what to read from the signal. EEGJev-Bench measures how well that decision follows the question and when a model should decline.</p>
             <div class="actions">
-              <a class="button primary" href="#benchmark">Explore the benchmark <span aria-hidden="true">↓</span></a>
-              <a class="button" href="#model">See the model</a>
+              <a class="button primary" href="#benchmark">Explore the benchmark</a>
+              <a class="button" href="https://github.com/dengzhe-hou/EEGJev">GitHub</a>
+              <a class="button" href="https://huggingface.co/dengzhe-hou/EEGJev">Model</a>
+              <a class="button" href="https://huggingface.co/datasets/dengzhe-hou/EEGJev-Bench">Dataset</a>
             </div>
           </div>
           <div class="bench-card">
@@ -63,16 +64,24 @@
       </div>
     </section>
 
+    <div class="benchmark-facts">
+      <dl class="wrap facts-grid">
+        <div><dt>Public EEG sources</dt><dd>19</dd></div>
+        <div><dt>Sources contributing to test scores</dt><dd>17</dd></div>
+        <div><dt>Question types</dt><dd>6</dd></div>
+      </dl>
+    </div>
+
     <div class="wrap content">
       <section id="benchmark" class="section">
         <p class="eyebrow">The benchmark</p>
         <h2>What changes when the question changes?</h2>
-        <p class="section-intro">EEGJev-Bench spans 19 public EEG sources, with 17 contributing to test scores. Its six question types cover attributes, comparisons, event timing, and decisions about when to decline.</p>
+        <p class="section-intro">EEGJev-Bench covers attributes, comparisons, event timing, and decisions about when to decline.</p>
         <figure class="paper-figure paper-figure-tall">
           <a href="assets/paper/figure-2-benchmark.png" aria-label="Open full-size benchmark figure">
             <img src="assets/paper/figure-2-benchmark.png" width="1500" height="1883" loading="lazy" alt="EEGJev-Bench source data, participant split, six types of EEG question and scoring">
           </a>
-          <figcaption><strong>Fig. 2</strong> Benchmark construction and example questions. <a href="assets/paper/figure-2-benchmark.png">View full size ↗</a></figcaption>
+          <figcaption><strong>Fig. 2</strong> Benchmark construction and example questions. <a href="assets/paper/figure-2-benchmark.png">View full size</a></figcaption>
         </figure>
       </section>
 
@@ -84,7 +93,7 @@
           <a href="assets/paper/figure-1-model.png" aria-label="Open full-size model figure">
             <img src="assets/paper/figure-1-model.png" width="1400" height="669" loading="lazy" alt="EEGJev architecture with EEG and text branches, a shared decision head and candidate scores">
           </a>
-          <figcaption><strong>Fig. 1</strong> The EEGJev model. <a href="assets/paper/figure-1-model.png">View full size ↗</a></figcaption>
+          <figcaption><strong>Fig. 1</strong> The EEGJev model. <a href="assets/paper/figure-1-model.png">View full size</a></figcaption>
         </figure>
         <div class="features">
           <article>
@@ -103,7 +112,6 @@
       </section>
 
       <section id="evaluation" class="section">
-        <p class="eyebrow">Evaluation</p>
         <h2>Compare the same decisions</h2>
         <div class="details">
           <div><h3>Held-out people</h3><p>Test participants are held out from v1.3 training. Scores weight the contributing sources equally.</p></div>
@@ -113,12 +121,11 @@
       </section>
 
       <section id="resources" class="section">
-        <p class="eyebrow">Resources</p>
         <h2>Code, model and benchmark</h2>
         <div class="resources">
-          <a class="resource" href="https://github.com/dengzhe-hou/EEGJev"><strong>GitHub <span aria-hidden="true">↗</span></strong><span>Code, evaluation and reproducibility documents. Repository access required.</span></a>
-          <a class="resource" href="https://huggingface.co/dengzhe-hou/EEGJev"><strong>HF Model <span aria-hidden="true">↗</span></strong><span>Model card. Repository access required.</span></a>
-          <a class="resource" href="https://huggingface.co/datasets/dengzhe-hou/EEGJev-Bench"><strong>HF Dataset <span aria-hidden="true">↗</span></strong><span>Benchmark card and evaluation protocol. Repository access required.</span></a>
+          <a class="resource" href="https://github.com/dengzhe-hou/EEGJev"><strong>GitHub</strong><span>Code, evaluation and reproducibility documents. Repository access required.</span></a>
+          <a class="resource" href="https://huggingface.co/dengzhe-hou/EEGJev"><strong>HF Model</strong><span>Model card. Repository access required.</span></a>
+          <a class="resource" href="https://huggingface.co/datasets/dengzhe-hou/EEGJev-Bench"><strong>HF Dataset</strong><span>Benchmark card and evaluation protocol. Repository access required.</span></a>
         </div>
       </section>
     </div>
@@ -126,7 +133,8 @@
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <a class="brand" href="#overview">EEGJev</a>
-      <a href="#overview">Back to top ↑</a>
+      <a class="footer-credit" href="https://lichenlillc.github.io/SO-Arena/">Inspired by SO-Arena</a>
+      <a class="back-to-top" href="#overview">Back to top</a>
     </div>
   </footer>
 </body>
