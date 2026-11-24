@@ -237,7 +237,7 @@ button { font: inherit; }
 .features, .details { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .features article, .details > div { border-top: 1px solid #c9cfcb; padding: 9px 15px 0 0; }
 .features p, .details p { color: var(--muted); margin: 0; font-size: 14px; }
-.resources { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.resources { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .resource { display: grid; gap: 3px; padding: 16px; border: 1px solid var(--line); border-radius: 7px; background: #fff; text-decoration: none; }
 .resource:hover { border-color: var(--blue); }
 .resource span { color: var(--muted); font-size: 14px; }
