@@ -52,6 +52,7 @@ redirect_from:
 ### AI4Brain (AI for neuroscience)
 
 * Reliable decoding and automated analysis of EEG (preprocessing-induced instability, per-trial uncertainty, feature attribution)
+* Question-guided multi-task EEG decoding and benchmarks (EEG question answering)
 * Visual attention and self-initiated attentional control
 * Eye movement–EEG integration (gaze-contingent paradigms, saccades and microsaccades)
 * Decision-related neural dynamics (time–frequency analysis)
