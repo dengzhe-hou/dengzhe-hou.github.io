@@ -8,6 +8,7 @@ redirect_from:
 
 selected_research:
   - image_path: research-eegjev.png
+    strip_path: research-eegjev-strip.webp
     alt: "EEGJev architecture using separate EEG and text encoders and a shared candidate-scoring head"
     title: "EEGJev: System One EEG Question Answering"
     excerpt: "EEGJev scores offered answers from an EEG recording and a question. EEGJev-Bench tests six question types across 19 public EEG sources."
