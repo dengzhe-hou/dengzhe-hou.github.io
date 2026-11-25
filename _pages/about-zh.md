@@ -6,6 +6,20 @@ lang: zh-CN
 profile: true
 
 selected_research:
+  - image_path: research-eegjev.png
+    strip_path: research-eegjev-strip.webp
+    alt: "EEGJev 架构，EEG 编码器和文本编码器分开，候选答案由共用的打分头计算分数"
+    title: "EEGJev: System One EEG Question Answering"
+    excerpt: "EEGJev 根据一段 EEG 记录和一个问题，给提供的候选答案打分。EEGJev-Bench 覆盖 19 个公开 EEG 数据来源上的 6 类问题。"
+    url: "/publication/2026-arxiv-eegjev"
+    btn_label: "阅读更多"
+  - image_path: research-rsi-healthcare.jpg
+    strip_path: research-rsi-healthcare-strip.webp
+    alt: "2024 至 2026 年部分医疗智能体研究的时间线，按每项研究更新的对象分组，包括记忆与经验、技能、工具与工作流，以及参数与训练数据生成器"
+    title: "A Survey on Recursive Self-Improvement in Healthcare AI Agents"
+    excerpt: "我们按每项研究改变的对象，从记忆、技能到训练数据生成器，梳理了 85 项医疗智能体研究。现有证据主要支持组件更新和部分生成器带来的提升，修改改进流程本身的做法还没有经过检验。"
+    url: "/publication/2026-preprints-self-evolving"
+    btn_label: "阅读更多"
   - image_path: research-s1cogbench.jpg
     strip_path: research-s1cogbench-strip.webp
     alt: "S1CogBench 概览，展示 24 个认知任务中的 6 个示例，以及如何从预测人类选择、执行自身动作和报告概率三方面评估开源和 API 决策模型"
@@ -57,10 +71,17 @@ selected_research:
 
 <div class="news-list" markdown="1">
 
+| **2026年11月** | 在 arXiv 发布预印本 [EEGJev](/publication/2026-arxiv-eegjev)，并上线介绍模型、基准和对比结果的[项目主页](/EEGJev/) |
+| **2026年11月** | [S1CogBench](/publication/2026-arxiv-s1cogbench) 修订版预印本（v2）发布于 arXiv，现包含 7 个开源模型和 API 模型 Jev，并提供[社区排行榜](https://dengzhe-hou.github.io/S1CogBench/)和可加入新任务的扩展赛道 |
+| **2026年11月** | 综述修订并改名为 [A Survey on Recursive Self-Improvement in Healthcare AI Agents](/publication/2026-preprints-self-evolving)（原 Self-Evolving Agent Engineering for Healthcare），已发布在 [alphaXiv](https://www.alphaxiv.org/abs/2611.recursive-self-improvement-healthcare-agents)，并附有涵盖 85 项研究的[交互式证据图](https://dengzhe-hou.github.io/RSI-Healthcare-Agents/) |
 | **2026年10月** | 在 arXiv 发布新预印本 [S1CogBench](/publication/2026-arxiv-s1cogbench)，在 24 个认知实验上测试只给出一个快速决策、不输出文字的 System One 决策模型 |
 | **2026年10月** | 预印本大幅修订并改名为 [WMIP](/publication/2026-arxiv-wmip)（原 WMF-AM），在 18 个 LLM 上新做了实验。单步算术准确率为 84.9%，经过三到七次更新后降到 31.7% |
 | **2026年10月** | 预印本修订并改名为 [CogBattery](/publication/2026-arxiv-cogbattery)（原 CogArena），在 13 个认知范式上把 54 个开源权重语言模型与人类数据比较，发现效应方向一致并不等于行为像人 |
 | **2026年9月** | 在 [RSJ2026 开放论坛 OF7](https://ac.rsj-web.org/2026/openforum/#of7)「テクノロジーの質的進化と組織統制」（第 44 届日本机器人学会学术年会，金泽）作**特邀报告**，与 Michael Zielewski 一起介绍神经技术 |
+
+<details class="news-archive" markdown="1">
+<summary>更早的新闻</summary>
+
 | **2026年8月** | 合作报告被[日本市场营销科学学会（JIMS）研究大会](http://www.jims.gr.jp/%e7%a0%94%e7%a9%b6%e5%a4%a7%e4%bc%9a/)（早稻田大学，2026年11月14–15日）接收，题目为「生成AI活用事例における社会倫理的リスクと炎上要因の定量分析」 |
 | **2026年8月** | 论文 [Subject-Specific Analysis of Self-Initiated Attention Shifts from EEG](/publication/2026-arxiv-subject-specific) 被 **IEEE SMC 2026**（美国贝尔维尤）接收 |
 | **2026年8月** | [TimePre](/publication/2026-tmlr-timepre) 被 **Transactions on Machine Learning Research (TMLR)** 接收 |
@@ -68,10 +89,6 @@ selected_research:
 | **2026年8月** | 在 arXiv 发布新预印本 [Control-Diverse Reinforcement Fine-Tuning](/publication/2026-arxiv-cd-rft)。即使激活看起来很分散，RL 后训练也会把*控制*集中到跨任务共享的少数组件上；缓解这个瓶颈能提升多任务表现 |
 | **2026年8月** | 在[第 12 届 CWRU–东北大学工程与生命科学数据科学研讨会](https://sites.google.com/case.edu/2026-cwru-tohoku-symposium/event-program)（美国克利夫兰）作**特邀报告**，题目为 "From Preprocessing Choices to LLM Agents: Automated and Verifiable Cognitive EEG Analysis" |
 | **2026年8月** | 获得[**日本学术振兴会科研费 研究活动启动支援**](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-26K25566/)（负责人，26K25566），用计算模型层级、脑电和眼动追踪研究注意模板的表征形式 |
-
-<details class="news-archive" markdown="1">
-<summary>更早的新闻</summary>
-
 | **2026年8月** | 在 [Kaggle](https://www.kaggle.com/monkeydz) [ROGII - Wellbore Geology Prediction](https://www.kaggle.com/competitions/rogii-wellbore-geology-prediction) 获得**银牌**（6125 支队伍中排名第 89） |
 | **2026年7月** | [KANMixer](/publication/2026-scirep-kanmixer) 发表于 ***Scientific Reports***，提出一个以 KAN 为核心的紧凑长期预测混合器，并分析 KAN 在什么情况下真正有用 |
 | **2026年7月** | 在 arXiv 发布两篇新预印本，[CogEEGAgent](/publication/2026-arxiv-cogeegagent)（自主完成认知脑电分析）和 [CogBattery](/publication/2026-arxiv-cogbattery)（初版名为 CogArena，以人类数据为参照评估 LLM 的认知任务表现） |

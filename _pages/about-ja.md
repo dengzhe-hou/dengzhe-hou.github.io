@@ -6,6 +6,20 @@ lang: ja
 profile: true
 
 selected_research:
+  - image_path: research-eegjev.png
+    strip_path: research-eegjev-strip.webp
+    alt: "EEGJev のアーキテクチャ。EEG エンコーダとテキストエンコーダを別々に持ち、回答候補のスコアを共通のヘッドで計算する"
+    title: "EEGJev: System One EEG Question Answering"
+    excerpt: "EEGJev は、EEG 記録と質問から、提示された回答候補にスコアを付けます。EEGJev-Bench では、19 の公開 EEG データソースにまたがる 6 種類の質問を検証します。"
+    url: "/publication/2026-arxiv-eegjev"
+    btn_label: "詳しく見る"
+  - image_path: research-rsi-healthcare.jpg
+    strip_path: research-rsi-healthcare-strip.webp
+    alt: "2024〜2026 年の医療エージェント研究から選んだ研究の年表。記憶と経験、スキル、ツールとワークフロー、パラメータと学習データの生成器のうち、何を更新するかで分類"
+    title: "A Survey on Recursive Self-Improvement in Healthcare AI Agents"
+    excerpt: "85 の医療エージェント研究を、記憶やスキルから学習データの生成器まで、それぞれが何を変えるかで整理しました。現在の証拠が主に支持するのは構成要素の更新と一部の生成器による改善で、改善手順そのものを改訂する方式はまだ検証されていません。"
+    url: "/publication/2026-preprints-self-evolving"
+    btn_label: "詳しく見る"
   - image_path: research-s1cogbench.jpg
     strip_path: research-s1cogbench-strip.webp
     alt: "S1CogBench の概要。24 の認知課題のうち 6 つの例と、オープンモデルと API の意思決定モデルを、人間の選択の予測、自身の行動の実行、確率の報告で評価する流れ"
@@ -57,10 +71,17 @@ selected_research:
 
 <div class="news-list" markdown="1">
 
+| **2026年11月** | arXiv にプレプリント [EEGJev](/publication/2026-arxiv-eegjev) を公開。モデル、ベンチマーク、比較結果をまとめた[プロジェクトページ](/EEGJev/)も公開 |
+| **2026年11月** | [S1CogBench](/publication/2026-arxiv-s1cogbench) の改訂版プレプリント（v2）を arXiv で公開。7 つのオープンモデルと API モデル Jev を評価対象とし、[コミュニティ・リーダーボード](https://dengzhe-hou.github.io/S1CogBench/)と新しい課題を追加できる拡張トラックを用意 |
+| **2026年11月** | サーベイを改訂し、[A Survey on Recursive Self-Improvement in Healthcare AI Agents](/publication/2026-preprints-self-evolving)（旧 Self-Evolving Agent Engineering for Healthcare）に改題。[alphaXiv](https://www.alphaxiv.org/abs/2611.recursive-self-improvement-healthcare-agents) で公開し、85 の研究をまとめた[インタラクティブなエビデンスマップ](https://dengzhe-hou.github.io/RSI-Healthcare-Agents/)も公開 |
 | **2026年10月** | arXiv に新しいプレプリント [S1CogBench](/publication/2026-arxiv-s1cogbench) を公開。推論過程を出力せず、即座に一つの判断を返す System One 型意思決定モデルを、24 の認知実験で検証 |
 | **2026年10月** | プレプリントを大幅に改訂し、[WMIP](/publication/2026-arxiv-wmip)（旧 WMF-AM）に改題。18 の LLM で新たに実験し、1 ステップの算術では正答率 84.9% だが、3〜7 回の更新後には 31.7% に下がる |
 | **2026年10月** | プレプリントを改訂し、[CogBattery](/publication/2026-arxiv-cogbattery)（旧 CogArena）に改題。54 のオープンウェイト言語モデルを 13 の認知パラダイムで人間のデータと比較し、効果の向きが一致するだけでは人間らしい行動とは言えないことを示した |
 | **2026年9月** | [RSJ2026 オープンフォーラム OF7](https://ac.rsj-web.org/2026/openforum/#of7)「テクノロジーの質的進化と組織統制」（第44回日本ロボット学会学術講演会、金沢）で**招待講演**。Michael Zielewski とともにニューロテクノロジーについて話題提供 |
+
+<details class="news-archive" markdown="1">
+<summary>以前のニュース</summary>
+
 | **2026年8月** | 共著の発表が[日本マーケティング・サイエンス学会（JIMS）研究大会](http://www.jims.gr.jp/%e7%a0%94%e7%a9%b6%e5%a4%a7%e4%bc%9a/)（早稲田大学、2026年11月14–15日）に採択。「生成AI活用事例における社会倫理的リスクと炎上要因の定量分析」 |
 | **2026年8月** | 論文 [Subject-Specific Analysis of Self-Initiated Attention Shifts from EEG](/publication/2026-arxiv-subject-specific) が **IEEE SMC 2026**（米国ベルビュー）に採択 |
 | **2026年8月** | [TimePre](/publication/2026-tmlr-timepre) が **Transactions on Machine Learning Research (TMLR)** に採択 |
@@ -68,10 +89,6 @@ selected_research:
 | **2026年8月** | arXiv に新しいプレプリント [Control-Diverse Reinforcement Fine-Tuning](/publication/2026-arxiv-cd-rft) を公開。RL による事後学習では、活性が多様に見えても、*制御*はタスク間で共有される一部の要素に集中する。このボトルネックを緩めるとマルチタスク性能が向上する |
 | **2026年8月** | [第12回 CWRU–東北大学 Data Science in Engineering and Life Sciences シンポジウム](https://sites.google.com/case.edu/2026-cwru-tohoku-symposium/event-program)（米国クリーブランド）で**招待講演**。"From Preprocessing Choices to LLM Agents: Automated and Verifiable Cognitive EEG Analysis" |
 | **2026年8月** | [**科研費 研究活動スタート支援**](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-26K25566/)（代表、26K25566）に採択。「注意テンプレートの表象形式：計算モデル階層・脳波・視線追跡による解明」 |
-
-<details class="news-archive" markdown="1">
-<summary>以前のニュース</summary>
-
 | **2026年8月** | [Kaggle](https://www.kaggle.com/monkeydz) [ROGII - Wellbore Geology Prediction](https://www.kaggle.com/competitions/rogii-wellbore-geology-prediction) で**銀メダル**（6125チーム中89位） |
 | **2026年7月** | [KANMixer](/publication/2026-scirep-kanmixer) が ***Scientific Reports*** に掲載。長期予測のためのコンパクトな KAN 中心のミキサーを提案し、KAN が実際に役立つ条件を検討 |
 | **2026年7月** | arXiv に新しいプレプリント2本を公開。[CogEEGAgent](/publication/2026-arxiv-cogeegagent)（認知脳波解析を自律的に行うエージェント）と [CogBattery](/publication/2026-arxiv-cogbattery)（初版の名称は CogArena。LLM の認知課題成績を人間のデータを参照して評価） |
