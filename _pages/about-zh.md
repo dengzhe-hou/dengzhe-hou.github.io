@@ -215,6 +215,9 @@ selected_research:
 
 </div>
 
+<details class="news-archive" markdown="1">
+<summary>更早的教学（助教，2022–2025）</summary>
+
 东北大学信息科学研究科 **助教（TA）**（2022–2025）
 
 指导教师为[山田和范教授](https://yamada-lab.gr.jp/ja/index.html)和 [Samy Baladram 副教授](https://www.samybaladram.com/)。
@@ -223,6 +226,8 @@ selected_research:
 - **2023 年秋季** Data Science Basics
 - **2022 年春季** Data Science Training I、Data Science Skill Up Exercise
 
+</details>
+
 ## 科研经费、奖学金与奖项
 
 | **2026–2027** | **[日本学术振兴会科研费 研究活动启动支援](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-26K25566/)**（负责人，26K25566），「注意テンプレートの表象形式：計算モデル階層・脳波・視線追跡による解明」（260 万日元） |
@@ -230,6 +235,10 @@ selected_research:
 | **2026** | 东北大学[综合知信息学研究中心](https://www.aisogochi.tohoku.ac.jp/) **研究资助（负责人）**「脑电基础模型对非脑源伪迹依赖性的系统检验」（40 万日元） |
 | **2026–** | 东北大学 × NTT DATA 集团技术治理联合研究（[TechGov](https://techgov.udac.tohoku.ac.jp/ja/index.html#home)，UDAC）研究员（个人分配 100 万日元，项目总额 4000 万日元） |
 | **2026** | 东北大学信息科学研究科跨学科研究项目培育支持 **研究资助（负责人）**，「認知科学実験パラダイムに基づくAIシステム認知能力評価プラットフォームの開拓」（50 万日元） |
+
+<details class="news-archive" markdown="1">
+<summary>更早的经费与奖项</summary>
+
 | **2026** | [Kaggle Expert](https://www.kaggle.com/monkeydz)，[CSIRO Image2Biomass Prediction](https://www.kaggle.com/competitions/csiro-biomass) 铜牌（3805 支队伍中第 355） |
 | **2025–2026** | **[日本学术振兴会特别研究员 DC2](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-25KJ0641)**（已结束） |
 | **2025** | [Kaggle](https://www.kaggle.com/monkeydz) [Santa 2024: The Perplexity Permutation Puzzle](https://www.kaggle.com/competitions/santa-2024) 铜牌（1514 支队伍中第 148） |
@@ -241,6 +250,8 @@ selected_research:
 | **2021–2023** | [公益财团法人龟井纪念财团](https://kmfo.or.jp/)留学生奖学金 |
 | **2016** | 同济大学本科新生奖学金 |
 
+</details>
+
 ## 学术服务
 
 - *[Interdisciplinary Information Sciences](https://www.is.tohoku.ac.jp/en/iis/)*（东北大学信息科学研究科）**编委**，2026年至今
@@ -249,10 +260,16 @@ selected_research:
   - *Cognitive Neurodynamics*
   - *Journal of NeuroEngineering and Rehabilitation*
   - *Scientific Reports*
-  - *Discover Neuroscience*
-  - *Frontiers in Artificial Intelligence*
-  - European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD 2026)
-  - International Joint Conference on Neural Networks (IJCNN)
+
+<details class="news-archive" markdown="1">
+<summary>更多审稿（4 个）</summary>
+
+- *Discover Neuroscience*
+- *Frontiers in Artificial Intelligence*
+- European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD 2026)
+- International Joint Conference on Neural Networks (IJCNN)
+
+</details>
 
 ## 链接
 
