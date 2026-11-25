@@ -1,0 +1,9 @@
+# EEGJev
+
+> EEGJev scores candidate answers to EEG questions in one pass. EEGJev-Bench tests six question types across 19 public EEG sources.
+
+- [Preprint](https://arxiv.org/abs/2611.32100): The model, benchmark, and matched evaluations.
+- [Project page](https://dengzhe-hou.github.io/EEGJev/): Paper figures, example questions, and results.
+- [Code](https://github.com/dengzhe-hou/EEGJev): Inference, scoring, and reproduction instructions.
+- [EEGJev weights](https://huggingface.co/dengzhe-hou/EEGJev): Model variants and loading examples.
+- [EEGJev-Bench](https://huggingface.co/datasets/dengzhe-hou/EEGJev-Bench): Dataset card, source catalog and scoring examples.

@@ -7,6 +7,13 @@ redirect_from:
   - /about.html
 
 selected_research:
+  - image_path: research-eegjev.png
+    alt: "EEGJev architecture using separate EEG and text encoders and a shared candidate-scoring head"
+    title: "EEGJev: System One EEG Question Answering"
+    excerpt: "EEGJev scores offered answers from an EEG recording and a question. EEGJev-Bench tests six question types across 19 public EEG sources."
+    url: "/publication/2026-arxiv-eegjev"
+    btn_label: "Read more"
+    btn_class: "btn--primary"
   - image_path: research-rsi-healthcare.jpg
     strip_path: research-rsi-healthcare-strip.webp
     alt: "Timeline of selected healthcare-agent studies from 2024 to 2026, grouped by what each one updates: memory and experience, skills, tools and workflows, or parameters and training generators"
@@ -84,6 +91,7 @@ I received my Ph.D. under [Prof. Satoshi Shioiri](https://scholar.google.com/cit
 
 <div class="news-list" markdown="1">
 
+| **Nov 2026** | [EEGJev](/publication/2026-arxiv-eegjev) preprint on arXiv, with a [project page](/EEGJev/) for the model, benchmark and comparisons |
 | **Nov 2026** | Revised preprint of [S1CogBench](/publication/2026-arxiv-s1cogbench) on arXiv (v2), now with seven open models and the API model Jev, a [community leaderboard](https://dengzhe-hou.github.io/S1CogBench/) and an extension track for new tasks |
 | **Nov 2026** | Revised survey, now titled [A Survey on Recursive Self-Improvement in Healthcare AI Agents](/publication/2026-preprints-self-evolving) (formerly Self-Evolving Agent Engineering for Healthcare), now on [alphaXiv](https://www.alphaxiv.org/abs/2611.recursive-self-improvement-healthcare-agents) with an [interactive evidence map](https://dengzhe-hou.github.io/RSI-Healthcare-Agents/) of 85 studies |
 | **Oct 2026** | New preprint on arXiv, [S1CogBench](/publication/2026-arxiv-s1cogbench): System One decision models, which return one fast decision without text, tested on 24 cognitive experiments |
