@@ -37,8 +37,9 @@
   ]
 }
   </script>
-  <link rel="stylesheet" href="assets/site.css?v=paper-figure-palette">
+  <link rel="stylesheet" href="assets/site.css?v=validation-demo">
   <script src="assets/site.js?v=interactive-evaluation" defer></script>
+  <script src="assets/validation-demo.js" defer></script>
   <script src="assets/scoring.js" defer></script>
   <script src="assets/reliability.js" defer></script>
   <script src="assets/results-data.js" defer></script>
@@ -54,6 +55,7 @@
         <a href="#leaderboard">Results</a>
         <a href="#benchmark">Benchmark</a>
         <a href="#model">Model</a>
+        <a href="#real-demo">Demo</a>
         <a href="#scoring">Scoring</a>
         <a href="#decision-reliability">Reliability</a>
         <a href="#resources">Resources</a>
@@ -204,6 +206,48 @@
           <div id="participant-split"><h3>Held-out people</h3><p>Test participants are held out from v1.3 training. Scores weight the contributing sources equally.</p></div>
           <div><h3>Matched tasks</h3><p>Each pairwise comparison uses the tasks that both models cover. The score depends on the question type.</p></div>
         </div>
+      </section>
+
+      <section id="real-demo" class="section explore-section" aria-labelledby="real-demo-title">
+        <h2 id="real-demo-title">Watch EEGJev answer real EEG questions</h2>
+        <p class="section-intro">Compare two recorded windows or change the question on one fixed window. The demonstration shows saved model outputs.</p>
+        <div class="validation-demo" data-validation-demo>
+          <div class="demo-tabs" data-demo-tabs role="tablist" aria-label="Real EEG examples">
+            <button id="real-pair-tab" type="button" role="tab" aria-controls="real-pair-panel" aria-selected="true">Compare two windows</button>
+            <button id="real-switch-tab" type="button" role="tab" aria-controls="real-switch-panel" aria-selected="false" tabindex="-1">Switch the question</button>
+          </div>
+          <div class="demo-panel" id="real-pair-panel" role="tabpanel" aria-labelledby="real-pair-tab" tabindex="0">
+            <div class="demo-columns">
+              <div class="demo-surface" data-real-traces></div>
+              <div class="demo-surface validation-answer" aria-live="polite">
+                <h3 data-real-question></h3>
+                <dl class="validation-decisions">
+                  <div><dt>Model choice</dt><dd data-real-choice></dd></div>
+                  <div><dt>Reference answer</dt><dd data-real-reference></dd></div>
+                </dl>
+                <ol class="validation-options" data-real-options aria-label="Candidate probabilities"></ol>
+              </div>
+            </div>
+          </div>
+          <div class="demo-panel" id="real-switch-panel" role="tabpanel" aria-labelledby="real-switch-tab" tabindex="0" hidden>
+            <div class="demo-columns">
+              <div class="demo-surface" data-real-traces></div>
+              <div class="demo-surface validation-answer">
+                <div class="validation-questions" role="group" aria-label="Choose the question"></div>
+                <div aria-live="polite">
+                  <h3 data-real-question></h3>
+                  <dl class="validation-decisions">
+                    <div><dt>Model choice</dt><dd data-real-choice></dd></div>
+                    <div><dt>Reference answer</dt><dd data-real-reference></dd></div>
+                  </dl>
+                  <ol class="validation-options" data-real-options aria-label="Candidate probabilities"></ol>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="validation-status" data-real-status role="status">Loading the saved validation examples…</p>
+        </div>
+        <p class="demo-note validation-source">EEGJev-Bench validation · Shared EEGJev, seed 0 · Four of 32 standardized EEG channels at 200 Hz. <a href="https://doi.org/10.18112/openneuro.ds007172.v1.0.0">EEG-Asymmetries dataset</a></p>
       </section>
 
       <section id="scoring" class="section explore-section" aria-labelledby="scoring-title">
