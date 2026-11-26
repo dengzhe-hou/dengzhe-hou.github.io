@@ -874,3 +874,33 @@ button.demo-option, label.demo-option { cursor: pointer; }
 }
 .validation-decisions dt { font-size: 0.84rem; color: var(--muted); }
 .validation-decisions dd { margin: 2px 0 0; font-weight: 650; }
+.validation-subtabs {
+  border-bottom: 0;
+  border-radius: 0;
+  padding-bottom: 0;
+  background: var(--paper);
+}
+.validation-subtabs button { font-size: .9rem; }
+.validation-choice .demo-panel { padding-top: clamp(12px, 1.6vw, 19px); }
+.validation-answer .demo-tag { margin-top: 0; }
+.validation-score-result {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0 10px;
+}
+.validation-score-result strong {
+  color: var(--accent);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.14;
+}
+.validation-score-result span { font-size: .94rem; }
+.validation-score-equation {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: .6em;
+  row-gap: .25em;
+  font: .88rem/1.55 var(--mono);
+}
+.validation-score-equation span { white-space: nowrap; }

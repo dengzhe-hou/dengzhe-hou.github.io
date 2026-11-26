@@ -37,9 +37,9 @@
   ]
 }
   </script>
-  <link rel="stylesheet" href="assets/site.css?v=validation-demo">
+  <link rel="stylesheet" href="assets/site.css?v=typed-outputs">
   <script src="assets/site.js?v=interactive-evaluation" defer></script>
-  <script src="assets/validation-demo.js" defer></script>
+  <script src="assets/validation-demo.js?v=typed-outputs" defer></script>
   <script src="assets/scoring.js" defer></script>
   <script src="assets/reliability.js" defer></script>
   <script src="assets/results-data.js" defer></script>
@@ -209,32 +209,23 @@
       </section>
 
       <section id="real-demo" class="section explore-section" aria-labelledby="real-demo-title">
-        <h2 id="real-demo-title">Watch EEGJev answer real EEG questions</h2>
-        <p class="section-intro">Compare two recorded windows or change the question on one fixed window. The demonstration shows saved model outputs.</p>
+        <h2 id="real-demo-title">Explore EEGJev’s answer formats</h2>
+        <p class="section-intro">See how EEGJev scores options, estimates whether a statement is true and computes an ordered score. The demo replays saved model outputs.</p>
         <div class="validation-demo" data-validation-demo>
-          <div class="demo-tabs" data-demo-tabs role="tablist" aria-label="Real EEG examples">
-            <button id="real-pair-tab" type="button" role="tab" aria-controls="real-pair-panel" aria-selected="true">Compare two windows</button>
-            <button id="real-switch-tab" type="button" role="tab" aria-controls="real-switch-panel" aria-selected="false" tabindex="-1">Switch the question</button>
+          <div class="demo-tabs" data-demo-tabs role="tablist" aria-label="Answer format">
+            <button id="real-choice-tab" type="button" role="tab" aria-controls="real-choice-panel" aria-selected="true">Choice</button>
+            <button id="real-noul-tab" type="button" role="tab" aria-controls="real-noul-panel" aria-selected="false" tabindex="-1">Noul</button>
+            <button id="real-score-tab" type="button" role="tab" aria-controls="real-score-panel" aria-selected="false" tabindex="-1">Score</button>
           </div>
-          <div class="demo-panel" id="real-pair-panel" role="tabpanel" aria-labelledby="real-pair-tab" tabindex="0">
-            <div class="demo-columns">
-              <div class="demo-surface" data-real-traces></div>
-              <div class="demo-surface validation-answer" aria-live="polite">
-                <h3 data-real-question></h3>
-                <dl class="validation-decisions">
-                  <div><dt>Model choice</dt><dd data-real-choice></dd></div>
-                  <div><dt>Reference answer</dt><dd data-real-reference></dd></div>
-                </dl>
-                <ol class="validation-options" data-real-options aria-label="Candidate probabilities"></ol>
-              </div>
+          <div id="real-choice-panel" class="validation-choice" role="tabpanel" aria-labelledby="real-choice-tab">
+            <div class="demo-tabs validation-subtabs" data-demo-tabs role="tablist" aria-label="Choice examples">
+              <button id="real-pair-tab" type="button" role="tab" aria-controls="real-pair-panel" aria-selected="true">Compare two windows</button>
+              <button id="real-switch-tab" type="button" role="tab" aria-controls="real-switch-panel" aria-selected="false" tabindex="-1">Switch the question</button>
             </div>
-          </div>
-          <div class="demo-panel" id="real-switch-panel" role="tabpanel" aria-labelledby="real-switch-tab" tabindex="0" hidden>
-            <div class="demo-columns">
-              <div class="demo-surface" data-real-traces></div>
-              <div class="demo-surface validation-answer">
-                <div class="validation-questions" role="group" aria-label="Choose the question"></div>
-                <div aria-live="polite">
+            <div class="demo-panel" id="real-pair-panel" role="tabpanel" aria-labelledby="real-pair-tab" tabindex="0">
+              <div class="demo-columns">
+                <div class="demo-surface" data-real-traces></div>
+                <div class="demo-surface validation-answer" aria-live="polite">
                   <h3 data-real-question></h3>
                   <dl class="validation-decisions">
                     <div><dt>Model choice</dt><dd data-real-choice></dd></div>
@@ -244,10 +235,57 @@
                 </div>
               </div>
             </div>
+            <div class="demo-panel" id="real-switch-panel" role="tabpanel" aria-labelledby="real-switch-tab" tabindex="0" hidden>
+              <div class="demo-columns">
+                <div class="demo-surface" data-real-traces></div>
+                <div class="demo-surface validation-answer">
+                  <div class="validation-questions" role="group" aria-label="Choose the question"></div>
+                  <div aria-live="polite">
+                    <h3 data-real-question></h3>
+                    <dl class="validation-decisions">
+                      <div><dt>Model choice</dt><dd data-real-choice></dd></div>
+                      <div><dt>Reference answer</dt><dd data-real-reference></dd></div>
+                    </dl>
+                    <ol class="validation-options" data-real-options aria-label="Candidate probabilities"></ol>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <p class="validation-status" data-real-status role="status">Loading the saved validation examples…</p>
+          <div class="demo-panel" id="real-noul-panel" role="tabpanel" aria-labelledby="real-noul-tab" tabindex="0" hidden>
+            <div class="demo-columns">
+              <div class="demo-surface" data-real-traces></div>
+              <div class="demo-surface validation-answer">
+                <div class="validation-questions" role="group" aria-label="Choose the window the statement refers to"></div>
+                <div aria-live="polite">
+                  <h3 data-noul-statement></h3>
+                  <dl class="validation-decisions">
+                    <div><dt>Probability it is true</dt><dd data-noul-probability></dd></div>
+                    <div><dt>Reference</dt><dd data-noul-reference></dd></div>
+                  </dl>
+                </div>
+                <p class="demo-note">The probability comes from the chosen window’s score in the same two-option question.</p>
+              </div>
+            </div>
+          </div>
+          <div class="demo-panel" id="real-score-panel" role="tabpanel" aria-labelledby="real-score-tab" tabindex="0" hidden>
+            <div class="demo-columns">
+              <div class="demo-surface validation-answer">
+                <p class="demo-tag">Simulated EEG in the COG-BCI montage</p>
+                <h3 data-ordered-question></h3>
+                <ol class="validation-options" data-real-options aria-label="Ordered-bin probabilities"></ol>
+              </div>
+              <div class="demo-surface validation-answer">
+                <h3>Expected n-back level</h3>
+                <p class="validation-score-result"><strong data-ordered-value></strong><span data-ordered-scale></span></p>
+                <p>Multiply each level by its probability and add the results.</p>
+                <p class="validation-score-equation" data-ordered-equation></p>
+              </div>
+            </div>
+          </div>
+          <p class="validation-status" data-real-status role="status">Loading the saved outputs…</p>
         </div>
-        <p class="demo-note validation-source">EEGJev-Bench validation · Shared EEGJev, seed 0 · Four of 32 standardized EEG channels at 200 Hz. <a href="https://doi.org/10.18112/openneuro.ds007172.v1.0.0">EEG-Asymmetries dataset</a></p>
+        <p class="demo-note validation-source">Choice and Noul use released validation windows from the <a href="https://doi.org/10.18112/openneuro.ds007172.v1.0.0">EEG-Asymmetries dataset</a>. The traces show four of 32 standardized channels at 200 Hz. The examples use the shared v1.3 weights (seed 0). Probabilities are shown before calibration. <a href="https://github.com/dengzhe-hou/EEGJev/blob/main/model/README.md#choice-noul-score-and-answerability">Run the Python example</a>.</p>
       </section>
 
       <section id="scoring" class="section explore-section" aria-labelledby="scoring-title">

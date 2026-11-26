@@ -4,20 +4,21 @@ function optionText(label) {
   return label[0].toUpperCase() + label.slice(1);
 }
 
-function showValidationAnswer(panel, answer) {
-  panel.querySelector("[data-real-question]").textContent = answer.question;
-  panel.querySelector("[data-real-choice]").textContent = optionText(answer.options[answer.selected]);
-  panel.querySelector("[data-real-reference]").textContent = optionText(answer.options[answer.reference]);
-  panel.querySelector("[data-real-options]").replaceChildren(...answer.options.map((label, index) => {
+function percentText(probability) {
+  const percent = 100 * probability;
+  return percent > 0 && percent < 0.1 ? "<0.1%" : percent.toFixed(1) + "%";
+}
+
+function showProbabilities(panel, options, probabilities, selected = null) {
+  panel.querySelector("[data-real-options]").replaceChildren(...options.map((label, index) => {
     const row = document.createElement("li");
     row.className = "validation-option";
-    row.dataset.selected = String(index === answer.selected);
+    row.dataset.selected = String(index === selected);
 
     const name = document.createElement("span");
     name.textContent = optionText(label);
     const value = document.createElement("strong");
-    const percent = 100 * answer.probabilities[index];
-    value.textContent = percent > 0 && percent < 0.1 ? "<0.1%" : percent.toFixed(1) + "%";
+    value.textContent = percentText(probabilities[index]);
     const line = document.createElement("div");
     line.className = "validation-option-line";
     line.append(name, value);
@@ -26,11 +27,18 @@ function showValidationAnswer(panel, answer) {
     bar.className = "validation-bar";
     bar.setAttribute("aria-hidden", "true");
     const fill = document.createElement("span");
-    fill.style.width = percent + "%";
+    fill.style.width = 100 * probabilities[index] + "%";
     bar.append(fill);
     row.append(line, bar);
     return row;
   }));
+}
+
+function showValidationAnswer(panel, answer) {
+  panel.querySelector("[data-real-question]").textContent = answer.question;
+  panel.querySelector("[data-real-choice]").textContent = optionText(answer.options[answer.selected]);
+  panel.querySelector("[data-real-reference]").textContent = optionText(answer.options[answer.reference]);
+  showProbabilities(panel, answer.options, answer.probabilities, answer.selected);
 }
 
 function makeTrace(windowSamples, channels, peak, title) {
@@ -90,44 +98,74 @@ function makeTrace(windowSamples, channels, peak, title) {
   return figure;
 }
 
-async function mountValidationDemo(root) {
-  const response = await fetch("assets/validation-demo.json");
-  if (!response.ok) throw new Error("Saved validation outputs unavailable");
-  const data = await response.json();
-  const peak = Math.max(1, ...data.traces.flat(2).map(Math.abs));
-  const pair = root.querySelector("#real-pair-panel");
-  pair.querySelector("[data-real-traces]").append(...data.traces.map((trace, index) => {
-    return makeTrace(trace, data.channels, peak, index === 0 ? "Window A" : "Window B");
+function addTraceWindows(panel, data, peak, indices) {
+  panel.querySelector("[data-real-traces]").append(...indices.map(index => {
+    return makeTrace(data.traces[index], data.channels, peak, optionText(data.pair.options[index]));
   }));
-  showValidationAnswer(pair, data.pair);
+}
 
-  const same = root.querySelector("#real-switch-panel");
-  same.querySelector("[data-real-traces]").append(makeTrace(
-    data.traces[data.switch.window], data.channels, peak,
-    data.switch.window === 0 ? "Window A" : "Window B",
-  ));
-  const chooser = same.querySelector(".validation-questions");
-  const buttons = data.switch.questions.map(question => {
+function addQuestionButtons(panel, titles, show) {
+  const buttons = titles.map(title => {
     const button = document.createElement("button");
     button.type = "button";
     button.className = "demo-option";
-    button.textContent = question.title;
+    button.textContent = title;
     return button;
   });
-  function selectQuestion(index) {
+  function select(index) {
     buttons.forEach((button, i) => button.setAttribute("aria-pressed", String(i === index)));
-    showValidationAnswer(same, data.switch.questions[index]);
+    show(index);
   }
-  buttons.forEach((button, index) => {
-    button.addEventListener("click", () => selectQuestion(index));
-    chooser.append(button);
+  buttons.forEach((button, index) => button.addEventListener("click", () => select(index)));
+  panel.querySelector(".validation-questions").append(...buttons);
+  select(0);
+}
+
+function showOrderedScore(panel, ordered) {
+  panel.querySelector("[data-ordered-question]").textContent = ordered.question;
+  showProbabilities(panel, ordered.options, ordered.probabilities);
+  const score = ordered.score.toFixed(3);
+  panel.querySelector("[data-ordered-value]").textContent = score;
+  panel.querySelector("[data-ordered-scale]").textContent =
+    ordered.values[0] + "–" + ordered.values.at(-1) + " scale";
+  const terms = ordered.values.map((value, index) => value + " × " + ordered.probabilities[index].toFixed(4));
+  const equation = [...terms, "≈ " + score].map((term, index) => {
+    const part = document.createElement("span");
+    part.textContent = (index > 0 && index < terms.length ? "+ " : "") + term;
+    return part;
   });
-  selectQuestion(0);
+  panel.querySelector("[data-ordered-equation]").replaceChildren(...equation);
+}
+
+async function mountValidationDemo(root) {
+  const response = await fetch("assets/validation-demo.json?v=typed-outputs");
+  if (!response.ok) throw new Error("Saved outputs unavailable");
+  const data = await response.json();
+  const peak = Math.max(1, ...data.traces.flat(2).map(Math.abs));
+  const pair = root.querySelector("#real-pair-panel");
+  addTraceWindows(pair, data, peak, [0, 1]);
+  showValidationAnswer(pair, data.pair);
+
+  const same = root.querySelector("#real-switch-panel");
+  addTraceWindows(same, data, peak, [data.switch.window]);
+  addQuestionButtons(same, data.switch.questions.map(question => question.title), index => {
+    showValidationAnswer(same, data.switch.questions[index]);
+  });
+
+  const noul = root.querySelector("#real-noul-panel");
+  addTraceWindows(noul, data, peak, [0, 1]);
+  addQuestionButtons(noul, data.pair.options.map(optionText), index => {
+    noul.querySelector("[data-noul-statement]").textContent = data.noulStatements[index];
+    noul.querySelector("[data-noul-probability]").textContent = percentText(data.pair.probabilities[index]);
+    noul.querySelector("[data-noul-reference]").textContent = index === data.pair.reference ? "True" : "False";
+  });
+
+  showOrderedScore(root.querySelector("#real-score-panel"), data.orderedScore);
   root.querySelector("[data-real-status]").hidden = true;
 }
 
 if (validationDemo) {
   mountValidationDemo(validationDemo).catch(() => {
-    validationDemo.querySelector("[data-real-status]").textContent = "The saved validation examples could not be loaded.";
+    validationDemo.querySelector("[data-real-status]").textContent = "The saved outputs could not be loaded.";
   });
 }
